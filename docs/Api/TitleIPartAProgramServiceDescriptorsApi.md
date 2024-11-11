@@ -1,4 +1,4 @@
-# OpenAPI\Client\TitleIPartAProgramServiceDescriptorsApi
+# Descriptors\TitleIPartAProgramServiceDescriptorsApi
 
 All URIs are relative to https://api.ed-fi.org:443/v7.1/api/data/v3, except if the operation defines another base path.
 
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TitleIPartAProgramServiceDescriptorsApi(
+$apiInstance = new Descriptors\Api\TitleIPartAProgramServiceDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -77,7 +77,7 @@ void (empty response body)
 ## `deletesTitleIPartAProgramServiceDescriptors()`
 
 ```php
-deletesTitleIPartAProgramServiceDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAProgramServiceDescriptorDelete[]
+deletesTitleIPartAProgramServiceDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiTitleIPartAProgramServiceDescriptorDelete[]
 ```
 
 Retrieves deleted resources based on change version.
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TitleIPartAProgramServiceDescriptorsApi(
+$apiInstance = new Descriptors\Api\TitleIPartAProgramServiceDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAProgramServiceDescriptorDelete[]**](../Model/TrackedChangesEdFiTitleIPartAProgramServiceDescriptorDelete.md)
+[**\Descriptors\Model\TrackedChangesEdFiTitleIPartAProgramServiceDescriptorDelete[]**](../Model/TrackedChangesEdFiTitleIPartAProgramServiceDescriptorDelete.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `getTitleIPartAProgramServiceDescriptors()`
 
 ```php
-getTitleIPartAProgramServiceDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $title_i_part_a_program_service_descriptor_id, $use_snapshot): \OpenAPI\Client\Model\EdFiTitleIPartAProgramServiceDescriptor[]
+getTitleIPartAProgramServiceDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $title_i_part_a_program_service_descriptor_id, $use_snapshot): \Descriptors\Model\EdFiTitleIPartAProgramServiceDescriptor[]
 ```
 
 Retrieves specific resources using the resource's property values (using the \"Get\" pattern).
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TitleIPartAProgramServiceDescriptorsApi(
+$apiInstance = new Descriptors\Api\TitleIPartAProgramServiceDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,7 +201,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EdFiTitleIPartAProgramServiceDescriptor[]**](../Model/EdFiTitleIPartAProgramServiceDescriptor.md)
+[**\Descriptors\Model\EdFiTitleIPartAProgramServiceDescriptor[]**](../Model/EdFiTitleIPartAProgramServiceDescriptor.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ try {
 ## `getTitleIPartAProgramServiceDescriptorsById()`
 
 ```php
-getTitleIPartAProgramServiceDescriptorsById($id, $if_none_match, $use_snapshot): \OpenAPI\Client\Model\EdFiTitleIPartAProgramServiceDescriptor
+getTitleIPartAProgramServiceDescriptorsById($id, $if_none_match, $use_snapshot): \Descriptors\Model\EdFiTitleIPartAProgramServiceDescriptor
 ```
 
 Retrieves a specific resource using the resource's identifier (using the \"Get By Id\" pattern).
@@ -234,10 +234,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TitleIPartAProgramServiceDescriptorsApi(
+$apiInstance = new Descriptors\Api\TitleIPartAProgramServiceDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,7 +265,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EdFiTitleIPartAProgramServiceDescriptor**](../Model/EdFiTitleIPartAProgramServiceDescriptor.md)
+[**\Descriptors\Model\EdFiTitleIPartAProgramServiceDescriptor**](../Model/EdFiTitleIPartAProgramServiceDescriptor.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ try {
 ## `keyChangesTitleIPartAProgramServiceDescriptors()`
 
 ```php
-keyChangesTitleIPartAProgramServiceDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAProgramServiceDescriptorKeyChange[]
+keyChangesTitleIPartAProgramServiceDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiTitleIPartAProgramServiceDescriptorKeyChange[]
 ```
 
 Retrieves resources key changes based on change version.
@@ -298,10 +298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TitleIPartAProgramServiceDescriptorsApi(
+$apiInstance = new Descriptors\Api\TitleIPartAProgramServiceDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -335,7 +335,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAProgramServiceDescriptorKeyChange[]**](../Model/TrackedChangesEdFiTitleIPartAProgramServiceDescriptorKeyChange.md)
+[**\Descriptors\Model\TrackedChangesEdFiTitleIPartAProgramServiceDescriptorKeyChange[]**](../Model/TrackedChangesEdFiTitleIPartAProgramServiceDescriptorKeyChange.md)
 
 ### Authorization
 
@@ -368,16 +368,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TitleIPartAProgramServiceDescriptorsApi(
+$apiInstance = new Descriptors\Api\TitleIPartAProgramServiceDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ed_fi_title_i_part_a_program_service_descriptor = new \OpenAPI\Client\Model\EdFiTitleIPartAProgramServiceDescriptor(); // \OpenAPI\Client\Model\EdFiTitleIPartAProgramServiceDescriptor | The JSON representation of the \"titleIPartAProgramServiceDescriptor\" resource to be created or updated.
+$ed_fi_title_i_part_a_program_service_descriptor = new \Descriptors\Model\EdFiTitleIPartAProgramServiceDescriptor(); // \Descriptors\Model\EdFiTitleIPartAProgramServiceDescriptor | The JSON representation of the \"titleIPartAProgramServiceDescriptor\" resource to be created or updated.
 
 try {
     $apiInstance->postTitleIPartAProgramServiceDescriptor($ed_fi_title_i_part_a_program_service_descriptor);
@@ -390,7 +390,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ed_fi_title_i_part_a_program_service_descriptor** | [**\OpenAPI\Client\Model\EdFiTitleIPartAProgramServiceDescriptor**](../Model/EdFiTitleIPartAProgramServiceDescriptor.md)| The JSON representation of the \&quot;titleIPartAProgramServiceDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_title_i_part_a_program_service_descriptor** | [**\Descriptors\Model\EdFiTitleIPartAProgramServiceDescriptor**](../Model/EdFiTitleIPartAProgramServiceDescriptor.md)| The JSON representation of the \&quot;titleIPartAProgramServiceDescriptor\&quot; resource to be created or updated. | |
 
 ### Return type
 
@@ -427,17 +427,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TitleIPartAProgramServiceDescriptorsApi(
+$apiInstance = new Descriptors\Api\TitleIPartAProgramServiceDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string | A resource identifier that uniquely identifies the resource.
-$ed_fi_title_i_part_a_program_service_descriptor = new \OpenAPI\Client\Model\EdFiTitleIPartAProgramServiceDescriptor(); // \OpenAPI\Client\Model\EdFiTitleIPartAProgramServiceDescriptor | The JSON representation of the \"titleIPartAProgramServiceDescriptor\" resource to be created or updated.
+$ed_fi_title_i_part_a_program_service_descriptor = new \Descriptors\Model\EdFiTitleIPartAProgramServiceDescriptor(); // \Descriptors\Model\EdFiTitleIPartAProgramServiceDescriptor | The JSON representation of the \"titleIPartAProgramServiceDescriptor\" resource to be created or updated.
 $if_match = 'if_match_example'; // string | The ETag header value used to prevent the PUT from updating a resource modified by another consumer.
 
 try {
@@ -452,7 +452,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| A resource identifier that uniquely identifies the resource. | |
-| **ed_fi_title_i_part_a_program_service_descriptor** | [**\OpenAPI\Client\Model\EdFiTitleIPartAProgramServiceDescriptor**](../Model/EdFiTitleIPartAProgramServiceDescriptor.md)| The JSON representation of the \&quot;titleIPartAProgramServiceDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_title_i_part_a_program_service_descriptor** | [**\Descriptors\Model\EdFiTitleIPartAProgramServiceDescriptor**](../Model/EdFiTitleIPartAProgramServiceDescriptor.md)| The JSON representation of the \&quot;titleIPartAProgramServiceDescriptor\&quot; resource to be created or updated. | |
 | **if_match** | **string**| The ETag header value used to prevent the PUT from updating a resource modified by another consumer. | [optional] |
 
 ### Return type

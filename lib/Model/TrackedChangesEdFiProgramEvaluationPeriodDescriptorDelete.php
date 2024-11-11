@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Descriptors\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Descriptors\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete implements Model
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKey'
+        'key_values' => '\Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKey'
     ];
 
     /**
@@ -360,7 +360,7 @@ class TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete implements Model
     /**
      * Gets key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKey|null
      */
     public function getKeyValues()
     {
@@ -370,7 +370,7 @@ class TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete implements Model
     /**
      * Sets key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKey|null $key_values key_values
+     * @param \Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKey|null $key_values key_values
      *
      * @return self
      */

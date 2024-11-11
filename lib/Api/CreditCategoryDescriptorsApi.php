@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * CreditCategoryDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class CreditCategoryDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCreditCategoryDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class CreditCategoryDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCreditCategoryDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class CreditCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCreditCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiCreditCategoryDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiCreditCategoryDescriptorDelete[]
      */
     public function deletesCreditCategoryDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCreditCategoryDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class CreditCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCreditCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiCreditCategoryDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiCreditCategoryDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesCreditCategoryDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCreditCategoryDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class CreditCategoryDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiCreditCategoryDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiCreditCategoryDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiCreditCategoryDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiCreditCategoryDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class CreditCategoryDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiCreditCategoryDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiCreditCategoryDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class CreditCategoryDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCreditCategoryDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiCreditCategoryDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class CreditCategoryDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiCreditCategoryDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiCreditCategoryDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class CreditCategoryDescriptorsApi
      */
     public function deletesCreditCategoryDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCreditCategoryDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCreditCategoryDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiCreditCategoryDescriptorDelete[]';
         $request = $this->deletesCreditCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class CreditCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCreditCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiCreditCategoryDescriptor[]
+     * @return \Descriptors\Model\EdFiCreditCategoryDescriptor[]
      */
     public function getCreditCategoryDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $credit_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCreditCategoryDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class CreditCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCreditCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiCreditCategoryDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiCreditCategoryDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getCreditCategoryDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $credit_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCreditCategoryDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class CreditCategoryDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiCreditCategoryDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiCreditCategoryDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiCreditCategoryDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiCreditCategoryDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class CreditCategoryDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiCreditCategoryDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiCreditCategoryDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class CreditCategoryDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiCreditCategoryDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiCreditCategoryDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class CreditCategoryDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiCreditCategoryDescriptor[]',
+                        '\Descriptors\Model\EdFiCreditCategoryDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class CreditCategoryDescriptorsApi
      */
     public function getCreditCategoryDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $credit_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCreditCategoryDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiCreditCategoryDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiCreditCategoryDescriptor[]';
         $request = $this->getCreditCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $credit_category_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class CreditCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCreditCategoryDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiCreditCategoryDescriptor
+     * @return \Descriptors\Model\EdFiCreditCategoryDescriptor
      */
     public function getCreditCategoryDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCreditCategoryDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class CreditCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCreditCategoryDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiCreditCategoryDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiCreditCategoryDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCreditCategoryDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCreditCategoryDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class CreditCategoryDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiCreditCategoryDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiCreditCategoryDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiCreditCategoryDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiCreditCategoryDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class CreditCategoryDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiCreditCategoryDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiCreditCategoryDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class CreditCategoryDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiCreditCategoryDescriptor';
+            $returnType = '\Descriptors\Model\EdFiCreditCategoryDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class CreditCategoryDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiCreditCategoryDescriptor',
+                        '\Descriptors\Model\EdFiCreditCategoryDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class CreditCategoryDescriptorsApi
      */
     public function getCreditCategoryDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCreditCategoryDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiCreditCategoryDescriptor';
+        $returnType = '\Descriptors\Model\EdFiCreditCategoryDescriptor';
         $request = $this->getCreditCategoryDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class CreditCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCreditCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiCreditCategoryDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiCreditCategoryDescriptorKeyChange[]
      */
     public function keyChangesCreditCategoryDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCreditCategoryDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class CreditCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCreditCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiCreditCategoryDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiCreditCategoryDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesCreditCategoryDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCreditCategoryDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class CreditCategoryDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiCreditCategoryDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiCreditCategoryDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiCreditCategoryDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiCreditCategoryDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class CreditCategoryDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiCreditCategoryDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiCreditCategoryDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class CreditCategoryDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCreditCategoryDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiCreditCategoryDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class CreditCategoryDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiCreditCategoryDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiCreditCategoryDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class CreditCategoryDescriptorsApi
      */
     public function keyChangesCreditCategoryDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCreditCategoryDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCreditCategoryDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiCreditCategoryDescriptorKeyChange[]';
         $request = $this->keyChangesCreditCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class CreditCategoryDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCreditCategoryDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class CreditCategoryDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCreditCategoryDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class CreditCategoryDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCreditCategoryDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class CreditCategoryDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCreditCategoryDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class CreditCategoryDescriptorsApi
     /**
      * Create request for operation 'postCreditCategoryDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCreditCategoryDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class CreditCategoryDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCreditCategoryDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class CreditCategoryDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCreditCategoryDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class CreditCategoryDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCreditCategoryDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class CreditCategoryDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCreditCategoryDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class CreditCategoryDescriptorsApi
      * Create request for operation 'putCreditCategoryDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCreditCategoryDescriptor $ed_fi_credit_category_descriptor The JSON representation of the \&quot;creditCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCreditCategoryDescriptor'] to see the possible values for this operation
      *

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * EligibilityEvaluationTypeDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class EligibilityEvaluationTypeDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEligibilityEvaluationTypeDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class EligibilityEvaluationTypeDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEligibilityEvaluationTypeDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class EligibilityEvaluationTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEligibilityEvaluationTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorDelete[]
      */
     public function deletesEligibilityEvaluationTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEligibilityEvaluationTypeDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class EligibilityEvaluationTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEligibilityEvaluationTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesEligibilityEvaluationTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEligibilityEvaluationTypeDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class EligibilityEvaluationTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class EligibilityEvaluationTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class EligibilityEvaluationTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class EligibilityEvaluationTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class EligibilityEvaluationTypeDescriptorsApi
      */
     public function deletesEligibilityEvaluationTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEligibilityEvaluationTypeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorDelete[]';
         $request = $this->deletesEligibilityEvaluationTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class EligibilityEvaluationTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEligibilityEvaluationTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor[]
+     * @return \Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor[]
      */
     public function getEligibilityEvaluationTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $eligibility_evaluation_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEligibilityEvaluationTypeDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class EligibilityEvaluationTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEligibilityEvaluationTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getEligibilityEvaluationTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $eligibility_evaluation_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEligibilityEvaluationTypeDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class EligibilityEvaluationTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class EligibilityEvaluationTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class EligibilityEvaluationTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class EligibilityEvaluationTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor[]',
+                        '\Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class EligibilityEvaluationTypeDescriptorsApi
      */
     public function getEligibilityEvaluationTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $eligibility_evaluation_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEligibilityEvaluationTypeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor[]';
         $request = $this->getEligibilityEvaluationTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $eligibility_evaluation_type_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class EligibilityEvaluationTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEligibilityEvaluationTypeDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor
+     * @return \Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor
      */
     public function getEligibilityEvaluationTypeDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEligibilityEvaluationTypeDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class EligibilityEvaluationTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEligibilityEvaluationTypeDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEligibilityEvaluationTypeDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEligibilityEvaluationTypeDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class EligibilityEvaluationTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class EligibilityEvaluationTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class EligibilityEvaluationTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor';
+            $returnType = '\Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class EligibilityEvaluationTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor',
+                        '\Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class EligibilityEvaluationTypeDescriptorsApi
      */
     public function getEligibilityEvaluationTypeDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEligibilityEvaluationTypeDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor';
+        $returnType = '\Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor';
         $request = $this->getEligibilityEvaluationTypeDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class EligibilityEvaluationTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEligibilityEvaluationTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorKeyChange[]
      */
     public function keyChangesEligibilityEvaluationTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEligibilityEvaluationTypeDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class EligibilityEvaluationTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEligibilityEvaluationTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesEligibilityEvaluationTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEligibilityEvaluationTypeDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class EligibilityEvaluationTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class EligibilityEvaluationTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class EligibilityEvaluationTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class EligibilityEvaluationTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class EligibilityEvaluationTypeDescriptorsApi
      */
     public function keyChangesEligibilityEvaluationTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEligibilityEvaluationTypeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiEligibilityEvaluationTypeDescriptorKeyChange[]';
         $request = $this->keyChangesEligibilityEvaluationTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class EligibilityEvaluationTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEligibilityEvaluationTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class EligibilityEvaluationTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEligibilityEvaluationTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class EligibilityEvaluationTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEligibilityEvaluationTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class EligibilityEvaluationTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEligibilityEvaluationTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class EligibilityEvaluationTypeDescriptorsApi
     /**
      * Create request for operation 'postEligibilityEvaluationTypeDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEligibilityEvaluationTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class EligibilityEvaluationTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEligibilityEvaluationTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class EligibilityEvaluationTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEligibilityEvaluationTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class EligibilityEvaluationTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEligibilityEvaluationTypeDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class EligibilityEvaluationTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEligibilityEvaluationTypeDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class EligibilityEvaluationTypeDescriptorsApi
      * Create request for operation 'putEligibilityEvaluationTypeDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEligibilityEvaluationTypeDescriptor $ed_fi_eligibility_evaluation_type_descriptor The JSON representation of the \&quot;eligibilityEvaluationTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEligibilityEvaluationTypeDescriptor'] to see the possible values for this operation
      *

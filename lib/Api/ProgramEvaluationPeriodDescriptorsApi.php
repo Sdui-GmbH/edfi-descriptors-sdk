@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * ProgramEvaluationPeriodDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class ProgramEvaluationPeriodDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteProgramEvaluationPeriodDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class ProgramEvaluationPeriodDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteProgramEvaluationPeriodDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class ProgramEvaluationPeriodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesProgramEvaluationPeriodDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete[]
      */
     public function deletesProgramEvaluationPeriodDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesProgramEvaluationPeriodDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class ProgramEvaluationPeriodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesProgramEvaluationPeriodDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesProgramEvaluationPeriodDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesProgramEvaluationPeriodDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class ProgramEvaluationPeriodDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class ProgramEvaluationPeriodDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class ProgramEvaluationPeriodDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class ProgramEvaluationPeriodDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class ProgramEvaluationPeriodDescriptorsApi
      */
     public function deletesProgramEvaluationPeriodDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesProgramEvaluationPeriodDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorDelete[]';
         $request = $this->deletesProgramEvaluationPeriodDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class ProgramEvaluationPeriodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProgramEvaluationPeriodDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor[]
+     * @return \Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor[]
      */
     public function getProgramEvaluationPeriodDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $program_evaluation_period_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getProgramEvaluationPeriodDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class ProgramEvaluationPeriodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProgramEvaluationPeriodDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getProgramEvaluationPeriodDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $program_evaluation_period_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getProgramEvaluationPeriodDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class ProgramEvaluationPeriodDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class ProgramEvaluationPeriodDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class ProgramEvaluationPeriodDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class ProgramEvaluationPeriodDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor[]',
+                        '\Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class ProgramEvaluationPeriodDescriptorsApi
      */
     public function getProgramEvaluationPeriodDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $program_evaluation_period_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getProgramEvaluationPeriodDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor[]';
         $request = $this->getProgramEvaluationPeriodDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $program_evaluation_period_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class ProgramEvaluationPeriodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProgramEvaluationPeriodDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor
+     * @return \Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor
      */
     public function getProgramEvaluationPeriodDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getProgramEvaluationPeriodDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class ProgramEvaluationPeriodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProgramEvaluationPeriodDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProgramEvaluationPeriodDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getProgramEvaluationPeriodDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class ProgramEvaluationPeriodDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class ProgramEvaluationPeriodDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class ProgramEvaluationPeriodDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor';
+            $returnType = '\Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class ProgramEvaluationPeriodDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor',
+                        '\Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class ProgramEvaluationPeriodDescriptorsApi
      */
     public function getProgramEvaluationPeriodDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getProgramEvaluationPeriodDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor';
+        $returnType = '\Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor';
         $request = $this->getProgramEvaluationPeriodDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class ProgramEvaluationPeriodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesProgramEvaluationPeriodDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKeyChange[]
      */
     public function keyChangesProgramEvaluationPeriodDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesProgramEvaluationPeriodDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class ProgramEvaluationPeriodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesProgramEvaluationPeriodDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesProgramEvaluationPeriodDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesProgramEvaluationPeriodDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class ProgramEvaluationPeriodDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class ProgramEvaluationPeriodDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class ProgramEvaluationPeriodDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class ProgramEvaluationPeriodDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class ProgramEvaluationPeriodDescriptorsApi
      */
     public function keyChangesProgramEvaluationPeriodDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesProgramEvaluationPeriodDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiProgramEvaluationPeriodDescriptorKeyChange[]';
         $request = $this->keyChangesProgramEvaluationPeriodDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class ProgramEvaluationPeriodDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProgramEvaluationPeriodDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class ProgramEvaluationPeriodDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProgramEvaluationPeriodDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class ProgramEvaluationPeriodDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProgramEvaluationPeriodDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class ProgramEvaluationPeriodDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProgramEvaluationPeriodDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class ProgramEvaluationPeriodDescriptorsApi
     /**
      * Create request for operation 'postProgramEvaluationPeriodDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProgramEvaluationPeriodDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class ProgramEvaluationPeriodDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProgramEvaluationPeriodDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class ProgramEvaluationPeriodDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProgramEvaluationPeriodDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class ProgramEvaluationPeriodDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProgramEvaluationPeriodDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class ProgramEvaluationPeriodDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProgramEvaluationPeriodDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class ProgramEvaluationPeriodDescriptorsApi
      * Create request for operation 'putProgramEvaluationPeriodDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramEvaluationPeriodDescriptor $ed_fi_program_evaluation_period_descriptor The JSON representation of the \&quot;programEvaluationPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProgramEvaluationPeriodDescriptor'] to see the possible values for this operation
      *

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * QuestionFormDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class QuestionFormDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteQuestionFormDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class QuestionFormDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteQuestionFormDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class QuestionFormDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesQuestionFormDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiQuestionFormDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiQuestionFormDescriptorDelete[]
      */
     public function deletesQuestionFormDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesQuestionFormDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class QuestionFormDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesQuestionFormDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiQuestionFormDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiQuestionFormDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesQuestionFormDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesQuestionFormDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class QuestionFormDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiQuestionFormDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiQuestionFormDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiQuestionFormDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiQuestionFormDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class QuestionFormDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiQuestionFormDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiQuestionFormDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class QuestionFormDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiQuestionFormDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiQuestionFormDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class QuestionFormDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiQuestionFormDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiQuestionFormDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class QuestionFormDescriptorsApi
      */
     public function deletesQuestionFormDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesQuestionFormDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiQuestionFormDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiQuestionFormDescriptorDelete[]';
         $request = $this->deletesQuestionFormDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class QuestionFormDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getQuestionFormDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiQuestionFormDescriptor[]
+     * @return \Descriptors\Model\EdFiQuestionFormDescriptor[]
      */
     public function getQuestionFormDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $question_form_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getQuestionFormDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class QuestionFormDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getQuestionFormDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiQuestionFormDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiQuestionFormDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getQuestionFormDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $question_form_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getQuestionFormDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class QuestionFormDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiQuestionFormDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiQuestionFormDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiQuestionFormDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiQuestionFormDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class QuestionFormDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiQuestionFormDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiQuestionFormDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class QuestionFormDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiQuestionFormDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiQuestionFormDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class QuestionFormDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiQuestionFormDescriptor[]',
+                        '\Descriptors\Model\EdFiQuestionFormDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class QuestionFormDescriptorsApi
      */
     public function getQuestionFormDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $question_form_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getQuestionFormDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiQuestionFormDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiQuestionFormDescriptor[]';
         $request = $this->getQuestionFormDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $question_form_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class QuestionFormDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getQuestionFormDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiQuestionFormDescriptor
+     * @return \Descriptors\Model\EdFiQuestionFormDescriptor
      */
     public function getQuestionFormDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getQuestionFormDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class QuestionFormDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getQuestionFormDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiQuestionFormDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiQuestionFormDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getQuestionFormDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getQuestionFormDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class QuestionFormDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiQuestionFormDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiQuestionFormDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiQuestionFormDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiQuestionFormDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class QuestionFormDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiQuestionFormDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiQuestionFormDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class QuestionFormDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiQuestionFormDescriptor';
+            $returnType = '\Descriptors\Model\EdFiQuestionFormDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class QuestionFormDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiQuestionFormDescriptor',
+                        '\Descriptors\Model\EdFiQuestionFormDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class QuestionFormDescriptorsApi
      */
     public function getQuestionFormDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getQuestionFormDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiQuestionFormDescriptor';
+        $returnType = '\Descriptors\Model\EdFiQuestionFormDescriptor';
         $request = $this->getQuestionFormDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class QuestionFormDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesQuestionFormDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiQuestionFormDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiQuestionFormDescriptorKeyChange[]
      */
     public function keyChangesQuestionFormDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesQuestionFormDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class QuestionFormDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesQuestionFormDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiQuestionFormDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiQuestionFormDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesQuestionFormDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesQuestionFormDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class QuestionFormDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiQuestionFormDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiQuestionFormDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiQuestionFormDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiQuestionFormDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class QuestionFormDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiQuestionFormDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiQuestionFormDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class QuestionFormDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiQuestionFormDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiQuestionFormDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class QuestionFormDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiQuestionFormDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiQuestionFormDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class QuestionFormDescriptorsApi
      */
     public function keyChangesQuestionFormDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesQuestionFormDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiQuestionFormDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiQuestionFormDescriptorKeyChange[]';
         $request = $this->keyChangesQuestionFormDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class QuestionFormDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postQuestionFormDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class QuestionFormDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postQuestionFormDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class QuestionFormDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postQuestionFormDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class QuestionFormDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postQuestionFormDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class QuestionFormDescriptorsApi
     /**
      * Create request for operation 'postQuestionFormDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postQuestionFormDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class QuestionFormDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putQuestionFormDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class QuestionFormDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putQuestionFormDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class QuestionFormDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putQuestionFormDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class QuestionFormDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putQuestionFormDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class QuestionFormDescriptorsApi
      * Create request for operation 'putQuestionFormDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiQuestionFormDescriptor $ed_fi_question_form_descriptor The JSON representation of the \&quot;questionFormDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putQuestionFormDescriptor'] to see the possible values for this operation
      *

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * TitleIPartAParticipantDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class TitleIPartAParticipantDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTitleIPartAParticipantDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class TitleIPartAParticipantDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTitleIPartAParticipantDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class TitleIPartAParticipantDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesTitleIPartAParticipantDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorDelete[]
      */
     public function deletesTitleIPartAParticipantDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesTitleIPartAParticipantDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class TitleIPartAParticipantDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesTitleIPartAParticipantDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesTitleIPartAParticipantDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesTitleIPartAParticipantDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class TitleIPartAParticipantDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class TitleIPartAParticipantDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class TitleIPartAParticipantDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class TitleIPartAParticipantDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class TitleIPartAParticipantDescriptorsApi
      */
     public function deletesTitleIPartAParticipantDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesTitleIPartAParticipantDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorDelete[]';
         $request = $this->deletesTitleIPartAParticipantDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class TitleIPartAParticipantDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTitleIPartAParticipantDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor[]
+     * @return \Descriptors\Model\EdFiTitleIPartAParticipantDescriptor[]
      */
     public function getTitleIPartAParticipantDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $title_i_part_a_participant_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getTitleIPartAParticipantDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class TitleIPartAParticipantDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTitleIPartAParticipantDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiTitleIPartAParticipantDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getTitleIPartAParticipantDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $title_i_part_a_participant_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getTitleIPartAParticipantDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class TitleIPartAParticipantDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiTitleIPartAParticipantDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiTitleIPartAParticipantDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class TitleIPartAParticipantDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiTitleIPartAParticipantDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class TitleIPartAParticipantDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiTitleIPartAParticipantDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class TitleIPartAParticipantDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor[]',
+                        '\Descriptors\Model\EdFiTitleIPartAParticipantDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class TitleIPartAParticipantDescriptorsApi
      */
     public function getTitleIPartAParticipantDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $title_i_part_a_participant_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getTitleIPartAParticipantDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiTitleIPartAParticipantDescriptor[]';
         $request = $this->getTitleIPartAParticipantDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $title_i_part_a_participant_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class TitleIPartAParticipantDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTitleIPartAParticipantDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor
+     * @return \Descriptors\Model\EdFiTitleIPartAParticipantDescriptor
      */
     public function getTitleIPartAParticipantDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getTitleIPartAParticipantDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class TitleIPartAParticipantDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTitleIPartAParticipantDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiTitleIPartAParticipantDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTitleIPartAParticipantDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getTitleIPartAParticipantDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class TitleIPartAParticipantDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiTitleIPartAParticipantDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiTitleIPartAParticipantDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class TitleIPartAParticipantDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiTitleIPartAParticipantDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class TitleIPartAParticipantDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor';
+            $returnType = '\Descriptors\Model\EdFiTitleIPartAParticipantDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class TitleIPartAParticipantDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor',
+                        '\Descriptors\Model\EdFiTitleIPartAParticipantDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class TitleIPartAParticipantDescriptorsApi
      */
     public function getTitleIPartAParticipantDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getTitleIPartAParticipantDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor';
+        $returnType = '\Descriptors\Model\EdFiTitleIPartAParticipantDescriptor';
         $request = $this->getTitleIPartAParticipantDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class TitleIPartAParticipantDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesTitleIPartAParticipantDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorKeyChange[]
      */
     public function keyChangesTitleIPartAParticipantDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesTitleIPartAParticipantDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class TitleIPartAParticipantDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesTitleIPartAParticipantDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesTitleIPartAParticipantDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesTitleIPartAParticipantDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class TitleIPartAParticipantDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class TitleIPartAParticipantDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class TitleIPartAParticipantDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class TitleIPartAParticipantDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class TitleIPartAParticipantDescriptorsApi
      */
     public function keyChangesTitleIPartAParticipantDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesTitleIPartAParticipantDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiTitleIPartAParticipantDescriptorKeyChange[]';
         $request = $this->keyChangesTitleIPartAParticipantDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class TitleIPartAParticipantDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postTitleIPartAParticipantDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class TitleIPartAParticipantDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postTitleIPartAParticipantDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class TitleIPartAParticipantDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postTitleIPartAParticipantDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class TitleIPartAParticipantDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postTitleIPartAParticipantDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class TitleIPartAParticipantDescriptorsApi
     /**
      * Create request for operation 'postTitleIPartAParticipantDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postTitleIPartAParticipantDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class TitleIPartAParticipantDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putTitleIPartAParticipantDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class TitleIPartAParticipantDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putTitleIPartAParticipantDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class TitleIPartAParticipantDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putTitleIPartAParticipantDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class TitleIPartAParticipantDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putTitleIPartAParticipantDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class TitleIPartAParticipantDescriptorsApi
      * Create request for operation 'putTitleIPartAParticipantDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTitleIPartAParticipantDescriptor $ed_fi_title_i_part_a_participant_descriptor The JSON representation of the \&quot;titleIPartAParticipantDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putTitleIPartAParticipantDescriptor'] to see the possible values for this operation
      *

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Descriptors\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Descriptors\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiDisabilityDesignationDescriptorKeyChange Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class TrackedChangesEdFiDisabilityDesignationDescriptorKeyChange implements Mode
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'old_key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDesignationDescriptorKey',
-        'new_key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDesignationDescriptorKey'
+        'old_key_values' => '\Descriptors\Model\TrackedChangesEdFiDisabilityDesignationDescriptorKey',
+        'new_key_values' => '\Descriptors\Model\TrackedChangesEdFiDisabilityDesignationDescriptorKey'
     ];
 
     /**
@@ -367,7 +367,7 @@ class TrackedChangesEdFiDisabilityDesignationDescriptorKeyChange implements Mode
     /**
      * Gets old_key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDesignationDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesEdFiDisabilityDesignationDescriptorKey|null
      */
     public function getOldKeyValues()
     {
@@ -377,7 +377,7 @@ class TrackedChangesEdFiDisabilityDesignationDescriptorKeyChange implements Mode
     /**
      * Sets old_key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDesignationDescriptorKey|null $old_key_values old_key_values
+     * @param \Descriptors\Model\TrackedChangesEdFiDisabilityDesignationDescriptorKey|null $old_key_values old_key_values
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class TrackedChangesEdFiDisabilityDesignationDescriptorKeyChange implements Mode
     /**
      * Gets new_key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDesignationDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesEdFiDisabilityDesignationDescriptorKey|null
      */
     public function getNewKeyValues()
     {
@@ -404,7 +404,7 @@ class TrackedChangesEdFiDisabilityDesignationDescriptorKeyChange implements Mode
     /**
      * Sets new_key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDesignationDescriptorKey|null $new_key_values new_key_values
+     * @param \Descriptors\Model\TrackedChangesEdFiDisabilityDesignationDescriptorKey|null $new_key_values new_key_values
      *
      * @return self
      */

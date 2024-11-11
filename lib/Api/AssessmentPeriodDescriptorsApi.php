@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * AssessmentPeriodDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class AssessmentPeriodDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAssessmentPeriodDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class AssessmentPeriodDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAssessmentPeriodDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class AssessmentPeriodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAssessmentPeriodDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiAssessmentPeriodDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiAssessmentPeriodDescriptorDelete[]
      */
     public function deletesAssessmentPeriodDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAssessmentPeriodDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class AssessmentPeriodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAssessmentPeriodDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiAssessmentPeriodDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiAssessmentPeriodDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesAssessmentPeriodDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAssessmentPeriodDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class AssessmentPeriodDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentPeriodDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiAssessmentPeriodDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentPeriodDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiAssessmentPeriodDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class AssessmentPeriodDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentPeriodDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiAssessmentPeriodDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class AssessmentPeriodDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentPeriodDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiAssessmentPeriodDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class AssessmentPeriodDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentPeriodDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiAssessmentPeriodDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class AssessmentPeriodDescriptorsApi
      */
     public function deletesAssessmentPeriodDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAssessmentPeriodDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentPeriodDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiAssessmentPeriodDescriptorDelete[]';
         $request = $this->deletesAssessmentPeriodDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class AssessmentPeriodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssessmentPeriodDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor[]
+     * @return \Descriptors\Model\EdFiAssessmentPeriodDescriptor[]
      */
     public function getAssessmentPeriodDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $assessment_period_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentPeriodDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class AssessmentPeriodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssessmentPeriodDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiAssessmentPeriodDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssessmentPeriodDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $assessment_period_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentPeriodDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class AssessmentPeriodDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiAssessmentPeriodDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiAssessmentPeriodDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class AssessmentPeriodDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiAssessmentPeriodDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class AssessmentPeriodDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiAssessmentPeriodDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class AssessmentPeriodDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor[]',
+                        '\Descriptors\Model\EdFiAssessmentPeriodDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class AssessmentPeriodDescriptorsApi
      */
     public function getAssessmentPeriodDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $assessment_period_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentPeriodDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiAssessmentPeriodDescriptor[]';
         $request = $this->getAssessmentPeriodDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $assessment_period_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class AssessmentPeriodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssessmentPeriodDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor
+     * @return \Descriptors\Model\EdFiAssessmentPeriodDescriptor
      */
     public function getAssessmentPeriodDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentPeriodDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class AssessmentPeriodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssessmentPeriodDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiAssessmentPeriodDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssessmentPeriodDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentPeriodDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class AssessmentPeriodDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiAssessmentPeriodDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiAssessmentPeriodDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class AssessmentPeriodDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiAssessmentPeriodDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class AssessmentPeriodDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor';
+            $returnType = '\Descriptors\Model\EdFiAssessmentPeriodDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class AssessmentPeriodDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor',
+                        '\Descriptors\Model\EdFiAssessmentPeriodDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class AssessmentPeriodDescriptorsApi
      */
     public function getAssessmentPeriodDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentPeriodDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor';
+        $returnType = '\Descriptors\Model\EdFiAssessmentPeriodDescriptor';
         $request = $this->getAssessmentPeriodDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class AssessmentPeriodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAssessmentPeriodDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiAssessmentPeriodDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiAssessmentPeriodDescriptorKeyChange[]
      */
     public function keyChangesAssessmentPeriodDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAssessmentPeriodDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class AssessmentPeriodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAssessmentPeriodDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiAssessmentPeriodDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiAssessmentPeriodDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesAssessmentPeriodDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAssessmentPeriodDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class AssessmentPeriodDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentPeriodDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiAssessmentPeriodDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentPeriodDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiAssessmentPeriodDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class AssessmentPeriodDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentPeriodDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiAssessmentPeriodDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class AssessmentPeriodDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentPeriodDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiAssessmentPeriodDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class AssessmentPeriodDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentPeriodDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiAssessmentPeriodDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class AssessmentPeriodDescriptorsApi
      */
     public function keyChangesAssessmentPeriodDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAssessmentPeriodDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentPeriodDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiAssessmentPeriodDescriptorKeyChange[]';
         $request = $this->keyChangesAssessmentPeriodDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class AssessmentPeriodDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAssessmentPeriodDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class AssessmentPeriodDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAssessmentPeriodDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class AssessmentPeriodDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAssessmentPeriodDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class AssessmentPeriodDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAssessmentPeriodDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class AssessmentPeriodDescriptorsApi
     /**
      * Create request for operation 'postAssessmentPeriodDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAssessmentPeriodDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class AssessmentPeriodDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAssessmentPeriodDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class AssessmentPeriodDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAssessmentPeriodDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class AssessmentPeriodDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAssessmentPeriodDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class AssessmentPeriodDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAssessmentPeriodDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class AssessmentPeriodDescriptorsApi
      * Create request for operation 'putAssessmentPeriodDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentPeriodDescriptor $ed_fi_assessment_period_descriptor The JSON representation of the \&quot;assessmentPeriodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAssessmentPeriodDescriptor'] to see the possible values for this operation
      *

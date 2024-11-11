@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * EventCircumstanceDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class EventCircumstanceDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEventCircumstanceDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class EventCircumstanceDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEventCircumstanceDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class EventCircumstanceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEventCircumstanceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEventCircumstanceDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiEventCircumstanceDescriptorDelete[]
      */
     public function deletesEventCircumstanceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEventCircumstanceDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class EventCircumstanceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEventCircumstanceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiEventCircumstanceDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiEventCircumstanceDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesEventCircumstanceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEventCircumstanceDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class EventCircumstanceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiEventCircumstanceDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiEventCircumstanceDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiEventCircumstanceDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiEventCircumstanceDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class EventCircumstanceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiEventCircumstanceDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiEventCircumstanceDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class EventCircumstanceDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEventCircumstanceDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiEventCircumstanceDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class EventCircumstanceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiEventCircumstanceDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiEventCircumstanceDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class EventCircumstanceDescriptorsApi
      */
     public function deletesEventCircumstanceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEventCircumstanceDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEventCircumstanceDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiEventCircumstanceDescriptorDelete[]';
         $request = $this->deletesEventCircumstanceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class EventCircumstanceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEventCircumstanceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor[]
+     * @return \Descriptors\Model\EdFiEventCircumstanceDescriptor[]
      */
     public function getEventCircumstanceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $event_circumstance_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEventCircumstanceDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class EventCircumstanceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEventCircumstanceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiEventCircumstanceDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventCircumstanceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $event_circumstance_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEventCircumstanceDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class EventCircumstanceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiEventCircumstanceDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiEventCircumstanceDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class EventCircumstanceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiEventCircumstanceDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class EventCircumstanceDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiEventCircumstanceDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class EventCircumstanceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor[]',
+                        '\Descriptors\Model\EdFiEventCircumstanceDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class EventCircumstanceDescriptorsApi
      */
     public function getEventCircumstanceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $event_circumstance_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEventCircumstanceDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiEventCircumstanceDescriptor[]';
         $request = $this->getEventCircumstanceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $event_circumstance_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class EventCircumstanceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEventCircumstanceDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor
+     * @return \Descriptors\Model\EdFiEventCircumstanceDescriptor
      */
     public function getEventCircumstanceDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEventCircumstanceDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class EventCircumstanceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEventCircumstanceDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiEventCircumstanceDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventCircumstanceDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEventCircumstanceDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class EventCircumstanceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiEventCircumstanceDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiEventCircumstanceDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class EventCircumstanceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiEventCircumstanceDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class EventCircumstanceDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor';
+            $returnType = '\Descriptors\Model\EdFiEventCircumstanceDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class EventCircumstanceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor',
+                        '\Descriptors\Model\EdFiEventCircumstanceDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class EventCircumstanceDescriptorsApi
      */
     public function getEventCircumstanceDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEventCircumstanceDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor';
+        $returnType = '\Descriptors\Model\EdFiEventCircumstanceDescriptor';
         $request = $this->getEventCircumstanceDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class EventCircumstanceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEventCircumstanceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEventCircumstanceDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiEventCircumstanceDescriptorKeyChange[]
      */
     public function keyChangesEventCircumstanceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEventCircumstanceDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class EventCircumstanceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEventCircumstanceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiEventCircumstanceDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiEventCircumstanceDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesEventCircumstanceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEventCircumstanceDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class EventCircumstanceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiEventCircumstanceDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiEventCircumstanceDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiEventCircumstanceDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiEventCircumstanceDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class EventCircumstanceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiEventCircumstanceDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiEventCircumstanceDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class EventCircumstanceDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEventCircumstanceDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiEventCircumstanceDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class EventCircumstanceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiEventCircumstanceDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiEventCircumstanceDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class EventCircumstanceDescriptorsApi
      */
     public function keyChangesEventCircumstanceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEventCircumstanceDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEventCircumstanceDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiEventCircumstanceDescriptorKeyChange[]';
         $request = $this->keyChangesEventCircumstanceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class EventCircumstanceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEventCircumstanceDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class EventCircumstanceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEventCircumstanceDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class EventCircumstanceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEventCircumstanceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class EventCircumstanceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEventCircumstanceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class EventCircumstanceDescriptorsApi
     /**
      * Create request for operation 'postEventCircumstanceDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEventCircumstanceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class EventCircumstanceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEventCircumstanceDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class EventCircumstanceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEventCircumstanceDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class EventCircumstanceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEventCircumstanceDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class EventCircumstanceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEventCircumstanceDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class EventCircumstanceDescriptorsApi
      * Create request for operation 'putEventCircumstanceDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEventCircumstanceDescriptor $ed_fi_event_circumstance_descriptor The JSON representation of the \&quot;eventCircumstanceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEventCircumstanceDescriptor'] to see the possible values for this operation
      *

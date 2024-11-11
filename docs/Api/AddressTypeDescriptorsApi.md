@@ -1,4 +1,4 @@
-# OpenAPI\Client\AddressTypeDescriptorsApi
+# Descriptors\AddressTypeDescriptorsApi
 
 All URIs are relative to https://api.ed-fi.org:443/v7.1/api/data/v3, except if the operation defines another base path.
 
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AddressTypeDescriptorsApi(
+$apiInstance = new Descriptors\Api\AddressTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -77,7 +77,7 @@ void (empty response body)
 ## `deletesAddressTypeDescriptors()`
 
 ```php
-deletesAddressTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiAddressTypeDescriptorDelete[]
+deletesAddressTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiAddressTypeDescriptorDelete[]
 ```
 
 Retrieves deleted resources based on change version.
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AddressTypeDescriptorsApi(
+$apiInstance = new Descriptors\Api\AddressTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrackedChangesEdFiAddressTypeDescriptorDelete[]**](../Model/TrackedChangesEdFiAddressTypeDescriptorDelete.md)
+[**\Descriptors\Model\TrackedChangesEdFiAddressTypeDescriptorDelete[]**](../Model/TrackedChangesEdFiAddressTypeDescriptorDelete.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `getAddressTypeDescriptors()`
 
 ```php
-getAddressTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $address_type_descriptor_id, $use_snapshot): \OpenAPI\Client\Model\EdFiAddressTypeDescriptor[]
+getAddressTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $address_type_descriptor_id, $use_snapshot): \Descriptors\Model\EdFiAddressTypeDescriptor[]
 ```
 
 Retrieves specific resources using the resource's property values (using the \"Get\" pattern).
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AddressTypeDescriptorsApi(
+$apiInstance = new Descriptors\Api\AddressTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,7 +201,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EdFiAddressTypeDescriptor[]**](../Model/EdFiAddressTypeDescriptor.md)
+[**\Descriptors\Model\EdFiAddressTypeDescriptor[]**](../Model/EdFiAddressTypeDescriptor.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ try {
 ## `getAddressTypeDescriptorsById()`
 
 ```php
-getAddressTypeDescriptorsById($id, $if_none_match, $use_snapshot): \OpenAPI\Client\Model\EdFiAddressTypeDescriptor
+getAddressTypeDescriptorsById($id, $if_none_match, $use_snapshot): \Descriptors\Model\EdFiAddressTypeDescriptor
 ```
 
 Retrieves a specific resource using the resource's identifier (using the \"Get By Id\" pattern).
@@ -234,10 +234,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AddressTypeDescriptorsApi(
+$apiInstance = new Descriptors\Api\AddressTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,7 +265,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EdFiAddressTypeDescriptor**](../Model/EdFiAddressTypeDescriptor.md)
+[**\Descriptors\Model\EdFiAddressTypeDescriptor**](../Model/EdFiAddressTypeDescriptor.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ try {
 ## `keyChangesAddressTypeDescriptors()`
 
 ```php
-keyChangesAddressTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiAddressTypeDescriptorKeyChange[]
+keyChangesAddressTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiAddressTypeDescriptorKeyChange[]
 ```
 
 Retrieves resources key changes based on change version.
@@ -298,10 +298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AddressTypeDescriptorsApi(
+$apiInstance = new Descriptors\Api\AddressTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -335,7 +335,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrackedChangesEdFiAddressTypeDescriptorKeyChange[]**](../Model/TrackedChangesEdFiAddressTypeDescriptorKeyChange.md)
+[**\Descriptors\Model\TrackedChangesEdFiAddressTypeDescriptorKeyChange[]**](../Model/TrackedChangesEdFiAddressTypeDescriptorKeyChange.md)
 
 ### Authorization
 
@@ -368,16 +368,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AddressTypeDescriptorsApi(
+$apiInstance = new Descriptors\Api\AddressTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ed_fi_address_type_descriptor = new \OpenAPI\Client\Model\EdFiAddressTypeDescriptor(); // \OpenAPI\Client\Model\EdFiAddressTypeDescriptor | The JSON representation of the \"addressTypeDescriptor\" resource to be created or updated.
+$ed_fi_address_type_descriptor = new \Descriptors\Model\EdFiAddressTypeDescriptor(); // \Descriptors\Model\EdFiAddressTypeDescriptor | The JSON representation of the \"addressTypeDescriptor\" resource to be created or updated.
 
 try {
     $apiInstance->postAddressTypeDescriptor($ed_fi_address_type_descriptor);
@@ -390,7 +390,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ed_fi_address_type_descriptor** | [**\OpenAPI\Client\Model\EdFiAddressTypeDescriptor**](../Model/EdFiAddressTypeDescriptor.md)| The JSON representation of the \&quot;addressTypeDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_address_type_descriptor** | [**\Descriptors\Model\EdFiAddressTypeDescriptor**](../Model/EdFiAddressTypeDescriptor.md)| The JSON representation of the \&quot;addressTypeDescriptor\&quot; resource to be created or updated. | |
 
 ### Return type
 
@@ -427,17 +427,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AddressTypeDescriptorsApi(
+$apiInstance = new Descriptors\Api\AddressTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string | A resource identifier that uniquely identifies the resource.
-$ed_fi_address_type_descriptor = new \OpenAPI\Client\Model\EdFiAddressTypeDescriptor(); // \OpenAPI\Client\Model\EdFiAddressTypeDescriptor | The JSON representation of the \"addressTypeDescriptor\" resource to be created or updated.
+$ed_fi_address_type_descriptor = new \Descriptors\Model\EdFiAddressTypeDescriptor(); // \Descriptors\Model\EdFiAddressTypeDescriptor | The JSON representation of the \"addressTypeDescriptor\" resource to be created or updated.
 $if_match = 'if_match_example'; // string | The ETag header value used to prevent the PUT from updating a resource modified by another consumer.
 
 try {
@@ -452,7 +452,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| A resource identifier that uniquely identifies the resource. | |
-| **ed_fi_address_type_descriptor** | [**\OpenAPI\Client\Model\EdFiAddressTypeDescriptor**](../Model/EdFiAddressTypeDescriptor.md)| The JSON representation of the \&quot;addressTypeDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_address_type_descriptor** | [**\Descriptors\Model\EdFiAddressTypeDescriptor**](../Model/EdFiAddressTypeDescriptor.md)| The JSON representation of the \&quot;addressTypeDescriptor\&quot; resource to be created or updated. | |
 | **if_match** | **string**| The ETag header value used to prevent the PUT from updating a resource modified by another consumer. | [optional] |
 
 ### Return type

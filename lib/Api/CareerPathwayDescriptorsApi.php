@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * CareerPathwayDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class CareerPathwayDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCareerPathwayDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class CareerPathwayDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCareerPathwayDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class CareerPathwayDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCareerPathwayDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiCareerPathwayDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiCareerPathwayDescriptorDelete[]
      */
     public function deletesCareerPathwayDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCareerPathwayDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class CareerPathwayDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCareerPathwayDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiCareerPathwayDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiCareerPathwayDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesCareerPathwayDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCareerPathwayDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class CareerPathwayDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiCareerPathwayDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiCareerPathwayDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiCareerPathwayDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiCareerPathwayDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class CareerPathwayDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiCareerPathwayDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiCareerPathwayDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class CareerPathwayDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCareerPathwayDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiCareerPathwayDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class CareerPathwayDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiCareerPathwayDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiCareerPathwayDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class CareerPathwayDescriptorsApi
      */
     public function deletesCareerPathwayDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCareerPathwayDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCareerPathwayDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiCareerPathwayDescriptorDelete[]';
         $request = $this->deletesCareerPathwayDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class CareerPathwayDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCareerPathwayDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiCareerPathwayDescriptor[]
+     * @return \Descriptors\Model\EdFiCareerPathwayDescriptor[]
      */
     public function getCareerPathwayDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $career_pathway_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCareerPathwayDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class CareerPathwayDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCareerPathwayDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiCareerPathwayDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiCareerPathwayDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getCareerPathwayDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $career_pathway_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCareerPathwayDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class CareerPathwayDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiCareerPathwayDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiCareerPathwayDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiCareerPathwayDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiCareerPathwayDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class CareerPathwayDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiCareerPathwayDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiCareerPathwayDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class CareerPathwayDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiCareerPathwayDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiCareerPathwayDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class CareerPathwayDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiCareerPathwayDescriptor[]',
+                        '\Descriptors\Model\EdFiCareerPathwayDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class CareerPathwayDescriptorsApi
      */
     public function getCareerPathwayDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $career_pathway_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCareerPathwayDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiCareerPathwayDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiCareerPathwayDescriptor[]';
         $request = $this->getCareerPathwayDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $career_pathway_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class CareerPathwayDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCareerPathwayDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiCareerPathwayDescriptor
+     * @return \Descriptors\Model\EdFiCareerPathwayDescriptor
      */
     public function getCareerPathwayDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCareerPathwayDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class CareerPathwayDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCareerPathwayDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiCareerPathwayDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiCareerPathwayDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCareerPathwayDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCareerPathwayDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class CareerPathwayDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiCareerPathwayDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiCareerPathwayDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiCareerPathwayDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiCareerPathwayDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class CareerPathwayDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiCareerPathwayDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiCareerPathwayDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class CareerPathwayDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiCareerPathwayDescriptor';
+            $returnType = '\Descriptors\Model\EdFiCareerPathwayDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class CareerPathwayDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiCareerPathwayDescriptor',
+                        '\Descriptors\Model\EdFiCareerPathwayDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class CareerPathwayDescriptorsApi
      */
     public function getCareerPathwayDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCareerPathwayDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiCareerPathwayDescriptor';
+        $returnType = '\Descriptors\Model\EdFiCareerPathwayDescriptor';
         $request = $this->getCareerPathwayDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class CareerPathwayDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCareerPathwayDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiCareerPathwayDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiCareerPathwayDescriptorKeyChange[]
      */
     public function keyChangesCareerPathwayDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCareerPathwayDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class CareerPathwayDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCareerPathwayDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiCareerPathwayDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiCareerPathwayDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesCareerPathwayDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCareerPathwayDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class CareerPathwayDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiCareerPathwayDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiCareerPathwayDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiCareerPathwayDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiCareerPathwayDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class CareerPathwayDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiCareerPathwayDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiCareerPathwayDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class CareerPathwayDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCareerPathwayDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiCareerPathwayDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class CareerPathwayDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiCareerPathwayDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiCareerPathwayDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class CareerPathwayDescriptorsApi
      */
     public function keyChangesCareerPathwayDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCareerPathwayDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCareerPathwayDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiCareerPathwayDescriptorKeyChange[]';
         $request = $this->keyChangesCareerPathwayDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class CareerPathwayDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCareerPathwayDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class CareerPathwayDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCareerPathwayDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class CareerPathwayDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCareerPathwayDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class CareerPathwayDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCareerPathwayDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class CareerPathwayDescriptorsApi
     /**
      * Create request for operation 'postCareerPathwayDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCareerPathwayDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class CareerPathwayDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCareerPathwayDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class CareerPathwayDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCareerPathwayDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class CareerPathwayDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCareerPathwayDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class CareerPathwayDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCareerPathwayDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class CareerPathwayDescriptorsApi
      * Create request for operation 'putCareerPathwayDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCareerPathwayDescriptor $ed_fi_career_pathway_descriptor The JSON representation of the \&quot;careerPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCareerPathwayDescriptor'] to see the possible values for this operation
      *

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * DiplomaLevelDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class DiplomaLevelDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDiplomaLevelDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class DiplomaLevelDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDiplomaLevelDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class DiplomaLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesDiplomaLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiDiplomaLevelDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiDiplomaLevelDescriptorDelete[]
      */
     public function deletesDiplomaLevelDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesDiplomaLevelDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class DiplomaLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesDiplomaLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiDiplomaLevelDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiDiplomaLevelDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesDiplomaLevelDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesDiplomaLevelDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class DiplomaLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiDiplomaLevelDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiDiplomaLevelDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiDiplomaLevelDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiDiplomaLevelDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class DiplomaLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiDiplomaLevelDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiDiplomaLevelDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class DiplomaLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiDiplomaLevelDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiDiplomaLevelDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class DiplomaLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiDiplomaLevelDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiDiplomaLevelDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class DiplomaLevelDescriptorsApi
      */
     public function deletesDiplomaLevelDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesDiplomaLevelDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiDiplomaLevelDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiDiplomaLevelDescriptorDelete[]';
         $request = $this->deletesDiplomaLevelDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class DiplomaLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDiplomaLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor[]
+     * @return \Descriptors\Model\EdFiDiplomaLevelDescriptor[]
      */
     public function getDiplomaLevelDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $diploma_level_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getDiplomaLevelDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class DiplomaLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDiplomaLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiDiplomaLevelDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getDiplomaLevelDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $diploma_level_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getDiplomaLevelDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class DiplomaLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiDiplomaLevelDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiDiplomaLevelDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class DiplomaLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiDiplomaLevelDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class DiplomaLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiDiplomaLevelDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class DiplomaLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor[]',
+                        '\Descriptors\Model\EdFiDiplomaLevelDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class DiplomaLevelDescriptorsApi
      */
     public function getDiplomaLevelDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $diploma_level_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getDiplomaLevelDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiDiplomaLevelDescriptor[]';
         $request = $this->getDiplomaLevelDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $diploma_level_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class DiplomaLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDiplomaLevelDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor
+     * @return \Descriptors\Model\EdFiDiplomaLevelDescriptor
      */
     public function getDiplomaLevelDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getDiplomaLevelDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class DiplomaLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDiplomaLevelDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiDiplomaLevelDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDiplomaLevelDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getDiplomaLevelDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class DiplomaLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiDiplomaLevelDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiDiplomaLevelDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class DiplomaLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiDiplomaLevelDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class DiplomaLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor';
+            $returnType = '\Descriptors\Model\EdFiDiplomaLevelDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class DiplomaLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor',
+                        '\Descriptors\Model\EdFiDiplomaLevelDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class DiplomaLevelDescriptorsApi
      */
     public function getDiplomaLevelDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getDiplomaLevelDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor';
+        $returnType = '\Descriptors\Model\EdFiDiplomaLevelDescriptor';
         $request = $this->getDiplomaLevelDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class DiplomaLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesDiplomaLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiDiplomaLevelDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiDiplomaLevelDescriptorKeyChange[]
      */
     public function keyChangesDiplomaLevelDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesDiplomaLevelDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class DiplomaLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesDiplomaLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiDiplomaLevelDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiDiplomaLevelDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesDiplomaLevelDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesDiplomaLevelDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class DiplomaLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiDiplomaLevelDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiDiplomaLevelDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiDiplomaLevelDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiDiplomaLevelDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class DiplomaLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiDiplomaLevelDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiDiplomaLevelDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class DiplomaLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiDiplomaLevelDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiDiplomaLevelDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class DiplomaLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiDiplomaLevelDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiDiplomaLevelDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class DiplomaLevelDescriptorsApi
      */
     public function keyChangesDiplomaLevelDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesDiplomaLevelDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiDiplomaLevelDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiDiplomaLevelDescriptorKeyChange[]';
         $request = $this->keyChangesDiplomaLevelDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class DiplomaLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDiplomaLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class DiplomaLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDiplomaLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class DiplomaLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDiplomaLevelDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class DiplomaLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDiplomaLevelDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class DiplomaLevelDescriptorsApi
     /**
      * Create request for operation 'postDiplomaLevelDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDiplomaLevelDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class DiplomaLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDiplomaLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class DiplomaLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDiplomaLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class DiplomaLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDiplomaLevelDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class DiplomaLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDiplomaLevelDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class DiplomaLevelDescriptorsApi
      * Create request for operation 'putDiplomaLevelDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiplomaLevelDescriptor $ed_fi_diploma_level_descriptor The JSON representation of the \&quot;diplomaLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDiplomaLevelDescriptor'] to see the possible values for this operation
      *

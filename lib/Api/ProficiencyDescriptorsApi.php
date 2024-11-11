@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * ProficiencyDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class ProficiencyDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteProficiencyDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class ProficiencyDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteProficiencyDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class ProficiencyDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesProficiencyDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiProficiencyDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiProficiencyDescriptorDelete[]
      */
     public function deletesProficiencyDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesProficiencyDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class ProficiencyDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesProficiencyDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiProficiencyDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiProficiencyDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesProficiencyDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesProficiencyDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class ProficiencyDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiProficiencyDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiProficiencyDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiProficiencyDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiProficiencyDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class ProficiencyDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiProficiencyDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiProficiencyDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class ProficiencyDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiProficiencyDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiProficiencyDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class ProficiencyDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiProficiencyDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiProficiencyDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class ProficiencyDescriptorsApi
      */
     public function deletesProficiencyDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesProficiencyDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiProficiencyDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiProficiencyDescriptorDelete[]';
         $request = $this->deletesProficiencyDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class ProficiencyDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProficiencyDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiProficiencyDescriptor[]
+     * @return \Descriptors\Model\EdFiProficiencyDescriptor[]
      */
     public function getProficiencyDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $proficiency_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getProficiencyDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class ProficiencyDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProficiencyDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiProficiencyDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiProficiencyDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getProficiencyDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $proficiency_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getProficiencyDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class ProficiencyDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiProficiencyDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiProficiencyDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiProficiencyDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiProficiencyDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class ProficiencyDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiProficiencyDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiProficiencyDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class ProficiencyDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiProficiencyDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiProficiencyDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class ProficiencyDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiProficiencyDescriptor[]',
+                        '\Descriptors\Model\EdFiProficiencyDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class ProficiencyDescriptorsApi
      */
     public function getProficiencyDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $proficiency_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getProficiencyDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiProficiencyDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiProficiencyDescriptor[]';
         $request = $this->getProficiencyDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $proficiency_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class ProficiencyDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProficiencyDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiProficiencyDescriptor
+     * @return \Descriptors\Model\EdFiProficiencyDescriptor
      */
     public function getProficiencyDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getProficiencyDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class ProficiencyDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProficiencyDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiProficiencyDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiProficiencyDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProficiencyDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getProficiencyDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class ProficiencyDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiProficiencyDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiProficiencyDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiProficiencyDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiProficiencyDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class ProficiencyDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiProficiencyDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiProficiencyDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class ProficiencyDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiProficiencyDescriptor';
+            $returnType = '\Descriptors\Model\EdFiProficiencyDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class ProficiencyDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiProficiencyDescriptor',
+                        '\Descriptors\Model\EdFiProficiencyDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class ProficiencyDescriptorsApi
      */
     public function getProficiencyDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getProficiencyDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiProficiencyDescriptor';
+        $returnType = '\Descriptors\Model\EdFiProficiencyDescriptor';
         $request = $this->getProficiencyDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class ProficiencyDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesProficiencyDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiProficiencyDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiProficiencyDescriptorKeyChange[]
      */
     public function keyChangesProficiencyDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesProficiencyDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class ProficiencyDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesProficiencyDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiProficiencyDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiProficiencyDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesProficiencyDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesProficiencyDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class ProficiencyDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiProficiencyDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiProficiencyDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiProficiencyDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiProficiencyDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class ProficiencyDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiProficiencyDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiProficiencyDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class ProficiencyDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiProficiencyDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiProficiencyDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class ProficiencyDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiProficiencyDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiProficiencyDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class ProficiencyDescriptorsApi
      */
     public function keyChangesProficiencyDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesProficiencyDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiProficiencyDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiProficiencyDescriptorKeyChange[]';
         $request = $this->keyChangesProficiencyDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class ProficiencyDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProficiencyDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class ProficiencyDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProficiencyDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class ProficiencyDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProficiencyDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class ProficiencyDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProficiencyDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class ProficiencyDescriptorsApi
     /**
      * Create request for operation 'postProficiencyDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProficiencyDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class ProficiencyDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProficiencyDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class ProficiencyDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProficiencyDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class ProficiencyDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProficiencyDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class ProficiencyDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProficiencyDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class ProficiencyDescriptorsApi
      * Create request for operation 'putProficiencyDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProficiencyDescriptor $ed_fi_proficiency_descriptor The JSON representation of the \&quot;proficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProficiencyDescriptor'] to see the possible values for this operation
      *

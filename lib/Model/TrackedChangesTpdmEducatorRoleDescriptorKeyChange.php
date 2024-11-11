@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Descriptors\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Descriptors\ObjectSerializer;
 
 /**
  * TrackedChangesTpdmEducatorRoleDescriptorKeyChange Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class TrackedChangesTpdmEducatorRoleDescriptorKeyChange implements ModelInterfac
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'old_key_values' => '\OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorKey',
-        'new_key_values' => '\OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorKey'
+        'old_key_values' => '\Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorKey',
+        'new_key_values' => '\Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorKey'
     ];
 
     /**
@@ -367,7 +367,7 @@ class TrackedChangesTpdmEducatorRoleDescriptorKeyChange implements ModelInterfac
     /**
      * Gets old_key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorKey|null
      */
     public function getOldKeyValues()
     {
@@ -377,7 +377,7 @@ class TrackedChangesTpdmEducatorRoleDescriptorKeyChange implements ModelInterfac
     /**
      * Sets old_key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorKey|null $old_key_values old_key_values
+     * @param \Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorKey|null $old_key_values old_key_values
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class TrackedChangesTpdmEducatorRoleDescriptorKeyChange implements ModelInterfac
     /**
      * Gets new_key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorKey|null
      */
     public function getNewKeyValues()
     {
@@ -404,7 +404,7 @@ class TrackedChangesTpdmEducatorRoleDescriptorKeyChange implements ModelInterfac
     /**
      * Sets new_key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorKey|null $new_key_values new_key_values
+     * @param \Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorKey|null $new_key_values new_key_values
      *
      * @return self
      */

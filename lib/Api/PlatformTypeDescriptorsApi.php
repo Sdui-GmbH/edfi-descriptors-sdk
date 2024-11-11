@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * PlatformTypeDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class PlatformTypeDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePlatformTypeDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class PlatformTypeDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePlatformTypeDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class PlatformTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesPlatformTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiPlatformTypeDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiPlatformTypeDescriptorDelete[]
      */
     public function deletesPlatformTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPlatformTypeDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class PlatformTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesPlatformTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiPlatformTypeDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiPlatformTypeDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesPlatformTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPlatformTypeDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class PlatformTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiPlatformTypeDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiPlatformTypeDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiPlatformTypeDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiPlatformTypeDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class PlatformTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiPlatformTypeDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiPlatformTypeDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class PlatformTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPlatformTypeDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiPlatformTypeDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class PlatformTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiPlatformTypeDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiPlatformTypeDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class PlatformTypeDescriptorsApi
      */
     public function deletesPlatformTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPlatformTypeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPlatformTypeDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiPlatformTypeDescriptorDelete[]';
         $request = $this->deletesPlatformTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class PlatformTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPlatformTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiPlatformTypeDescriptor[]
+     * @return \Descriptors\Model\EdFiPlatformTypeDescriptor[]
      */
     public function getPlatformTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $platform_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPlatformTypeDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class PlatformTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPlatformTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiPlatformTypeDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiPlatformTypeDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getPlatformTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $platform_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPlatformTypeDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class PlatformTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiPlatformTypeDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiPlatformTypeDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiPlatformTypeDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiPlatformTypeDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class PlatformTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiPlatformTypeDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiPlatformTypeDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class PlatformTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiPlatformTypeDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiPlatformTypeDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class PlatformTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiPlatformTypeDescriptor[]',
+                        '\Descriptors\Model\EdFiPlatformTypeDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class PlatformTypeDescriptorsApi
      */
     public function getPlatformTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $platform_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPlatformTypeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiPlatformTypeDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiPlatformTypeDescriptor[]';
         $request = $this->getPlatformTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $platform_type_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class PlatformTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPlatformTypeDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiPlatformTypeDescriptor
+     * @return \Descriptors\Model\EdFiPlatformTypeDescriptor
      */
     public function getPlatformTypeDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPlatformTypeDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class PlatformTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPlatformTypeDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiPlatformTypeDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiPlatformTypeDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPlatformTypeDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPlatformTypeDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class PlatformTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiPlatformTypeDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiPlatformTypeDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiPlatformTypeDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiPlatformTypeDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class PlatformTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiPlatformTypeDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiPlatformTypeDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class PlatformTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiPlatformTypeDescriptor';
+            $returnType = '\Descriptors\Model\EdFiPlatformTypeDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class PlatformTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiPlatformTypeDescriptor',
+                        '\Descriptors\Model\EdFiPlatformTypeDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class PlatformTypeDescriptorsApi
      */
     public function getPlatformTypeDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPlatformTypeDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiPlatformTypeDescriptor';
+        $returnType = '\Descriptors\Model\EdFiPlatformTypeDescriptor';
         $request = $this->getPlatformTypeDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class PlatformTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesPlatformTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiPlatformTypeDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiPlatformTypeDescriptorKeyChange[]
      */
     public function keyChangesPlatformTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPlatformTypeDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class PlatformTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesPlatformTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiPlatformTypeDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiPlatformTypeDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesPlatformTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPlatformTypeDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class PlatformTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiPlatformTypeDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiPlatformTypeDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiPlatformTypeDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiPlatformTypeDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class PlatformTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiPlatformTypeDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiPlatformTypeDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class PlatformTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPlatformTypeDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiPlatformTypeDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class PlatformTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiPlatformTypeDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiPlatformTypeDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class PlatformTypeDescriptorsApi
      */
     public function keyChangesPlatformTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPlatformTypeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPlatformTypeDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiPlatformTypeDescriptorKeyChange[]';
         $request = $this->keyChangesPlatformTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class PlatformTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPlatformTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class PlatformTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPlatformTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class PlatformTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPlatformTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class PlatformTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPlatformTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class PlatformTypeDescriptorsApi
     /**
      * Create request for operation 'postPlatformTypeDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPlatformTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class PlatformTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPlatformTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class PlatformTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPlatformTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class PlatformTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPlatformTypeDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class PlatformTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPlatformTypeDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class PlatformTypeDescriptorsApi
      * Create request for operation 'putPlatformTypeDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPlatformTypeDescriptor $ed_fi_platform_type_descriptor The JSON representation of the \&quot;platformTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPlatformTypeDescriptor'] to see the possible values for this operation
      *

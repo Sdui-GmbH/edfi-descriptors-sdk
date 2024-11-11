@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Descriptors\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Descriptors\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiReasonExitedDescriptorDelete Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TrackedChangesEdFiReasonExitedDescriptorDelete implements ModelInterface, 
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKey'
+        'key_values' => '\Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKey'
     ];
 
     /**
@@ -360,7 +360,7 @@ class TrackedChangesEdFiReasonExitedDescriptorDelete implements ModelInterface, 
     /**
      * Gets key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKey|null
      */
     public function getKeyValues()
     {
@@ -370,7 +370,7 @@ class TrackedChangesEdFiReasonExitedDescriptorDelete implements ModelInterface, 
     /**
      * Sets key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKey|null $key_values key_values
+     * @param \Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKey|null $key_values key_values
      *
      * @return self
      */

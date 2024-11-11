@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * ExitWithdrawTypeDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class ExitWithdrawTypeDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteExitWithdrawTypeDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class ExitWithdrawTypeDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteExitWithdrawTypeDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class ExitWithdrawTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesExitWithdrawTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorDelete[]
      */
     public function deletesExitWithdrawTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesExitWithdrawTypeDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class ExitWithdrawTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesExitWithdrawTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesExitWithdrawTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesExitWithdrawTypeDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class ExitWithdrawTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class ExitWithdrawTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class ExitWithdrawTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class ExitWithdrawTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class ExitWithdrawTypeDescriptorsApi
      */
     public function deletesExitWithdrawTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesExitWithdrawTypeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorDelete[]';
         $request = $this->deletesExitWithdrawTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class ExitWithdrawTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExitWithdrawTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor[]
+     * @return \Descriptors\Model\EdFiExitWithdrawTypeDescriptor[]
      */
     public function getExitWithdrawTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $exit_withdraw_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getExitWithdrawTypeDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class ExitWithdrawTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExitWithdrawTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiExitWithdrawTypeDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getExitWithdrawTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $exit_withdraw_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getExitWithdrawTypeDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class ExitWithdrawTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiExitWithdrawTypeDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiExitWithdrawTypeDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class ExitWithdrawTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiExitWithdrawTypeDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class ExitWithdrawTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiExitWithdrawTypeDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class ExitWithdrawTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor[]',
+                        '\Descriptors\Model\EdFiExitWithdrawTypeDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class ExitWithdrawTypeDescriptorsApi
      */
     public function getExitWithdrawTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $exit_withdraw_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getExitWithdrawTypeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiExitWithdrawTypeDescriptor[]';
         $request = $this->getExitWithdrawTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $exit_withdraw_type_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class ExitWithdrawTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExitWithdrawTypeDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor
+     * @return \Descriptors\Model\EdFiExitWithdrawTypeDescriptor
      */
     public function getExitWithdrawTypeDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getExitWithdrawTypeDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class ExitWithdrawTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExitWithdrawTypeDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiExitWithdrawTypeDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getExitWithdrawTypeDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getExitWithdrawTypeDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class ExitWithdrawTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiExitWithdrawTypeDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiExitWithdrawTypeDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class ExitWithdrawTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiExitWithdrawTypeDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class ExitWithdrawTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor';
+            $returnType = '\Descriptors\Model\EdFiExitWithdrawTypeDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class ExitWithdrawTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor',
+                        '\Descriptors\Model\EdFiExitWithdrawTypeDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class ExitWithdrawTypeDescriptorsApi
      */
     public function getExitWithdrawTypeDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getExitWithdrawTypeDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor';
+        $returnType = '\Descriptors\Model\EdFiExitWithdrawTypeDescriptor';
         $request = $this->getExitWithdrawTypeDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class ExitWithdrawTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesExitWithdrawTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorKeyChange[]
      */
     public function keyChangesExitWithdrawTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesExitWithdrawTypeDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class ExitWithdrawTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesExitWithdrawTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesExitWithdrawTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesExitWithdrawTypeDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class ExitWithdrawTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class ExitWithdrawTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class ExitWithdrawTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class ExitWithdrawTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class ExitWithdrawTypeDescriptorsApi
      */
     public function keyChangesExitWithdrawTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesExitWithdrawTypeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiExitWithdrawTypeDescriptorKeyChange[]';
         $request = $this->keyChangesExitWithdrawTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class ExitWithdrawTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postExitWithdrawTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class ExitWithdrawTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postExitWithdrawTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class ExitWithdrawTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postExitWithdrawTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class ExitWithdrawTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postExitWithdrawTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class ExitWithdrawTypeDescriptorsApi
     /**
      * Create request for operation 'postExitWithdrawTypeDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postExitWithdrawTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class ExitWithdrawTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putExitWithdrawTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class ExitWithdrawTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putExitWithdrawTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class ExitWithdrawTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putExitWithdrawTypeDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class ExitWithdrawTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putExitWithdrawTypeDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class ExitWithdrawTypeDescriptorsApi
      * Create request for operation 'putExitWithdrawTypeDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiExitWithdrawTypeDescriptor $ed_fi_exit_withdraw_type_descriptor The JSON representation of the \&quot;exitWithdrawTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putExitWithdrawTypeDescriptor'] to see the possible values for this operation
      *

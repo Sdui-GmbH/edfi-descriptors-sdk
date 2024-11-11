@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * LearningStandardCategoryDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class LearningStandardCategoryDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteLearningStandardCategoryDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class LearningStandardCategoryDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteLearningStandardCategoryDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class LearningStandardCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesLearningStandardCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorDelete[]
      */
     public function deletesLearningStandardCategoryDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesLearningStandardCategoryDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class LearningStandardCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesLearningStandardCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesLearningStandardCategoryDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesLearningStandardCategoryDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class LearningStandardCategoryDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class LearningStandardCategoryDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class LearningStandardCategoryDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class LearningStandardCategoryDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class LearningStandardCategoryDescriptorsApi
      */
     public function deletesLearningStandardCategoryDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesLearningStandardCategoryDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorDelete[]';
         $request = $this->deletesLearningStandardCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class LearningStandardCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLearningStandardCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor[]
+     * @return \Descriptors\Model\EdFiLearningStandardCategoryDescriptor[]
      */
     public function getLearningStandardCategoryDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $learning_standard_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardCategoryDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class LearningStandardCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLearningStandardCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiLearningStandardCategoryDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getLearningStandardCategoryDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $learning_standard_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardCategoryDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class LearningStandardCategoryDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiLearningStandardCategoryDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiLearningStandardCategoryDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class LearningStandardCategoryDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiLearningStandardCategoryDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class LearningStandardCategoryDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiLearningStandardCategoryDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class LearningStandardCategoryDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor[]',
+                        '\Descriptors\Model\EdFiLearningStandardCategoryDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class LearningStandardCategoryDescriptorsApi
      */
     public function getLearningStandardCategoryDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $learning_standard_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardCategoryDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiLearningStandardCategoryDescriptor[]';
         $request = $this->getLearningStandardCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $learning_standard_category_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class LearningStandardCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLearningStandardCategoryDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor
+     * @return \Descriptors\Model\EdFiLearningStandardCategoryDescriptor
      */
     public function getLearningStandardCategoryDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardCategoryDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class LearningStandardCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLearningStandardCategoryDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiLearningStandardCategoryDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLearningStandardCategoryDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardCategoryDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class LearningStandardCategoryDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiLearningStandardCategoryDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiLearningStandardCategoryDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class LearningStandardCategoryDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiLearningStandardCategoryDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class LearningStandardCategoryDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor';
+            $returnType = '\Descriptors\Model\EdFiLearningStandardCategoryDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class LearningStandardCategoryDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor',
+                        '\Descriptors\Model\EdFiLearningStandardCategoryDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class LearningStandardCategoryDescriptorsApi
      */
     public function getLearningStandardCategoryDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardCategoryDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor';
+        $returnType = '\Descriptors\Model\EdFiLearningStandardCategoryDescriptor';
         $request = $this->getLearningStandardCategoryDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class LearningStandardCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesLearningStandardCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorKeyChange[]
      */
     public function keyChangesLearningStandardCategoryDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesLearningStandardCategoryDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class LearningStandardCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesLearningStandardCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesLearningStandardCategoryDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesLearningStandardCategoryDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class LearningStandardCategoryDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class LearningStandardCategoryDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class LearningStandardCategoryDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class LearningStandardCategoryDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class LearningStandardCategoryDescriptorsApi
      */
     public function keyChangesLearningStandardCategoryDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesLearningStandardCategoryDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiLearningStandardCategoryDescriptorKeyChange[]';
         $request = $this->keyChangesLearningStandardCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class LearningStandardCategoryDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLearningStandardCategoryDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class LearningStandardCategoryDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLearningStandardCategoryDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class LearningStandardCategoryDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLearningStandardCategoryDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class LearningStandardCategoryDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLearningStandardCategoryDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class LearningStandardCategoryDescriptorsApi
     /**
      * Create request for operation 'postLearningStandardCategoryDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLearningStandardCategoryDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class LearningStandardCategoryDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLearningStandardCategoryDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class LearningStandardCategoryDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLearningStandardCategoryDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class LearningStandardCategoryDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLearningStandardCategoryDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class LearningStandardCategoryDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLearningStandardCategoryDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class LearningStandardCategoryDescriptorsApi
      * Create request for operation 'putLearningStandardCategoryDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardCategoryDescriptor $ed_fi_learning_standard_category_descriptor The JSON representation of the \&quot;learningStandardCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLearningStandardCategoryDescriptor'] to see the possible values for this operation
      *

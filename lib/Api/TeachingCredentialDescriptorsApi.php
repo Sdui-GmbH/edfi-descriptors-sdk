@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * TeachingCredentialDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class TeachingCredentialDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTeachingCredentialDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class TeachingCredentialDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTeachingCredentialDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class TeachingCredentialDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesTeachingCredentialDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiTeachingCredentialDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiTeachingCredentialDescriptorDelete[]
      */
     public function deletesTeachingCredentialDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesTeachingCredentialDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class TeachingCredentialDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesTeachingCredentialDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiTeachingCredentialDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiTeachingCredentialDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesTeachingCredentialDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesTeachingCredentialDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class TeachingCredentialDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiTeachingCredentialDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiTeachingCredentialDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiTeachingCredentialDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiTeachingCredentialDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class TeachingCredentialDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiTeachingCredentialDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiTeachingCredentialDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class TeachingCredentialDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiTeachingCredentialDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiTeachingCredentialDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class TeachingCredentialDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiTeachingCredentialDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiTeachingCredentialDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class TeachingCredentialDescriptorsApi
      */
     public function deletesTeachingCredentialDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesTeachingCredentialDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiTeachingCredentialDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiTeachingCredentialDescriptorDelete[]';
         $request = $this->deletesTeachingCredentialDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class TeachingCredentialDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTeachingCredentialDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor[]
+     * @return \Descriptors\Model\EdFiTeachingCredentialDescriptor[]
      */
     public function getTeachingCredentialDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $teaching_credential_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getTeachingCredentialDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class TeachingCredentialDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTeachingCredentialDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiTeachingCredentialDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getTeachingCredentialDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $teaching_credential_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getTeachingCredentialDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class TeachingCredentialDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiTeachingCredentialDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiTeachingCredentialDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class TeachingCredentialDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiTeachingCredentialDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class TeachingCredentialDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiTeachingCredentialDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class TeachingCredentialDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor[]',
+                        '\Descriptors\Model\EdFiTeachingCredentialDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class TeachingCredentialDescriptorsApi
      */
     public function getTeachingCredentialDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $teaching_credential_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getTeachingCredentialDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiTeachingCredentialDescriptor[]';
         $request = $this->getTeachingCredentialDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $teaching_credential_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class TeachingCredentialDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTeachingCredentialDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor
+     * @return \Descriptors\Model\EdFiTeachingCredentialDescriptor
      */
     public function getTeachingCredentialDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getTeachingCredentialDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class TeachingCredentialDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTeachingCredentialDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiTeachingCredentialDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTeachingCredentialDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getTeachingCredentialDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class TeachingCredentialDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiTeachingCredentialDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiTeachingCredentialDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class TeachingCredentialDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiTeachingCredentialDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class TeachingCredentialDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor';
+            $returnType = '\Descriptors\Model\EdFiTeachingCredentialDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class TeachingCredentialDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor',
+                        '\Descriptors\Model\EdFiTeachingCredentialDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class TeachingCredentialDescriptorsApi
      */
     public function getTeachingCredentialDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getTeachingCredentialDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor';
+        $returnType = '\Descriptors\Model\EdFiTeachingCredentialDescriptor';
         $request = $this->getTeachingCredentialDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class TeachingCredentialDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesTeachingCredentialDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiTeachingCredentialDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiTeachingCredentialDescriptorKeyChange[]
      */
     public function keyChangesTeachingCredentialDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesTeachingCredentialDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class TeachingCredentialDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesTeachingCredentialDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiTeachingCredentialDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiTeachingCredentialDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesTeachingCredentialDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesTeachingCredentialDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class TeachingCredentialDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiTeachingCredentialDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiTeachingCredentialDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiTeachingCredentialDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiTeachingCredentialDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class TeachingCredentialDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiTeachingCredentialDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiTeachingCredentialDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class TeachingCredentialDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiTeachingCredentialDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiTeachingCredentialDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class TeachingCredentialDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiTeachingCredentialDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiTeachingCredentialDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class TeachingCredentialDescriptorsApi
      */
     public function keyChangesTeachingCredentialDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesTeachingCredentialDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiTeachingCredentialDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiTeachingCredentialDescriptorKeyChange[]';
         $request = $this->keyChangesTeachingCredentialDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class TeachingCredentialDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postTeachingCredentialDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class TeachingCredentialDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postTeachingCredentialDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class TeachingCredentialDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postTeachingCredentialDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class TeachingCredentialDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postTeachingCredentialDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class TeachingCredentialDescriptorsApi
     /**
      * Create request for operation 'postTeachingCredentialDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postTeachingCredentialDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class TeachingCredentialDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putTeachingCredentialDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class TeachingCredentialDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putTeachingCredentialDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class TeachingCredentialDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putTeachingCredentialDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class TeachingCredentialDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putTeachingCredentialDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class TeachingCredentialDescriptorsApi
      * Create request for operation 'putTeachingCredentialDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiTeachingCredentialDescriptor $ed_fi_teaching_credential_descriptor The JSON representation of the \&quot;teachingCredentialDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putTeachingCredentialDescriptor'] to see the possible values for this operation
      *

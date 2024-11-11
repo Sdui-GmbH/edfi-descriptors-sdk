@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * PerformanceLevelDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class PerformanceLevelDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePerformanceLevelDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class PerformanceLevelDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePerformanceLevelDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class PerformanceLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesPerformanceLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiPerformanceLevelDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiPerformanceLevelDescriptorDelete[]
      */
     public function deletesPerformanceLevelDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPerformanceLevelDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class PerformanceLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesPerformanceLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiPerformanceLevelDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiPerformanceLevelDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesPerformanceLevelDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPerformanceLevelDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class PerformanceLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceLevelDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiPerformanceLevelDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceLevelDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiPerformanceLevelDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class PerformanceLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceLevelDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiPerformanceLevelDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class PerformanceLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceLevelDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiPerformanceLevelDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class PerformanceLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceLevelDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiPerformanceLevelDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class PerformanceLevelDescriptorsApi
      */
     public function deletesPerformanceLevelDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPerformanceLevelDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceLevelDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiPerformanceLevelDescriptorDelete[]';
         $request = $this->deletesPerformanceLevelDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class PerformanceLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPerformanceLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor[]
+     * @return \Descriptors\Model\EdFiPerformanceLevelDescriptor[]
      */
     public function getPerformanceLevelDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $performance_level_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPerformanceLevelDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class PerformanceLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPerformanceLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiPerformanceLevelDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getPerformanceLevelDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $performance_level_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPerformanceLevelDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class PerformanceLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiPerformanceLevelDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiPerformanceLevelDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class PerformanceLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiPerformanceLevelDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class PerformanceLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiPerformanceLevelDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class PerformanceLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor[]',
+                        '\Descriptors\Model\EdFiPerformanceLevelDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class PerformanceLevelDescriptorsApi
      */
     public function getPerformanceLevelDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $performance_level_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPerformanceLevelDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiPerformanceLevelDescriptor[]';
         $request = $this->getPerformanceLevelDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $performance_level_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class PerformanceLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPerformanceLevelDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor
+     * @return \Descriptors\Model\EdFiPerformanceLevelDescriptor
      */
     public function getPerformanceLevelDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPerformanceLevelDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class PerformanceLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPerformanceLevelDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiPerformanceLevelDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPerformanceLevelDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPerformanceLevelDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class PerformanceLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiPerformanceLevelDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiPerformanceLevelDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class PerformanceLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiPerformanceLevelDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class PerformanceLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor';
+            $returnType = '\Descriptors\Model\EdFiPerformanceLevelDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class PerformanceLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor',
+                        '\Descriptors\Model\EdFiPerformanceLevelDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class PerformanceLevelDescriptorsApi
      */
     public function getPerformanceLevelDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPerformanceLevelDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor';
+        $returnType = '\Descriptors\Model\EdFiPerformanceLevelDescriptor';
         $request = $this->getPerformanceLevelDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class PerformanceLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesPerformanceLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiPerformanceLevelDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiPerformanceLevelDescriptorKeyChange[]
      */
     public function keyChangesPerformanceLevelDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPerformanceLevelDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class PerformanceLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesPerformanceLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiPerformanceLevelDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiPerformanceLevelDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesPerformanceLevelDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPerformanceLevelDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class PerformanceLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceLevelDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiPerformanceLevelDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceLevelDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiPerformanceLevelDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class PerformanceLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceLevelDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiPerformanceLevelDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class PerformanceLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceLevelDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiPerformanceLevelDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class PerformanceLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceLevelDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiPerformanceLevelDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class PerformanceLevelDescriptorsApi
      */
     public function keyChangesPerformanceLevelDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPerformanceLevelDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceLevelDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiPerformanceLevelDescriptorKeyChange[]';
         $request = $this->keyChangesPerformanceLevelDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class PerformanceLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPerformanceLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class PerformanceLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPerformanceLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class PerformanceLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPerformanceLevelDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class PerformanceLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPerformanceLevelDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class PerformanceLevelDescriptorsApi
     /**
      * Create request for operation 'postPerformanceLevelDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPerformanceLevelDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class PerformanceLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPerformanceLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class PerformanceLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPerformanceLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class PerformanceLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPerformanceLevelDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class PerformanceLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPerformanceLevelDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class PerformanceLevelDescriptorsApi
      * Create request for operation 'putPerformanceLevelDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceLevelDescriptor $ed_fi_performance_level_descriptor The JSON representation of the \&quot;performanceLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPerformanceLevelDescriptor'] to see the possible values for this operation
      *

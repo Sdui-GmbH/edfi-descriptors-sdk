@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Descriptors\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Descriptors\ObjectSerializer;
 
 /**
  * TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange implements Model
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'old_key_values' => '\OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKey',
-        'new_key_values' => '\OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKey'
+        'old_key_values' => '\Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKey',
+        'new_key_values' => '\Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKey'
     ];
 
     /**
@@ -367,7 +367,7 @@ class TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange implements Model
     /**
      * Gets old_key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKey|null
      */
     public function getOldKeyValues()
     {
@@ -377,7 +377,7 @@ class TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange implements Model
     /**
      * Sets old_key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKey|null $old_key_values old_key_values
+     * @param \Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKey|null $old_key_values old_key_values
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange implements Model
     /**
      * Gets new_key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKey|null
      */
     public function getNewKeyValues()
     {
@@ -404,7 +404,7 @@ class TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange implements Model
     /**
      * Sets new_key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKey|null $new_key_values new_key_values
+     * @param \Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKey|null $new_key_values new_key_values
      *
      * @return self
      */

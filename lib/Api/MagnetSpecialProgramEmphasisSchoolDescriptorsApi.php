@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * MagnetSpecialProgramEmphasisSchoolDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMagnetSpecialProgramEmphasisSchoolDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMagnetSpecialProgramEmphasisSchoolDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesMagnetSpecialProgramEmphasisSchoolDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorDelete[]
      */
     public function deletesMagnetSpecialProgramEmphasisSchoolDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesMagnetSpecialProgramEmphasisSchoolDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesMagnetSpecialProgramEmphasisSchoolDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesMagnetSpecialProgramEmphasisSchoolDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesMagnetSpecialProgramEmphasisSchoolDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      */
     public function deletesMagnetSpecialProgramEmphasisSchoolDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesMagnetSpecialProgramEmphasisSchoolDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorDelete[]';
         $request = $this->deletesMagnetSpecialProgramEmphasisSchoolDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMagnetSpecialProgramEmphasisSchoolDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor[]
+     * @return \Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor[]
      */
     public function getMagnetSpecialProgramEmphasisSchoolDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $magnet_special_program_emphasis_school_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getMagnetSpecialProgramEmphasisSchoolDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMagnetSpecialProgramEmphasisSchoolDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getMagnetSpecialProgramEmphasisSchoolDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $magnet_special_program_emphasis_school_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getMagnetSpecialProgramEmphasisSchoolDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor[]',
+                        '\Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      */
     public function getMagnetSpecialProgramEmphasisSchoolDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $magnet_special_program_emphasis_school_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getMagnetSpecialProgramEmphasisSchoolDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor[]';
         $request = $this->getMagnetSpecialProgramEmphasisSchoolDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $magnet_special_program_emphasis_school_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMagnetSpecialProgramEmphasisSchoolDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor
+     * @return \Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor
      */
     public function getMagnetSpecialProgramEmphasisSchoolDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getMagnetSpecialProgramEmphasisSchoolDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMagnetSpecialProgramEmphasisSchoolDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMagnetSpecialProgramEmphasisSchoolDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getMagnetSpecialProgramEmphasisSchoolDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor';
+            $returnType = '\Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor',
+                        '\Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      */
     public function getMagnetSpecialProgramEmphasisSchoolDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getMagnetSpecialProgramEmphasisSchoolDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor';
+        $returnType = '\Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor';
         $request = $this->getMagnetSpecialProgramEmphasisSchoolDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesMagnetSpecialProgramEmphasisSchoolDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorKeyChange[]
      */
     public function keyChangesMagnetSpecialProgramEmphasisSchoolDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesMagnetSpecialProgramEmphasisSchoolDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesMagnetSpecialProgramEmphasisSchoolDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesMagnetSpecialProgramEmphasisSchoolDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesMagnetSpecialProgramEmphasisSchoolDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      */
     public function keyChangesMagnetSpecialProgramEmphasisSchoolDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesMagnetSpecialProgramEmphasisSchoolDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiMagnetSpecialProgramEmphasisSchoolDescriptorKeyChange[]';
         $request = $this->keyChangesMagnetSpecialProgramEmphasisSchoolDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMagnetSpecialProgramEmphasisSchoolDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMagnetSpecialProgramEmphasisSchoolDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMagnetSpecialProgramEmphasisSchoolDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMagnetSpecialProgramEmphasisSchoolDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
     /**
      * Create request for operation 'postMagnetSpecialProgramEmphasisSchoolDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMagnetSpecialProgramEmphasisSchoolDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMagnetSpecialProgramEmphasisSchoolDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMagnetSpecialProgramEmphasisSchoolDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMagnetSpecialProgramEmphasisSchoolDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMagnetSpecialProgramEmphasisSchoolDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class MagnetSpecialProgramEmphasisSchoolDescriptorsApi
      * Create request for operation 'putMagnetSpecialProgramEmphasisSchoolDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMagnetSpecialProgramEmphasisSchoolDescriptor $ed_fi_magnet_special_program_emphasis_school_descriptor The JSON representation of the \&quot;magnetSpecialProgramEmphasisSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMagnetSpecialProgramEmphasisSchoolDescriptor'] to see the possible values for this operation
      *

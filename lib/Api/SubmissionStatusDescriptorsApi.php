@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * SubmissionStatusDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class SubmissionStatusDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSubmissionStatusDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class SubmissionStatusDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSubmissionStatusDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class SubmissionStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesSubmissionStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiSubmissionStatusDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiSubmissionStatusDescriptorDelete[]
      */
     public function deletesSubmissionStatusDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSubmissionStatusDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class SubmissionStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesSubmissionStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiSubmissionStatusDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiSubmissionStatusDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesSubmissionStatusDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSubmissionStatusDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class SubmissionStatusDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiSubmissionStatusDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiSubmissionStatusDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiSubmissionStatusDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiSubmissionStatusDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class SubmissionStatusDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiSubmissionStatusDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiSubmissionStatusDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class SubmissionStatusDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSubmissionStatusDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiSubmissionStatusDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class SubmissionStatusDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiSubmissionStatusDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiSubmissionStatusDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class SubmissionStatusDescriptorsApi
      */
     public function deletesSubmissionStatusDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSubmissionStatusDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSubmissionStatusDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiSubmissionStatusDescriptorDelete[]';
         $request = $this->deletesSubmissionStatusDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class SubmissionStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSubmissionStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor[]
+     * @return \Descriptors\Model\EdFiSubmissionStatusDescriptor[]
      */
     public function getSubmissionStatusDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $submission_status_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSubmissionStatusDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class SubmissionStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSubmissionStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiSubmissionStatusDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubmissionStatusDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $submission_status_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSubmissionStatusDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class SubmissionStatusDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiSubmissionStatusDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiSubmissionStatusDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class SubmissionStatusDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiSubmissionStatusDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class SubmissionStatusDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiSubmissionStatusDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class SubmissionStatusDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor[]',
+                        '\Descriptors\Model\EdFiSubmissionStatusDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class SubmissionStatusDescriptorsApi
      */
     public function getSubmissionStatusDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $submission_status_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSubmissionStatusDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiSubmissionStatusDescriptor[]';
         $request = $this->getSubmissionStatusDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $submission_status_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class SubmissionStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSubmissionStatusDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor
+     * @return \Descriptors\Model\EdFiSubmissionStatusDescriptor
      */
     public function getSubmissionStatusDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSubmissionStatusDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class SubmissionStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSubmissionStatusDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiSubmissionStatusDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubmissionStatusDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSubmissionStatusDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class SubmissionStatusDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiSubmissionStatusDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiSubmissionStatusDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class SubmissionStatusDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiSubmissionStatusDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class SubmissionStatusDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor';
+            $returnType = '\Descriptors\Model\EdFiSubmissionStatusDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class SubmissionStatusDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor',
+                        '\Descriptors\Model\EdFiSubmissionStatusDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class SubmissionStatusDescriptorsApi
      */
     public function getSubmissionStatusDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSubmissionStatusDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor';
+        $returnType = '\Descriptors\Model\EdFiSubmissionStatusDescriptor';
         $request = $this->getSubmissionStatusDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class SubmissionStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesSubmissionStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiSubmissionStatusDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiSubmissionStatusDescriptorKeyChange[]
      */
     public function keyChangesSubmissionStatusDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSubmissionStatusDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class SubmissionStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesSubmissionStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiSubmissionStatusDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiSubmissionStatusDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesSubmissionStatusDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSubmissionStatusDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class SubmissionStatusDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiSubmissionStatusDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiSubmissionStatusDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiSubmissionStatusDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiSubmissionStatusDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class SubmissionStatusDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiSubmissionStatusDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiSubmissionStatusDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class SubmissionStatusDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSubmissionStatusDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiSubmissionStatusDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class SubmissionStatusDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiSubmissionStatusDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiSubmissionStatusDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class SubmissionStatusDescriptorsApi
      */
     public function keyChangesSubmissionStatusDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSubmissionStatusDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSubmissionStatusDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiSubmissionStatusDescriptorKeyChange[]';
         $request = $this->keyChangesSubmissionStatusDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class SubmissionStatusDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSubmissionStatusDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class SubmissionStatusDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSubmissionStatusDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class SubmissionStatusDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSubmissionStatusDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class SubmissionStatusDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSubmissionStatusDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class SubmissionStatusDescriptorsApi
     /**
      * Create request for operation 'postSubmissionStatusDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSubmissionStatusDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class SubmissionStatusDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSubmissionStatusDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class SubmissionStatusDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSubmissionStatusDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class SubmissionStatusDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSubmissionStatusDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class SubmissionStatusDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSubmissionStatusDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class SubmissionStatusDescriptorsApi
      * Create request for operation 'putSubmissionStatusDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSubmissionStatusDescriptor $ed_fi_submission_status_descriptor The JSON representation of the \&quot;submissionStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSubmissionStatusDescriptor'] to see the possible values for this operation
      *

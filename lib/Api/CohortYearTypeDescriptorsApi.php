@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * CohortYearTypeDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class CohortYearTypeDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCohortYearTypeDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class CohortYearTypeDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCohortYearTypeDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class CohortYearTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCohortYearTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiCohortYearTypeDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiCohortYearTypeDescriptorDelete[]
      */
     public function deletesCohortYearTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCohortYearTypeDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class CohortYearTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCohortYearTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiCohortYearTypeDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiCohortYearTypeDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesCohortYearTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCohortYearTypeDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class CohortYearTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiCohortYearTypeDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiCohortYearTypeDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiCohortYearTypeDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiCohortYearTypeDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class CohortYearTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiCohortYearTypeDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiCohortYearTypeDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class CohortYearTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCohortYearTypeDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiCohortYearTypeDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class CohortYearTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiCohortYearTypeDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiCohortYearTypeDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class CohortYearTypeDescriptorsApi
      */
     public function deletesCohortYearTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCohortYearTypeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCohortYearTypeDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiCohortYearTypeDescriptorDelete[]';
         $request = $this->deletesCohortYearTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class CohortYearTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCohortYearTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor[]
+     * @return \Descriptors\Model\EdFiCohortYearTypeDescriptor[]
      */
     public function getCohortYearTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $cohort_year_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCohortYearTypeDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class CohortYearTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCohortYearTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiCohortYearTypeDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getCohortYearTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $cohort_year_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCohortYearTypeDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class CohortYearTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiCohortYearTypeDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiCohortYearTypeDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class CohortYearTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiCohortYearTypeDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class CohortYearTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiCohortYearTypeDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class CohortYearTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor[]',
+                        '\Descriptors\Model\EdFiCohortYearTypeDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class CohortYearTypeDescriptorsApi
      */
     public function getCohortYearTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $cohort_year_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCohortYearTypeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiCohortYearTypeDescriptor[]';
         $request = $this->getCohortYearTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $cohort_year_type_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class CohortYearTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCohortYearTypeDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor
+     * @return \Descriptors\Model\EdFiCohortYearTypeDescriptor
      */
     public function getCohortYearTypeDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCohortYearTypeDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class CohortYearTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCohortYearTypeDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiCohortYearTypeDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCohortYearTypeDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCohortYearTypeDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class CohortYearTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiCohortYearTypeDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiCohortYearTypeDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class CohortYearTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiCohortYearTypeDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class CohortYearTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor';
+            $returnType = '\Descriptors\Model\EdFiCohortYearTypeDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class CohortYearTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor',
+                        '\Descriptors\Model\EdFiCohortYearTypeDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class CohortYearTypeDescriptorsApi
      */
     public function getCohortYearTypeDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCohortYearTypeDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor';
+        $returnType = '\Descriptors\Model\EdFiCohortYearTypeDescriptor';
         $request = $this->getCohortYearTypeDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class CohortYearTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCohortYearTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiCohortYearTypeDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiCohortYearTypeDescriptorKeyChange[]
      */
     public function keyChangesCohortYearTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCohortYearTypeDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class CohortYearTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCohortYearTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiCohortYearTypeDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiCohortYearTypeDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesCohortYearTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCohortYearTypeDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class CohortYearTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiCohortYearTypeDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiCohortYearTypeDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiCohortYearTypeDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiCohortYearTypeDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class CohortYearTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiCohortYearTypeDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiCohortYearTypeDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class CohortYearTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCohortYearTypeDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiCohortYearTypeDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class CohortYearTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiCohortYearTypeDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiCohortYearTypeDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class CohortYearTypeDescriptorsApi
      */
     public function keyChangesCohortYearTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCohortYearTypeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCohortYearTypeDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiCohortYearTypeDescriptorKeyChange[]';
         $request = $this->keyChangesCohortYearTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class CohortYearTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCohortYearTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class CohortYearTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCohortYearTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class CohortYearTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCohortYearTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class CohortYearTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCohortYearTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class CohortYearTypeDescriptorsApi
     /**
      * Create request for operation 'postCohortYearTypeDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCohortYearTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class CohortYearTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCohortYearTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class CohortYearTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCohortYearTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class CohortYearTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCohortYearTypeDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class CohortYearTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCohortYearTypeDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class CohortYearTypeDescriptorsApi
      * Create request for operation 'putCohortYearTypeDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCohortYearTypeDescriptor $ed_fi_cohort_year_type_descriptor The JSON representation of the \&quot;cohortYearTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCohortYearTypeDescriptor'] to see the possible values for this operation
      *

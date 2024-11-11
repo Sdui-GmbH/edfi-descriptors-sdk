@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * MigrantEducationProgramServiceDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class MigrantEducationProgramServiceDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMigrantEducationProgramServiceDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class MigrantEducationProgramServiceDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMigrantEducationProgramServiceDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class MigrantEducationProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesMigrantEducationProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorDelete[]
      */
     public function deletesMigrantEducationProgramServiceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesMigrantEducationProgramServiceDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class MigrantEducationProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesMigrantEducationProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesMigrantEducationProgramServiceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesMigrantEducationProgramServiceDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class MigrantEducationProgramServiceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class MigrantEducationProgramServiceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class MigrantEducationProgramServiceDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class MigrantEducationProgramServiceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class MigrantEducationProgramServiceDescriptorsApi
      */
     public function deletesMigrantEducationProgramServiceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesMigrantEducationProgramServiceDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorDelete[]';
         $request = $this->deletesMigrantEducationProgramServiceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class MigrantEducationProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMigrantEducationProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor[]
+     * @return \Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor[]
      */
     public function getMigrantEducationProgramServiceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $migrant_education_program_service_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getMigrantEducationProgramServiceDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class MigrantEducationProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMigrantEducationProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getMigrantEducationProgramServiceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $migrant_education_program_service_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getMigrantEducationProgramServiceDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class MigrantEducationProgramServiceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class MigrantEducationProgramServiceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class MigrantEducationProgramServiceDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class MigrantEducationProgramServiceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor[]',
+                        '\Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class MigrantEducationProgramServiceDescriptorsApi
      */
     public function getMigrantEducationProgramServiceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $migrant_education_program_service_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getMigrantEducationProgramServiceDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor[]';
         $request = $this->getMigrantEducationProgramServiceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $migrant_education_program_service_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class MigrantEducationProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMigrantEducationProgramServiceDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor
+     * @return \Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor
      */
     public function getMigrantEducationProgramServiceDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getMigrantEducationProgramServiceDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class MigrantEducationProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMigrantEducationProgramServiceDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMigrantEducationProgramServiceDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getMigrantEducationProgramServiceDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class MigrantEducationProgramServiceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class MigrantEducationProgramServiceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class MigrantEducationProgramServiceDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor';
+            $returnType = '\Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class MigrantEducationProgramServiceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor',
+                        '\Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class MigrantEducationProgramServiceDescriptorsApi
      */
     public function getMigrantEducationProgramServiceDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getMigrantEducationProgramServiceDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor';
+        $returnType = '\Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor';
         $request = $this->getMigrantEducationProgramServiceDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class MigrantEducationProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesMigrantEducationProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorKeyChange[]
      */
     public function keyChangesMigrantEducationProgramServiceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesMigrantEducationProgramServiceDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class MigrantEducationProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesMigrantEducationProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesMigrantEducationProgramServiceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesMigrantEducationProgramServiceDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class MigrantEducationProgramServiceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class MigrantEducationProgramServiceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class MigrantEducationProgramServiceDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class MigrantEducationProgramServiceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class MigrantEducationProgramServiceDescriptorsApi
      */
     public function keyChangesMigrantEducationProgramServiceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesMigrantEducationProgramServiceDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiMigrantEducationProgramServiceDescriptorKeyChange[]';
         $request = $this->keyChangesMigrantEducationProgramServiceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class MigrantEducationProgramServiceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMigrantEducationProgramServiceDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class MigrantEducationProgramServiceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMigrantEducationProgramServiceDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class MigrantEducationProgramServiceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMigrantEducationProgramServiceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class MigrantEducationProgramServiceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMigrantEducationProgramServiceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class MigrantEducationProgramServiceDescriptorsApi
     /**
      * Create request for operation 'postMigrantEducationProgramServiceDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMigrantEducationProgramServiceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class MigrantEducationProgramServiceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMigrantEducationProgramServiceDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class MigrantEducationProgramServiceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMigrantEducationProgramServiceDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class MigrantEducationProgramServiceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMigrantEducationProgramServiceDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class MigrantEducationProgramServiceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMigrantEducationProgramServiceDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class MigrantEducationProgramServiceDescriptorsApi
      * Create request for operation 'putMigrantEducationProgramServiceDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMigrantEducationProgramServiceDescriptor $ed_fi_migrant_education_program_service_descriptor The JSON representation of the \&quot;migrantEducationProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMigrantEducationProgramServiceDescriptor'] to see the possible values for this operation
      *

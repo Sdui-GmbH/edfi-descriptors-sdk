@@ -31,14 +31,14 @@
   },
   "autoload": {
     "psr-4": {
-      "OpenAPI\\Client\\": "lib/"
+      "Descriptors\\": "lib/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "OpenAPI\\Client\\Test\\": "test/"
+      "Descriptors\\Test\\": "test/"
     }
   },
   "name": "edfi/descriptors",
-  "version": "v1.0"
+  "version": "v1.2"
 }

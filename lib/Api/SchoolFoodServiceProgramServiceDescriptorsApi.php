@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * SchoolFoodServiceProgramServiceDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSchoolFoodServiceProgramServiceDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSchoolFoodServiceProgramServiceDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesSchoolFoodServiceProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete[]
      */
     public function deletesSchoolFoodServiceProgramServiceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSchoolFoodServiceProgramServiceDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesSchoolFoodServiceProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesSchoolFoodServiceProgramServiceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSchoolFoodServiceProgramServiceDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      */
     public function deletesSchoolFoodServiceProgramServiceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSchoolFoodServiceProgramServiceDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete[]';
         $request = $this->deletesSchoolFoodServiceProgramServiceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSchoolFoodServiceProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor[]
+     * @return \Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor[]
      */
     public function getSchoolFoodServiceProgramServiceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $school_food_service_program_service_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSchoolFoodServiceProgramServiceDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSchoolFoodServiceProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getSchoolFoodServiceProgramServiceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $school_food_service_program_service_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSchoolFoodServiceProgramServiceDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor[]',
+                        '\Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      */
     public function getSchoolFoodServiceProgramServiceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $school_food_service_program_service_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSchoolFoodServiceProgramServiceDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor[]';
         $request = $this->getSchoolFoodServiceProgramServiceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $school_food_service_program_service_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSchoolFoodServiceProgramServiceDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor
+     * @return \Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor
      */
     public function getSchoolFoodServiceProgramServiceDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSchoolFoodServiceProgramServiceDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSchoolFoodServiceProgramServiceDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSchoolFoodServiceProgramServiceDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSchoolFoodServiceProgramServiceDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor';
+            $returnType = '\Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor',
+                        '\Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      */
     public function getSchoolFoodServiceProgramServiceDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSchoolFoodServiceProgramServiceDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor';
+        $returnType = '\Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor';
         $request = $this->getSchoolFoodServiceProgramServiceDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesSchoolFoodServiceProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange[]
      */
     public function keyChangesSchoolFoodServiceProgramServiceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSchoolFoodServiceProgramServiceDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesSchoolFoodServiceProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesSchoolFoodServiceProgramServiceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSchoolFoodServiceProgramServiceDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      */
     public function keyChangesSchoolFoodServiceProgramServiceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSchoolFoodServiceProgramServiceDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange[]';
         $request = $this->keyChangesSchoolFoodServiceProgramServiceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSchoolFoodServiceProgramServiceDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSchoolFoodServiceProgramServiceDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSchoolFoodServiceProgramServiceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSchoolFoodServiceProgramServiceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
     /**
      * Create request for operation 'postSchoolFoodServiceProgramServiceDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSchoolFoodServiceProgramServiceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSchoolFoodServiceProgramServiceDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSchoolFoodServiceProgramServiceDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSchoolFoodServiceProgramServiceDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSchoolFoodServiceProgramServiceDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class SchoolFoodServiceProgramServiceDescriptorsApi
      * Create request for operation 'putSchoolFoodServiceProgramServiceDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSchoolFoodServiceProgramServiceDescriptor $ed_fi_school_food_service_program_service_descriptor The JSON representation of the \&quot;schoolFoodServiceProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSchoolFoodServiceProgramServiceDescriptor'] to see the possible values for this operation
      *

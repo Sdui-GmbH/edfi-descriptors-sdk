@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * AssessmentIdentificationSystemDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class AssessmentIdentificationSystemDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAssessmentIdentificationSystemDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class AssessmentIdentificationSystemDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAssessmentIdentificationSystemDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class AssessmentIdentificationSystemDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAssessmentIdentificationSystemDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorDelete[]
      */
     public function deletesAssessmentIdentificationSystemDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAssessmentIdentificationSystemDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class AssessmentIdentificationSystemDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAssessmentIdentificationSystemDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesAssessmentIdentificationSystemDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAssessmentIdentificationSystemDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class AssessmentIdentificationSystemDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class AssessmentIdentificationSystemDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class AssessmentIdentificationSystemDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class AssessmentIdentificationSystemDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class AssessmentIdentificationSystemDescriptorsApi
      */
     public function deletesAssessmentIdentificationSystemDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAssessmentIdentificationSystemDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorDelete[]';
         $request = $this->deletesAssessmentIdentificationSystemDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class AssessmentIdentificationSystemDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssessmentIdentificationSystemDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor[]
+     * @return \Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor[]
      */
     public function getAssessmentIdentificationSystemDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $assessment_identification_system_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentIdentificationSystemDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class AssessmentIdentificationSystemDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssessmentIdentificationSystemDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssessmentIdentificationSystemDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $assessment_identification_system_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentIdentificationSystemDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class AssessmentIdentificationSystemDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class AssessmentIdentificationSystemDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class AssessmentIdentificationSystemDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class AssessmentIdentificationSystemDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor[]',
+                        '\Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class AssessmentIdentificationSystemDescriptorsApi
      */
     public function getAssessmentIdentificationSystemDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $assessment_identification_system_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentIdentificationSystemDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor[]';
         $request = $this->getAssessmentIdentificationSystemDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $assessment_identification_system_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class AssessmentIdentificationSystemDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssessmentIdentificationSystemDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor
+     * @return \Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor
      */
     public function getAssessmentIdentificationSystemDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentIdentificationSystemDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class AssessmentIdentificationSystemDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssessmentIdentificationSystemDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssessmentIdentificationSystemDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentIdentificationSystemDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class AssessmentIdentificationSystemDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class AssessmentIdentificationSystemDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class AssessmentIdentificationSystemDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor';
+            $returnType = '\Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class AssessmentIdentificationSystemDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor',
+                        '\Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class AssessmentIdentificationSystemDescriptorsApi
      */
     public function getAssessmentIdentificationSystemDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentIdentificationSystemDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor';
+        $returnType = '\Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor';
         $request = $this->getAssessmentIdentificationSystemDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class AssessmentIdentificationSystemDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAssessmentIdentificationSystemDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorKeyChange[]
      */
     public function keyChangesAssessmentIdentificationSystemDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAssessmentIdentificationSystemDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class AssessmentIdentificationSystemDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAssessmentIdentificationSystemDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesAssessmentIdentificationSystemDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAssessmentIdentificationSystemDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class AssessmentIdentificationSystemDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class AssessmentIdentificationSystemDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class AssessmentIdentificationSystemDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class AssessmentIdentificationSystemDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class AssessmentIdentificationSystemDescriptorsApi
      */
     public function keyChangesAssessmentIdentificationSystemDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAssessmentIdentificationSystemDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiAssessmentIdentificationSystemDescriptorKeyChange[]';
         $request = $this->keyChangesAssessmentIdentificationSystemDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class AssessmentIdentificationSystemDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAssessmentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class AssessmentIdentificationSystemDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAssessmentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class AssessmentIdentificationSystemDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAssessmentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class AssessmentIdentificationSystemDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAssessmentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class AssessmentIdentificationSystemDescriptorsApi
     /**
      * Create request for operation 'postAssessmentIdentificationSystemDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAssessmentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class AssessmentIdentificationSystemDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAssessmentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class AssessmentIdentificationSystemDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAssessmentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class AssessmentIdentificationSystemDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAssessmentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class AssessmentIdentificationSystemDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAssessmentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class AssessmentIdentificationSystemDescriptorsApi
      * Create request for operation 'putAssessmentIdentificationSystemDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentIdentificationSystemDescriptor $ed_fi_assessment_identification_system_descriptor The JSON representation of the \&quot;assessmentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAssessmentIdentificationSystemDescriptor'] to see the possible values for this operation
      *

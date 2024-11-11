@@ -1,4 +1,4 @@
-# OpenAPI\Client\CourseDefinedByDescriptorsApi
+# Descriptors\CourseDefinedByDescriptorsApi
 
 All URIs are relative to https://api.ed-fi.org:443/v7.1/api/data/v3, except if the operation defines another base path.
 
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CourseDefinedByDescriptorsApi(
+$apiInstance = new Descriptors\Api\CourseDefinedByDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -77,7 +77,7 @@ void (empty response body)
 ## `deletesCourseDefinedByDescriptors()`
 
 ```php
-deletesCourseDefinedByDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiCourseDefinedByDescriptorDelete[]
+deletesCourseDefinedByDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiCourseDefinedByDescriptorDelete[]
 ```
 
 Retrieves deleted resources based on change version.
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CourseDefinedByDescriptorsApi(
+$apiInstance = new Descriptors\Api\CourseDefinedByDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrackedChangesEdFiCourseDefinedByDescriptorDelete[]**](../Model/TrackedChangesEdFiCourseDefinedByDescriptorDelete.md)
+[**\Descriptors\Model\TrackedChangesEdFiCourseDefinedByDescriptorDelete[]**](../Model/TrackedChangesEdFiCourseDefinedByDescriptorDelete.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `getCourseDefinedByDescriptors()`
 
 ```php
-getCourseDefinedByDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $course_defined_by_descriptor_id, $use_snapshot): \OpenAPI\Client\Model\EdFiCourseDefinedByDescriptor[]
+getCourseDefinedByDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $course_defined_by_descriptor_id, $use_snapshot): \Descriptors\Model\EdFiCourseDefinedByDescriptor[]
 ```
 
 Retrieves specific resources using the resource's property values (using the \"Get\" pattern).
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CourseDefinedByDescriptorsApi(
+$apiInstance = new Descriptors\Api\CourseDefinedByDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,7 +201,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EdFiCourseDefinedByDescriptor[]**](../Model/EdFiCourseDefinedByDescriptor.md)
+[**\Descriptors\Model\EdFiCourseDefinedByDescriptor[]**](../Model/EdFiCourseDefinedByDescriptor.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ try {
 ## `getCourseDefinedByDescriptorsById()`
 
 ```php
-getCourseDefinedByDescriptorsById($id, $if_none_match, $use_snapshot): \OpenAPI\Client\Model\EdFiCourseDefinedByDescriptor
+getCourseDefinedByDescriptorsById($id, $if_none_match, $use_snapshot): \Descriptors\Model\EdFiCourseDefinedByDescriptor
 ```
 
 Retrieves a specific resource using the resource's identifier (using the \"Get By Id\" pattern).
@@ -234,10 +234,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CourseDefinedByDescriptorsApi(
+$apiInstance = new Descriptors\Api\CourseDefinedByDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,7 +265,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EdFiCourseDefinedByDescriptor**](../Model/EdFiCourseDefinedByDescriptor.md)
+[**\Descriptors\Model\EdFiCourseDefinedByDescriptor**](../Model/EdFiCourseDefinedByDescriptor.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ try {
 ## `keyChangesCourseDefinedByDescriptors()`
 
 ```php
-keyChangesCourseDefinedByDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiCourseDefinedByDescriptorKeyChange[]
+keyChangesCourseDefinedByDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiCourseDefinedByDescriptorKeyChange[]
 ```
 
 Retrieves resources key changes based on change version.
@@ -298,10 +298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CourseDefinedByDescriptorsApi(
+$apiInstance = new Descriptors\Api\CourseDefinedByDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -335,7 +335,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrackedChangesEdFiCourseDefinedByDescriptorKeyChange[]**](../Model/TrackedChangesEdFiCourseDefinedByDescriptorKeyChange.md)
+[**\Descriptors\Model\TrackedChangesEdFiCourseDefinedByDescriptorKeyChange[]**](../Model/TrackedChangesEdFiCourseDefinedByDescriptorKeyChange.md)
 
 ### Authorization
 
@@ -368,16 +368,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CourseDefinedByDescriptorsApi(
+$apiInstance = new Descriptors\Api\CourseDefinedByDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ed_fi_course_defined_by_descriptor = new \OpenAPI\Client\Model\EdFiCourseDefinedByDescriptor(); // \OpenAPI\Client\Model\EdFiCourseDefinedByDescriptor | The JSON representation of the \"courseDefinedByDescriptor\" resource to be created or updated.
+$ed_fi_course_defined_by_descriptor = new \Descriptors\Model\EdFiCourseDefinedByDescriptor(); // \Descriptors\Model\EdFiCourseDefinedByDescriptor | The JSON representation of the \"courseDefinedByDescriptor\" resource to be created or updated.
 
 try {
     $apiInstance->postCourseDefinedByDescriptor($ed_fi_course_defined_by_descriptor);
@@ -390,7 +390,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ed_fi_course_defined_by_descriptor** | [**\OpenAPI\Client\Model\EdFiCourseDefinedByDescriptor**](../Model/EdFiCourseDefinedByDescriptor.md)| The JSON representation of the \&quot;courseDefinedByDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_course_defined_by_descriptor** | [**\Descriptors\Model\EdFiCourseDefinedByDescriptor**](../Model/EdFiCourseDefinedByDescriptor.md)| The JSON representation of the \&quot;courseDefinedByDescriptor\&quot; resource to be created or updated. | |
 
 ### Return type
 
@@ -427,17 +427,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CourseDefinedByDescriptorsApi(
+$apiInstance = new Descriptors\Api\CourseDefinedByDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string | A resource identifier that uniquely identifies the resource.
-$ed_fi_course_defined_by_descriptor = new \OpenAPI\Client\Model\EdFiCourseDefinedByDescriptor(); // \OpenAPI\Client\Model\EdFiCourseDefinedByDescriptor | The JSON representation of the \"courseDefinedByDescriptor\" resource to be created or updated.
+$ed_fi_course_defined_by_descriptor = new \Descriptors\Model\EdFiCourseDefinedByDescriptor(); // \Descriptors\Model\EdFiCourseDefinedByDescriptor | The JSON representation of the \"courseDefinedByDescriptor\" resource to be created or updated.
 $if_match = 'if_match_example'; // string | The ETag header value used to prevent the PUT from updating a resource modified by another consumer.
 
 try {
@@ -452,7 +452,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| A resource identifier that uniquely identifies the resource. | |
-| **ed_fi_course_defined_by_descriptor** | [**\OpenAPI\Client\Model\EdFiCourseDefinedByDescriptor**](../Model/EdFiCourseDefinedByDescriptor.md)| The JSON representation of the \&quot;courseDefinedByDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_course_defined_by_descriptor** | [**\Descriptors\Model\EdFiCourseDefinedByDescriptor**](../Model/EdFiCourseDefinedByDescriptor.md)| The JSON representation of the \&quot;courseDefinedByDescriptor\&quot; resource to be created or updated. | |
 | **if_match** | **string**| The ETag header value used to prevent the PUT from updating a resource modified by another consumer. | [optional] |
 
 ### Return type

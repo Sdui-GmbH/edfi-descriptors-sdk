@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * GradeLevelDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class GradeLevelDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteGradeLevelDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class GradeLevelDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteGradeLevelDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class GradeLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesGradeLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiGradeLevelDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiGradeLevelDescriptorDelete[]
      */
     public function deletesGradeLevelDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesGradeLevelDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class GradeLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesGradeLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiGradeLevelDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiGradeLevelDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesGradeLevelDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesGradeLevelDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class GradeLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiGradeLevelDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiGradeLevelDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiGradeLevelDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiGradeLevelDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class GradeLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiGradeLevelDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiGradeLevelDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class GradeLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiGradeLevelDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiGradeLevelDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class GradeLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiGradeLevelDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiGradeLevelDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class GradeLevelDescriptorsApi
      */
     public function deletesGradeLevelDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesGradeLevelDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiGradeLevelDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiGradeLevelDescriptorDelete[]';
         $request = $this->deletesGradeLevelDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class GradeLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGradeLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiGradeLevelDescriptor[]
+     * @return \Descriptors\Model\EdFiGradeLevelDescriptor[]
      */
     public function getGradeLevelDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $grade_level_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getGradeLevelDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class GradeLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGradeLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiGradeLevelDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiGradeLevelDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getGradeLevelDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $grade_level_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getGradeLevelDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class GradeLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiGradeLevelDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiGradeLevelDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiGradeLevelDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiGradeLevelDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class GradeLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiGradeLevelDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiGradeLevelDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class GradeLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiGradeLevelDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiGradeLevelDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class GradeLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiGradeLevelDescriptor[]',
+                        '\Descriptors\Model\EdFiGradeLevelDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class GradeLevelDescriptorsApi
      */
     public function getGradeLevelDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $grade_level_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getGradeLevelDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiGradeLevelDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiGradeLevelDescriptor[]';
         $request = $this->getGradeLevelDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $grade_level_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class GradeLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGradeLevelDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiGradeLevelDescriptor
+     * @return \Descriptors\Model\EdFiGradeLevelDescriptor
      */
     public function getGradeLevelDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getGradeLevelDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class GradeLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGradeLevelDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiGradeLevelDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiGradeLevelDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGradeLevelDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getGradeLevelDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class GradeLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiGradeLevelDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiGradeLevelDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiGradeLevelDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiGradeLevelDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class GradeLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiGradeLevelDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiGradeLevelDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class GradeLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiGradeLevelDescriptor';
+            $returnType = '\Descriptors\Model\EdFiGradeLevelDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class GradeLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiGradeLevelDescriptor',
+                        '\Descriptors\Model\EdFiGradeLevelDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class GradeLevelDescriptorsApi
      */
     public function getGradeLevelDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getGradeLevelDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiGradeLevelDescriptor';
+        $returnType = '\Descriptors\Model\EdFiGradeLevelDescriptor';
         $request = $this->getGradeLevelDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class GradeLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesGradeLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiGradeLevelDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiGradeLevelDescriptorKeyChange[]
      */
     public function keyChangesGradeLevelDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesGradeLevelDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class GradeLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesGradeLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiGradeLevelDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiGradeLevelDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesGradeLevelDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesGradeLevelDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class GradeLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiGradeLevelDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiGradeLevelDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiGradeLevelDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiGradeLevelDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class GradeLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiGradeLevelDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiGradeLevelDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class GradeLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiGradeLevelDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiGradeLevelDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class GradeLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiGradeLevelDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiGradeLevelDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class GradeLevelDescriptorsApi
      */
     public function keyChangesGradeLevelDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesGradeLevelDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiGradeLevelDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiGradeLevelDescriptorKeyChange[]';
         $request = $this->keyChangesGradeLevelDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class GradeLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGradeLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class GradeLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGradeLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class GradeLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGradeLevelDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class GradeLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGradeLevelDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class GradeLevelDescriptorsApi
     /**
      * Create request for operation 'postGradeLevelDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGradeLevelDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class GradeLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putGradeLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class GradeLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putGradeLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class GradeLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putGradeLevelDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class GradeLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putGradeLevelDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class GradeLevelDescriptorsApi
      * Create request for operation 'putGradeLevelDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiGradeLevelDescriptor $ed_fi_grade_level_descriptor The JSON representation of the \&quot;gradeLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putGradeLevelDescriptor'] to see the possible values for this operation
      *

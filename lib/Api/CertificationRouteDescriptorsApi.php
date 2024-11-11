@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * CertificationRouteDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class CertificationRouteDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCertificationRouteDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class CertificationRouteDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCertificationRouteDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class CertificationRouteDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCertificationRouteDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmCertificationRouteDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesTpdmCertificationRouteDescriptorDelete[]
      */
     public function deletesCertificationRouteDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCertificationRouteDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class CertificationRouteDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCertificationRouteDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmCertificationRouteDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesTpdmCertificationRouteDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesCertificationRouteDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCertificationRouteDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class CertificationRouteDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmCertificationRouteDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesTpdmCertificationRouteDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmCertificationRouteDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesTpdmCertificationRouteDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class CertificationRouteDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmCertificationRouteDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmCertificationRouteDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class CertificationRouteDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmCertificationRouteDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesTpdmCertificationRouteDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class CertificationRouteDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesTpdmCertificationRouteDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesTpdmCertificationRouteDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class CertificationRouteDescriptorsApi
      */
     public function deletesCertificationRouteDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCertificationRouteDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmCertificationRouteDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesTpdmCertificationRouteDescriptorDelete[]';
         $request = $this->deletesCertificationRouteDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class CertificationRouteDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCertificationRouteDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TpdmCertificationRouteDescriptor[]
+     * @return \Descriptors\Model\TpdmCertificationRouteDescriptor[]
      */
     public function getCertificationRouteDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $certification_route_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCertificationRouteDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class CertificationRouteDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCertificationRouteDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TpdmCertificationRouteDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TpdmCertificationRouteDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getCertificationRouteDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $certification_route_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCertificationRouteDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class CertificationRouteDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TpdmCertificationRouteDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TpdmCertificationRouteDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TpdmCertificationRouteDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\TpdmCertificationRouteDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class CertificationRouteDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmCertificationRouteDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmCertificationRouteDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class CertificationRouteDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TpdmCertificationRouteDescriptor[]';
+            $returnType = '\Descriptors\Model\TpdmCertificationRouteDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class CertificationRouteDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TpdmCertificationRouteDescriptor[]',
+                        '\Descriptors\Model\TpdmCertificationRouteDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class CertificationRouteDescriptorsApi
      */
     public function getCertificationRouteDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $certification_route_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCertificationRouteDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TpdmCertificationRouteDescriptor[]';
+        $returnType = '\Descriptors\Model\TpdmCertificationRouteDescriptor[]';
         $request = $this->getCertificationRouteDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $certification_route_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class CertificationRouteDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCertificationRouteDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TpdmCertificationRouteDescriptor
+     * @return \Descriptors\Model\TpdmCertificationRouteDescriptor
      */
     public function getCertificationRouteDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCertificationRouteDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class CertificationRouteDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCertificationRouteDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TpdmCertificationRouteDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TpdmCertificationRouteDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCertificationRouteDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCertificationRouteDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class CertificationRouteDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TpdmCertificationRouteDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TpdmCertificationRouteDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TpdmCertificationRouteDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\TpdmCertificationRouteDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class CertificationRouteDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmCertificationRouteDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmCertificationRouteDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class CertificationRouteDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TpdmCertificationRouteDescriptor';
+            $returnType = '\Descriptors\Model\TpdmCertificationRouteDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class CertificationRouteDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TpdmCertificationRouteDescriptor',
+                        '\Descriptors\Model\TpdmCertificationRouteDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class CertificationRouteDescriptorsApi
      */
     public function getCertificationRouteDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCertificationRouteDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TpdmCertificationRouteDescriptor';
+        $returnType = '\Descriptors\Model\TpdmCertificationRouteDescriptor';
         $request = $this->getCertificationRouteDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class CertificationRouteDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCertificationRouteDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmCertificationRouteDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesTpdmCertificationRouteDescriptorKeyChange[]
      */
     public function keyChangesCertificationRouteDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCertificationRouteDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class CertificationRouteDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCertificationRouteDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmCertificationRouteDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesTpdmCertificationRouteDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesCertificationRouteDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCertificationRouteDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class CertificationRouteDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmCertificationRouteDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesTpdmCertificationRouteDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmCertificationRouteDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesTpdmCertificationRouteDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class CertificationRouteDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmCertificationRouteDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmCertificationRouteDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class CertificationRouteDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmCertificationRouteDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesTpdmCertificationRouteDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class CertificationRouteDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesTpdmCertificationRouteDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesTpdmCertificationRouteDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class CertificationRouteDescriptorsApi
      */
     public function keyChangesCertificationRouteDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCertificationRouteDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmCertificationRouteDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesTpdmCertificationRouteDescriptorKeyChange[]';
         $request = $this->keyChangesCertificationRouteDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class CertificationRouteDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCertificationRouteDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class CertificationRouteDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCertificationRouteDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class CertificationRouteDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCertificationRouteDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class CertificationRouteDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCertificationRouteDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class CertificationRouteDescriptorsApi
     /**
      * Create request for operation 'postCertificationRouteDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCertificationRouteDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class CertificationRouteDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCertificationRouteDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class CertificationRouteDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCertificationRouteDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class CertificationRouteDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCertificationRouteDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class CertificationRouteDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCertificationRouteDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class CertificationRouteDescriptorsApi
      * Create request for operation 'putCertificationRouteDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCertificationRouteDescriptor $tpdm_certification_route_descriptor The JSON representation of the \&quot;certificationRouteDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCertificationRouteDescriptor'] to see the possible values for this operation
      *

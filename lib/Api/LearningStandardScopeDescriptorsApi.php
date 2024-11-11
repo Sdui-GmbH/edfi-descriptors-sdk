@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * LearningStandardScopeDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class LearningStandardScopeDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteLearningStandardScopeDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class LearningStandardScopeDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteLearningStandardScopeDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class LearningStandardScopeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesLearningStandardScopeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardScopeDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiLearningStandardScopeDescriptorDelete[]
      */
     public function deletesLearningStandardScopeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesLearningStandardScopeDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class LearningStandardScopeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesLearningStandardScopeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardScopeDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiLearningStandardScopeDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesLearningStandardScopeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesLearningStandardScopeDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class LearningStandardScopeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardScopeDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiLearningStandardScopeDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardScopeDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiLearningStandardScopeDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class LearningStandardScopeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardScopeDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiLearningStandardScopeDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class LearningStandardScopeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardScopeDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiLearningStandardScopeDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class LearningStandardScopeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardScopeDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiLearningStandardScopeDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class LearningStandardScopeDescriptorsApi
      */
     public function deletesLearningStandardScopeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesLearningStandardScopeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardScopeDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiLearningStandardScopeDescriptorDelete[]';
         $request = $this->deletesLearningStandardScopeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class LearningStandardScopeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLearningStandardScopeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor[]
+     * @return \Descriptors\Model\EdFiLearningStandardScopeDescriptor[]
      */
     public function getLearningStandardScopeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $learning_standard_scope_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardScopeDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class LearningStandardScopeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLearningStandardScopeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiLearningStandardScopeDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getLearningStandardScopeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $learning_standard_scope_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardScopeDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class LearningStandardScopeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiLearningStandardScopeDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiLearningStandardScopeDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class LearningStandardScopeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiLearningStandardScopeDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class LearningStandardScopeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiLearningStandardScopeDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class LearningStandardScopeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor[]',
+                        '\Descriptors\Model\EdFiLearningStandardScopeDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class LearningStandardScopeDescriptorsApi
      */
     public function getLearningStandardScopeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $learning_standard_scope_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardScopeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiLearningStandardScopeDescriptor[]';
         $request = $this->getLearningStandardScopeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $learning_standard_scope_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class LearningStandardScopeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLearningStandardScopeDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor
+     * @return \Descriptors\Model\EdFiLearningStandardScopeDescriptor
      */
     public function getLearningStandardScopeDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardScopeDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class LearningStandardScopeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLearningStandardScopeDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiLearningStandardScopeDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLearningStandardScopeDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardScopeDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class LearningStandardScopeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiLearningStandardScopeDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiLearningStandardScopeDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class LearningStandardScopeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiLearningStandardScopeDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class LearningStandardScopeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor';
+            $returnType = '\Descriptors\Model\EdFiLearningStandardScopeDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class LearningStandardScopeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor',
+                        '\Descriptors\Model\EdFiLearningStandardScopeDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class LearningStandardScopeDescriptorsApi
      */
     public function getLearningStandardScopeDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardScopeDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor';
+        $returnType = '\Descriptors\Model\EdFiLearningStandardScopeDescriptor';
         $request = $this->getLearningStandardScopeDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class LearningStandardScopeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesLearningStandardScopeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardScopeDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiLearningStandardScopeDescriptorKeyChange[]
      */
     public function keyChangesLearningStandardScopeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesLearningStandardScopeDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class LearningStandardScopeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesLearningStandardScopeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardScopeDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiLearningStandardScopeDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesLearningStandardScopeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesLearningStandardScopeDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class LearningStandardScopeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardScopeDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiLearningStandardScopeDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardScopeDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiLearningStandardScopeDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class LearningStandardScopeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardScopeDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiLearningStandardScopeDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class LearningStandardScopeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardScopeDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiLearningStandardScopeDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class LearningStandardScopeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardScopeDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiLearningStandardScopeDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class LearningStandardScopeDescriptorsApi
      */
     public function keyChangesLearningStandardScopeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesLearningStandardScopeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardScopeDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiLearningStandardScopeDescriptorKeyChange[]';
         $request = $this->keyChangesLearningStandardScopeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class LearningStandardScopeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLearningStandardScopeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class LearningStandardScopeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLearningStandardScopeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class LearningStandardScopeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLearningStandardScopeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class LearningStandardScopeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLearningStandardScopeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class LearningStandardScopeDescriptorsApi
     /**
      * Create request for operation 'postLearningStandardScopeDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLearningStandardScopeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class LearningStandardScopeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLearningStandardScopeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class LearningStandardScopeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLearningStandardScopeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class LearningStandardScopeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLearningStandardScopeDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class LearningStandardScopeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLearningStandardScopeDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class LearningStandardScopeDescriptorsApi
      * Create request for operation 'putLearningStandardScopeDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLearningStandardScopeDescriptor $ed_fi_learning_standard_scope_descriptor The JSON representation of the \&quot;learningStandardScopeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLearningStandardScopeDescriptor'] to see the possible values for this operation
      *

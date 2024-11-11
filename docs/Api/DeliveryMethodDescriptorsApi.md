@@ -1,4 +1,4 @@
-# OpenAPI\Client\DeliveryMethodDescriptorsApi
+# Descriptors\DeliveryMethodDescriptorsApi
 
 All URIs are relative to https://api.ed-fi.org:443/v7.1/api/data/v3, except if the operation defines another base path.
 
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DeliveryMethodDescriptorsApi(
+$apiInstance = new Descriptors\Api\DeliveryMethodDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -77,7 +77,7 @@ void (empty response body)
 ## `deletesDeliveryMethodDescriptors()`
 
 ```php
-deletesDeliveryMethodDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]
+deletesDeliveryMethodDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]
 ```
 
 Retrieves deleted resources based on change version.
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DeliveryMethodDescriptorsApi(
+$apiInstance = new Descriptors\Api\DeliveryMethodDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]**](../Model/TrackedChangesEdFiDeliveryMethodDescriptorDelete.md)
+[**\Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]**](../Model/TrackedChangesEdFiDeliveryMethodDescriptorDelete.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `getDeliveryMethodDescriptors()`
 
 ```php
-getDeliveryMethodDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $delivery_method_descriptor_id, $use_snapshot): \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor[]
+getDeliveryMethodDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $delivery_method_descriptor_id, $use_snapshot): \Descriptors\Model\EdFiDeliveryMethodDescriptor[]
 ```
 
 Retrieves specific resources using the resource's property values (using the \"Get\" pattern).
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DeliveryMethodDescriptorsApi(
+$apiInstance = new Descriptors\Api\DeliveryMethodDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,7 +201,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor[]**](../Model/EdFiDeliveryMethodDescriptor.md)
+[**\Descriptors\Model\EdFiDeliveryMethodDescriptor[]**](../Model/EdFiDeliveryMethodDescriptor.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ try {
 ## `getDeliveryMethodDescriptorsById()`
 
 ```php
-getDeliveryMethodDescriptorsById($id, $if_none_match, $use_snapshot): \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor
+getDeliveryMethodDescriptorsById($id, $if_none_match, $use_snapshot): \Descriptors\Model\EdFiDeliveryMethodDescriptor
 ```
 
 Retrieves a specific resource using the resource's identifier (using the \"Get By Id\" pattern).
@@ -234,10 +234,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DeliveryMethodDescriptorsApi(
+$apiInstance = new Descriptors\Api\DeliveryMethodDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,7 +265,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor**](../Model/EdFiDeliveryMethodDescriptor.md)
+[**\Descriptors\Model\EdFiDeliveryMethodDescriptor**](../Model/EdFiDeliveryMethodDescriptor.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ try {
 ## `keyChangesDeliveryMethodDescriptors()`
 
 ```php
-keyChangesDeliveryMethodDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]
+keyChangesDeliveryMethodDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]
 ```
 
 Retrieves resources key changes based on change version.
@@ -298,10 +298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DeliveryMethodDescriptorsApi(
+$apiInstance = new Descriptors\Api\DeliveryMethodDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -335,7 +335,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]**](../Model/TrackedChangesEdFiDeliveryMethodDescriptorKeyChange.md)
+[**\Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]**](../Model/TrackedChangesEdFiDeliveryMethodDescriptorKeyChange.md)
 
 ### Authorization
 
@@ -368,16 +368,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DeliveryMethodDescriptorsApi(
+$apiInstance = new Descriptors\Api\DeliveryMethodDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ed_fi_delivery_method_descriptor = new \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor(); // \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor | The JSON representation of the \"deliveryMethodDescriptor\" resource to be created or updated.
+$ed_fi_delivery_method_descriptor = new \Descriptors\Model\EdFiDeliveryMethodDescriptor(); // \Descriptors\Model\EdFiDeliveryMethodDescriptor | The JSON representation of the \"deliveryMethodDescriptor\" resource to be created or updated.
 
 try {
     $apiInstance->postDeliveryMethodDescriptor($ed_fi_delivery_method_descriptor);
@@ -390,7 +390,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ed_fi_delivery_method_descriptor** | [**\OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor**](../Model/EdFiDeliveryMethodDescriptor.md)| The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_delivery_method_descriptor** | [**\Descriptors\Model\EdFiDeliveryMethodDescriptor**](../Model/EdFiDeliveryMethodDescriptor.md)| The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. | |
 
 ### Return type
 
@@ -427,17 +427,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DeliveryMethodDescriptorsApi(
+$apiInstance = new Descriptors\Api\DeliveryMethodDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string | A resource identifier that uniquely identifies the resource.
-$ed_fi_delivery_method_descriptor = new \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor(); // \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor | The JSON representation of the \"deliveryMethodDescriptor\" resource to be created or updated.
+$ed_fi_delivery_method_descriptor = new \Descriptors\Model\EdFiDeliveryMethodDescriptor(); // \Descriptors\Model\EdFiDeliveryMethodDescriptor | The JSON representation of the \"deliveryMethodDescriptor\" resource to be created or updated.
 $if_match = 'if_match_example'; // string | The ETag header value used to prevent the PUT from updating a resource modified by another consumer.
 
 try {
@@ -452,7 +452,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| A resource identifier that uniquely identifies the resource. | |
-| **ed_fi_delivery_method_descriptor** | [**\OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor**](../Model/EdFiDeliveryMethodDescriptor.md)| The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_delivery_method_descriptor** | [**\Descriptors\Model\EdFiDeliveryMethodDescriptor**](../Model/EdFiDeliveryMethodDescriptor.md)| The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. | |
 | **if_match** | **string**| The ETag header value used to prevent the PUT from updating a resource modified by another consumer. | [optional] |
 
 ### Return type

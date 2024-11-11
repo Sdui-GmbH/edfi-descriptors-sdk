@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * LocalEducationAgencyCategoryDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteLocalEducationAgencyCategoryDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteLocalEducationAgencyCategoryDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class LocalEducationAgencyCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesLocalEducationAgencyCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorDelete[]
      */
     public function deletesLocalEducationAgencyCategoryDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesLocalEducationAgencyCategoryDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class LocalEducationAgencyCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesLocalEducationAgencyCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesLocalEducationAgencyCategoryDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesLocalEducationAgencyCategoryDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class LocalEducationAgencyCategoryDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
      */
     public function deletesLocalEducationAgencyCategoryDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesLocalEducationAgencyCategoryDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorDelete[]';
         $request = $this->deletesLocalEducationAgencyCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class LocalEducationAgencyCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLocalEducationAgencyCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor[]
+     * @return \Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor[]
      */
     public function getLocalEducationAgencyCategoryDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $local_education_agency_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getLocalEducationAgencyCategoryDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class LocalEducationAgencyCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLocalEducationAgencyCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getLocalEducationAgencyCategoryDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $local_education_agency_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getLocalEducationAgencyCategoryDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class LocalEducationAgencyCategoryDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor[]',
+                        '\Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
      */
     public function getLocalEducationAgencyCategoryDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $local_education_agency_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getLocalEducationAgencyCategoryDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor[]';
         $request = $this->getLocalEducationAgencyCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $local_education_agency_category_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class LocalEducationAgencyCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLocalEducationAgencyCategoryDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor
+     * @return \Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor
      */
     public function getLocalEducationAgencyCategoryDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getLocalEducationAgencyCategoryDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class LocalEducationAgencyCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLocalEducationAgencyCategoryDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLocalEducationAgencyCategoryDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getLocalEducationAgencyCategoryDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class LocalEducationAgencyCategoryDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor';
+            $returnType = '\Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor',
+                        '\Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
      */
     public function getLocalEducationAgencyCategoryDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getLocalEducationAgencyCategoryDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor';
+        $returnType = '\Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor';
         $request = $this->getLocalEducationAgencyCategoryDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class LocalEducationAgencyCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesLocalEducationAgencyCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorKeyChange[]
      */
     public function keyChangesLocalEducationAgencyCategoryDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesLocalEducationAgencyCategoryDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class LocalEducationAgencyCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesLocalEducationAgencyCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesLocalEducationAgencyCategoryDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesLocalEducationAgencyCategoryDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class LocalEducationAgencyCategoryDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
      */
     public function keyChangesLocalEducationAgencyCategoryDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesLocalEducationAgencyCategoryDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiLocalEducationAgencyCategoryDescriptorKeyChange[]';
         $request = $this->keyChangesLocalEducationAgencyCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class LocalEducationAgencyCategoryDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLocalEducationAgencyCategoryDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class LocalEducationAgencyCategoryDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLocalEducationAgencyCategoryDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLocalEducationAgencyCategoryDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLocalEducationAgencyCategoryDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
     /**
      * Create request for operation 'postLocalEducationAgencyCategoryDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLocalEducationAgencyCategoryDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class LocalEducationAgencyCategoryDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLocalEducationAgencyCategoryDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class LocalEducationAgencyCategoryDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLocalEducationAgencyCategoryDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLocalEducationAgencyCategoryDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLocalEducationAgencyCategoryDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class LocalEducationAgencyCategoryDescriptorsApi
      * Create request for operation 'putLocalEducationAgencyCategoryDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLocalEducationAgencyCategoryDescriptor $ed_fi_local_education_agency_category_descriptor The JSON representation of the \&quot;localEducationAgencyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLocalEducationAgencyCategoryDescriptor'] to see the possible values for this operation
      *

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * GenderDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class GenderDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteGenderDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class GenderDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteGenderDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class GenderDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesGenderDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesTpdmGenderDescriptorDelete[]
      */
     public function deletesGenderDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesGenderDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class GenderDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesGenderDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesTpdmGenderDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesGenderDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesGenderDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class GenderDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesTpdmGenderDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesTpdmGenderDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class GenderDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmGenderDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class GenderDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesTpdmGenderDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class GenderDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesTpdmGenderDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class GenderDescriptorsApi
      */
     public function deletesGenderDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesGenderDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesTpdmGenderDescriptorDelete[]';
         $request = $this->deletesGenderDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class GenderDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGenderDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TpdmGenderDescriptor[]
+     * @return \Descriptors\Model\TpdmGenderDescriptor[]
      */
     public function getGenderDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $gender_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getGenderDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class GenderDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGenderDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TpdmGenderDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TpdmGenderDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getGenderDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $gender_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getGenderDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class GenderDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TpdmGenderDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TpdmGenderDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TpdmGenderDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\TpdmGenderDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class GenderDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmGenderDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmGenderDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class GenderDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TpdmGenderDescriptor[]';
+            $returnType = '\Descriptors\Model\TpdmGenderDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class GenderDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TpdmGenderDescriptor[]',
+                        '\Descriptors\Model\TpdmGenderDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class GenderDescriptorsApi
      */
     public function getGenderDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $gender_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getGenderDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TpdmGenderDescriptor[]';
+        $returnType = '\Descriptors\Model\TpdmGenderDescriptor[]';
         $request = $this->getGenderDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $gender_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class GenderDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGenderDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TpdmGenderDescriptor
+     * @return \Descriptors\Model\TpdmGenderDescriptor
      */
     public function getGenderDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getGenderDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class GenderDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGenderDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TpdmGenderDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TpdmGenderDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGenderDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getGenderDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class GenderDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TpdmGenderDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TpdmGenderDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TpdmGenderDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\TpdmGenderDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class GenderDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmGenderDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmGenderDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class GenderDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TpdmGenderDescriptor';
+            $returnType = '\Descriptors\Model\TpdmGenderDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class GenderDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TpdmGenderDescriptor',
+                        '\Descriptors\Model\TpdmGenderDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class GenderDescriptorsApi
      */
     public function getGenderDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getGenderDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TpdmGenderDescriptor';
+        $returnType = '\Descriptors\Model\TpdmGenderDescriptor';
         $request = $this->getGenderDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class GenderDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesGenderDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesTpdmGenderDescriptorKeyChange[]
      */
     public function keyChangesGenderDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesGenderDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class GenderDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesGenderDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesTpdmGenderDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesGenderDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesGenderDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class GenderDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesTpdmGenderDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesTpdmGenderDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class GenderDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmGenderDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class GenderDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesTpdmGenderDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class GenderDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesTpdmGenderDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class GenderDescriptorsApi
      */
     public function keyChangesGenderDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesGenderDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesTpdmGenderDescriptorKeyChange[]';
         $request = $this->keyChangesGenderDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class GenderDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGenderDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class GenderDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGenderDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class GenderDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGenderDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class GenderDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGenderDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class GenderDescriptorsApi
     /**
      * Create request for operation 'postGenderDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGenderDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class GenderDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putGenderDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class GenderDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putGenderDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class GenderDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putGenderDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class GenderDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putGenderDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class GenderDescriptorsApi
      * Create request for operation 'putGenderDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmGenderDescriptor $tpdm_gender_descriptor The JSON representation of the \&quot;genderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putGenderDescriptor'] to see the possible values for this operation
      *

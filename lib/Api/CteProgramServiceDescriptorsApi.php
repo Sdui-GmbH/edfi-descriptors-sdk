@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * CteProgramServiceDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class CteProgramServiceDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCTEProgramServiceDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class CteProgramServiceDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCTEProgramServiceDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class CteProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCTEProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiCteProgramServiceDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiCteProgramServiceDescriptorDelete[]
      */
     public function deletesCTEProgramServiceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCTEProgramServiceDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class CteProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCTEProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiCteProgramServiceDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiCteProgramServiceDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesCTEProgramServiceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCTEProgramServiceDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class CteProgramServiceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiCteProgramServiceDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiCteProgramServiceDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiCteProgramServiceDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiCteProgramServiceDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class CteProgramServiceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiCteProgramServiceDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiCteProgramServiceDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class CteProgramServiceDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCteProgramServiceDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiCteProgramServiceDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class CteProgramServiceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiCteProgramServiceDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiCteProgramServiceDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class CteProgramServiceDescriptorsApi
      */
     public function deletesCTEProgramServiceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCTEProgramServiceDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCteProgramServiceDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiCteProgramServiceDescriptorDelete[]';
         $request = $this->deletesCTEProgramServiceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class CteProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCTEProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor[]
+     * @return \Descriptors\Model\EdFiCteProgramServiceDescriptor[]
      */
     public function getCTEProgramServiceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $cte_program_service_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCTEProgramServiceDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class CteProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCTEProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiCteProgramServiceDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getCTEProgramServiceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $cte_program_service_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCTEProgramServiceDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class CteProgramServiceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiCteProgramServiceDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiCteProgramServiceDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class CteProgramServiceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiCteProgramServiceDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class CteProgramServiceDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiCteProgramServiceDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class CteProgramServiceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor[]',
+                        '\Descriptors\Model\EdFiCteProgramServiceDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class CteProgramServiceDescriptorsApi
      */
     public function getCTEProgramServiceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $cte_program_service_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCTEProgramServiceDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiCteProgramServiceDescriptor[]';
         $request = $this->getCTEProgramServiceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $cte_program_service_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class CteProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCTEProgramServiceDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor
+     * @return \Descriptors\Model\EdFiCteProgramServiceDescriptor
      */
     public function getCTEProgramServiceDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCTEProgramServiceDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class CteProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCTEProgramServiceDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiCteProgramServiceDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCTEProgramServiceDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCTEProgramServiceDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class CteProgramServiceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiCteProgramServiceDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiCteProgramServiceDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class CteProgramServiceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiCteProgramServiceDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class CteProgramServiceDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor';
+            $returnType = '\Descriptors\Model\EdFiCteProgramServiceDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class CteProgramServiceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor',
+                        '\Descriptors\Model\EdFiCteProgramServiceDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class CteProgramServiceDescriptorsApi
      */
     public function getCTEProgramServiceDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCTEProgramServiceDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor';
+        $returnType = '\Descriptors\Model\EdFiCteProgramServiceDescriptor';
         $request = $this->getCTEProgramServiceDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class CteProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCTEProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiCteProgramServiceDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiCteProgramServiceDescriptorKeyChange[]
      */
     public function keyChangesCTEProgramServiceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCTEProgramServiceDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class CteProgramServiceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCTEProgramServiceDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiCteProgramServiceDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiCteProgramServiceDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesCTEProgramServiceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCTEProgramServiceDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class CteProgramServiceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiCteProgramServiceDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiCteProgramServiceDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiCteProgramServiceDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiCteProgramServiceDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class CteProgramServiceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiCteProgramServiceDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiCteProgramServiceDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class CteProgramServiceDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCteProgramServiceDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiCteProgramServiceDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class CteProgramServiceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiCteProgramServiceDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiCteProgramServiceDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class CteProgramServiceDescriptorsApi
      */
     public function keyChangesCTEProgramServiceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCTEProgramServiceDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCteProgramServiceDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiCteProgramServiceDescriptorKeyChange[]';
         $request = $this->keyChangesCTEProgramServiceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class CteProgramServiceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCTEProgramServiceDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class CteProgramServiceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCTEProgramServiceDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class CteProgramServiceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCTEProgramServiceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class CteProgramServiceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCTEProgramServiceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class CteProgramServiceDescriptorsApi
     /**
      * Create request for operation 'postCTEProgramServiceDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCTEProgramServiceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class CteProgramServiceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCTEProgramServiceDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class CteProgramServiceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCTEProgramServiceDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class CteProgramServiceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCTEProgramServiceDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class CteProgramServiceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCTEProgramServiceDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class CteProgramServiceDescriptorsApi
      * Create request for operation 'putCTEProgramServiceDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCteProgramServiceDescriptor $ed_fi_cte_program_service_descriptor The JSON representation of the \&quot;cteProgramServiceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCTEProgramServiceDescriptor'] to see the possible values for this operation
      *

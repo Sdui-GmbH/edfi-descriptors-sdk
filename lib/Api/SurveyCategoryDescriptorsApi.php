@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * SurveyCategoryDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class SurveyCategoryDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSurveyCategoryDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class SurveyCategoryDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSurveyCategoryDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class SurveyCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesSurveyCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiSurveyCategoryDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiSurveyCategoryDescriptorDelete[]
      */
     public function deletesSurveyCategoryDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSurveyCategoryDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class SurveyCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesSurveyCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiSurveyCategoryDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiSurveyCategoryDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesSurveyCategoryDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSurveyCategoryDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class SurveyCategoryDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiSurveyCategoryDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiSurveyCategoryDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiSurveyCategoryDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiSurveyCategoryDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class SurveyCategoryDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiSurveyCategoryDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiSurveyCategoryDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class SurveyCategoryDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSurveyCategoryDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiSurveyCategoryDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class SurveyCategoryDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiSurveyCategoryDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiSurveyCategoryDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class SurveyCategoryDescriptorsApi
      */
     public function deletesSurveyCategoryDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSurveyCategoryDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSurveyCategoryDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiSurveyCategoryDescriptorDelete[]';
         $request = $this->deletesSurveyCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class SurveyCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSurveyCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor[]
+     * @return \Descriptors\Model\EdFiSurveyCategoryDescriptor[]
      */
     public function getSurveyCategoryDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $survey_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSurveyCategoryDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class SurveyCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSurveyCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiSurveyCategoryDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getSurveyCategoryDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $survey_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSurveyCategoryDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class SurveyCategoryDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiSurveyCategoryDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiSurveyCategoryDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class SurveyCategoryDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiSurveyCategoryDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class SurveyCategoryDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiSurveyCategoryDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class SurveyCategoryDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor[]',
+                        '\Descriptors\Model\EdFiSurveyCategoryDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class SurveyCategoryDescriptorsApi
      */
     public function getSurveyCategoryDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $survey_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSurveyCategoryDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiSurveyCategoryDescriptor[]';
         $request = $this->getSurveyCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $survey_category_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class SurveyCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSurveyCategoryDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor
+     * @return \Descriptors\Model\EdFiSurveyCategoryDescriptor
      */
     public function getSurveyCategoryDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSurveyCategoryDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class SurveyCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSurveyCategoryDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiSurveyCategoryDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSurveyCategoryDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSurveyCategoryDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class SurveyCategoryDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiSurveyCategoryDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiSurveyCategoryDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class SurveyCategoryDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiSurveyCategoryDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class SurveyCategoryDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor';
+            $returnType = '\Descriptors\Model\EdFiSurveyCategoryDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class SurveyCategoryDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor',
+                        '\Descriptors\Model\EdFiSurveyCategoryDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class SurveyCategoryDescriptorsApi
      */
     public function getSurveyCategoryDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSurveyCategoryDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor';
+        $returnType = '\Descriptors\Model\EdFiSurveyCategoryDescriptor';
         $request = $this->getSurveyCategoryDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class SurveyCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesSurveyCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiSurveyCategoryDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiSurveyCategoryDescriptorKeyChange[]
      */
     public function keyChangesSurveyCategoryDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSurveyCategoryDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class SurveyCategoryDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesSurveyCategoryDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiSurveyCategoryDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiSurveyCategoryDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesSurveyCategoryDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSurveyCategoryDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class SurveyCategoryDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiSurveyCategoryDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiSurveyCategoryDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiSurveyCategoryDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiSurveyCategoryDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class SurveyCategoryDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiSurveyCategoryDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiSurveyCategoryDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class SurveyCategoryDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSurveyCategoryDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiSurveyCategoryDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class SurveyCategoryDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiSurveyCategoryDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiSurveyCategoryDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class SurveyCategoryDescriptorsApi
      */
     public function keyChangesSurveyCategoryDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSurveyCategoryDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSurveyCategoryDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiSurveyCategoryDescriptorKeyChange[]';
         $request = $this->keyChangesSurveyCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class SurveyCategoryDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSurveyCategoryDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class SurveyCategoryDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSurveyCategoryDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class SurveyCategoryDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSurveyCategoryDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class SurveyCategoryDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSurveyCategoryDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class SurveyCategoryDescriptorsApi
     /**
      * Create request for operation 'postSurveyCategoryDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSurveyCategoryDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class SurveyCategoryDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSurveyCategoryDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class SurveyCategoryDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSurveyCategoryDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class SurveyCategoryDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSurveyCategoryDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class SurveyCategoryDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSurveyCategoryDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class SurveyCategoryDescriptorsApi
      * Create request for operation 'putSurveyCategoryDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiSurveyCategoryDescriptor $ed_fi_survey_category_descriptor The JSON representation of the \&quot;surveyCategoryDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSurveyCategoryDescriptor'] to see the possible values for this operation
      *

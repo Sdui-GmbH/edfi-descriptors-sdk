@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * ObjectiveRatingLevelDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class ObjectiveRatingLevelDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteObjectiveRatingLevelDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class ObjectiveRatingLevelDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteObjectiveRatingLevelDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class ObjectiveRatingLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesObjectiveRatingLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorDelete[]
      */
     public function deletesObjectiveRatingLevelDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesObjectiveRatingLevelDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class ObjectiveRatingLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesObjectiveRatingLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesObjectiveRatingLevelDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesObjectiveRatingLevelDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class ObjectiveRatingLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class ObjectiveRatingLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class ObjectiveRatingLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class ObjectiveRatingLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class ObjectiveRatingLevelDescriptorsApi
      */
     public function deletesObjectiveRatingLevelDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesObjectiveRatingLevelDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorDelete[]';
         $request = $this->deletesObjectiveRatingLevelDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class ObjectiveRatingLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getObjectiveRatingLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor[]
+     * @return \Descriptors\Model\TpdmObjectiveRatingLevelDescriptor[]
      */
     public function getObjectiveRatingLevelDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $objective_rating_level_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getObjectiveRatingLevelDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class ObjectiveRatingLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getObjectiveRatingLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TpdmObjectiveRatingLevelDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getObjectiveRatingLevelDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $objective_rating_level_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getObjectiveRatingLevelDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class ObjectiveRatingLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TpdmObjectiveRatingLevelDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\TpdmObjectiveRatingLevelDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class ObjectiveRatingLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmObjectiveRatingLevelDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class ObjectiveRatingLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor[]';
+            $returnType = '\Descriptors\Model\TpdmObjectiveRatingLevelDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class ObjectiveRatingLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor[]',
+                        '\Descriptors\Model\TpdmObjectiveRatingLevelDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class ObjectiveRatingLevelDescriptorsApi
      */
     public function getObjectiveRatingLevelDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $objective_rating_level_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getObjectiveRatingLevelDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor[]';
+        $returnType = '\Descriptors\Model\TpdmObjectiveRatingLevelDescriptor[]';
         $request = $this->getObjectiveRatingLevelDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $objective_rating_level_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class ObjectiveRatingLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getObjectiveRatingLevelDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor
+     * @return \Descriptors\Model\TpdmObjectiveRatingLevelDescriptor
      */
     public function getObjectiveRatingLevelDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getObjectiveRatingLevelDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class ObjectiveRatingLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getObjectiveRatingLevelDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TpdmObjectiveRatingLevelDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getObjectiveRatingLevelDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getObjectiveRatingLevelDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class ObjectiveRatingLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TpdmObjectiveRatingLevelDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\TpdmObjectiveRatingLevelDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class ObjectiveRatingLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmObjectiveRatingLevelDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class ObjectiveRatingLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor';
+            $returnType = '\Descriptors\Model\TpdmObjectiveRatingLevelDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class ObjectiveRatingLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor',
+                        '\Descriptors\Model\TpdmObjectiveRatingLevelDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class ObjectiveRatingLevelDescriptorsApi
      */
     public function getObjectiveRatingLevelDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getObjectiveRatingLevelDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor';
+        $returnType = '\Descriptors\Model\TpdmObjectiveRatingLevelDescriptor';
         $request = $this->getObjectiveRatingLevelDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class ObjectiveRatingLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesObjectiveRatingLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange[]
      */
     public function keyChangesObjectiveRatingLevelDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesObjectiveRatingLevelDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class ObjectiveRatingLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesObjectiveRatingLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesObjectiveRatingLevelDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesObjectiveRatingLevelDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class ObjectiveRatingLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class ObjectiveRatingLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class ObjectiveRatingLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class ObjectiveRatingLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class ObjectiveRatingLevelDescriptorsApi
      */
     public function keyChangesObjectiveRatingLevelDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesObjectiveRatingLevelDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesTpdmObjectiveRatingLevelDescriptorKeyChange[]';
         $request = $this->keyChangesObjectiveRatingLevelDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class ObjectiveRatingLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postObjectiveRatingLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class ObjectiveRatingLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postObjectiveRatingLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class ObjectiveRatingLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postObjectiveRatingLevelDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class ObjectiveRatingLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postObjectiveRatingLevelDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class ObjectiveRatingLevelDescriptorsApi
     /**
      * Create request for operation 'postObjectiveRatingLevelDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postObjectiveRatingLevelDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class ObjectiveRatingLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putObjectiveRatingLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class ObjectiveRatingLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putObjectiveRatingLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class ObjectiveRatingLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putObjectiveRatingLevelDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class ObjectiveRatingLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putObjectiveRatingLevelDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class ObjectiveRatingLevelDescriptorsApi
      * Create request for operation 'putObjectiveRatingLevelDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmObjectiveRatingLevelDescriptor $tpdm_objective_rating_level_descriptor The JSON representation of the \&quot;objectiveRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putObjectiveRatingLevelDescriptor'] to see the possible values for this operation
      *

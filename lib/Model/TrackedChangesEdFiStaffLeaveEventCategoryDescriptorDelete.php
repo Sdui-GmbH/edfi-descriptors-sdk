@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Descriptors\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Descriptors\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiStaffLeaveEventCategoryDescriptorDelete Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TrackedChangesEdFiStaffLeaveEventCategoryDescriptorDelete implements Model
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey'
+        'key_values' => '\Descriptors\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey'
     ];
 
     /**
@@ -360,7 +360,7 @@ class TrackedChangesEdFiStaffLeaveEventCategoryDescriptorDelete implements Model
     /**
      * Gets key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey|null
      */
     public function getKeyValues()
     {
@@ -370,7 +370,7 @@ class TrackedChangesEdFiStaffLeaveEventCategoryDescriptorDelete implements Model
     /**
      * Sets key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey|null $key_values key_values
+     * @param \Descriptors\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey|null $key_values key_values
      *
      * @return self
      */

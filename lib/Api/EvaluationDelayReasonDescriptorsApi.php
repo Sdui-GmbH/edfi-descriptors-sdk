@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * EvaluationDelayReasonDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class EvaluationDelayReasonDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEvaluationDelayReasonDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class EvaluationDelayReasonDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEvaluationDelayReasonDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class EvaluationDelayReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEvaluationDelayReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete[]
      */
     public function deletesEvaluationDelayReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEvaluationDelayReasonDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class EvaluationDelayReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEvaluationDelayReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesEvaluationDelayReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEvaluationDelayReasonDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class EvaluationDelayReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class EvaluationDelayReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class EvaluationDelayReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class EvaluationDelayReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class EvaluationDelayReasonDescriptorsApi
      */
     public function deletesEvaluationDelayReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEvaluationDelayReasonDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete[]';
         $request = $this->deletesEvaluationDelayReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class EvaluationDelayReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEvaluationDelayReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor[]
+     * @return \Descriptors\Model\EdFiEvaluationDelayReasonDescriptor[]
      */
     public function getEvaluationDelayReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $evaluation_delay_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEvaluationDelayReasonDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class EvaluationDelayReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEvaluationDelayReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiEvaluationDelayReasonDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getEvaluationDelayReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $evaluation_delay_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEvaluationDelayReasonDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class EvaluationDelayReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiEvaluationDelayReasonDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiEvaluationDelayReasonDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class EvaluationDelayReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiEvaluationDelayReasonDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class EvaluationDelayReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiEvaluationDelayReasonDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class EvaluationDelayReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor[]',
+                        '\Descriptors\Model\EdFiEvaluationDelayReasonDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class EvaluationDelayReasonDescriptorsApi
      */
     public function getEvaluationDelayReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $evaluation_delay_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEvaluationDelayReasonDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiEvaluationDelayReasonDescriptor[]';
         $request = $this->getEvaluationDelayReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $evaluation_delay_reason_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class EvaluationDelayReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEvaluationDelayReasonDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor
+     * @return \Descriptors\Model\EdFiEvaluationDelayReasonDescriptor
      */
     public function getEvaluationDelayReasonDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEvaluationDelayReasonDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class EvaluationDelayReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEvaluationDelayReasonDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiEvaluationDelayReasonDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEvaluationDelayReasonDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEvaluationDelayReasonDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class EvaluationDelayReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiEvaluationDelayReasonDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiEvaluationDelayReasonDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class EvaluationDelayReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiEvaluationDelayReasonDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class EvaluationDelayReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor';
+            $returnType = '\Descriptors\Model\EdFiEvaluationDelayReasonDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class EvaluationDelayReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor',
+                        '\Descriptors\Model\EdFiEvaluationDelayReasonDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class EvaluationDelayReasonDescriptorsApi
      */
     public function getEvaluationDelayReasonDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEvaluationDelayReasonDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor';
+        $returnType = '\Descriptors\Model\EdFiEvaluationDelayReasonDescriptor';
         $request = $this->getEvaluationDelayReasonDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class EvaluationDelayReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEvaluationDelayReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKeyChange[]
      */
     public function keyChangesEvaluationDelayReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEvaluationDelayReasonDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class EvaluationDelayReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEvaluationDelayReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesEvaluationDelayReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEvaluationDelayReasonDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class EvaluationDelayReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class EvaluationDelayReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class EvaluationDelayReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class EvaluationDelayReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class EvaluationDelayReasonDescriptorsApi
      */
     public function keyChangesEvaluationDelayReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEvaluationDelayReasonDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKeyChange[]';
         $request = $this->keyChangesEvaluationDelayReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class EvaluationDelayReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEvaluationDelayReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class EvaluationDelayReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEvaluationDelayReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class EvaluationDelayReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEvaluationDelayReasonDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class EvaluationDelayReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEvaluationDelayReasonDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class EvaluationDelayReasonDescriptorsApi
     /**
      * Create request for operation 'postEvaluationDelayReasonDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEvaluationDelayReasonDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class EvaluationDelayReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEvaluationDelayReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class EvaluationDelayReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEvaluationDelayReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class EvaluationDelayReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEvaluationDelayReasonDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class EvaluationDelayReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEvaluationDelayReasonDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class EvaluationDelayReasonDescriptorsApi
      * Create request for operation 'putEvaluationDelayReasonDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEvaluationDelayReasonDescriptor $ed_fi_evaluation_delay_reason_descriptor The JSON representation of the \&quot;evaluationDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEvaluationDelayReasonDescriptor'] to see the possible values for this operation
      *

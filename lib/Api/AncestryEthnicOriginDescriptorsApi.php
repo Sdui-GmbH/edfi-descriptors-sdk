@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * AncestryEthnicOriginDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class AncestryEthnicOriginDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAncestryEthnicOriginDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class AncestryEthnicOriginDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAncestryEthnicOriginDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class AncestryEthnicOriginDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAncestryEthnicOriginDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete[]
      */
     public function deletesAncestryEthnicOriginDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAncestryEthnicOriginDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class AncestryEthnicOriginDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAncestryEthnicOriginDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesAncestryEthnicOriginDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAncestryEthnicOriginDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class AncestryEthnicOriginDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class AncestryEthnicOriginDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class AncestryEthnicOriginDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class AncestryEthnicOriginDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class AncestryEthnicOriginDescriptorsApi
      */
     public function deletesAncestryEthnicOriginDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAncestryEthnicOriginDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete[]';
         $request = $this->deletesAncestryEthnicOriginDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class AncestryEthnicOriginDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAncestryEthnicOriginDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor[]
+     * @return \Descriptors\Model\EdFiAncestryEthnicOriginDescriptor[]
      */
     public function getAncestryEthnicOriginDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $ancestry_ethnic_origin_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAncestryEthnicOriginDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class AncestryEthnicOriginDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAncestryEthnicOriginDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiAncestryEthnicOriginDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAncestryEthnicOriginDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $ancestry_ethnic_origin_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAncestryEthnicOriginDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class AncestryEthnicOriginDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiAncestryEthnicOriginDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiAncestryEthnicOriginDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class AncestryEthnicOriginDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiAncestryEthnicOriginDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class AncestryEthnicOriginDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiAncestryEthnicOriginDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class AncestryEthnicOriginDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor[]',
+                        '\Descriptors\Model\EdFiAncestryEthnicOriginDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class AncestryEthnicOriginDescriptorsApi
      */
     public function getAncestryEthnicOriginDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $ancestry_ethnic_origin_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAncestryEthnicOriginDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiAncestryEthnicOriginDescriptor[]';
         $request = $this->getAncestryEthnicOriginDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $ancestry_ethnic_origin_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class AncestryEthnicOriginDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAncestryEthnicOriginDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor
+     * @return \Descriptors\Model\EdFiAncestryEthnicOriginDescriptor
      */
     public function getAncestryEthnicOriginDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAncestryEthnicOriginDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class AncestryEthnicOriginDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAncestryEthnicOriginDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiAncestryEthnicOriginDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAncestryEthnicOriginDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAncestryEthnicOriginDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class AncestryEthnicOriginDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiAncestryEthnicOriginDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiAncestryEthnicOriginDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class AncestryEthnicOriginDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiAncestryEthnicOriginDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class AncestryEthnicOriginDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor';
+            $returnType = '\Descriptors\Model\EdFiAncestryEthnicOriginDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class AncestryEthnicOriginDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor',
+                        '\Descriptors\Model\EdFiAncestryEthnicOriginDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class AncestryEthnicOriginDescriptorsApi
      */
     public function getAncestryEthnicOriginDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAncestryEthnicOriginDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor';
+        $returnType = '\Descriptors\Model\EdFiAncestryEthnicOriginDescriptor';
         $request = $this->getAncestryEthnicOriginDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class AncestryEthnicOriginDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAncestryEthnicOriginDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKeyChange[]
      */
     public function keyChangesAncestryEthnicOriginDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAncestryEthnicOriginDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class AncestryEthnicOriginDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAncestryEthnicOriginDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesAncestryEthnicOriginDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAncestryEthnicOriginDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class AncestryEthnicOriginDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class AncestryEthnicOriginDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class AncestryEthnicOriginDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class AncestryEthnicOriginDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class AncestryEthnicOriginDescriptorsApi
      */
     public function keyChangesAncestryEthnicOriginDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAncestryEthnicOriginDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKeyChange[]';
         $request = $this->keyChangesAncestryEthnicOriginDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class AncestryEthnicOriginDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAncestryEthnicOriginDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class AncestryEthnicOriginDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAncestryEthnicOriginDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class AncestryEthnicOriginDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAncestryEthnicOriginDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class AncestryEthnicOriginDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAncestryEthnicOriginDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class AncestryEthnicOriginDescriptorsApi
     /**
      * Create request for operation 'postAncestryEthnicOriginDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAncestryEthnicOriginDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class AncestryEthnicOriginDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAncestryEthnicOriginDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class AncestryEthnicOriginDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAncestryEthnicOriginDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class AncestryEthnicOriginDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAncestryEthnicOriginDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class AncestryEthnicOriginDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAncestryEthnicOriginDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class AncestryEthnicOriginDescriptorsApi
      * Create request for operation 'putAncestryEthnicOriginDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAncestryEthnicOriginDescriptor $ed_fi_ancestry_ethnic_origin_descriptor The JSON representation of the \&quot;ancestryEthnicOriginDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAncestryEthnicOriginDescriptor'] to see the possible values for this operation
      *

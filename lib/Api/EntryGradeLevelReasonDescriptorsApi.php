@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * EntryGradeLevelReasonDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class EntryGradeLevelReasonDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEntryGradeLevelReasonDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class EntryGradeLevelReasonDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEntryGradeLevelReasonDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class EntryGradeLevelReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]
      */
     public function deletesEntryGradeLevelReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEntryGradeLevelReasonDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class EntryGradeLevelReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesEntryGradeLevelReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEntryGradeLevelReasonDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class EntryGradeLevelReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class EntryGradeLevelReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class EntryGradeLevelReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class EntryGradeLevelReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class EntryGradeLevelReasonDescriptorsApi
      */
     public function deletesEntryGradeLevelReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEntryGradeLevelReasonDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]';
         $request = $this->deletesEntryGradeLevelReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class EntryGradeLevelReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor[]
+     * @return \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor[]
      */
     public function getEntryGradeLevelReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $entry_grade_level_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class EntryGradeLevelReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getEntryGradeLevelReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $entry_grade_level_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class EntryGradeLevelReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class EntryGradeLevelReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class EntryGradeLevelReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class EntryGradeLevelReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor[]',
+                        '\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class EntryGradeLevelReasonDescriptorsApi
      */
     public function getEntryGradeLevelReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $entry_grade_level_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor[]';
         $request = $this->getEntryGradeLevelReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $entry_grade_level_reason_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class EntryGradeLevelReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntryGradeLevelReasonDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor
+     * @return \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor
      */
     public function getEntryGradeLevelReasonDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class EntryGradeLevelReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntryGradeLevelReasonDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEntryGradeLevelReasonDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class EntryGradeLevelReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class EntryGradeLevelReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class EntryGradeLevelReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor';
+            $returnType = '\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class EntryGradeLevelReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor',
+                        '\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class EntryGradeLevelReasonDescriptorsApi
      */
     public function getEntryGradeLevelReasonDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor';
+        $returnType = '\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor';
         $request = $this->getEntryGradeLevelReasonDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class EntryGradeLevelReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]
      */
     public function keyChangesEntryGradeLevelReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class EntryGradeLevelReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesEntryGradeLevelReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class EntryGradeLevelReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class EntryGradeLevelReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class EntryGradeLevelReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class EntryGradeLevelReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class EntryGradeLevelReasonDescriptorsApi
      */
     public function keyChangesEntryGradeLevelReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]';
         $request = $this->keyChangesEntryGradeLevelReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEntryGradeLevelReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEntryGradeLevelReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEntryGradeLevelReasonDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEntryGradeLevelReasonDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class EntryGradeLevelReasonDescriptorsApi
     /**
      * Create request for operation 'postEntryGradeLevelReasonDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEntryGradeLevelReasonDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class EntryGradeLevelReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEntryGradeLevelReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class EntryGradeLevelReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEntryGradeLevelReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class EntryGradeLevelReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEntryGradeLevelReasonDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class EntryGradeLevelReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEntryGradeLevelReasonDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class EntryGradeLevelReasonDescriptorsApi
      * Create request for operation 'putEntryGradeLevelReasonDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor $ed_fi_entry_grade_level_reason_descriptor The JSON representation of the \&quot;entryGradeLevelReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEntryGradeLevelReasonDescriptor'] to see the possible values for this operation
      *

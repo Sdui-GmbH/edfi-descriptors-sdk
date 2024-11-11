@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * EducationPlanDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class EducationPlanDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEducationPlanDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class EducationPlanDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEducationPlanDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class EducationPlanDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEducationPlanDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEducationPlanDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiEducationPlanDescriptorDelete[]
      */
     public function deletesEducationPlanDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEducationPlanDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class EducationPlanDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEducationPlanDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiEducationPlanDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiEducationPlanDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesEducationPlanDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEducationPlanDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class EducationPlanDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiEducationPlanDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiEducationPlanDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiEducationPlanDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiEducationPlanDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class EducationPlanDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiEducationPlanDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiEducationPlanDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class EducationPlanDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEducationPlanDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiEducationPlanDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class EducationPlanDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiEducationPlanDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiEducationPlanDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class EducationPlanDescriptorsApi
      */
     public function deletesEducationPlanDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEducationPlanDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEducationPlanDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiEducationPlanDescriptorDelete[]';
         $request = $this->deletesEducationPlanDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class EducationPlanDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEducationPlanDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiEducationPlanDescriptor[]
+     * @return \Descriptors\Model\EdFiEducationPlanDescriptor[]
      */
     public function getEducationPlanDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $education_plan_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEducationPlanDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class EducationPlanDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEducationPlanDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiEducationPlanDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiEducationPlanDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getEducationPlanDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $education_plan_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEducationPlanDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class EducationPlanDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiEducationPlanDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiEducationPlanDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiEducationPlanDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiEducationPlanDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class EducationPlanDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiEducationPlanDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiEducationPlanDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class EducationPlanDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiEducationPlanDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiEducationPlanDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class EducationPlanDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiEducationPlanDescriptor[]',
+                        '\Descriptors\Model\EdFiEducationPlanDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class EducationPlanDescriptorsApi
      */
     public function getEducationPlanDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $education_plan_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEducationPlanDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiEducationPlanDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiEducationPlanDescriptor[]';
         $request = $this->getEducationPlanDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $education_plan_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class EducationPlanDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEducationPlanDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiEducationPlanDescriptor
+     * @return \Descriptors\Model\EdFiEducationPlanDescriptor
      */
     public function getEducationPlanDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEducationPlanDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class EducationPlanDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEducationPlanDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiEducationPlanDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiEducationPlanDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEducationPlanDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEducationPlanDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class EducationPlanDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiEducationPlanDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiEducationPlanDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiEducationPlanDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiEducationPlanDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class EducationPlanDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiEducationPlanDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiEducationPlanDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class EducationPlanDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiEducationPlanDescriptor';
+            $returnType = '\Descriptors\Model\EdFiEducationPlanDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class EducationPlanDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiEducationPlanDescriptor',
+                        '\Descriptors\Model\EdFiEducationPlanDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class EducationPlanDescriptorsApi
      */
     public function getEducationPlanDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEducationPlanDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiEducationPlanDescriptor';
+        $returnType = '\Descriptors\Model\EdFiEducationPlanDescriptor';
         $request = $this->getEducationPlanDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class EducationPlanDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEducationPlanDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEducationPlanDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiEducationPlanDescriptorKeyChange[]
      */
     public function keyChangesEducationPlanDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEducationPlanDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class EducationPlanDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEducationPlanDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiEducationPlanDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiEducationPlanDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesEducationPlanDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEducationPlanDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class EducationPlanDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiEducationPlanDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiEducationPlanDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiEducationPlanDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiEducationPlanDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class EducationPlanDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiEducationPlanDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiEducationPlanDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class EducationPlanDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEducationPlanDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiEducationPlanDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class EducationPlanDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiEducationPlanDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiEducationPlanDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class EducationPlanDescriptorsApi
      */
     public function keyChangesEducationPlanDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEducationPlanDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEducationPlanDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiEducationPlanDescriptorKeyChange[]';
         $request = $this->keyChangesEducationPlanDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class EducationPlanDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEducationPlanDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class EducationPlanDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEducationPlanDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class EducationPlanDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEducationPlanDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class EducationPlanDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEducationPlanDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class EducationPlanDescriptorsApi
     /**
      * Create request for operation 'postEducationPlanDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEducationPlanDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class EducationPlanDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEducationPlanDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class EducationPlanDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEducationPlanDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class EducationPlanDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEducationPlanDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class EducationPlanDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEducationPlanDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class EducationPlanDescriptorsApi
      * Create request for operation 'putEducationPlanDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiEducationPlanDescriptor $ed_fi_education_plan_descriptor The JSON representation of the \&quot;educationPlanDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEducationPlanDescriptor'] to see the possible values for this operation
      *

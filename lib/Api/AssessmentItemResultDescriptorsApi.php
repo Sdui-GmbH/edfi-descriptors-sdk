@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * AssessmentItemResultDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class AssessmentItemResultDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAssessmentItemResultDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class AssessmentItemResultDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAssessmentItemResultDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class AssessmentItemResultDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAssessmentItemResultDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiAssessmentItemResultDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiAssessmentItemResultDescriptorDelete[]
      */
     public function deletesAssessmentItemResultDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAssessmentItemResultDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class AssessmentItemResultDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAssessmentItemResultDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiAssessmentItemResultDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiAssessmentItemResultDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesAssessmentItemResultDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAssessmentItemResultDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class AssessmentItemResultDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentItemResultDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiAssessmentItemResultDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentItemResultDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiAssessmentItemResultDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class AssessmentItemResultDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentItemResultDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiAssessmentItemResultDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class AssessmentItemResultDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentItemResultDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiAssessmentItemResultDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class AssessmentItemResultDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentItemResultDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiAssessmentItemResultDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class AssessmentItemResultDescriptorsApi
      */
     public function deletesAssessmentItemResultDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAssessmentItemResultDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentItemResultDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiAssessmentItemResultDescriptorDelete[]';
         $request = $this->deletesAssessmentItemResultDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class AssessmentItemResultDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssessmentItemResultDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor[]
+     * @return \Descriptors\Model\EdFiAssessmentItemResultDescriptor[]
      */
     public function getAssessmentItemResultDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $assessment_item_result_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentItemResultDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class AssessmentItemResultDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssessmentItemResultDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiAssessmentItemResultDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssessmentItemResultDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $assessment_item_result_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentItemResultDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class AssessmentItemResultDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiAssessmentItemResultDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiAssessmentItemResultDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class AssessmentItemResultDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiAssessmentItemResultDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class AssessmentItemResultDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiAssessmentItemResultDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class AssessmentItemResultDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor[]',
+                        '\Descriptors\Model\EdFiAssessmentItemResultDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class AssessmentItemResultDescriptorsApi
      */
     public function getAssessmentItemResultDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $assessment_item_result_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentItemResultDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiAssessmentItemResultDescriptor[]';
         $request = $this->getAssessmentItemResultDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $assessment_item_result_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class AssessmentItemResultDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssessmentItemResultDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor
+     * @return \Descriptors\Model\EdFiAssessmentItemResultDescriptor
      */
     public function getAssessmentItemResultDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentItemResultDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class AssessmentItemResultDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssessmentItemResultDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiAssessmentItemResultDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssessmentItemResultDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentItemResultDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class AssessmentItemResultDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiAssessmentItemResultDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiAssessmentItemResultDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class AssessmentItemResultDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiAssessmentItemResultDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class AssessmentItemResultDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor';
+            $returnType = '\Descriptors\Model\EdFiAssessmentItemResultDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class AssessmentItemResultDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor',
+                        '\Descriptors\Model\EdFiAssessmentItemResultDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class AssessmentItemResultDescriptorsApi
      */
     public function getAssessmentItemResultDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAssessmentItemResultDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor';
+        $returnType = '\Descriptors\Model\EdFiAssessmentItemResultDescriptor';
         $request = $this->getAssessmentItemResultDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class AssessmentItemResultDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAssessmentItemResultDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiAssessmentItemResultDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiAssessmentItemResultDescriptorKeyChange[]
      */
     public function keyChangesAssessmentItemResultDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAssessmentItemResultDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class AssessmentItemResultDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAssessmentItemResultDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiAssessmentItemResultDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiAssessmentItemResultDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesAssessmentItemResultDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAssessmentItemResultDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class AssessmentItemResultDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentItemResultDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiAssessmentItemResultDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentItemResultDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiAssessmentItemResultDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class AssessmentItemResultDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentItemResultDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiAssessmentItemResultDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class AssessmentItemResultDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentItemResultDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiAssessmentItemResultDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class AssessmentItemResultDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentItemResultDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiAssessmentItemResultDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class AssessmentItemResultDescriptorsApi
      */
     public function keyChangesAssessmentItemResultDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAssessmentItemResultDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAssessmentItemResultDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiAssessmentItemResultDescriptorKeyChange[]';
         $request = $this->keyChangesAssessmentItemResultDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class AssessmentItemResultDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAssessmentItemResultDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class AssessmentItemResultDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAssessmentItemResultDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class AssessmentItemResultDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAssessmentItemResultDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class AssessmentItemResultDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAssessmentItemResultDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class AssessmentItemResultDescriptorsApi
     /**
      * Create request for operation 'postAssessmentItemResultDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAssessmentItemResultDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class AssessmentItemResultDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAssessmentItemResultDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class AssessmentItemResultDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAssessmentItemResultDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class AssessmentItemResultDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAssessmentItemResultDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class AssessmentItemResultDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAssessmentItemResultDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class AssessmentItemResultDescriptorsApi
      * Create request for operation 'putAssessmentItemResultDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAssessmentItemResultDescriptor $ed_fi_assessment_item_result_descriptor The JSON representation of the \&quot;assessmentItemResultDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAssessmentItemResultDescriptor'] to see the possible values for this operation
      *

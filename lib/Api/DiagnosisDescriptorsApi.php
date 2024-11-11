@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * DiagnosisDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class DiagnosisDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDiagnosisDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class DiagnosisDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDiagnosisDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class DiagnosisDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesDiagnosisDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiDiagnosisDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiDiagnosisDescriptorDelete[]
      */
     public function deletesDiagnosisDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesDiagnosisDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class DiagnosisDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesDiagnosisDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiDiagnosisDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiDiagnosisDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesDiagnosisDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesDiagnosisDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class DiagnosisDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiDiagnosisDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiDiagnosisDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiDiagnosisDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiDiagnosisDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class DiagnosisDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiDiagnosisDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiDiagnosisDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class DiagnosisDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiDiagnosisDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiDiagnosisDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class DiagnosisDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiDiagnosisDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiDiagnosisDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class DiagnosisDescriptorsApi
      */
     public function deletesDiagnosisDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesDiagnosisDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiDiagnosisDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiDiagnosisDescriptorDelete[]';
         $request = $this->deletesDiagnosisDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class DiagnosisDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDiagnosisDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiDiagnosisDescriptor[]
+     * @return \Descriptors\Model\EdFiDiagnosisDescriptor[]
      */
     public function getDiagnosisDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $diagnosis_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getDiagnosisDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class DiagnosisDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDiagnosisDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiDiagnosisDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiDiagnosisDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getDiagnosisDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $diagnosis_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getDiagnosisDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class DiagnosisDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiDiagnosisDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiDiagnosisDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiDiagnosisDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiDiagnosisDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class DiagnosisDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiDiagnosisDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiDiagnosisDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class DiagnosisDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiDiagnosisDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiDiagnosisDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class DiagnosisDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiDiagnosisDescriptor[]',
+                        '\Descriptors\Model\EdFiDiagnosisDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class DiagnosisDescriptorsApi
      */
     public function getDiagnosisDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $diagnosis_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getDiagnosisDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiDiagnosisDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiDiagnosisDescriptor[]';
         $request = $this->getDiagnosisDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $diagnosis_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class DiagnosisDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDiagnosisDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiDiagnosisDescriptor
+     * @return \Descriptors\Model\EdFiDiagnosisDescriptor
      */
     public function getDiagnosisDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getDiagnosisDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class DiagnosisDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDiagnosisDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiDiagnosisDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiDiagnosisDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDiagnosisDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getDiagnosisDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class DiagnosisDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiDiagnosisDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiDiagnosisDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiDiagnosisDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiDiagnosisDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class DiagnosisDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiDiagnosisDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiDiagnosisDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class DiagnosisDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiDiagnosisDescriptor';
+            $returnType = '\Descriptors\Model\EdFiDiagnosisDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class DiagnosisDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiDiagnosisDescriptor',
+                        '\Descriptors\Model\EdFiDiagnosisDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class DiagnosisDescriptorsApi
      */
     public function getDiagnosisDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getDiagnosisDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiDiagnosisDescriptor';
+        $returnType = '\Descriptors\Model\EdFiDiagnosisDescriptor';
         $request = $this->getDiagnosisDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class DiagnosisDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesDiagnosisDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiDiagnosisDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiDiagnosisDescriptorKeyChange[]
      */
     public function keyChangesDiagnosisDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesDiagnosisDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class DiagnosisDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesDiagnosisDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiDiagnosisDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiDiagnosisDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesDiagnosisDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesDiagnosisDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class DiagnosisDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiDiagnosisDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiDiagnosisDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiDiagnosisDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiDiagnosisDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class DiagnosisDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiDiagnosisDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiDiagnosisDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class DiagnosisDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiDiagnosisDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiDiagnosisDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class DiagnosisDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiDiagnosisDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiDiagnosisDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class DiagnosisDescriptorsApi
      */
     public function keyChangesDiagnosisDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesDiagnosisDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiDiagnosisDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiDiagnosisDescriptorKeyChange[]';
         $request = $this->keyChangesDiagnosisDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class DiagnosisDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDiagnosisDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class DiagnosisDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDiagnosisDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class DiagnosisDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDiagnosisDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class DiagnosisDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDiagnosisDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class DiagnosisDescriptorsApi
     /**
      * Create request for operation 'postDiagnosisDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDiagnosisDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class DiagnosisDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDiagnosisDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class DiagnosisDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDiagnosisDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class DiagnosisDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDiagnosisDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class DiagnosisDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDiagnosisDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class DiagnosisDescriptorsApi
      * Create request for operation 'putDiagnosisDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiDiagnosisDescriptor $ed_fi_diagnosis_descriptor The JSON representation of the \&quot;diagnosisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDiagnosisDescriptor'] to see the possible values for this operation
      *

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Descriptors\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Descriptors\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiDisciplineActionLengthDifferenceReasonDescriptorDelete Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TrackedChangesEdFiDisciplineActionLengthDifferenceReasonDescriptorDelete i
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiDisciplineActionLengthDifferenceReasonDescriptorKey'
+        'key_values' => '\Descriptors\Model\TrackedChangesEdFiDisciplineActionLengthDifferenceReasonDescriptorKey'
     ];
 
     /**
@@ -360,7 +360,7 @@ class TrackedChangesEdFiDisciplineActionLengthDifferenceReasonDescriptorDelete i
     /**
      * Gets key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiDisciplineActionLengthDifferenceReasonDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesEdFiDisciplineActionLengthDifferenceReasonDescriptorKey|null
      */
     public function getKeyValues()
     {
@@ -370,7 +370,7 @@ class TrackedChangesEdFiDisciplineActionLengthDifferenceReasonDescriptorDelete i
     /**
      * Sets key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesEdFiDisciplineActionLengthDifferenceReasonDescriptorKey|null $key_values key_values
+     * @param \Descriptors\Model\TrackedChangesEdFiDisciplineActionLengthDifferenceReasonDescriptorKey|null $key_values key_values
      *
      * @return self
      */

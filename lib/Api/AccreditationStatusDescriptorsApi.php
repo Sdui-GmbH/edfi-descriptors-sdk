@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * AccreditationStatusDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class AccreditationStatusDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAccreditationStatusDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class AccreditationStatusDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAccreditationStatusDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class AccreditationStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAccreditationStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmAccreditationStatusDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesTpdmAccreditationStatusDescriptorDelete[]
      */
     public function deletesAccreditationStatusDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAccreditationStatusDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class AccreditationStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAccreditationStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmAccreditationStatusDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesTpdmAccreditationStatusDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesAccreditationStatusDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAccreditationStatusDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class AccreditationStatusDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmAccreditationStatusDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesTpdmAccreditationStatusDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmAccreditationStatusDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesTpdmAccreditationStatusDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class AccreditationStatusDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmAccreditationStatusDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmAccreditationStatusDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class AccreditationStatusDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmAccreditationStatusDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesTpdmAccreditationStatusDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class AccreditationStatusDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesTpdmAccreditationStatusDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesTpdmAccreditationStatusDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class AccreditationStatusDescriptorsApi
      */
     public function deletesAccreditationStatusDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAccreditationStatusDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmAccreditationStatusDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesTpdmAccreditationStatusDescriptorDelete[]';
         $request = $this->deletesAccreditationStatusDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class AccreditationStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAccreditationStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor[]
+     * @return \Descriptors\Model\TpdmAccreditationStatusDescriptor[]
      */
     public function getAccreditationStatusDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $accreditation_status_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAccreditationStatusDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class AccreditationStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAccreditationStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TpdmAccreditationStatusDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccreditationStatusDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $accreditation_status_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAccreditationStatusDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class AccreditationStatusDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TpdmAccreditationStatusDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\TpdmAccreditationStatusDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class AccreditationStatusDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmAccreditationStatusDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class AccreditationStatusDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor[]';
+            $returnType = '\Descriptors\Model\TpdmAccreditationStatusDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class AccreditationStatusDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor[]',
+                        '\Descriptors\Model\TpdmAccreditationStatusDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class AccreditationStatusDescriptorsApi
      */
     public function getAccreditationStatusDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $accreditation_status_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAccreditationStatusDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor[]';
+        $returnType = '\Descriptors\Model\TpdmAccreditationStatusDescriptor[]';
         $request = $this->getAccreditationStatusDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $accreditation_status_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class AccreditationStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAccreditationStatusDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor
+     * @return \Descriptors\Model\TpdmAccreditationStatusDescriptor
      */
     public function getAccreditationStatusDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAccreditationStatusDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class AccreditationStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAccreditationStatusDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TpdmAccreditationStatusDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccreditationStatusDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAccreditationStatusDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class AccreditationStatusDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TpdmAccreditationStatusDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\TpdmAccreditationStatusDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class AccreditationStatusDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmAccreditationStatusDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class AccreditationStatusDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor';
+            $returnType = '\Descriptors\Model\TpdmAccreditationStatusDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class AccreditationStatusDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor',
+                        '\Descriptors\Model\TpdmAccreditationStatusDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class AccreditationStatusDescriptorsApi
      */
     public function getAccreditationStatusDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAccreditationStatusDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor';
+        $returnType = '\Descriptors\Model\TpdmAccreditationStatusDescriptor';
         $request = $this->getAccreditationStatusDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class AccreditationStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAccreditationStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmAccreditationStatusDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesTpdmAccreditationStatusDescriptorKeyChange[]
      */
     public function keyChangesAccreditationStatusDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAccreditationStatusDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class AccreditationStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAccreditationStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmAccreditationStatusDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesTpdmAccreditationStatusDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesAccreditationStatusDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAccreditationStatusDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class AccreditationStatusDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmAccreditationStatusDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesTpdmAccreditationStatusDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmAccreditationStatusDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesTpdmAccreditationStatusDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class AccreditationStatusDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmAccreditationStatusDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmAccreditationStatusDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class AccreditationStatusDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmAccreditationStatusDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesTpdmAccreditationStatusDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class AccreditationStatusDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesTpdmAccreditationStatusDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesTpdmAccreditationStatusDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class AccreditationStatusDescriptorsApi
      */
     public function keyChangesAccreditationStatusDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAccreditationStatusDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmAccreditationStatusDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesTpdmAccreditationStatusDescriptorKeyChange[]';
         $request = $this->keyChangesAccreditationStatusDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class AccreditationStatusDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAccreditationStatusDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class AccreditationStatusDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAccreditationStatusDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class AccreditationStatusDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAccreditationStatusDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class AccreditationStatusDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAccreditationStatusDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class AccreditationStatusDescriptorsApi
     /**
      * Create request for operation 'postAccreditationStatusDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAccreditationStatusDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class AccreditationStatusDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAccreditationStatusDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class AccreditationStatusDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAccreditationStatusDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class AccreditationStatusDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAccreditationStatusDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class AccreditationStatusDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAccreditationStatusDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class AccreditationStatusDescriptorsApi
      * Create request for operation 'putAccreditationStatusDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmAccreditationStatusDescriptor $tpdm_accreditation_status_descriptor The JSON representation of the \&quot;accreditationStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAccreditationStatusDescriptor'] to see the possible values for this operation
      *

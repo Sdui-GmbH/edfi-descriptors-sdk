@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * IdentificationDocumentUseDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class IdentificationDocumentUseDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteIdentificationDocumentUseDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class IdentificationDocumentUseDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteIdentificationDocumentUseDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class IdentificationDocumentUseDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesIdentificationDocumentUseDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorDelete[]
      */
     public function deletesIdentificationDocumentUseDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesIdentificationDocumentUseDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class IdentificationDocumentUseDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesIdentificationDocumentUseDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesIdentificationDocumentUseDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesIdentificationDocumentUseDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class IdentificationDocumentUseDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class IdentificationDocumentUseDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class IdentificationDocumentUseDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class IdentificationDocumentUseDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class IdentificationDocumentUseDescriptorsApi
      */
     public function deletesIdentificationDocumentUseDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesIdentificationDocumentUseDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorDelete[]';
         $request = $this->deletesIdentificationDocumentUseDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class IdentificationDocumentUseDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getIdentificationDocumentUseDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor[]
+     * @return \Descriptors\Model\EdFiIdentificationDocumentUseDescriptor[]
      */
     public function getIdentificationDocumentUseDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $identification_document_use_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getIdentificationDocumentUseDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class IdentificationDocumentUseDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getIdentificationDocumentUseDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiIdentificationDocumentUseDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getIdentificationDocumentUseDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $identification_document_use_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getIdentificationDocumentUseDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class IdentificationDocumentUseDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiIdentificationDocumentUseDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiIdentificationDocumentUseDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class IdentificationDocumentUseDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiIdentificationDocumentUseDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class IdentificationDocumentUseDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiIdentificationDocumentUseDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class IdentificationDocumentUseDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor[]',
+                        '\Descriptors\Model\EdFiIdentificationDocumentUseDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class IdentificationDocumentUseDescriptorsApi
      */
     public function getIdentificationDocumentUseDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $identification_document_use_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getIdentificationDocumentUseDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiIdentificationDocumentUseDescriptor[]';
         $request = $this->getIdentificationDocumentUseDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $identification_document_use_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class IdentificationDocumentUseDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getIdentificationDocumentUseDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor
+     * @return \Descriptors\Model\EdFiIdentificationDocumentUseDescriptor
      */
     public function getIdentificationDocumentUseDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getIdentificationDocumentUseDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class IdentificationDocumentUseDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getIdentificationDocumentUseDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiIdentificationDocumentUseDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getIdentificationDocumentUseDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getIdentificationDocumentUseDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class IdentificationDocumentUseDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiIdentificationDocumentUseDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiIdentificationDocumentUseDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class IdentificationDocumentUseDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiIdentificationDocumentUseDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class IdentificationDocumentUseDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor';
+            $returnType = '\Descriptors\Model\EdFiIdentificationDocumentUseDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class IdentificationDocumentUseDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor',
+                        '\Descriptors\Model\EdFiIdentificationDocumentUseDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class IdentificationDocumentUseDescriptorsApi
      */
     public function getIdentificationDocumentUseDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getIdentificationDocumentUseDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor';
+        $returnType = '\Descriptors\Model\EdFiIdentificationDocumentUseDescriptor';
         $request = $this->getIdentificationDocumentUseDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class IdentificationDocumentUseDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesIdentificationDocumentUseDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorKeyChange[]
      */
     public function keyChangesIdentificationDocumentUseDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesIdentificationDocumentUseDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class IdentificationDocumentUseDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesIdentificationDocumentUseDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesIdentificationDocumentUseDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesIdentificationDocumentUseDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class IdentificationDocumentUseDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class IdentificationDocumentUseDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class IdentificationDocumentUseDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class IdentificationDocumentUseDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class IdentificationDocumentUseDescriptorsApi
      */
     public function keyChangesIdentificationDocumentUseDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesIdentificationDocumentUseDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiIdentificationDocumentUseDescriptorKeyChange[]';
         $request = $this->keyChangesIdentificationDocumentUseDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class IdentificationDocumentUseDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postIdentificationDocumentUseDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class IdentificationDocumentUseDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postIdentificationDocumentUseDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class IdentificationDocumentUseDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postIdentificationDocumentUseDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class IdentificationDocumentUseDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postIdentificationDocumentUseDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class IdentificationDocumentUseDescriptorsApi
     /**
      * Create request for operation 'postIdentificationDocumentUseDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postIdentificationDocumentUseDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class IdentificationDocumentUseDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putIdentificationDocumentUseDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class IdentificationDocumentUseDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putIdentificationDocumentUseDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class IdentificationDocumentUseDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putIdentificationDocumentUseDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class IdentificationDocumentUseDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putIdentificationDocumentUseDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class IdentificationDocumentUseDescriptorsApi
      * Create request for operation 'putIdentificationDocumentUseDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiIdentificationDocumentUseDescriptor $ed_fi_identification_document_use_descriptor The JSON representation of the \&quot;identificationDocumentUseDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putIdentificationDocumentUseDescriptor'] to see the possible values for this operation
      *
