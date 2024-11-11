@@ -36,7 +36,7 @@ jobs:
 
     - name: Generate PHP client SDK for descriptors
       run: |
-        java -jar ${{ runner.temp }}/openapi-generator-cli.jar generate -i swagger-descriptors.json -g php -o . -p phpVersion=8.2
+        java -jar ${{ runner.temp }}/openapi-generator-cli.jar generate -i swagger-descriptors.json -g php -o . -p phpVersion=8.2 -p invokerPackage=Descriptors
 
     - name: Update name and version
       run: |
