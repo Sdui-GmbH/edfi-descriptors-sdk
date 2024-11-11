@@ -7,10 +7,6 @@ on:
         description: 'EdFi version to generate SDK for'
         required: true
         default: 'v7.1'
-      packageTag:
-        description: 'Package tag'
-        required: true
-        default: 'v1.0'
 
 permissions:
   contents: write
@@ -49,5 +45,5 @@ jobs:
         git add . || echo "nothing to add" || echo "nothing to add"
         git commit -m "build: generated descriptors client SDK ${{ github.event.inputs.edfiVersion }}" || echo "nothing to commit"
         git push origin master || echo "nothing to push"
-        git tag ${{ github.event.inputs.packageTag }}
-        git push origin ${{ github.event.inputs.packageTag }}
+        git tag ${{ github.event.inputs.edfiVersion }}
+        git push origin ${{ github.event.inputs.edfiVersion }}
