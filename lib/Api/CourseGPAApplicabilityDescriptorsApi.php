@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * CourseGPAApplicabilityDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class CourseGPAApplicabilityDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCourseGPAApplicabilityDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class CourseGPAApplicabilityDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCourseGPAApplicabilityDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class CourseGPAApplicabilityDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCourseGPAApplicabilityDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorDelete[]
      */
     public function deletesCourseGPAApplicabilityDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCourseGPAApplicabilityDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class CourseGPAApplicabilityDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCourseGPAApplicabilityDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesCourseGPAApplicabilityDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCourseGPAApplicabilityDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class CourseGPAApplicabilityDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class CourseGPAApplicabilityDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class CourseGPAApplicabilityDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class CourseGPAApplicabilityDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class CourseGPAApplicabilityDescriptorsApi
      */
     public function deletesCourseGPAApplicabilityDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCourseGPAApplicabilityDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorDelete[]';
         $request = $this->deletesCourseGPAApplicabilityDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class CourseGPAApplicabilityDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCourseGPAApplicabilityDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor[]
      */
     public function getCourseGPAApplicabilityDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $course_gpa_applicability_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCourseGPAApplicabilityDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class CourseGPAApplicabilityDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCourseGPAApplicabilityDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getCourseGPAApplicabilityDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $course_gpa_applicability_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCourseGPAApplicabilityDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class CourseGPAApplicabilityDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class CourseGPAApplicabilityDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class CourseGPAApplicabilityDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class CourseGPAApplicabilityDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class CourseGPAApplicabilityDescriptorsApi
      */
     public function getCourseGPAApplicabilityDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $course_gpa_applicability_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCourseGPAApplicabilityDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor[]';
         $request = $this->getCourseGPAApplicabilityDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $course_gpa_applicability_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class CourseGPAApplicabilityDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCourseGPAApplicabilityDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor
+     * @return \OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor
      */
     public function getCourseGPAApplicabilityDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCourseGPAApplicabilityDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class CourseGPAApplicabilityDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCourseGPAApplicabilityDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCourseGPAApplicabilityDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCourseGPAApplicabilityDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class CourseGPAApplicabilityDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class CourseGPAApplicabilityDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class CourseGPAApplicabilityDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class CourseGPAApplicabilityDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor',
+                        '\OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class CourseGPAApplicabilityDescriptorsApi
      */
     public function getCourseGPAApplicabilityDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCourseGPAApplicabilityDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor';
         $request = $this->getCourseGPAApplicabilityDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class CourseGPAApplicabilityDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCourseGPAApplicabilityDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorKeyChange[]
      */
     public function keyChangesCourseGPAApplicabilityDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCourseGPAApplicabilityDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class CourseGPAApplicabilityDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCourseGPAApplicabilityDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesCourseGPAApplicabilityDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCourseGPAApplicabilityDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class CourseGPAApplicabilityDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class CourseGPAApplicabilityDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class CourseGPAApplicabilityDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class CourseGPAApplicabilityDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class CourseGPAApplicabilityDescriptorsApi
      */
     public function keyChangesCourseGPAApplicabilityDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCourseGPAApplicabilityDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCourseGPAApplicabilityDescriptorKeyChange[]';
         $request = $this->keyChangesCourseGPAApplicabilityDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class CourseGPAApplicabilityDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCourseGPAApplicabilityDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class CourseGPAApplicabilityDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCourseGPAApplicabilityDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class CourseGPAApplicabilityDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCourseGPAApplicabilityDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class CourseGPAApplicabilityDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCourseGPAApplicabilityDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class CourseGPAApplicabilityDescriptorsApi
     /**
      * Create request for operation 'postCourseGPAApplicabilityDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCourseGPAApplicabilityDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class CourseGPAApplicabilityDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCourseGPAApplicabilityDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class CourseGPAApplicabilityDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCourseGPAApplicabilityDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class CourseGPAApplicabilityDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCourseGPAApplicabilityDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class CourseGPAApplicabilityDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCourseGPAApplicabilityDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class CourseGPAApplicabilityDescriptorsApi
      * Create request for operation 'putCourseGPAApplicabilityDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseGPAApplicabilityDescriptor $ed_fi_course_gpa_applicability_descriptor The JSON representation of the \&quot;courseGPAApplicabilityDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCourseGPAApplicabilityDescriptor'] to see the possible values for this operation
      *

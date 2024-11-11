@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * DeliveryMethodDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class DeliveryMethodDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDeliveryMethodDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class DeliveryMethodDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDeliveryMethodDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class DeliveryMethodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesDeliveryMethodDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]
      */
     public function deletesDeliveryMethodDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesDeliveryMethodDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class DeliveryMethodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesDeliveryMethodDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesDeliveryMethodDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesDeliveryMethodDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class DeliveryMethodDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class DeliveryMethodDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class DeliveryMethodDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class DeliveryMethodDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class DeliveryMethodDescriptorsApi
      */
     public function deletesDeliveryMethodDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesDeliveryMethodDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorDelete[]';
         $request = $this->deletesDeliveryMethodDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class DeliveryMethodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDeliveryMethodDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiDeliveryMethodDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor[]
      */
     public function getDeliveryMethodDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $delivery_method_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getDeliveryMethodDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class DeliveryMethodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDeliveryMethodDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiDeliveryMethodDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getDeliveryMethodDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $delivery_method_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getDeliveryMethodDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class DeliveryMethodDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiDeliveryMethodDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiDeliveryMethodDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class DeliveryMethodDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiDeliveryMethodDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class DeliveryMethodDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiDeliveryMethodDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class DeliveryMethodDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiDeliveryMethodDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class DeliveryMethodDescriptorsApi
      */
     public function getDeliveryMethodDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $delivery_method_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getDeliveryMethodDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiDeliveryMethodDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor[]';
         $request = $this->getDeliveryMethodDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $delivery_method_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class DeliveryMethodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDeliveryMethodDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiDeliveryMethodDescriptor
+     * @return \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor
      */
     public function getDeliveryMethodDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getDeliveryMethodDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class DeliveryMethodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDeliveryMethodDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiDeliveryMethodDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDeliveryMethodDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getDeliveryMethodDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class DeliveryMethodDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiDeliveryMethodDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiDeliveryMethodDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class DeliveryMethodDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiDeliveryMethodDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class DeliveryMethodDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiDeliveryMethodDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class DeliveryMethodDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiDeliveryMethodDescriptor',
+                        '\OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class DeliveryMethodDescriptorsApi
      */
     public function getDeliveryMethodDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getDeliveryMethodDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiDeliveryMethodDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor';
         $request = $this->getDeliveryMethodDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class DeliveryMethodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesDeliveryMethodDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]
      */
     public function keyChangesDeliveryMethodDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesDeliveryMethodDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class DeliveryMethodDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesDeliveryMethodDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesDeliveryMethodDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesDeliveryMethodDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class DeliveryMethodDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class DeliveryMethodDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class DeliveryMethodDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class DeliveryMethodDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class DeliveryMethodDescriptorsApi
      */
     public function keyChangesDeliveryMethodDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesDeliveryMethodDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiDeliveryMethodDescriptorKeyChange[]';
         $request = $this->keyChangesDeliveryMethodDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class DeliveryMethodDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDeliveryMethodDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class DeliveryMethodDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDeliveryMethodDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class DeliveryMethodDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDeliveryMethodDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class DeliveryMethodDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDeliveryMethodDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class DeliveryMethodDescriptorsApi
     /**
      * Create request for operation 'postDeliveryMethodDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDeliveryMethodDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class DeliveryMethodDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDeliveryMethodDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class DeliveryMethodDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDeliveryMethodDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class DeliveryMethodDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDeliveryMethodDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class DeliveryMethodDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDeliveryMethodDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class DeliveryMethodDescriptorsApi
      * Create request for operation 'putDeliveryMethodDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDeliveryMethodDescriptor $ed_fi_delivery_method_descriptor The JSON representation of the \&quot;deliveryMethodDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDeliveryMethodDescriptor'] to see the possible values for this operation
      *

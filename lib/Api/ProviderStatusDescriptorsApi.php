@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * ProviderStatusDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class ProviderStatusDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteProviderStatusDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class ProviderStatusDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteProviderStatusDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class ProviderStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesProviderStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiProviderStatusDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiProviderStatusDescriptorDelete[]
      */
     public function deletesProviderStatusDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesProviderStatusDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class ProviderStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesProviderStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiProviderStatusDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiProviderStatusDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesProviderStatusDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesProviderStatusDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class ProviderStatusDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiProviderStatusDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiProviderStatusDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiProviderStatusDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiProviderStatusDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class ProviderStatusDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiProviderStatusDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiProviderStatusDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class ProviderStatusDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiProviderStatusDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiProviderStatusDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class ProviderStatusDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiProviderStatusDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiProviderStatusDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class ProviderStatusDescriptorsApi
      */
     public function deletesProviderStatusDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesProviderStatusDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiProviderStatusDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiProviderStatusDescriptorDelete[]';
         $request = $this->deletesProviderStatusDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class ProviderStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProviderStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiProviderStatusDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiProviderStatusDescriptor[]
      */
     public function getProviderStatusDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $provider_status_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getProviderStatusDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class ProviderStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProviderStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiProviderStatusDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiProviderStatusDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getProviderStatusDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $provider_status_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getProviderStatusDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class ProviderStatusDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiProviderStatusDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiProviderStatusDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiProviderStatusDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiProviderStatusDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class ProviderStatusDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiProviderStatusDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiProviderStatusDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class ProviderStatusDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiProviderStatusDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiProviderStatusDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class ProviderStatusDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiProviderStatusDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiProviderStatusDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class ProviderStatusDescriptorsApi
      */
     public function getProviderStatusDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $provider_status_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getProviderStatusDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiProviderStatusDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiProviderStatusDescriptor[]';
         $request = $this->getProviderStatusDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $provider_status_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class ProviderStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProviderStatusDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiProviderStatusDescriptor
+     * @return \OpenAPI\Client\Model\EdFiProviderStatusDescriptor
      */
     public function getProviderStatusDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getProviderStatusDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class ProviderStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProviderStatusDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiProviderStatusDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiProviderStatusDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProviderStatusDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getProviderStatusDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class ProviderStatusDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiProviderStatusDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiProviderStatusDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiProviderStatusDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiProviderStatusDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class ProviderStatusDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiProviderStatusDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiProviderStatusDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class ProviderStatusDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiProviderStatusDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiProviderStatusDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class ProviderStatusDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiProviderStatusDescriptor',
+                        '\OpenAPI\Client\Model\EdFiProviderStatusDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class ProviderStatusDescriptorsApi
      */
     public function getProviderStatusDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getProviderStatusDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiProviderStatusDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiProviderStatusDescriptor';
         $request = $this->getProviderStatusDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class ProviderStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesProviderStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiProviderStatusDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiProviderStatusDescriptorKeyChange[]
      */
     public function keyChangesProviderStatusDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesProviderStatusDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class ProviderStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesProviderStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiProviderStatusDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiProviderStatusDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesProviderStatusDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesProviderStatusDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class ProviderStatusDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiProviderStatusDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiProviderStatusDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiProviderStatusDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiProviderStatusDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class ProviderStatusDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiProviderStatusDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiProviderStatusDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class ProviderStatusDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiProviderStatusDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiProviderStatusDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class ProviderStatusDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiProviderStatusDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiProviderStatusDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class ProviderStatusDescriptorsApi
      */
     public function keyChangesProviderStatusDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesProviderStatusDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiProviderStatusDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiProviderStatusDescriptorKeyChange[]';
         $request = $this->keyChangesProviderStatusDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class ProviderStatusDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProviderStatusDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class ProviderStatusDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProviderStatusDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class ProviderStatusDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProviderStatusDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class ProviderStatusDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProviderStatusDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class ProviderStatusDescriptorsApi
     /**
      * Create request for operation 'postProviderStatusDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProviderStatusDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class ProviderStatusDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProviderStatusDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class ProviderStatusDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProviderStatusDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class ProviderStatusDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProviderStatusDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class ProviderStatusDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProviderStatusDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class ProviderStatusDescriptorsApi
      * Create request for operation 'putProviderStatusDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiProviderStatusDescriptor $ed_fi_provider_status_descriptor The JSON representation of the \&quot;providerStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProviderStatusDescriptor'] to see the possible values for this operation
      *

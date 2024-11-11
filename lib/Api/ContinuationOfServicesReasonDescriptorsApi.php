@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * ContinuationOfServicesReasonDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class ContinuationOfServicesReasonDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteContinuationOfServicesReasonDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class ContinuationOfServicesReasonDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteContinuationOfServicesReasonDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class ContinuationOfServicesReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesContinuationOfServicesReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorDelete[]
      */
     public function deletesContinuationOfServicesReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesContinuationOfServicesReasonDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class ContinuationOfServicesReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesContinuationOfServicesReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesContinuationOfServicesReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesContinuationOfServicesReasonDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class ContinuationOfServicesReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class ContinuationOfServicesReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class ContinuationOfServicesReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class ContinuationOfServicesReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class ContinuationOfServicesReasonDescriptorsApi
      */
     public function deletesContinuationOfServicesReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesContinuationOfServicesReasonDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorDelete[]';
         $request = $this->deletesContinuationOfServicesReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class ContinuationOfServicesReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getContinuationOfServicesReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor[]
      */
     public function getContinuationOfServicesReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $continuation_of_services_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getContinuationOfServicesReasonDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class ContinuationOfServicesReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getContinuationOfServicesReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getContinuationOfServicesReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $continuation_of_services_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getContinuationOfServicesReasonDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class ContinuationOfServicesReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class ContinuationOfServicesReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class ContinuationOfServicesReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class ContinuationOfServicesReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class ContinuationOfServicesReasonDescriptorsApi
      */
     public function getContinuationOfServicesReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $continuation_of_services_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getContinuationOfServicesReasonDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor[]';
         $request = $this->getContinuationOfServicesReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $continuation_of_services_reason_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class ContinuationOfServicesReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getContinuationOfServicesReasonDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor
+     * @return \OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor
      */
     public function getContinuationOfServicesReasonDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getContinuationOfServicesReasonDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class ContinuationOfServicesReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getContinuationOfServicesReasonDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getContinuationOfServicesReasonDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getContinuationOfServicesReasonDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class ContinuationOfServicesReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class ContinuationOfServicesReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class ContinuationOfServicesReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class ContinuationOfServicesReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor',
+                        '\OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class ContinuationOfServicesReasonDescriptorsApi
      */
     public function getContinuationOfServicesReasonDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getContinuationOfServicesReasonDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor';
         $request = $this->getContinuationOfServicesReasonDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class ContinuationOfServicesReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesContinuationOfServicesReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorKeyChange[]
      */
     public function keyChangesContinuationOfServicesReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesContinuationOfServicesReasonDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class ContinuationOfServicesReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesContinuationOfServicesReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesContinuationOfServicesReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesContinuationOfServicesReasonDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class ContinuationOfServicesReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class ContinuationOfServicesReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class ContinuationOfServicesReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class ContinuationOfServicesReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class ContinuationOfServicesReasonDescriptorsApi
      */
     public function keyChangesContinuationOfServicesReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesContinuationOfServicesReasonDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiContinuationOfServicesReasonDescriptorKeyChange[]';
         $request = $this->keyChangesContinuationOfServicesReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class ContinuationOfServicesReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postContinuationOfServicesReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class ContinuationOfServicesReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postContinuationOfServicesReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class ContinuationOfServicesReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postContinuationOfServicesReasonDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class ContinuationOfServicesReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postContinuationOfServicesReasonDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class ContinuationOfServicesReasonDescriptorsApi
     /**
      * Create request for operation 'postContinuationOfServicesReasonDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postContinuationOfServicesReasonDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class ContinuationOfServicesReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putContinuationOfServicesReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class ContinuationOfServicesReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putContinuationOfServicesReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class ContinuationOfServicesReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putContinuationOfServicesReasonDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class ContinuationOfServicesReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putContinuationOfServicesReasonDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class ContinuationOfServicesReasonDescriptorsApi
      * Create request for operation 'putContinuationOfServicesReasonDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiContinuationOfServicesReasonDescriptor $ed_fi_continuation_of_services_reason_descriptor The JSON representation of the \&quot;continuationOfServicesReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putContinuationOfServicesReasonDescriptor'] to see the possible values for this operation
      *

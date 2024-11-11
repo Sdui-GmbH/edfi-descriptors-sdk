@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Model;
+namespace OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \Descriptors\ObjectSerializer;
+use \OpenAPI\Client\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiEducationalEnvironmentDescriptorKeyChange Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class TrackedChangesEdFiEducationalEnvironmentDescriptorKeyChange implements Mod
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'old_key_values' => '\Descriptors\Model\TrackedChangesEdFiEducationalEnvironmentDescriptorKey',
-        'new_key_values' => '\Descriptors\Model\TrackedChangesEdFiEducationalEnvironmentDescriptorKey'
+        'old_key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiEducationalEnvironmentDescriptorKey',
+        'new_key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiEducationalEnvironmentDescriptorKey'
     ];
 
     /**
@@ -367,7 +367,7 @@ class TrackedChangesEdFiEducationalEnvironmentDescriptorKeyChange implements Mod
     /**
      * Gets old_key_values
      *
-     * @return \Descriptors\Model\TrackedChangesEdFiEducationalEnvironmentDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEducationalEnvironmentDescriptorKey|null
      */
     public function getOldKeyValues()
     {
@@ -377,7 +377,7 @@ class TrackedChangesEdFiEducationalEnvironmentDescriptorKeyChange implements Mod
     /**
      * Sets old_key_values
      *
-     * @param \Descriptors\Model\TrackedChangesEdFiEducationalEnvironmentDescriptorKey|null $old_key_values old_key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesEdFiEducationalEnvironmentDescriptorKey|null $old_key_values old_key_values
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class TrackedChangesEdFiEducationalEnvironmentDescriptorKeyChange implements Mod
     /**
      * Gets new_key_values
      *
-     * @return \Descriptors\Model\TrackedChangesEdFiEducationalEnvironmentDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEducationalEnvironmentDescriptorKey|null
      */
     public function getNewKeyValues()
     {
@@ -404,7 +404,7 @@ class TrackedChangesEdFiEducationalEnvironmentDescriptorKeyChange implements Mod
     /**
      * Sets new_key_values
      *
-     * @param \Descriptors\Model\TrackedChangesEdFiEducationalEnvironmentDescriptorKey|null $new_key_values new_key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesEdFiEducationalEnvironmentDescriptorKey|null $new_key_values new_key_values
      *
      * @return self
      */

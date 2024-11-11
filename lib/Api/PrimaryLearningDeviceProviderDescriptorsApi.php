@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * PrimaryLearningDeviceProviderDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePrimaryLearningDeviceProviderDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePrimaryLearningDeviceProviderDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesPrimaryLearningDeviceProviderDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorDelete[]
      */
     public function deletesPrimaryLearningDeviceProviderDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPrimaryLearningDeviceProviderDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesPrimaryLearningDeviceProviderDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesPrimaryLearningDeviceProviderDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPrimaryLearningDeviceProviderDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class PrimaryLearningDeviceProviderDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      */
     public function deletesPrimaryLearningDeviceProviderDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPrimaryLearningDeviceProviderDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorDelete[]';
         $request = $this->deletesPrimaryLearningDeviceProviderDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPrimaryLearningDeviceProviderDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor[]
      */
     public function getPrimaryLearningDeviceProviderDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $primary_learning_device_provider_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPrimaryLearningDeviceProviderDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPrimaryLearningDeviceProviderDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getPrimaryLearningDeviceProviderDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $primary_learning_device_provider_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPrimaryLearningDeviceProviderDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class PrimaryLearningDeviceProviderDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      */
     public function getPrimaryLearningDeviceProviderDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $primary_learning_device_provider_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPrimaryLearningDeviceProviderDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor[]';
         $request = $this->getPrimaryLearningDeviceProviderDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $primary_learning_device_provider_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPrimaryLearningDeviceProviderDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor
+     * @return \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor
      */
     public function getPrimaryLearningDeviceProviderDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPrimaryLearningDeviceProviderDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPrimaryLearningDeviceProviderDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPrimaryLearningDeviceProviderDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPrimaryLearningDeviceProviderDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class PrimaryLearningDeviceProviderDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor',
+                        '\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      */
     public function getPrimaryLearningDeviceProviderDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPrimaryLearningDeviceProviderDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor';
         $request = $this->getPrimaryLearningDeviceProviderDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesPrimaryLearningDeviceProviderDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorKeyChange[]
      */
     public function keyChangesPrimaryLearningDeviceProviderDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPrimaryLearningDeviceProviderDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesPrimaryLearningDeviceProviderDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesPrimaryLearningDeviceProviderDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPrimaryLearningDeviceProviderDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class PrimaryLearningDeviceProviderDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      */
     public function keyChangesPrimaryLearningDeviceProviderDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPrimaryLearningDeviceProviderDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceProviderDescriptorKeyChange[]';
         $request = $this->keyChangesPrimaryLearningDeviceProviderDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPrimaryLearningDeviceProviderDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPrimaryLearningDeviceProviderDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPrimaryLearningDeviceProviderDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPrimaryLearningDeviceProviderDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
     /**
      * Create request for operation 'postPrimaryLearningDeviceProviderDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPrimaryLearningDeviceProviderDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPrimaryLearningDeviceProviderDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPrimaryLearningDeviceProviderDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPrimaryLearningDeviceProviderDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPrimaryLearningDeviceProviderDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class PrimaryLearningDeviceProviderDescriptorsApi
      * Create request for operation 'putPrimaryLearningDeviceProviderDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceProviderDescriptor $ed_fi_primary_learning_device_provider_descriptor The JSON representation of the \&quot;primaryLearningDeviceProviderDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPrimaryLearningDeviceProviderDescriptor'] to see the possible values for this operation
      *

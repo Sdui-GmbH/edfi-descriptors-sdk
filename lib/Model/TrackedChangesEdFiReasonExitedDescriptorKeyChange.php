@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Model;
+namespace OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \Descriptors\ObjectSerializer;
+use \OpenAPI\Client\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiReasonExitedDescriptorKeyChange Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class TrackedChangesEdFiReasonExitedDescriptorKeyChange implements ModelInterfac
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'old_key_values' => '\Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKey',
-        'new_key_values' => '\Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKey'
+        'old_key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKey',
+        'new_key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKey'
     ];
 
     /**
@@ -367,7 +367,7 @@ class TrackedChangesEdFiReasonExitedDescriptorKeyChange implements ModelInterfac
     /**
      * Gets old_key_values
      *
-     * @return \Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKey|null
      */
     public function getOldKeyValues()
     {
@@ -377,7 +377,7 @@ class TrackedChangesEdFiReasonExitedDescriptorKeyChange implements ModelInterfac
     /**
      * Sets old_key_values
      *
-     * @param \Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKey|null $old_key_values old_key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKey|null $old_key_values old_key_values
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class TrackedChangesEdFiReasonExitedDescriptorKeyChange implements ModelInterfac
     /**
      * Gets new_key_values
      *
-     * @return \Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKey|null
      */
     public function getNewKeyValues()
     {
@@ -404,7 +404,7 @@ class TrackedChangesEdFiReasonExitedDescriptorKeyChange implements ModelInterfac
     /**
      * Sets new_key_values
      *
-     * @param \Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKey|null $new_key_values new_key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKey|null $new_key_values new_key_values
      *
      * @return self
      */

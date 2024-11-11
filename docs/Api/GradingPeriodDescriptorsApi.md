@@ -1,4 +1,4 @@
-# Descriptors\GradingPeriodDescriptorsApi
+# OpenAPI\Client\GradingPeriodDescriptorsApi
 
 All URIs are relative to https://api.ed-fi.org:443/v7.1/api/data/v3, except if the operation defines another base path.
 
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\GradingPeriodDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\GradingPeriodDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -77,7 +77,7 @@ void (empty response body)
 ## `deletesGradingPeriodDescriptors()`
 
 ```php
-deletesGradingPeriodDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiGradingPeriodDescriptorDelete[]
+deletesGradingPeriodDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiGradingPeriodDescriptorDelete[]
 ```
 
 Retrieves deleted resources based on change version.
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\GradingPeriodDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\GradingPeriodDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiGradingPeriodDescriptorDelete[]**](../Model/TrackedChangesEdFiGradingPeriodDescriptorDelete.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiGradingPeriodDescriptorDelete[]**](../Model/TrackedChangesEdFiGradingPeriodDescriptorDelete.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `getGradingPeriodDescriptors()`
 
 ```php
-getGradingPeriodDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $grading_period_descriptor_id, $use_snapshot): \Descriptors\Model\EdFiGradingPeriodDescriptor[]
+getGradingPeriodDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $grading_period_descriptor_id, $use_snapshot): \OpenAPI\Client\Model\EdFiGradingPeriodDescriptor[]
 ```
 
 Retrieves specific resources using the resource's property values (using the \"Get\" pattern).
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\GradingPeriodDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\GradingPeriodDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,7 +201,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiGradingPeriodDescriptor[]**](../Model/EdFiGradingPeriodDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiGradingPeriodDescriptor[]**](../Model/EdFiGradingPeriodDescriptor.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ try {
 ## `getGradingPeriodDescriptorsById()`
 
 ```php
-getGradingPeriodDescriptorsById($id, $if_none_match, $use_snapshot): \Descriptors\Model\EdFiGradingPeriodDescriptor
+getGradingPeriodDescriptorsById($id, $if_none_match, $use_snapshot): \OpenAPI\Client\Model\EdFiGradingPeriodDescriptor
 ```
 
 Retrieves a specific resource using the resource's identifier (using the \"Get By Id\" pattern).
@@ -234,10 +234,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\GradingPeriodDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\GradingPeriodDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,7 +265,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiGradingPeriodDescriptor**](../Model/EdFiGradingPeriodDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiGradingPeriodDescriptor**](../Model/EdFiGradingPeriodDescriptor.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ try {
 ## `keyChangesGradingPeriodDescriptors()`
 
 ```php
-keyChangesGradingPeriodDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiGradingPeriodDescriptorKeyChange[]
+keyChangesGradingPeriodDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiGradingPeriodDescriptorKeyChange[]
 ```
 
 Retrieves resources key changes based on change version.
@@ -298,10 +298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\GradingPeriodDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\GradingPeriodDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -335,7 +335,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiGradingPeriodDescriptorKeyChange[]**](../Model/TrackedChangesEdFiGradingPeriodDescriptorKeyChange.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiGradingPeriodDescriptorKeyChange[]**](../Model/TrackedChangesEdFiGradingPeriodDescriptorKeyChange.md)
 
 ### Authorization
 
@@ -368,16 +368,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\GradingPeriodDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\GradingPeriodDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ed_fi_grading_period_descriptor = new \Descriptors\Model\EdFiGradingPeriodDescriptor(); // \Descriptors\Model\EdFiGradingPeriodDescriptor | The JSON representation of the \"gradingPeriodDescriptor\" resource to be created or updated.
+$ed_fi_grading_period_descriptor = new \OpenAPI\Client\Model\EdFiGradingPeriodDescriptor(); // \OpenAPI\Client\Model\EdFiGradingPeriodDescriptor | The JSON representation of the \"gradingPeriodDescriptor\" resource to be created or updated.
 
 try {
     $apiInstance->postGradingPeriodDescriptor($ed_fi_grading_period_descriptor);
@@ -390,7 +390,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ed_fi_grading_period_descriptor** | [**\Descriptors\Model\EdFiGradingPeriodDescriptor**](../Model/EdFiGradingPeriodDescriptor.md)| The JSON representation of the \&quot;gradingPeriodDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_grading_period_descriptor** | [**\OpenAPI\Client\Model\EdFiGradingPeriodDescriptor**](../Model/EdFiGradingPeriodDescriptor.md)| The JSON representation of the \&quot;gradingPeriodDescriptor\&quot; resource to be created or updated. | |
 
 ### Return type
 
@@ -427,17 +427,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\GradingPeriodDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\GradingPeriodDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string | A resource identifier that uniquely identifies the resource.
-$ed_fi_grading_period_descriptor = new \Descriptors\Model\EdFiGradingPeriodDescriptor(); // \Descriptors\Model\EdFiGradingPeriodDescriptor | The JSON representation of the \"gradingPeriodDescriptor\" resource to be created or updated.
+$ed_fi_grading_period_descriptor = new \OpenAPI\Client\Model\EdFiGradingPeriodDescriptor(); // \OpenAPI\Client\Model\EdFiGradingPeriodDescriptor | The JSON representation of the \"gradingPeriodDescriptor\" resource to be created or updated.
 $if_match = 'if_match_example'; // string | The ETag header value used to prevent the PUT from updating a resource modified by another consumer.
 
 try {
@@ -452,7 +452,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| A resource identifier that uniquely identifies the resource. | |
-| **ed_fi_grading_period_descriptor** | [**\Descriptors\Model\EdFiGradingPeriodDescriptor**](../Model/EdFiGradingPeriodDescriptor.md)| The JSON representation of the \&quot;gradingPeriodDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_grading_period_descriptor** | [**\OpenAPI\Client\Model\EdFiGradingPeriodDescriptor**](../Model/EdFiGradingPeriodDescriptor.md)| The JSON representation of the \&quot;gradingPeriodDescriptor\&quot; resource to be created or updated. | |
 | **if_match** | **string**| The ETag header value used to prevent the PUT from updating a resource modified by another consumer. | [optional] |
 
 ### Return type

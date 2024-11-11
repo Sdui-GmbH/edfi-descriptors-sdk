@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Model;
+namespace OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \Descriptors\ObjectSerializer;
+use \OpenAPI\Client\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiProgramCharacteristicDescriptorKeyChange Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class TrackedChangesEdFiProgramCharacteristicDescriptorKeyChange implements Mode
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'old_key_values' => '\Descriptors\Model\TrackedChangesEdFiProgramCharacteristicDescriptorKey',
-        'new_key_values' => '\Descriptors\Model\TrackedChangesEdFiProgramCharacteristicDescriptorKey'
+        'old_key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiProgramCharacteristicDescriptorKey',
+        'new_key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiProgramCharacteristicDescriptorKey'
     ];
 
     /**
@@ -367,7 +367,7 @@ class TrackedChangesEdFiProgramCharacteristicDescriptorKeyChange implements Mode
     /**
      * Gets old_key_values
      *
-     * @return \Descriptors\Model\TrackedChangesEdFiProgramCharacteristicDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiProgramCharacteristicDescriptorKey|null
      */
     public function getOldKeyValues()
     {
@@ -377,7 +377,7 @@ class TrackedChangesEdFiProgramCharacteristicDescriptorKeyChange implements Mode
     /**
      * Sets old_key_values
      *
-     * @param \Descriptors\Model\TrackedChangesEdFiProgramCharacteristicDescriptorKey|null $old_key_values old_key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesEdFiProgramCharacteristicDescriptorKey|null $old_key_values old_key_values
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class TrackedChangesEdFiProgramCharacteristicDescriptorKeyChange implements Mode
     /**
      * Gets new_key_values
      *
-     * @return \Descriptors\Model\TrackedChangesEdFiProgramCharacteristicDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiProgramCharacteristicDescriptorKey|null
      */
     public function getNewKeyValues()
     {
@@ -404,7 +404,7 @@ class TrackedChangesEdFiProgramCharacteristicDescriptorKeyChange implements Mode
     /**
      * Sets new_key_values
      *
-     * @param \Descriptors\Model\TrackedChangesEdFiProgramCharacteristicDescriptorKey|null $new_key_values new_key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesEdFiProgramCharacteristicDescriptorKey|null $new_key_values new_key_values
      *
      * @return self
      */

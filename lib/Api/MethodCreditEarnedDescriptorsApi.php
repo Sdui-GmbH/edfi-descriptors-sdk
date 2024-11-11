@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * MethodCreditEarnedDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class MethodCreditEarnedDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMethodCreditEarnedDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class MethodCreditEarnedDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMethodCreditEarnedDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class MethodCreditEarnedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesMethodCreditEarnedDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorDelete[]
      */
     public function deletesMethodCreditEarnedDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesMethodCreditEarnedDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class MethodCreditEarnedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesMethodCreditEarnedDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesMethodCreditEarnedDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesMethodCreditEarnedDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class MethodCreditEarnedDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class MethodCreditEarnedDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class MethodCreditEarnedDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class MethodCreditEarnedDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class MethodCreditEarnedDescriptorsApi
      */
     public function deletesMethodCreditEarnedDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesMethodCreditEarnedDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorDelete[]';
         $request = $this->deletesMethodCreditEarnedDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class MethodCreditEarnedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMethodCreditEarnedDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiMethodCreditEarnedDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor[]
      */
     public function getMethodCreditEarnedDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $method_credit_earned_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getMethodCreditEarnedDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class MethodCreditEarnedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMethodCreditEarnedDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiMethodCreditEarnedDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getMethodCreditEarnedDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $method_credit_earned_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getMethodCreditEarnedDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class MethodCreditEarnedDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiMethodCreditEarnedDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiMethodCreditEarnedDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class MethodCreditEarnedDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiMethodCreditEarnedDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class MethodCreditEarnedDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiMethodCreditEarnedDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class MethodCreditEarnedDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiMethodCreditEarnedDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class MethodCreditEarnedDescriptorsApi
      */
     public function getMethodCreditEarnedDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $method_credit_earned_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getMethodCreditEarnedDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiMethodCreditEarnedDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor[]';
         $request = $this->getMethodCreditEarnedDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $method_credit_earned_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class MethodCreditEarnedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMethodCreditEarnedDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiMethodCreditEarnedDescriptor
+     * @return \OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor
      */
     public function getMethodCreditEarnedDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getMethodCreditEarnedDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class MethodCreditEarnedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMethodCreditEarnedDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiMethodCreditEarnedDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMethodCreditEarnedDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getMethodCreditEarnedDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class MethodCreditEarnedDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiMethodCreditEarnedDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiMethodCreditEarnedDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class MethodCreditEarnedDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiMethodCreditEarnedDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class MethodCreditEarnedDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiMethodCreditEarnedDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class MethodCreditEarnedDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiMethodCreditEarnedDescriptor',
+                        '\OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class MethodCreditEarnedDescriptorsApi
      */
     public function getMethodCreditEarnedDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getMethodCreditEarnedDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiMethodCreditEarnedDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor';
         $request = $this->getMethodCreditEarnedDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class MethodCreditEarnedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesMethodCreditEarnedDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorKeyChange[]
      */
     public function keyChangesMethodCreditEarnedDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesMethodCreditEarnedDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class MethodCreditEarnedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesMethodCreditEarnedDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesMethodCreditEarnedDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesMethodCreditEarnedDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class MethodCreditEarnedDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class MethodCreditEarnedDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class MethodCreditEarnedDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class MethodCreditEarnedDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class MethodCreditEarnedDescriptorsApi
      */
     public function keyChangesMethodCreditEarnedDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesMethodCreditEarnedDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiMethodCreditEarnedDescriptorKeyChange[]';
         $request = $this->keyChangesMethodCreditEarnedDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class MethodCreditEarnedDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMethodCreditEarnedDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class MethodCreditEarnedDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMethodCreditEarnedDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class MethodCreditEarnedDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMethodCreditEarnedDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class MethodCreditEarnedDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMethodCreditEarnedDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class MethodCreditEarnedDescriptorsApi
     /**
      * Create request for operation 'postMethodCreditEarnedDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMethodCreditEarnedDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class MethodCreditEarnedDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMethodCreditEarnedDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class MethodCreditEarnedDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMethodCreditEarnedDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class MethodCreditEarnedDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMethodCreditEarnedDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class MethodCreditEarnedDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMethodCreditEarnedDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class MethodCreditEarnedDescriptorsApi
      * Create request for operation 'putMethodCreditEarnedDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiMethodCreditEarnedDescriptor $ed_fi_method_credit_earned_descriptor The JSON representation of the \&quot;methodCreditEarnedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMethodCreditEarnedDescriptor'] to see the possible values for this operation
      *

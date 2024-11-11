@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * SchoolChoiceBasisDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class SchoolChoiceBasisDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSchoolChoiceBasisDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class SchoolChoiceBasisDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSchoolChoiceBasisDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class SchoolChoiceBasisDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesSchoolChoiceBasisDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorDelete[]
      */
     public function deletesSchoolChoiceBasisDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSchoolChoiceBasisDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class SchoolChoiceBasisDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesSchoolChoiceBasisDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesSchoolChoiceBasisDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSchoolChoiceBasisDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class SchoolChoiceBasisDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class SchoolChoiceBasisDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class SchoolChoiceBasisDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class SchoolChoiceBasisDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class SchoolChoiceBasisDescriptorsApi
      */
     public function deletesSchoolChoiceBasisDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSchoolChoiceBasisDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorDelete[]';
         $request = $this->deletesSchoolChoiceBasisDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class SchoolChoiceBasisDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSchoolChoiceBasisDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiSchoolChoiceBasisDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor[]
      */
     public function getSchoolChoiceBasisDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $school_choice_basis_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSchoolChoiceBasisDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class SchoolChoiceBasisDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSchoolChoiceBasisDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiSchoolChoiceBasisDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getSchoolChoiceBasisDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $school_choice_basis_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSchoolChoiceBasisDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class SchoolChoiceBasisDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiSchoolChoiceBasisDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiSchoolChoiceBasisDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class SchoolChoiceBasisDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiSchoolChoiceBasisDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class SchoolChoiceBasisDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiSchoolChoiceBasisDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class SchoolChoiceBasisDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiSchoolChoiceBasisDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class SchoolChoiceBasisDescriptorsApi
      */
     public function getSchoolChoiceBasisDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $school_choice_basis_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSchoolChoiceBasisDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiSchoolChoiceBasisDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor[]';
         $request = $this->getSchoolChoiceBasisDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $school_choice_basis_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class SchoolChoiceBasisDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSchoolChoiceBasisDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiSchoolChoiceBasisDescriptor
+     * @return \OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor
      */
     public function getSchoolChoiceBasisDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSchoolChoiceBasisDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class SchoolChoiceBasisDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSchoolChoiceBasisDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiSchoolChoiceBasisDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSchoolChoiceBasisDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSchoolChoiceBasisDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class SchoolChoiceBasisDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiSchoolChoiceBasisDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiSchoolChoiceBasisDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class SchoolChoiceBasisDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiSchoolChoiceBasisDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class SchoolChoiceBasisDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiSchoolChoiceBasisDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class SchoolChoiceBasisDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiSchoolChoiceBasisDescriptor',
+                        '\OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class SchoolChoiceBasisDescriptorsApi
      */
     public function getSchoolChoiceBasisDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSchoolChoiceBasisDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiSchoolChoiceBasisDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor';
         $request = $this->getSchoolChoiceBasisDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class SchoolChoiceBasisDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesSchoolChoiceBasisDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorKeyChange[]
      */
     public function keyChangesSchoolChoiceBasisDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSchoolChoiceBasisDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class SchoolChoiceBasisDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesSchoolChoiceBasisDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesSchoolChoiceBasisDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSchoolChoiceBasisDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class SchoolChoiceBasisDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class SchoolChoiceBasisDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class SchoolChoiceBasisDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class SchoolChoiceBasisDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class SchoolChoiceBasisDescriptorsApi
      */
     public function keyChangesSchoolChoiceBasisDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSchoolChoiceBasisDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolChoiceBasisDescriptorKeyChange[]';
         $request = $this->keyChangesSchoolChoiceBasisDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class SchoolChoiceBasisDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSchoolChoiceBasisDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class SchoolChoiceBasisDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSchoolChoiceBasisDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class SchoolChoiceBasisDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSchoolChoiceBasisDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class SchoolChoiceBasisDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSchoolChoiceBasisDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class SchoolChoiceBasisDescriptorsApi
     /**
      * Create request for operation 'postSchoolChoiceBasisDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSchoolChoiceBasisDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class SchoolChoiceBasisDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSchoolChoiceBasisDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class SchoolChoiceBasisDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSchoolChoiceBasisDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class SchoolChoiceBasisDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSchoolChoiceBasisDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class SchoolChoiceBasisDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSchoolChoiceBasisDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class SchoolChoiceBasisDescriptorsApi
      * Create request for operation 'putSchoolChoiceBasisDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSchoolChoiceBasisDescriptor $ed_fi_school_choice_basis_descriptor The JSON representation of the \&quot;schoolChoiceBasisDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSchoolChoiceBasisDescriptor'] to see the possible values for this operation
      *

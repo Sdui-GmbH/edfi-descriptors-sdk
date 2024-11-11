@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Model;
+namespace OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \Descriptors\ObjectSerializer;
+use \OpenAPI\Client\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange imple
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'old_key_values' => '\Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey',
-        'new_key_values' => '\Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey'
+        'old_key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey',
+        'new_key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey'
     ];
 
     /**
@@ -367,7 +367,7 @@ class TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange imple
     /**
      * Gets old_key_values
      *
-     * @return \Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey|null
      */
     public function getOldKeyValues()
     {
@@ -377,7 +377,7 @@ class TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange imple
     /**
      * Sets old_key_values
      *
-     * @param \Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey|null $old_key_values old_key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey|null $old_key_values old_key_values
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange imple
     /**
      * Gets new_key_values
      *
-     * @return \Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey|null
      */
     public function getNewKeyValues()
     {
@@ -404,7 +404,7 @@ class TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKeyChange imple
     /**
      * Sets new_key_values
      *
-     * @param \Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey|null $new_key_values new_key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey|null $new_key_values new_key_values
      *
      * @return self
      */

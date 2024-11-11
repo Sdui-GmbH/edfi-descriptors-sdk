@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * GunFreeSchoolsActReportingStatusDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteGunFreeSchoolsActReportingStatusDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteGunFreeSchoolsActReportingStatusDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesGunFreeSchoolsActReportingStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorDelete[]
      */
     public function deletesGunFreeSchoolsActReportingStatusDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesGunFreeSchoolsActReportingStatusDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesGunFreeSchoolsActReportingStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesGunFreeSchoolsActReportingStatusDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesGunFreeSchoolsActReportingStatusDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      */
     public function deletesGunFreeSchoolsActReportingStatusDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesGunFreeSchoolsActReportingStatusDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorDelete[]';
         $request = $this->deletesGunFreeSchoolsActReportingStatusDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGunFreeSchoolsActReportingStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor[]
      */
     public function getGunFreeSchoolsActReportingStatusDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $gun_free_schools_act_reporting_status_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getGunFreeSchoolsActReportingStatusDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGunFreeSchoolsActReportingStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getGunFreeSchoolsActReportingStatusDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $gun_free_schools_act_reporting_status_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getGunFreeSchoolsActReportingStatusDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      */
     public function getGunFreeSchoolsActReportingStatusDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $gun_free_schools_act_reporting_status_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getGunFreeSchoolsActReportingStatusDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor[]';
         $request = $this->getGunFreeSchoolsActReportingStatusDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $gun_free_schools_act_reporting_status_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGunFreeSchoolsActReportingStatusDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor
+     * @return \OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor
      */
     public function getGunFreeSchoolsActReportingStatusDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getGunFreeSchoolsActReportingStatusDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGunFreeSchoolsActReportingStatusDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGunFreeSchoolsActReportingStatusDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getGunFreeSchoolsActReportingStatusDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor',
+                        '\OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      */
     public function getGunFreeSchoolsActReportingStatusDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getGunFreeSchoolsActReportingStatusDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor';
         $request = $this->getGunFreeSchoolsActReportingStatusDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesGunFreeSchoolsActReportingStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorKeyChange[]
      */
     public function keyChangesGunFreeSchoolsActReportingStatusDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesGunFreeSchoolsActReportingStatusDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesGunFreeSchoolsActReportingStatusDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesGunFreeSchoolsActReportingStatusDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesGunFreeSchoolsActReportingStatusDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      */
     public function keyChangesGunFreeSchoolsActReportingStatusDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesGunFreeSchoolsActReportingStatusDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiGunFreeSchoolsActReportingStatusDescriptorKeyChange[]';
         $request = $this->keyChangesGunFreeSchoolsActReportingStatusDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGunFreeSchoolsActReportingStatusDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGunFreeSchoolsActReportingStatusDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGunFreeSchoolsActReportingStatusDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGunFreeSchoolsActReportingStatusDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
     /**
      * Create request for operation 'postGunFreeSchoolsActReportingStatusDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGunFreeSchoolsActReportingStatusDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putGunFreeSchoolsActReportingStatusDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putGunFreeSchoolsActReportingStatusDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putGunFreeSchoolsActReportingStatusDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putGunFreeSchoolsActReportingStatusDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class GunFreeSchoolsActReportingStatusDescriptorsApi
      * Create request for operation 'putGunFreeSchoolsActReportingStatusDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiGunFreeSchoolsActReportingStatusDescriptor $ed_fi_gun_free_schools_act_reporting_status_descriptor The JSON representation of the \&quot;gunFreeSchoolsActReportingStatusDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putGunFreeSchoolsActReportingStatusDescriptor'] to see the possible values for this operation
      *

@@ -1,4 +1,4 @@
-# Descriptors\CohortScopeDescriptorsApi
+# OpenAPI\Client\CohortScopeDescriptorsApi
 
 All URIs are relative to https://api.ed-fi.org:443/v7.1/api/data/v3, except if the operation defines another base path.
 
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\CohortScopeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\CohortScopeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -77,7 +77,7 @@ void (empty response body)
 ## `deletesCohortScopeDescriptors()`
 
 ```php
-deletesCohortScopeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiCohortScopeDescriptorDelete[]
+deletesCohortScopeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiCohortScopeDescriptorDelete[]
 ```
 
 Retrieves deleted resources based on change version.
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\CohortScopeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\CohortScopeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiCohortScopeDescriptorDelete[]**](../Model/TrackedChangesEdFiCohortScopeDescriptorDelete.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiCohortScopeDescriptorDelete[]**](../Model/TrackedChangesEdFiCohortScopeDescriptorDelete.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `getCohortScopeDescriptors()`
 
 ```php
-getCohortScopeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $cohort_scope_descriptor_id, $use_snapshot): \Descriptors\Model\EdFiCohortScopeDescriptor[]
+getCohortScopeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $cohort_scope_descriptor_id, $use_snapshot): \OpenAPI\Client\Model\EdFiCohortScopeDescriptor[]
 ```
 
 Retrieves specific resources using the resource's property values (using the \"Get\" pattern).
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\CohortScopeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\CohortScopeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,7 +201,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiCohortScopeDescriptor[]**](../Model/EdFiCohortScopeDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiCohortScopeDescriptor[]**](../Model/EdFiCohortScopeDescriptor.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ try {
 ## `getCohortScopeDescriptorsById()`
 
 ```php
-getCohortScopeDescriptorsById($id, $if_none_match, $use_snapshot): \Descriptors\Model\EdFiCohortScopeDescriptor
+getCohortScopeDescriptorsById($id, $if_none_match, $use_snapshot): \OpenAPI\Client\Model\EdFiCohortScopeDescriptor
 ```
 
 Retrieves a specific resource using the resource's identifier (using the \"Get By Id\" pattern).
@@ -234,10 +234,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\CohortScopeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\CohortScopeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,7 +265,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiCohortScopeDescriptor**](../Model/EdFiCohortScopeDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiCohortScopeDescriptor**](../Model/EdFiCohortScopeDescriptor.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ try {
 ## `keyChangesCohortScopeDescriptors()`
 
 ```php
-keyChangesCohortScopeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiCohortScopeDescriptorKeyChange[]
+keyChangesCohortScopeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiCohortScopeDescriptorKeyChange[]
 ```
 
 Retrieves resources key changes based on change version.
@@ -298,10 +298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\CohortScopeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\CohortScopeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -335,7 +335,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiCohortScopeDescriptorKeyChange[]**](../Model/TrackedChangesEdFiCohortScopeDescriptorKeyChange.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiCohortScopeDescriptorKeyChange[]**](../Model/TrackedChangesEdFiCohortScopeDescriptorKeyChange.md)
 
 ### Authorization
 
@@ -368,16 +368,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\CohortScopeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\CohortScopeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ed_fi_cohort_scope_descriptor = new \Descriptors\Model\EdFiCohortScopeDescriptor(); // \Descriptors\Model\EdFiCohortScopeDescriptor | The JSON representation of the \"cohortScopeDescriptor\" resource to be created or updated.
+$ed_fi_cohort_scope_descriptor = new \OpenAPI\Client\Model\EdFiCohortScopeDescriptor(); // \OpenAPI\Client\Model\EdFiCohortScopeDescriptor | The JSON representation of the \"cohortScopeDescriptor\" resource to be created or updated.
 
 try {
     $apiInstance->postCohortScopeDescriptor($ed_fi_cohort_scope_descriptor);
@@ -390,7 +390,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ed_fi_cohort_scope_descriptor** | [**\Descriptors\Model\EdFiCohortScopeDescriptor**](../Model/EdFiCohortScopeDescriptor.md)| The JSON representation of the \&quot;cohortScopeDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_cohort_scope_descriptor** | [**\OpenAPI\Client\Model\EdFiCohortScopeDescriptor**](../Model/EdFiCohortScopeDescriptor.md)| The JSON representation of the \&quot;cohortScopeDescriptor\&quot; resource to be created or updated. | |
 
 ### Return type
 
@@ -427,17 +427,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\CohortScopeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\CohortScopeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string | A resource identifier that uniquely identifies the resource.
-$ed_fi_cohort_scope_descriptor = new \Descriptors\Model\EdFiCohortScopeDescriptor(); // \Descriptors\Model\EdFiCohortScopeDescriptor | The JSON representation of the \"cohortScopeDescriptor\" resource to be created or updated.
+$ed_fi_cohort_scope_descriptor = new \OpenAPI\Client\Model\EdFiCohortScopeDescriptor(); // \OpenAPI\Client\Model\EdFiCohortScopeDescriptor | The JSON representation of the \"cohortScopeDescriptor\" resource to be created or updated.
 $if_match = 'if_match_example'; // string | The ETag header value used to prevent the PUT from updating a resource modified by another consumer.
 
 try {
@@ -452,7 +452,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| A resource identifier that uniquely identifies the resource. | |
-| **ed_fi_cohort_scope_descriptor** | [**\Descriptors\Model\EdFiCohortScopeDescriptor**](../Model/EdFiCohortScopeDescriptor.md)| The JSON representation of the \&quot;cohortScopeDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_cohort_scope_descriptor** | [**\OpenAPI\Client\Model\EdFiCohortScopeDescriptor**](../Model/EdFiCohortScopeDescriptor.md)| The JSON representation of the \&quot;cohortScopeDescriptor\&quot; resource to be created or updated. | |
 | **if_match** | **string**| The ETag header value used to prevent the PUT from updating a resource modified by another consumer. | [optional] |
 
 ### Return type

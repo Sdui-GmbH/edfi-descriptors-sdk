@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors\Model
+ * @package  OpenAPI\Client\Model
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,12 +26,12 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Model;
+namespace OpenAPI\Client\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package Descriptors\Model
+ * @package OpenAPI\Client\Model
  * @author  OpenAPI Generator team
  */
 interface ModelInterface

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * EducatorRoleDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class EducatorRoleDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEducatorRoleDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class EducatorRoleDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEducatorRoleDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class EducatorRoleDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEducatorRoleDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorDelete[]
      */
     public function deletesEducatorRoleDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEducatorRoleDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class EducatorRoleDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEducatorRoleDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesEducatorRoleDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEducatorRoleDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class EducatorRoleDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class EducatorRoleDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class EducatorRoleDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class EducatorRoleDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class EducatorRoleDescriptorsApi
      */
     public function deletesEducatorRoleDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEducatorRoleDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorDelete[]';
         $request = $this->deletesEducatorRoleDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class EducatorRoleDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEducatorRoleDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TpdmEducatorRoleDescriptor[]
+     * @return \OpenAPI\Client\Model\TpdmEducatorRoleDescriptor[]
      */
     public function getEducatorRoleDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $educator_role_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEducatorRoleDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class EducatorRoleDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEducatorRoleDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TpdmEducatorRoleDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TpdmEducatorRoleDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getEducatorRoleDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $educator_role_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEducatorRoleDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class EducatorRoleDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TpdmEducatorRoleDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TpdmEducatorRoleDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TpdmEducatorRoleDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TpdmEducatorRoleDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class EducatorRoleDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmEducatorRoleDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmEducatorRoleDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class EducatorRoleDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TpdmEducatorRoleDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\TpdmEducatorRoleDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class EducatorRoleDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TpdmEducatorRoleDescriptor[]',
+                        '\OpenAPI\Client\Model\TpdmEducatorRoleDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class EducatorRoleDescriptorsApi
      */
     public function getEducatorRoleDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $educator_role_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEducatorRoleDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TpdmEducatorRoleDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\TpdmEducatorRoleDescriptor[]';
         $request = $this->getEducatorRoleDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $educator_role_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class EducatorRoleDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEducatorRoleDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TpdmEducatorRoleDescriptor
+     * @return \OpenAPI\Client\Model\TpdmEducatorRoleDescriptor
      */
     public function getEducatorRoleDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEducatorRoleDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class EducatorRoleDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEducatorRoleDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TpdmEducatorRoleDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TpdmEducatorRoleDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEducatorRoleDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEducatorRoleDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class EducatorRoleDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TpdmEducatorRoleDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TpdmEducatorRoleDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TpdmEducatorRoleDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TpdmEducatorRoleDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class EducatorRoleDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmEducatorRoleDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmEducatorRoleDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class EducatorRoleDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TpdmEducatorRoleDescriptor';
+            $returnType = '\OpenAPI\Client\Model\TpdmEducatorRoleDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class EducatorRoleDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TpdmEducatorRoleDescriptor',
+                        '\OpenAPI\Client\Model\TpdmEducatorRoleDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class EducatorRoleDescriptorsApi
      */
     public function getEducatorRoleDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEducatorRoleDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\TpdmEducatorRoleDescriptor';
+        $returnType = '\OpenAPI\Client\Model\TpdmEducatorRoleDescriptor';
         $request = $this->getEducatorRoleDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class EducatorRoleDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEducatorRoleDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorKeyChange[]
      */
     public function keyChangesEducatorRoleDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEducatorRoleDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class EducatorRoleDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEducatorRoleDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesEducatorRoleDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEducatorRoleDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class EducatorRoleDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class EducatorRoleDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class EducatorRoleDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class EducatorRoleDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class EducatorRoleDescriptorsApi
      */
     public function keyChangesEducatorRoleDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEducatorRoleDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesTpdmEducatorRoleDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmEducatorRoleDescriptorKeyChange[]';
         $request = $this->keyChangesEducatorRoleDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class EducatorRoleDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEducatorRoleDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class EducatorRoleDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEducatorRoleDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class EducatorRoleDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEducatorRoleDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class EducatorRoleDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEducatorRoleDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class EducatorRoleDescriptorsApi
     /**
      * Create request for operation 'postEducatorRoleDescriptor'
      *
-     * @param  \Descriptors\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEducatorRoleDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class EducatorRoleDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEducatorRoleDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class EducatorRoleDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEducatorRoleDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class EducatorRoleDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEducatorRoleDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class EducatorRoleDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEducatorRoleDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class EducatorRoleDescriptorsApi
      * Create request for operation 'putEducatorRoleDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEducatorRoleDescriptor $tpdm_educator_role_descriptor The JSON representation of the \&quot;educatorRoleDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEducatorRoleDescriptor'] to see the possible values for this operation
      *

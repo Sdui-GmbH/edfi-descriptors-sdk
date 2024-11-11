@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * CharterApprovalAgencyTypeDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharterApprovalAgencyTypeDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharterApprovalAgencyTypeDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class CharterApprovalAgencyTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCharterApprovalAgencyTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorDelete[]
      */
     public function deletesCharterApprovalAgencyTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCharterApprovalAgencyTypeDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class CharterApprovalAgencyTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCharterApprovalAgencyTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesCharterApprovalAgencyTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCharterApprovalAgencyTypeDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class CharterApprovalAgencyTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
      */
     public function deletesCharterApprovalAgencyTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCharterApprovalAgencyTypeDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorDelete[]';
         $request = $this->deletesCharterApprovalAgencyTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class CharterApprovalAgencyTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharterApprovalAgencyTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor[]
      */
     public function getCharterApprovalAgencyTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $charter_approval_agency_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCharterApprovalAgencyTypeDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class CharterApprovalAgencyTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharterApprovalAgencyTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getCharterApprovalAgencyTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $charter_approval_agency_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCharterApprovalAgencyTypeDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class CharterApprovalAgencyTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
      */
     public function getCharterApprovalAgencyTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $charter_approval_agency_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCharterApprovalAgencyTypeDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor[]';
         $request = $this->getCharterApprovalAgencyTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $charter_approval_agency_type_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class CharterApprovalAgencyTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharterApprovalAgencyTypeDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor
+     * @return \OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor
      */
     public function getCharterApprovalAgencyTypeDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCharterApprovalAgencyTypeDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class CharterApprovalAgencyTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharterApprovalAgencyTypeDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCharterApprovalAgencyTypeDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCharterApprovalAgencyTypeDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class CharterApprovalAgencyTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor',
+                        '\OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
      */
     public function getCharterApprovalAgencyTypeDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCharterApprovalAgencyTypeDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor';
         $request = $this->getCharterApprovalAgencyTypeDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class CharterApprovalAgencyTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCharterApprovalAgencyTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorKeyChange[]
      */
     public function keyChangesCharterApprovalAgencyTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCharterApprovalAgencyTypeDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class CharterApprovalAgencyTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCharterApprovalAgencyTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesCharterApprovalAgencyTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCharterApprovalAgencyTypeDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class CharterApprovalAgencyTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
      */
     public function keyChangesCharterApprovalAgencyTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCharterApprovalAgencyTypeDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCharterApprovalAgencyTypeDescriptorKeyChange[]';
         $request = $this->keyChangesCharterApprovalAgencyTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class CharterApprovalAgencyTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharterApprovalAgencyTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class CharterApprovalAgencyTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharterApprovalAgencyTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharterApprovalAgencyTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharterApprovalAgencyTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
     /**
      * Create request for operation 'postCharterApprovalAgencyTypeDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharterApprovalAgencyTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class CharterApprovalAgencyTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharterApprovalAgencyTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class CharterApprovalAgencyTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharterApprovalAgencyTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharterApprovalAgencyTypeDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharterApprovalAgencyTypeDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class CharterApprovalAgencyTypeDescriptorsApi
      * Create request for operation 'putCharterApprovalAgencyTypeDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCharterApprovalAgencyTypeDescriptor $ed_fi_charter_approval_agency_type_descriptor The JSON representation of the \&quot;charterApprovalAgencyTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharterApprovalAgencyTypeDescriptor'] to see the possible values for this operation
      *

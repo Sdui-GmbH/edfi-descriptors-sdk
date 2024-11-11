@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Model;
+namespace OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \Descriptors\ObjectSerializer;
+use \OpenAPI\Client\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiAcademicHonorCategoryDescriptorDelete Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TrackedChangesEdFiAcademicHonorCategoryDescriptorDelete implements ModelIn
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'key_values' => '\Descriptors\Model\TrackedChangesEdFiAcademicHonorCategoryDescriptorKey'
+        'key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiAcademicHonorCategoryDescriptorKey'
     ];
 
     /**
@@ -360,7 +360,7 @@ class TrackedChangesEdFiAcademicHonorCategoryDescriptorDelete implements ModelIn
     /**
      * Gets key_values
      *
-     * @return \Descriptors\Model\TrackedChangesEdFiAcademicHonorCategoryDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiAcademicHonorCategoryDescriptorKey|null
      */
     public function getKeyValues()
     {
@@ -370,7 +370,7 @@ class TrackedChangesEdFiAcademicHonorCategoryDescriptorDelete implements ModelIn
     /**
      * Sets key_values
      *
-     * @param \Descriptors\Model\TrackedChangesEdFiAcademicHonorCategoryDescriptorKey|null $key_values key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesEdFiAcademicHonorCategoryDescriptorKey|null $key_values key_values
      *
      * @return self
      */

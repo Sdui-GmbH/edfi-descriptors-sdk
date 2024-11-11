@@ -1,4 +1,4 @@
-# Descriptors\AdditionalCreditTypeDescriptorsApi
+# OpenAPI\Client\AdditionalCreditTypeDescriptorsApi
 
 All URIs are relative to https://api.ed-fi.org:443/v7.1/api/data/v3, except if the operation defines another base path.
 
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\AdditionalCreditTypeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\AdditionalCreditTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -77,7 +77,7 @@ void (empty response body)
 ## `deletesAdditionalCreditTypeDescriptors()`
 
 ```php
-deletesAdditionalCreditTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiAdditionalCreditTypeDescriptorDelete[]
+deletesAdditionalCreditTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiAdditionalCreditTypeDescriptorDelete[]
 ```
 
 Retrieves deleted resources based on change version.
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\AdditionalCreditTypeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\AdditionalCreditTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiAdditionalCreditTypeDescriptorDelete[]**](../Model/TrackedChangesEdFiAdditionalCreditTypeDescriptorDelete.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiAdditionalCreditTypeDescriptorDelete[]**](../Model/TrackedChangesEdFiAdditionalCreditTypeDescriptorDelete.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `getAdditionalCreditTypeDescriptors()`
 
 ```php
-getAdditionalCreditTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $additional_credit_type_descriptor_id, $use_snapshot): \Descriptors\Model\EdFiAdditionalCreditTypeDescriptor[]
+getAdditionalCreditTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $additional_credit_type_descriptor_id, $use_snapshot): \OpenAPI\Client\Model\EdFiAdditionalCreditTypeDescriptor[]
 ```
 
 Retrieves specific resources using the resource's property values (using the \"Get\" pattern).
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\AdditionalCreditTypeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\AdditionalCreditTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,7 +201,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiAdditionalCreditTypeDescriptor[]**](../Model/EdFiAdditionalCreditTypeDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiAdditionalCreditTypeDescriptor[]**](../Model/EdFiAdditionalCreditTypeDescriptor.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ try {
 ## `getAdditionalCreditTypeDescriptorsById()`
 
 ```php
-getAdditionalCreditTypeDescriptorsById($id, $if_none_match, $use_snapshot): \Descriptors\Model\EdFiAdditionalCreditTypeDescriptor
+getAdditionalCreditTypeDescriptorsById($id, $if_none_match, $use_snapshot): \OpenAPI\Client\Model\EdFiAdditionalCreditTypeDescriptor
 ```
 
 Retrieves a specific resource using the resource's identifier (using the \"Get By Id\" pattern).
@@ -234,10 +234,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\AdditionalCreditTypeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\AdditionalCreditTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,7 +265,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiAdditionalCreditTypeDescriptor**](../Model/EdFiAdditionalCreditTypeDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiAdditionalCreditTypeDescriptor**](../Model/EdFiAdditionalCreditTypeDescriptor.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ try {
 ## `keyChangesAdditionalCreditTypeDescriptors()`
 
 ```php
-keyChangesAdditionalCreditTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiAdditionalCreditTypeDescriptorKeyChange[]
+keyChangesAdditionalCreditTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiAdditionalCreditTypeDescriptorKeyChange[]
 ```
 
 Retrieves resources key changes based on change version.
@@ -298,10 +298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\AdditionalCreditTypeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\AdditionalCreditTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -335,7 +335,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiAdditionalCreditTypeDescriptorKeyChange[]**](../Model/TrackedChangesEdFiAdditionalCreditTypeDescriptorKeyChange.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiAdditionalCreditTypeDescriptorKeyChange[]**](../Model/TrackedChangesEdFiAdditionalCreditTypeDescriptorKeyChange.md)
 
 ### Authorization
 
@@ -368,16 +368,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\AdditionalCreditTypeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\AdditionalCreditTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ed_fi_additional_credit_type_descriptor = new \Descriptors\Model\EdFiAdditionalCreditTypeDescriptor(); // \Descriptors\Model\EdFiAdditionalCreditTypeDescriptor | The JSON representation of the \"additionalCreditTypeDescriptor\" resource to be created or updated.
+$ed_fi_additional_credit_type_descriptor = new \OpenAPI\Client\Model\EdFiAdditionalCreditTypeDescriptor(); // \OpenAPI\Client\Model\EdFiAdditionalCreditTypeDescriptor | The JSON representation of the \"additionalCreditTypeDescriptor\" resource to be created or updated.
 
 try {
     $apiInstance->postAdditionalCreditTypeDescriptor($ed_fi_additional_credit_type_descriptor);
@@ -390,7 +390,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ed_fi_additional_credit_type_descriptor** | [**\Descriptors\Model\EdFiAdditionalCreditTypeDescriptor**](../Model/EdFiAdditionalCreditTypeDescriptor.md)| The JSON representation of the \&quot;additionalCreditTypeDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_additional_credit_type_descriptor** | [**\OpenAPI\Client\Model\EdFiAdditionalCreditTypeDescriptor**](../Model/EdFiAdditionalCreditTypeDescriptor.md)| The JSON representation of the \&quot;additionalCreditTypeDescriptor\&quot; resource to be created or updated. | |
 
 ### Return type
 
@@ -427,17 +427,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\AdditionalCreditTypeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\AdditionalCreditTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string | A resource identifier that uniquely identifies the resource.
-$ed_fi_additional_credit_type_descriptor = new \Descriptors\Model\EdFiAdditionalCreditTypeDescriptor(); // \Descriptors\Model\EdFiAdditionalCreditTypeDescriptor | The JSON representation of the \"additionalCreditTypeDescriptor\" resource to be created or updated.
+$ed_fi_additional_credit_type_descriptor = new \OpenAPI\Client\Model\EdFiAdditionalCreditTypeDescriptor(); // \OpenAPI\Client\Model\EdFiAdditionalCreditTypeDescriptor | The JSON representation of the \"additionalCreditTypeDescriptor\" resource to be created or updated.
 $if_match = 'if_match_example'; // string | The ETag header value used to prevent the PUT from updating a resource modified by another consumer.
 
 try {
@@ -452,7 +452,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| A resource identifier that uniquely identifies the resource. | |
-| **ed_fi_additional_credit_type_descriptor** | [**\Descriptors\Model\EdFiAdditionalCreditTypeDescriptor**](../Model/EdFiAdditionalCreditTypeDescriptor.md)| The JSON representation of the \&quot;additionalCreditTypeDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_additional_credit_type_descriptor** | [**\OpenAPI\Client\Model\EdFiAdditionalCreditTypeDescriptor**](../Model/EdFiAdditionalCreditTypeDescriptor.md)| The JSON representation of the \&quot;additionalCreditTypeDescriptor\&quot; resource to be created or updated. | |
 | **if_match** | **string**| The ETag header value used to prevent the PUT from updating a resource modified by another consumer. | [optional] |
 
 ### Return type

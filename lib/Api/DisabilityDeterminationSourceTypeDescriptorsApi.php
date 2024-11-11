@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * DisabilityDeterminationSourceTypeDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDisabilityDeterminationSourceTypeDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDisabilityDeterminationSourceTypeDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesDisabilityDeterminationSourceTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorDelete[]
      */
     public function deletesDisabilityDeterminationSourceTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesDisabilityDeterminationSourceTypeDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesDisabilityDeterminationSourceTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesDisabilityDeterminationSourceTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesDisabilityDeterminationSourceTypeDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      */
     public function deletesDisabilityDeterminationSourceTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesDisabilityDeterminationSourceTypeDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorDelete[]';
         $request = $this->deletesDisabilityDeterminationSourceTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDisabilityDeterminationSourceTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor[]
      */
     public function getDisabilityDeterminationSourceTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $disability_determination_source_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getDisabilityDeterminationSourceTypeDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDisabilityDeterminationSourceTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getDisabilityDeterminationSourceTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $disability_determination_source_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getDisabilityDeterminationSourceTypeDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      */
     public function getDisabilityDeterminationSourceTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $disability_determination_source_type_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getDisabilityDeterminationSourceTypeDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor[]';
         $request = $this->getDisabilityDeterminationSourceTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $disability_determination_source_type_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDisabilityDeterminationSourceTypeDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor
+     * @return \OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor
      */
     public function getDisabilityDeterminationSourceTypeDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getDisabilityDeterminationSourceTypeDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDisabilityDeterminationSourceTypeDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDisabilityDeterminationSourceTypeDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getDisabilityDeterminationSourceTypeDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor',
+                        '\OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      */
     public function getDisabilityDeterminationSourceTypeDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getDisabilityDeterminationSourceTypeDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor';
         $request = $this->getDisabilityDeterminationSourceTypeDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesDisabilityDeterminationSourceTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorKeyChange[]
      */
     public function keyChangesDisabilityDeterminationSourceTypeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesDisabilityDeterminationSourceTypeDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesDisabilityDeterminationSourceTypeDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesDisabilityDeterminationSourceTypeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesDisabilityDeterminationSourceTypeDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      */
     public function keyChangesDisabilityDeterminationSourceTypeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesDisabilityDeterminationSourceTypeDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiDisabilityDeterminationSourceTypeDescriptorKeyChange[]';
         $request = $this->keyChangesDisabilityDeterminationSourceTypeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDisabilityDeterminationSourceTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDisabilityDeterminationSourceTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDisabilityDeterminationSourceTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDisabilityDeterminationSourceTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
     /**
      * Create request for operation 'postDisabilityDeterminationSourceTypeDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postDisabilityDeterminationSourceTypeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDisabilityDeterminationSourceTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDisabilityDeterminationSourceTypeDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDisabilityDeterminationSourceTypeDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDisabilityDeterminationSourceTypeDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class DisabilityDeterminationSourceTypeDescriptorsApi
      * Create request for operation 'putDisabilityDeterminationSourceTypeDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiDisabilityDeterminationSourceTypeDescriptor $ed_fi_disability_determination_source_type_descriptor The JSON representation of the \&quot;disabilityDeterminationSourceTypeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putDisabilityDeterminationSourceTypeDescriptor'] to see the possible values for this operation
      *

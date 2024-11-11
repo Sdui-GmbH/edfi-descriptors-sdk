@@ -1,4 +1,4 @@
-# Descriptors\ReporterDescriptionDescriptorsApi
+# OpenAPI\Client\ReporterDescriptionDescriptorsApi
 
 All URIs are relative to https://api.ed-fi.org:443/v7.1/api/data/v3, except if the operation defines another base path.
 
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\ReporterDescriptionDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\ReporterDescriptionDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -77,7 +77,7 @@ void (empty response body)
 ## `deletesReporterDescriptionDescriptors()`
 
 ```php
-deletesReporterDescriptionDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiReporterDescriptionDescriptorDelete[]
+deletesReporterDescriptionDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiReporterDescriptionDescriptorDelete[]
 ```
 
 Retrieves deleted resources based on change version.
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\ReporterDescriptionDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\ReporterDescriptionDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiReporterDescriptionDescriptorDelete[]**](../Model/TrackedChangesEdFiReporterDescriptionDescriptorDelete.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiReporterDescriptionDescriptorDelete[]**](../Model/TrackedChangesEdFiReporterDescriptionDescriptorDelete.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `getReporterDescriptionDescriptors()`
 
 ```php
-getReporterDescriptionDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $reporter_description_descriptor_id, $use_snapshot): \Descriptors\Model\EdFiReporterDescriptionDescriptor[]
+getReporterDescriptionDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $reporter_description_descriptor_id, $use_snapshot): \OpenAPI\Client\Model\EdFiReporterDescriptionDescriptor[]
 ```
 
 Retrieves specific resources using the resource's property values (using the \"Get\" pattern).
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\ReporterDescriptionDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\ReporterDescriptionDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,7 +201,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiReporterDescriptionDescriptor[]**](../Model/EdFiReporterDescriptionDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiReporterDescriptionDescriptor[]**](../Model/EdFiReporterDescriptionDescriptor.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ try {
 ## `getReporterDescriptionDescriptorsById()`
 
 ```php
-getReporterDescriptionDescriptorsById($id, $if_none_match, $use_snapshot): \Descriptors\Model\EdFiReporterDescriptionDescriptor
+getReporterDescriptionDescriptorsById($id, $if_none_match, $use_snapshot): \OpenAPI\Client\Model\EdFiReporterDescriptionDescriptor
 ```
 
 Retrieves a specific resource using the resource's identifier (using the \"Get By Id\" pattern).
@@ -234,10 +234,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\ReporterDescriptionDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\ReporterDescriptionDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,7 +265,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiReporterDescriptionDescriptor**](../Model/EdFiReporterDescriptionDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiReporterDescriptionDescriptor**](../Model/EdFiReporterDescriptionDescriptor.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ try {
 ## `keyChangesReporterDescriptionDescriptors()`
 
 ```php
-keyChangesReporterDescriptionDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiReporterDescriptionDescriptorKeyChange[]
+keyChangesReporterDescriptionDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiReporterDescriptionDescriptorKeyChange[]
 ```
 
 Retrieves resources key changes based on change version.
@@ -298,10 +298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\ReporterDescriptionDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\ReporterDescriptionDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -335,7 +335,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiReporterDescriptionDescriptorKeyChange[]**](../Model/TrackedChangesEdFiReporterDescriptionDescriptorKeyChange.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiReporterDescriptionDescriptorKeyChange[]**](../Model/TrackedChangesEdFiReporterDescriptionDescriptorKeyChange.md)
 
 ### Authorization
 
@@ -368,16 +368,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\ReporterDescriptionDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\ReporterDescriptionDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ed_fi_reporter_description_descriptor = new \Descriptors\Model\EdFiReporterDescriptionDescriptor(); // \Descriptors\Model\EdFiReporterDescriptionDescriptor | The JSON representation of the \"reporterDescriptionDescriptor\" resource to be created or updated.
+$ed_fi_reporter_description_descriptor = new \OpenAPI\Client\Model\EdFiReporterDescriptionDescriptor(); // \OpenAPI\Client\Model\EdFiReporterDescriptionDescriptor | The JSON representation of the \"reporterDescriptionDescriptor\" resource to be created or updated.
 
 try {
     $apiInstance->postReporterDescriptionDescriptor($ed_fi_reporter_description_descriptor);
@@ -390,7 +390,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ed_fi_reporter_description_descriptor** | [**\Descriptors\Model\EdFiReporterDescriptionDescriptor**](../Model/EdFiReporterDescriptionDescriptor.md)| The JSON representation of the \&quot;reporterDescriptionDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_reporter_description_descriptor** | [**\OpenAPI\Client\Model\EdFiReporterDescriptionDescriptor**](../Model/EdFiReporterDescriptionDescriptor.md)| The JSON representation of the \&quot;reporterDescriptionDescriptor\&quot; resource to be created or updated. | |
 
 ### Return type
 
@@ -427,17 +427,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\ReporterDescriptionDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\ReporterDescriptionDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string | A resource identifier that uniquely identifies the resource.
-$ed_fi_reporter_description_descriptor = new \Descriptors\Model\EdFiReporterDescriptionDescriptor(); // \Descriptors\Model\EdFiReporterDescriptionDescriptor | The JSON representation of the \"reporterDescriptionDescriptor\" resource to be created or updated.
+$ed_fi_reporter_description_descriptor = new \OpenAPI\Client\Model\EdFiReporterDescriptionDescriptor(); // \OpenAPI\Client\Model\EdFiReporterDescriptionDescriptor | The JSON representation of the \"reporterDescriptionDescriptor\" resource to be created or updated.
 $if_match = 'if_match_example'; // string | The ETag header value used to prevent the PUT from updating a resource modified by another consumer.
 
 try {
@@ -452,7 +452,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| A resource identifier that uniquely identifies the resource. | |
-| **ed_fi_reporter_description_descriptor** | [**\Descriptors\Model\EdFiReporterDescriptionDescriptor**](../Model/EdFiReporterDescriptionDescriptor.md)| The JSON representation of the \&quot;reporterDescriptionDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_reporter_description_descriptor** | [**\OpenAPI\Client\Model\EdFiReporterDescriptionDescriptor**](../Model/EdFiReporterDescriptionDescriptor.md)| The JSON representation of the \&quot;reporterDescriptionDescriptor\&quot; resource to be created or updated. | |
 | **if_match** | **string**| The ETag header value used to prevent the PUT from updating a resource modified by another consumer. | [optional] |
 
 ### Return type

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * HomelessPrimaryNighttimeResidenceDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteHomelessPrimaryNighttimeResidenceDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteHomelessPrimaryNighttimeResidenceDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesHomelessPrimaryNighttimeResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorDelete[]
      */
     public function deletesHomelessPrimaryNighttimeResidenceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesHomelessPrimaryNighttimeResidenceDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesHomelessPrimaryNighttimeResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesHomelessPrimaryNighttimeResidenceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesHomelessPrimaryNighttimeResidenceDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      */
     public function deletesHomelessPrimaryNighttimeResidenceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesHomelessPrimaryNighttimeResidenceDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorDelete[]';
         $request = $this->deletesHomelessPrimaryNighttimeResidenceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHomelessPrimaryNighttimeResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor[]
      */
     public function getHomelessPrimaryNighttimeResidenceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $homeless_primary_nighttime_residence_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getHomelessPrimaryNighttimeResidenceDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHomelessPrimaryNighttimeResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getHomelessPrimaryNighttimeResidenceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $homeless_primary_nighttime_residence_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getHomelessPrimaryNighttimeResidenceDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      */
     public function getHomelessPrimaryNighttimeResidenceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $homeless_primary_nighttime_residence_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getHomelessPrimaryNighttimeResidenceDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor[]';
         $request = $this->getHomelessPrimaryNighttimeResidenceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $homeless_primary_nighttime_residence_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHomelessPrimaryNighttimeResidenceDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor
+     * @return \OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor
      */
     public function getHomelessPrimaryNighttimeResidenceDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getHomelessPrimaryNighttimeResidenceDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHomelessPrimaryNighttimeResidenceDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getHomelessPrimaryNighttimeResidenceDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getHomelessPrimaryNighttimeResidenceDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor',
+                        '\OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      */
     public function getHomelessPrimaryNighttimeResidenceDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getHomelessPrimaryNighttimeResidenceDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor';
         $request = $this->getHomelessPrimaryNighttimeResidenceDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesHomelessPrimaryNighttimeResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorKeyChange[]
      */
     public function keyChangesHomelessPrimaryNighttimeResidenceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesHomelessPrimaryNighttimeResidenceDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesHomelessPrimaryNighttimeResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesHomelessPrimaryNighttimeResidenceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesHomelessPrimaryNighttimeResidenceDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      */
     public function keyChangesHomelessPrimaryNighttimeResidenceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesHomelessPrimaryNighttimeResidenceDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiHomelessPrimaryNighttimeResidenceDescriptorKeyChange[]';
         $request = $this->keyChangesHomelessPrimaryNighttimeResidenceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postHomelessPrimaryNighttimeResidenceDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postHomelessPrimaryNighttimeResidenceDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postHomelessPrimaryNighttimeResidenceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postHomelessPrimaryNighttimeResidenceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
     /**
      * Create request for operation 'postHomelessPrimaryNighttimeResidenceDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postHomelessPrimaryNighttimeResidenceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putHomelessPrimaryNighttimeResidenceDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putHomelessPrimaryNighttimeResidenceDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putHomelessPrimaryNighttimeResidenceDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putHomelessPrimaryNighttimeResidenceDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class HomelessPrimaryNighttimeResidenceDescriptorsApi
      * Create request for operation 'putHomelessPrimaryNighttimeResidenceDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiHomelessPrimaryNighttimeResidenceDescriptor $ed_fi_homeless_primary_nighttime_residence_descriptor The JSON representation of the \&quot;homelessPrimaryNighttimeResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putHomelessPrimaryNighttimeResidenceDescriptor'] to see the possible values for this operation
      *

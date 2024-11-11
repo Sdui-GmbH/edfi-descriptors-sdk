@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Model;
+namespace OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \Descriptors\ObjectSerializer;
+use \OpenAPI\Client\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiStateAbbreviationDescriptorDelete Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TrackedChangesEdFiStateAbbreviationDescriptorDelete implements ModelInterf
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'key_values' => '\Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorKey'
+        'key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorKey'
     ];
 
     /**
@@ -360,7 +360,7 @@ class TrackedChangesEdFiStateAbbreviationDescriptorDelete implements ModelInterf
     /**
      * Gets key_values
      *
-     * @return \Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorKey|null
      */
     public function getKeyValues()
     {
@@ -370,7 +370,7 @@ class TrackedChangesEdFiStateAbbreviationDescriptorDelete implements ModelInterf
     /**
      * Sets key_values
      *
-     * @param \Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorKey|null $key_values key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorKey|null $key_values key_values
      *
      * @return self
      */

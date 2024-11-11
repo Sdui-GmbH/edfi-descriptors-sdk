@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * LearningStandardEquivalenceStrengthDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteLearningStandardEquivalenceStrengthDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteLearningStandardEquivalenceStrengthDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesLearningStandardEquivalenceStrengthDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorDelete[]
      */
     public function deletesLearningStandardEquivalenceStrengthDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesLearningStandardEquivalenceStrengthDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesLearningStandardEquivalenceStrengthDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesLearningStandardEquivalenceStrengthDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesLearningStandardEquivalenceStrengthDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      */
     public function deletesLearningStandardEquivalenceStrengthDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesLearningStandardEquivalenceStrengthDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorDelete[]';
         $request = $this->deletesLearningStandardEquivalenceStrengthDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLearningStandardEquivalenceStrengthDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor[]
      */
     public function getLearningStandardEquivalenceStrengthDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $learning_standard_equivalence_strength_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardEquivalenceStrengthDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLearningStandardEquivalenceStrengthDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getLearningStandardEquivalenceStrengthDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $learning_standard_equivalence_strength_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardEquivalenceStrengthDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      */
     public function getLearningStandardEquivalenceStrengthDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $learning_standard_equivalence_strength_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardEquivalenceStrengthDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor[]';
         $request = $this->getLearningStandardEquivalenceStrengthDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $learning_standard_equivalence_strength_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLearningStandardEquivalenceStrengthDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor
+     * @return \OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor
      */
     public function getLearningStandardEquivalenceStrengthDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardEquivalenceStrengthDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLearningStandardEquivalenceStrengthDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLearningStandardEquivalenceStrengthDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardEquivalenceStrengthDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor',
+                        '\OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      */
     public function getLearningStandardEquivalenceStrengthDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getLearningStandardEquivalenceStrengthDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor';
         $request = $this->getLearningStandardEquivalenceStrengthDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesLearningStandardEquivalenceStrengthDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorKeyChange[]
      */
     public function keyChangesLearningStandardEquivalenceStrengthDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesLearningStandardEquivalenceStrengthDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesLearningStandardEquivalenceStrengthDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesLearningStandardEquivalenceStrengthDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesLearningStandardEquivalenceStrengthDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      */
     public function keyChangesLearningStandardEquivalenceStrengthDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesLearningStandardEquivalenceStrengthDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLearningStandardEquivalenceStrengthDescriptorKeyChange[]';
         $request = $this->keyChangesLearningStandardEquivalenceStrengthDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLearningStandardEquivalenceStrengthDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLearningStandardEquivalenceStrengthDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLearningStandardEquivalenceStrengthDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLearningStandardEquivalenceStrengthDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
     /**
      * Create request for operation 'postLearningStandardEquivalenceStrengthDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLearningStandardEquivalenceStrengthDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLearningStandardEquivalenceStrengthDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLearningStandardEquivalenceStrengthDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLearningStandardEquivalenceStrengthDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLearningStandardEquivalenceStrengthDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class LearningStandardEquivalenceStrengthDescriptorsApi
      * Create request for operation 'putLearningStandardEquivalenceStrengthDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiLearningStandardEquivalenceStrengthDescriptor $ed_fi_learning_standard_equivalence_strength_descriptor The JSON representation of the \&quot;learningStandardEquivalenceStrengthDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLearningStandardEquivalenceStrengthDescriptor'] to see the possible values for this operation
      *

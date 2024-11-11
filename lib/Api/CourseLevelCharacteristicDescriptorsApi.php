@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * CourseLevelCharacteristicDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class CourseLevelCharacteristicDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCourseLevelCharacteristicDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class CourseLevelCharacteristicDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCourseLevelCharacteristicDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class CourseLevelCharacteristicDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCourseLevelCharacteristicDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorDelete[]
      */
     public function deletesCourseLevelCharacteristicDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCourseLevelCharacteristicDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class CourseLevelCharacteristicDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCourseLevelCharacteristicDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesCourseLevelCharacteristicDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCourseLevelCharacteristicDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class CourseLevelCharacteristicDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class CourseLevelCharacteristicDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class CourseLevelCharacteristicDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class CourseLevelCharacteristicDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class CourseLevelCharacteristicDescriptorsApi
      */
     public function deletesCourseLevelCharacteristicDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCourseLevelCharacteristicDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorDelete[]';
         $request = $this->deletesCourseLevelCharacteristicDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class CourseLevelCharacteristicDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCourseLevelCharacteristicDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor[]
      */
     public function getCourseLevelCharacteristicDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $course_level_characteristic_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCourseLevelCharacteristicDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class CourseLevelCharacteristicDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCourseLevelCharacteristicDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getCourseLevelCharacteristicDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $course_level_characteristic_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCourseLevelCharacteristicDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class CourseLevelCharacteristicDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class CourseLevelCharacteristicDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class CourseLevelCharacteristicDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class CourseLevelCharacteristicDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class CourseLevelCharacteristicDescriptorsApi
      */
     public function getCourseLevelCharacteristicDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $course_level_characteristic_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCourseLevelCharacteristicDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor[]';
         $request = $this->getCourseLevelCharacteristicDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $course_level_characteristic_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class CourseLevelCharacteristicDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCourseLevelCharacteristicDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor
+     * @return \OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor
      */
     public function getCourseLevelCharacteristicDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCourseLevelCharacteristicDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class CourseLevelCharacteristicDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCourseLevelCharacteristicDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCourseLevelCharacteristicDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCourseLevelCharacteristicDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class CourseLevelCharacteristicDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class CourseLevelCharacteristicDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class CourseLevelCharacteristicDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class CourseLevelCharacteristicDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor',
+                        '\OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class CourseLevelCharacteristicDescriptorsApi
      */
     public function getCourseLevelCharacteristicDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCourseLevelCharacteristicDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor';
         $request = $this->getCourseLevelCharacteristicDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class CourseLevelCharacteristicDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCourseLevelCharacteristicDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorKeyChange[]
      */
     public function keyChangesCourseLevelCharacteristicDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCourseLevelCharacteristicDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class CourseLevelCharacteristicDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCourseLevelCharacteristicDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesCourseLevelCharacteristicDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCourseLevelCharacteristicDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class CourseLevelCharacteristicDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class CourseLevelCharacteristicDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class CourseLevelCharacteristicDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class CourseLevelCharacteristicDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class CourseLevelCharacteristicDescriptorsApi
      */
     public function keyChangesCourseLevelCharacteristicDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCourseLevelCharacteristicDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCourseLevelCharacteristicDescriptorKeyChange[]';
         $request = $this->keyChangesCourseLevelCharacteristicDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class CourseLevelCharacteristicDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCourseLevelCharacteristicDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class CourseLevelCharacteristicDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCourseLevelCharacteristicDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class CourseLevelCharacteristicDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCourseLevelCharacteristicDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class CourseLevelCharacteristicDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCourseLevelCharacteristicDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class CourseLevelCharacteristicDescriptorsApi
     /**
      * Create request for operation 'postCourseLevelCharacteristicDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCourseLevelCharacteristicDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class CourseLevelCharacteristicDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCourseLevelCharacteristicDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class CourseLevelCharacteristicDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCourseLevelCharacteristicDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class CourseLevelCharacteristicDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCourseLevelCharacteristicDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class CourseLevelCharacteristicDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCourseLevelCharacteristicDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class CourseLevelCharacteristicDescriptorsApi
      * Create request for operation 'putCourseLevelCharacteristicDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiCourseLevelCharacteristicDescriptor $ed_fi_course_level_characteristic_descriptor The JSON representation of the \&quot;courseLevelCharacteristicDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCourseLevelCharacteristicDescriptor'] to see the possible values for this operation
      *

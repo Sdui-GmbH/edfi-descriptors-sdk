@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * EligibilityDelayReasonDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class EligibilityDelayReasonDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEligibilityDelayReasonDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class EligibilityDelayReasonDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEligibilityDelayReasonDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class EligibilityDelayReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEligibilityDelayReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorDelete[]
      */
     public function deletesEligibilityDelayReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEligibilityDelayReasonDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class EligibilityDelayReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEligibilityDelayReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesEligibilityDelayReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEligibilityDelayReasonDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class EligibilityDelayReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class EligibilityDelayReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class EligibilityDelayReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class EligibilityDelayReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class EligibilityDelayReasonDescriptorsApi
      */
     public function deletesEligibilityDelayReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEligibilityDelayReasonDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorDelete[]';
         $request = $this->deletesEligibilityDelayReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class EligibilityDelayReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEligibilityDelayReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiEligibilityDelayReasonDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor[]
      */
     public function getEligibilityDelayReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $eligibility_delay_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEligibilityDelayReasonDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class EligibilityDelayReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEligibilityDelayReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiEligibilityDelayReasonDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getEligibilityDelayReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $eligibility_delay_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEligibilityDelayReasonDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class EligibilityDelayReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiEligibilityDelayReasonDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiEligibilityDelayReasonDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class EligibilityDelayReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiEligibilityDelayReasonDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class EligibilityDelayReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiEligibilityDelayReasonDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class EligibilityDelayReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiEligibilityDelayReasonDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class EligibilityDelayReasonDescriptorsApi
      */
     public function getEligibilityDelayReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $eligibility_delay_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEligibilityDelayReasonDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiEligibilityDelayReasonDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor[]';
         $request = $this->getEligibilityDelayReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $eligibility_delay_reason_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class EligibilityDelayReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEligibilityDelayReasonDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiEligibilityDelayReasonDescriptor
+     * @return \OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor
      */
     public function getEligibilityDelayReasonDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEligibilityDelayReasonDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class EligibilityDelayReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEligibilityDelayReasonDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiEligibilityDelayReasonDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEligibilityDelayReasonDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEligibilityDelayReasonDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class EligibilityDelayReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiEligibilityDelayReasonDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiEligibilityDelayReasonDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class EligibilityDelayReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiEligibilityDelayReasonDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class EligibilityDelayReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiEligibilityDelayReasonDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class EligibilityDelayReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiEligibilityDelayReasonDescriptor',
+                        '\OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class EligibilityDelayReasonDescriptorsApi
      */
     public function getEligibilityDelayReasonDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEligibilityDelayReasonDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiEligibilityDelayReasonDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor';
         $request = $this->getEligibilityDelayReasonDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class EligibilityDelayReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEligibilityDelayReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorKeyChange[]
      */
     public function keyChangesEligibilityDelayReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEligibilityDelayReasonDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class EligibilityDelayReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEligibilityDelayReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesEligibilityDelayReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEligibilityDelayReasonDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class EligibilityDelayReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class EligibilityDelayReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class EligibilityDelayReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class EligibilityDelayReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class EligibilityDelayReasonDescriptorsApi
      */
     public function keyChangesEligibilityDelayReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEligibilityDelayReasonDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiEligibilityDelayReasonDescriptorKeyChange[]';
         $request = $this->keyChangesEligibilityDelayReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class EligibilityDelayReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEligibilityDelayReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class EligibilityDelayReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEligibilityDelayReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class EligibilityDelayReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEligibilityDelayReasonDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class EligibilityDelayReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEligibilityDelayReasonDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class EligibilityDelayReasonDescriptorsApi
     /**
      * Create request for operation 'postEligibilityDelayReasonDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEligibilityDelayReasonDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class EligibilityDelayReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEligibilityDelayReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class EligibilityDelayReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEligibilityDelayReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class EligibilityDelayReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEligibilityDelayReasonDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class EligibilityDelayReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEligibilityDelayReasonDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class EligibilityDelayReasonDescriptorsApi
      * Create request for operation 'putEligibilityDelayReasonDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiEligibilityDelayReasonDescriptor $ed_fi_eligibility_delay_reason_descriptor The JSON representation of the \&quot;eligibilityDelayReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEligibilityDelayReasonDescriptor'] to see the possible values for this operation
      *

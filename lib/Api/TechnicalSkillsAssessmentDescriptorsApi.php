@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * TechnicalSkillsAssessmentDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTechnicalSkillsAssessmentDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTechnicalSkillsAssessmentDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class TechnicalSkillsAssessmentDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesTechnicalSkillsAssessmentDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorDelete[]
      */
     public function deletesTechnicalSkillsAssessmentDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesTechnicalSkillsAssessmentDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class TechnicalSkillsAssessmentDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesTechnicalSkillsAssessmentDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesTechnicalSkillsAssessmentDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesTechnicalSkillsAssessmentDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class TechnicalSkillsAssessmentDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
      */
     public function deletesTechnicalSkillsAssessmentDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesTechnicalSkillsAssessmentDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorDelete[]';
         $request = $this->deletesTechnicalSkillsAssessmentDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class TechnicalSkillsAssessmentDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTechnicalSkillsAssessmentDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor[]
      */
     public function getTechnicalSkillsAssessmentDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $technical_skills_assessment_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getTechnicalSkillsAssessmentDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class TechnicalSkillsAssessmentDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTechnicalSkillsAssessmentDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getTechnicalSkillsAssessmentDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $technical_skills_assessment_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getTechnicalSkillsAssessmentDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class TechnicalSkillsAssessmentDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
      */
     public function getTechnicalSkillsAssessmentDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $technical_skills_assessment_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getTechnicalSkillsAssessmentDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor[]';
         $request = $this->getTechnicalSkillsAssessmentDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $technical_skills_assessment_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class TechnicalSkillsAssessmentDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTechnicalSkillsAssessmentDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor
+     * @return \OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor
      */
     public function getTechnicalSkillsAssessmentDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getTechnicalSkillsAssessmentDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class TechnicalSkillsAssessmentDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTechnicalSkillsAssessmentDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTechnicalSkillsAssessmentDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getTechnicalSkillsAssessmentDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class TechnicalSkillsAssessmentDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor',
+                        '\OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
      */
     public function getTechnicalSkillsAssessmentDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getTechnicalSkillsAssessmentDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor';
         $request = $this->getTechnicalSkillsAssessmentDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class TechnicalSkillsAssessmentDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesTechnicalSkillsAssessmentDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorKeyChange[]
      */
     public function keyChangesTechnicalSkillsAssessmentDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesTechnicalSkillsAssessmentDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class TechnicalSkillsAssessmentDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesTechnicalSkillsAssessmentDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesTechnicalSkillsAssessmentDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesTechnicalSkillsAssessmentDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class TechnicalSkillsAssessmentDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
      */
     public function keyChangesTechnicalSkillsAssessmentDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesTechnicalSkillsAssessmentDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiTechnicalSkillsAssessmentDescriptorKeyChange[]';
         $request = $this->keyChangesTechnicalSkillsAssessmentDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class TechnicalSkillsAssessmentDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postTechnicalSkillsAssessmentDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class TechnicalSkillsAssessmentDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postTechnicalSkillsAssessmentDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postTechnicalSkillsAssessmentDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postTechnicalSkillsAssessmentDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
     /**
      * Create request for operation 'postTechnicalSkillsAssessmentDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postTechnicalSkillsAssessmentDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class TechnicalSkillsAssessmentDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putTechnicalSkillsAssessmentDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class TechnicalSkillsAssessmentDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putTechnicalSkillsAssessmentDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putTechnicalSkillsAssessmentDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putTechnicalSkillsAssessmentDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class TechnicalSkillsAssessmentDescriptorsApi
      * Create request for operation 'putTechnicalSkillsAssessmentDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiTechnicalSkillsAssessmentDescriptor $ed_fi_technical_skills_assessment_descriptor The JSON representation of the \&quot;technicalSkillsAssessmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putTechnicalSkillsAssessmentDescriptor'] to see the possible values for this operation
      *

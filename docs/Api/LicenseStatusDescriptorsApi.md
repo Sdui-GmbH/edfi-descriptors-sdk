@@ -1,4 +1,4 @@
-# Descriptors\LicenseStatusDescriptorsApi
+# OpenAPI\Client\LicenseStatusDescriptorsApi
 
 All URIs are relative to https://api.ed-fi.org:443/v7.1/api/data/v3, except if the operation defines another base path.
 
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\LicenseStatusDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\LicenseStatusDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -77,7 +77,7 @@ void (empty response body)
 ## `deletesLicenseStatusDescriptors()`
 
 ```php
-deletesLicenseStatusDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiLicenseStatusDescriptorDelete[]
+deletesLicenseStatusDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiLicenseStatusDescriptorDelete[]
 ```
 
 Retrieves deleted resources based on change version.
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\LicenseStatusDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\LicenseStatusDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiLicenseStatusDescriptorDelete[]**](../Model/TrackedChangesEdFiLicenseStatusDescriptorDelete.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiLicenseStatusDescriptorDelete[]**](../Model/TrackedChangesEdFiLicenseStatusDescriptorDelete.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `getLicenseStatusDescriptors()`
 
 ```php
-getLicenseStatusDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $license_status_descriptor_id, $use_snapshot): \Descriptors\Model\EdFiLicenseStatusDescriptor[]
+getLicenseStatusDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $license_status_descriptor_id, $use_snapshot): \OpenAPI\Client\Model\EdFiLicenseStatusDescriptor[]
 ```
 
 Retrieves specific resources using the resource's property values (using the \"Get\" pattern).
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\LicenseStatusDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\LicenseStatusDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,7 +201,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiLicenseStatusDescriptor[]**](../Model/EdFiLicenseStatusDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiLicenseStatusDescriptor[]**](../Model/EdFiLicenseStatusDescriptor.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ try {
 ## `getLicenseStatusDescriptorsById()`
 
 ```php
-getLicenseStatusDescriptorsById($id, $if_none_match, $use_snapshot): \Descriptors\Model\EdFiLicenseStatusDescriptor
+getLicenseStatusDescriptorsById($id, $if_none_match, $use_snapshot): \OpenAPI\Client\Model\EdFiLicenseStatusDescriptor
 ```
 
 Retrieves a specific resource using the resource's identifier (using the \"Get By Id\" pattern).
@@ -234,10 +234,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\LicenseStatusDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\LicenseStatusDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,7 +265,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiLicenseStatusDescriptor**](../Model/EdFiLicenseStatusDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiLicenseStatusDescriptor**](../Model/EdFiLicenseStatusDescriptor.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ try {
 ## `keyChangesLicenseStatusDescriptors()`
 
 ```php
-keyChangesLicenseStatusDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiLicenseStatusDescriptorKeyChange[]
+keyChangesLicenseStatusDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiLicenseStatusDescriptorKeyChange[]
 ```
 
 Retrieves resources key changes based on change version.
@@ -298,10 +298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\LicenseStatusDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\LicenseStatusDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -335,7 +335,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiLicenseStatusDescriptorKeyChange[]**](../Model/TrackedChangesEdFiLicenseStatusDescriptorKeyChange.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiLicenseStatusDescriptorKeyChange[]**](../Model/TrackedChangesEdFiLicenseStatusDescriptorKeyChange.md)
 
 ### Authorization
 
@@ -368,16 +368,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\LicenseStatusDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\LicenseStatusDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ed_fi_license_status_descriptor = new \Descriptors\Model\EdFiLicenseStatusDescriptor(); // \Descriptors\Model\EdFiLicenseStatusDescriptor | The JSON representation of the \"licenseStatusDescriptor\" resource to be created or updated.
+$ed_fi_license_status_descriptor = new \OpenAPI\Client\Model\EdFiLicenseStatusDescriptor(); // \OpenAPI\Client\Model\EdFiLicenseStatusDescriptor | The JSON representation of the \"licenseStatusDescriptor\" resource to be created or updated.
 
 try {
     $apiInstance->postLicenseStatusDescriptor($ed_fi_license_status_descriptor);
@@ -390,7 +390,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ed_fi_license_status_descriptor** | [**\Descriptors\Model\EdFiLicenseStatusDescriptor**](../Model/EdFiLicenseStatusDescriptor.md)| The JSON representation of the \&quot;licenseStatusDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_license_status_descriptor** | [**\OpenAPI\Client\Model\EdFiLicenseStatusDescriptor**](../Model/EdFiLicenseStatusDescriptor.md)| The JSON representation of the \&quot;licenseStatusDescriptor\&quot; resource to be created or updated. | |
 
 ### Return type
 
@@ -427,17 +427,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\LicenseStatusDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\LicenseStatusDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string | A resource identifier that uniquely identifies the resource.
-$ed_fi_license_status_descriptor = new \Descriptors\Model\EdFiLicenseStatusDescriptor(); // \Descriptors\Model\EdFiLicenseStatusDescriptor | The JSON representation of the \"licenseStatusDescriptor\" resource to be created or updated.
+$ed_fi_license_status_descriptor = new \OpenAPI\Client\Model\EdFiLicenseStatusDescriptor(); // \OpenAPI\Client\Model\EdFiLicenseStatusDescriptor | The JSON representation of the \"licenseStatusDescriptor\" resource to be created or updated.
 $if_match = 'if_match_example'; // string | The ETag header value used to prevent the PUT from updating a resource modified by another consumer.
 
 try {
@@ -452,7 +452,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| A resource identifier that uniquely identifies the resource. | |
-| **ed_fi_license_status_descriptor** | [**\Descriptors\Model\EdFiLicenseStatusDescriptor**](../Model/EdFiLicenseStatusDescriptor.md)| The JSON representation of the \&quot;licenseStatusDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_license_status_descriptor** | [**\OpenAPI\Client\Model\EdFiLicenseStatusDescriptor**](../Model/EdFiLicenseStatusDescriptor.md)| The JSON representation of the \&quot;licenseStatusDescriptor\&quot; resource to be created or updated. | |
 | **if_match** | **string**| The ETag header value used to prevent the PUT from updating a resource modified by another consumer. | [optional] |
 
 ### Return type

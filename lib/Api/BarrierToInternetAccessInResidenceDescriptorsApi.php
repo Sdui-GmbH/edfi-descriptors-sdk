@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * BarrierToInternetAccessInResidenceDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteBarrierToInternetAccessInResidenceDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteBarrierToInternetAccessInResidenceDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesBarrierToInternetAccessInResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete[]
      */
     public function deletesBarrierToInternetAccessInResidenceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesBarrierToInternetAccessInResidenceDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesBarrierToInternetAccessInResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesBarrierToInternetAccessInResidenceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesBarrierToInternetAccessInResidenceDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      */
     public function deletesBarrierToInternetAccessInResidenceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesBarrierToInternetAccessInResidenceDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete[]';
         $request = $this->deletesBarrierToInternetAccessInResidenceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getBarrierToInternetAccessInResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor[]
      */
     public function getBarrierToInternetAccessInResidenceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $barrier_to_internet_access_in_residence_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getBarrierToInternetAccessInResidenceDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getBarrierToInternetAccessInResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getBarrierToInternetAccessInResidenceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $barrier_to_internet_access_in_residence_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getBarrierToInternetAccessInResidenceDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      */
     public function getBarrierToInternetAccessInResidenceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $barrier_to_internet_access_in_residence_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getBarrierToInternetAccessInResidenceDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor[]';
         $request = $this->getBarrierToInternetAccessInResidenceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $barrier_to_internet_access_in_residence_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getBarrierToInternetAccessInResidenceDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor
+     * @return \OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor
      */
     public function getBarrierToInternetAccessInResidenceDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getBarrierToInternetAccessInResidenceDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getBarrierToInternetAccessInResidenceDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBarrierToInternetAccessInResidenceDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getBarrierToInternetAccessInResidenceDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor',
+                        '\OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      */
     public function getBarrierToInternetAccessInResidenceDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getBarrierToInternetAccessInResidenceDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor';
         $request = $this->getBarrierToInternetAccessInResidenceDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesBarrierToInternetAccessInResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKeyChange[]
      */
     public function keyChangesBarrierToInternetAccessInResidenceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesBarrierToInternetAccessInResidenceDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesBarrierToInternetAccessInResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesBarrierToInternetAccessInResidenceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesBarrierToInternetAccessInResidenceDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      */
     public function keyChangesBarrierToInternetAccessInResidenceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesBarrierToInternetAccessInResidenceDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKeyChange[]';
         $request = $this->keyChangesBarrierToInternetAccessInResidenceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postBarrierToInternetAccessInResidenceDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postBarrierToInternetAccessInResidenceDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postBarrierToInternetAccessInResidenceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postBarrierToInternetAccessInResidenceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
     /**
      * Create request for operation 'postBarrierToInternetAccessInResidenceDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postBarrierToInternetAccessInResidenceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putBarrierToInternetAccessInResidenceDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putBarrierToInternetAccessInResidenceDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putBarrierToInternetAccessInResidenceDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putBarrierToInternetAccessInResidenceDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class BarrierToInternetAccessInResidenceDescriptorsApi
      * Create request for operation 'putBarrierToInternetAccessInResidenceDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiBarrierToInternetAccessInResidenceDescriptor $ed_fi_barrier_to_internet_access_in_residence_descriptor The JSON representation of the \&quot;barrierToInternetAccessInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putBarrierToInternetAccessInResidenceDescriptor'] to see the possible values for this operation
      *

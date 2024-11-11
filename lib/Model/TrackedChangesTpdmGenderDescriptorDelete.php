@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Model;
+namespace OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \Descriptors\ObjectSerializer;
+use \OpenAPI\Client\ObjectSerializer;
 
 /**
  * TrackedChangesTpdmGenderDescriptorDelete Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TrackedChangesTpdmGenderDescriptorDelete implements ModelInterface, ArrayA
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'key_values' => '\Descriptors\Model\TrackedChangesTpdmGenderDescriptorKey'
+        'key_values' => '\OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorKey'
     ];
 
     /**
@@ -360,7 +360,7 @@ class TrackedChangesTpdmGenderDescriptorDelete implements ModelInterface, ArrayA
     /**
      * Gets key_values
      *
-     * @return \Descriptors\Model\TrackedChangesTpdmGenderDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorKey|null
      */
     public function getKeyValues()
     {
@@ -370,7 +370,7 @@ class TrackedChangesTpdmGenderDescriptorDelete implements ModelInterface, ArrayA
     /**
      * Sets key_values
      *
-     * @param \Descriptors\Model\TrackedChangesTpdmGenderDescriptorKey|null $key_values key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesTpdmGenderDescriptorKey|null $key_values key_values
      *
      * @return self
      */

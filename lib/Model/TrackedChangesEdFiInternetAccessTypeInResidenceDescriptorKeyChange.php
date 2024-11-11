@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Model;
+namespace OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \Descriptors\ObjectSerializer;
+use \OpenAPI\Client\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKeyChange Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKeyChange impleme
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'old_key_values' => '\Descriptors\Model\TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKey',
-        'new_key_values' => '\Descriptors\Model\TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKey'
+        'old_key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKey',
+        'new_key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKey'
     ];
 
     /**
@@ -367,7 +367,7 @@ class TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKeyChange impleme
     /**
      * Gets old_key_values
      *
-     * @return \Descriptors\Model\TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKey|null
      */
     public function getOldKeyValues()
     {
@@ -377,7 +377,7 @@ class TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKeyChange impleme
     /**
      * Sets old_key_values
      *
-     * @param \Descriptors\Model\TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKey|null $old_key_values old_key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKey|null $old_key_values old_key_values
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKeyChange impleme
     /**
      * Gets new_key_values
      *
-     * @return \Descriptors\Model\TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKey|null
      */
     public function getNewKeyValues()
     {
@@ -404,7 +404,7 @@ class TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKeyChange impleme
     /**
      * Sets new_key_values
      *
-     * @param \Descriptors\Model\TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKey|null $new_key_values new_key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesEdFiInternetAccessTypeInResidenceDescriptorKey|null $new_key_values new_key_values
      *
      * @return self
      */

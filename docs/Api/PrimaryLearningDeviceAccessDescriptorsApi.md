@@ -1,4 +1,4 @@
-# Descriptors\PrimaryLearningDeviceAccessDescriptorsApi
+# OpenAPI\Client\PrimaryLearningDeviceAccessDescriptorsApi
 
 All URIs are relative to https://api.ed-fi.org:443/v7.1/api/data/v3, except if the operation defines another base path.
 
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\PrimaryLearningDeviceAccessDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\PrimaryLearningDeviceAccessDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -77,7 +77,7 @@ void (empty response body)
 ## `deletesPrimaryLearningDeviceAccessDescriptors()`
 
 ```php
-deletesPrimaryLearningDeviceAccessDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAccessDescriptorDelete[]
+deletesPrimaryLearningDeviceAccessDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAccessDescriptorDelete[]
 ```
 
 Retrieves deleted resources based on change version.
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\PrimaryLearningDeviceAccessDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\PrimaryLearningDeviceAccessDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAccessDescriptorDelete[]**](../Model/TrackedChangesEdFiPrimaryLearningDeviceAccessDescriptorDelete.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAccessDescriptorDelete[]**](../Model/TrackedChangesEdFiPrimaryLearningDeviceAccessDescriptorDelete.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `getPrimaryLearningDeviceAccessDescriptors()`
 
 ```php
-getPrimaryLearningDeviceAccessDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $primary_learning_device_access_descriptor_id, $use_snapshot): \Descriptors\Model\EdFiPrimaryLearningDeviceAccessDescriptor[]
+getPrimaryLearningDeviceAccessDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $primary_learning_device_access_descriptor_id, $use_snapshot): \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAccessDescriptor[]
 ```
 
 Retrieves specific resources using the resource's property values (using the \"Get\" pattern).
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\PrimaryLearningDeviceAccessDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\PrimaryLearningDeviceAccessDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,7 +201,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiPrimaryLearningDeviceAccessDescriptor[]**](../Model/EdFiPrimaryLearningDeviceAccessDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAccessDescriptor[]**](../Model/EdFiPrimaryLearningDeviceAccessDescriptor.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ try {
 ## `getPrimaryLearningDeviceAccessDescriptorsById()`
 
 ```php
-getPrimaryLearningDeviceAccessDescriptorsById($id, $if_none_match, $use_snapshot): \Descriptors\Model\EdFiPrimaryLearningDeviceAccessDescriptor
+getPrimaryLearningDeviceAccessDescriptorsById($id, $if_none_match, $use_snapshot): \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAccessDescriptor
 ```
 
 Retrieves a specific resource using the resource's identifier (using the \"Get By Id\" pattern).
@@ -234,10 +234,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\PrimaryLearningDeviceAccessDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\PrimaryLearningDeviceAccessDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,7 +265,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiPrimaryLearningDeviceAccessDescriptor**](../Model/EdFiPrimaryLearningDeviceAccessDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAccessDescriptor**](../Model/EdFiPrimaryLearningDeviceAccessDescriptor.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ try {
 ## `keyChangesPrimaryLearningDeviceAccessDescriptors()`
 
 ```php
-keyChangesPrimaryLearningDeviceAccessDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAccessDescriptorKeyChange[]
+keyChangesPrimaryLearningDeviceAccessDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAccessDescriptorKeyChange[]
 ```
 
 Retrieves resources key changes based on change version.
@@ -298,10 +298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\PrimaryLearningDeviceAccessDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\PrimaryLearningDeviceAccessDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -335,7 +335,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAccessDescriptorKeyChange[]**](../Model/TrackedChangesEdFiPrimaryLearningDeviceAccessDescriptorKeyChange.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAccessDescriptorKeyChange[]**](../Model/TrackedChangesEdFiPrimaryLearningDeviceAccessDescriptorKeyChange.md)
 
 ### Authorization
 
@@ -368,16 +368,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\PrimaryLearningDeviceAccessDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\PrimaryLearningDeviceAccessDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ed_fi_primary_learning_device_access_descriptor = new \Descriptors\Model\EdFiPrimaryLearningDeviceAccessDescriptor(); // \Descriptors\Model\EdFiPrimaryLearningDeviceAccessDescriptor | The JSON representation of the \"primaryLearningDeviceAccessDescriptor\" resource to be created or updated.
+$ed_fi_primary_learning_device_access_descriptor = new \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAccessDescriptor(); // \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAccessDescriptor | The JSON representation of the \"primaryLearningDeviceAccessDescriptor\" resource to be created or updated.
 
 try {
     $apiInstance->postPrimaryLearningDeviceAccessDescriptor($ed_fi_primary_learning_device_access_descriptor);
@@ -390,7 +390,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ed_fi_primary_learning_device_access_descriptor** | [**\Descriptors\Model\EdFiPrimaryLearningDeviceAccessDescriptor**](../Model/EdFiPrimaryLearningDeviceAccessDescriptor.md)| The JSON representation of the \&quot;primaryLearningDeviceAccessDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_primary_learning_device_access_descriptor** | [**\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAccessDescriptor**](../Model/EdFiPrimaryLearningDeviceAccessDescriptor.md)| The JSON representation of the \&quot;primaryLearningDeviceAccessDescriptor\&quot; resource to be created or updated. | |
 
 ### Return type
 
@@ -427,17 +427,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\PrimaryLearningDeviceAccessDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\PrimaryLearningDeviceAccessDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string | A resource identifier that uniquely identifies the resource.
-$ed_fi_primary_learning_device_access_descriptor = new \Descriptors\Model\EdFiPrimaryLearningDeviceAccessDescriptor(); // \Descriptors\Model\EdFiPrimaryLearningDeviceAccessDescriptor | The JSON representation of the \"primaryLearningDeviceAccessDescriptor\" resource to be created or updated.
+$ed_fi_primary_learning_device_access_descriptor = new \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAccessDescriptor(); // \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAccessDescriptor | The JSON representation of the \"primaryLearningDeviceAccessDescriptor\" resource to be created or updated.
 $if_match = 'if_match_example'; // string | The ETag header value used to prevent the PUT from updating a resource modified by another consumer.
 
 try {
@@ -452,7 +452,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| A resource identifier that uniquely identifies the resource. | |
-| **ed_fi_primary_learning_device_access_descriptor** | [**\Descriptors\Model\EdFiPrimaryLearningDeviceAccessDescriptor**](../Model/EdFiPrimaryLearningDeviceAccessDescriptor.md)| The JSON representation of the \&quot;primaryLearningDeviceAccessDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_primary_learning_device_access_descriptor** | [**\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAccessDescriptor**](../Model/EdFiPrimaryLearningDeviceAccessDescriptor.md)| The JSON representation of the \&quot;primaryLearningDeviceAccessDescriptor\&quot; resource to be created or updated. | |
 | **if_match** | **string**| The ETag header value used to prevent the PUT from updating a resource modified by another consumer. | [optional] |
 
 ### Return type

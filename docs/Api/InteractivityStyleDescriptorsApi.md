@@ -1,4 +1,4 @@
-# Descriptors\InteractivityStyleDescriptorsApi
+# OpenAPI\Client\InteractivityStyleDescriptorsApi
 
 All URIs are relative to https://api.ed-fi.org:443/v7.1/api/data/v3, except if the operation defines another base path.
 
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\InteractivityStyleDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\InteractivityStyleDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -77,7 +77,7 @@ void (empty response body)
 ## `deletesInteractivityStyleDescriptors()`
 
 ```php
-deletesInteractivityStyleDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiInteractivityStyleDescriptorDelete[]
+deletesInteractivityStyleDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiInteractivityStyleDescriptorDelete[]
 ```
 
 Retrieves deleted resources based on change version.
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\InteractivityStyleDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\InteractivityStyleDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiInteractivityStyleDescriptorDelete[]**](../Model/TrackedChangesEdFiInteractivityStyleDescriptorDelete.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiInteractivityStyleDescriptorDelete[]**](../Model/TrackedChangesEdFiInteractivityStyleDescriptorDelete.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `getInteractivityStyleDescriptors()`
 
 ```php
-getInteractivityStyleDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $interactivity_style_descriptor_id, $use_snapshot): \Descriptors\Model\EdFiInteractivityStyleDescriptor[]
+getInteractivityStyleDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $interactivity_style_descriptor_id, $use_snapshot): \OpenAPI\Client\Model\EdFiInteractivityStyleDescriptor[]
 ```
 
 Retrieves specific resources using the resource's property values (using the \"Get\" pattern).
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\InteractivityStyleDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\InteractivityStyleDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,7 +201,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiInteractivityStyleDescriptor[]**](../Model/EdFiInteractivityStyleDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiInteractivityStyleDescriptor[]**](../Model/EdFiInteractivityStyleDescriptor.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ try {
 ## `getInteractivityStyleDescriptorsById()`
 
 ```php
-getInteractivityStyleDescriptorsById($id, $if_none_match, $use_snapshot): \Descriptors\Model\EdFiInteractivityStyleDescriptor
+getInteractivityStyleDescriptorsById($id, $if_none_match, $use_snapshot): \OpenAPI\Client\Model\EdFiInteractivityStyleDescriptor
 ```
 
 Retrieves a specific resource using the resource's identifier (using the \"Get By Id\" pattern).
@@ -234,10 +234,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\InteractivityStyleDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\InteractivityStyleDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,7 +265,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiInteractivityStyleDescriptor**](../Model/EdFiInteractivityStyleDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiInteractivityStyleDescriptor**](../Model/EdFiInteractivityStyleDescriptor.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ try {
 ## `keyChangesInteractivityStyleDescriptors()`
 
 ```php
-keyChangesInteractivityStyleDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiInteractivityStyleDescriptorKeyChange[]
+keyChangesInteractivityStyleDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiInteractivityStyleDescriptorKeyChange[]
 ```
 
 Retrieves resources key changes based on change version.
@@ -298,10 +298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\InteractivityStyleDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\InteractivityStyleDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -335,7 +335,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiInteractivityStyleDescriptorKeyChange[]**](../Model/TrackedChangesEdFiInteractivityStyleDescriptorKeyChange.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiInteractivityStyleDescriptorKeyChange[]**](../Model/TrackedChangesEdFiInteractivityStyleDescriptorKeyChange.md)
 
 ### Authorization
 
@@ -368,16 +368,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\InteractivityStyleDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\InteractivityStyleDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ed_fi_interactivity_style_descriptor = new \Descriptors\Model\EdFiInteractivityStyleDescriptor(); // \Descriptors\Model\EdFiInteractivityStyleDescriptor | The JSON representation of the \"interactivityStyleDescriptor\" resource to be created or updated.
+$ed_fi_interactivity_style_descriptor = new \OpenAPI\Client\Model\EdFiInteractivityStyleDescriptor(); // \OpenAPI\Client\Model\EdFiInteractivityStyleDescriptor | The JSON representation of the \"interactivityStyleDescriptor\" resource to be created or updated.
 
 try {
     $apiInstance->postInteractivityStyleDescriptor($ed_fi_interactivity_style_descriptor);
@@ -390,7 +390,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ed_fi_interactivity_style_descriptor** | [**\Descriptors\Model\EdFiInteractivityStyleDescriptor**](../Model/EdFiInteractivityStyleDescriptor.md)| The JSON representation of the \&quot;interactivityStyleDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_interactivity_style_descriptor** | [**\OpenAPI\Client\Model\EdFiInteractivityStyleDescriptor**](../Model/EdFiInteractivityStyleDescriptor.md)| The JSON representation of the \&quot;interactivityStyleDescriptor\&quot; resource to be created or updated. | |
 
 ### Return type
 
@@ -427,17 +427,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\InteractivityStyleDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\InteractivityStyleDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string | A resource identifier that uniquely identifies the resource.
-$ed_fi_interactivity_style_descriptor = new \Descriptors\Model\EdFiInteractivityStyleDescriptor(); // \Descriptors\Model\EdFiInteractivityStyleDescriptor | The JSON representation of the \"interactivityStyleDescriptor\" resource to be created or updated.
+$ed_fi_interactivity_style_descriptor = new \OpenAPI\Client\Model\EdFiInteractivityStyleDescriptor(); // \OpenAPI\Client\Model\EdFiInteractivityStyleDescriptor | The JSON representation of the \"interactivityStyleDescriptor\" resource to be created or updated.
 $if_match = 'if_match_example'; // string | The ETag header value used to prevent the PUT from updating a resource modified by another consumer.
 
 try {
@@ -452,7 +452,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| A resource identifier that uniquely identifies the resource. | |
-| **ed_fi_interactivity_style_descriptor** | [**\Descriptors\Model\EdFiInteractivityStyleDescriptor**](../Model/EdFiInteractivityStyleDescriptor.md)| The JSON representation of the \&quot;interactivityStyleDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_interactivity_style_descriptor** | [**\OpenAPI\Client\Model\EdFiInteractivityStyleDescriptor**](../Model/EdFiInteractivityStyleDescriptor.md)| The JSON representation of the \&quot;interactivityStyleDescriptor\&quot; resource to be created or updated. | |
 | **if_match** | **string**| The ETag header value used to prevent the PUT from updating a resource modified by another consumer. | [optional] |
 
 ### Return type

@@ -1,4 +1,4 @@
-# Descriptors\GradeTypeDescriptorsApi
+# OpenAPI\Client\GradeTypeDescriptorsApi
 
 All URIs are relative to https://api.ed-fi.org:443/v7.1/api/data/v3, except if the operation defines another base path.
 
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\GradeTypeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\GradeTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -77,7 +77,7 @@ void (empty response body)
 ## `deletesGradeTypeDescriptors()`
 
 ```php
-deletesGradeTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiGradeTypeDescriptorDelete[]
+deletesGradeTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiGradeTypeDescriptorDelete[]
 ```
 
 Retrieves deleted resources based on change version.
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\GradeTypeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\GradeTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiGradeTypeDescriptorDelete[]**](../Model/TrackedChangesEdFiGradeTypeDescriptorDelete.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiGradeTypeDescriptorDelete[]**](../Model/TrackedChangesEdFiGradeTypeDescriptorDelete.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `getGradeTypeDescriptors()`
 
 ```php
-getGradeTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $grade_type_descriptor_id, $use_snapshot): \Descriptors\Model\EdFiGradeTypeDescriptor[]
+getGradeTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $grade_type_descriptor_id, $use_snapshot): \OpenAPI\Client\Model\EdFiGradeTypeDescriptor[]
 ```
 
 Retrieves specific resources using the resource's property values (using the \"Get\" pattern).
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\GradeTypeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\GradeTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,7 +201,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiGradeTypeDescriptor[]**](../Model/EdFiGradeTypeDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiGradeTypeDescriptor[]**](../Model/EdFiGradeTypeDescriptor.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ try {
 ## `getGradeTypeDescriptorsById()`
 
 ```php
-getGradeTypeDescriptorsById($id, $if_none_match, $use_snapshot): \Descriptors\Model\EdFiGradeTypeDescriptor
+getGradeTypeDescriptorsById($id, $if_none_match, $use_snapshot): \OpenAPI\Client\Model\EdFiGradeTypeDescriptor
 ```
 
 Retrieves a specific resource using the resource's identifier (using the \"Get By Id\" pattern).
@@ -234,10 +234,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\GradeTypeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\GradeTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,7 +265,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiGradeTypeDescriptor**](../Model/EdFiGradeTypeDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiGradeTypeDescriptor**](../Model/EdFiGradeTypeDescriptor.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ try {
 ## `keyChangesGradeTypeDescriptors()`
 
 ```php
-keyChangesGradeTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiGradeTypeDescriptorKeyChange[]
+keyChangesGradeTypeDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiGradeTypeDescriptorKeyChange[]
 ```
 
 Retrieves resources key changes based on change version.
@@ -298,10 +298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\GradeTypeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\GradeTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -335,7 +335,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiGradeTypeDescriptorKeyChange[]**](../Model/TrackedChangesEdFiGradeTypeDescriptorKeyChange.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiGradeTypeDescriptorKeyChange[]**](../Model/TrackedChangesEdFiGradeTypeDescriptorKeyChange.md)
 
 ### Authorization
 
@@ -368,16 +368,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\GradeTypeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\GradeTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ed_fi_grade_type_descriptor = new \Descriptors\Model\EdFiGradeTypeDescriptor(); // \Descriptors\Model\EdFiGradeTypeDescriptor | The JSON representation of the \"gradeTypeDescriptor\" resource to be created or updated.
+$ed_fi_grade_type_descriptor = new \OpenAPI\Client\Model\EdFiGradeTypeDescriptor(); // \OpenAPI\Client\Model\EdFiGradeTypeDescriptor | The JSON representation of the \"gradeTypeDescriptor\" resource to be created or updated.
 
 try {
     $apiInstance->postGradeTypeDescriptor($ed_fi_grade_type_descriptor);
@@ -390,7 +390,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ed_fi_grade_type_descriptor** | [**\Descriptors\Model\EdFiGradeTypeDescriptor**](../Model/EdFiGradeTypeDescriptor.md)| The JSON representation of the \&quot;gradeTypeDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_grade_type_descriptor** | [**\OpenAPI\Client\Model\EdFiGradeTypeDescriptor**](../Model/EdFiGradeTypeDescriptor.md)| The JSON representation of the \&quot;gradeTypeDescriptor\&quot; resource to be created or updated. | |
 
 ### Return type
 
@@ -427,17 +427,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\GradeTypeDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\GradeTypeDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string | A resource identifier that uniquely identifies the resource.
-$ed_fi_grade_type_descriptor = new \Descriptors\Model\EdFiGradeTypeDescriptor(); // \Descriptors\Model\EdFiGradeTypeDescriptor | The JSON representation of the \"gradeTypeDescriptor\" resource to be created or updated.
+$ed_fi_grade_type_descriptor = new \OpenAPI\Client\Model\EdFiGradeTypeDescriptor(); // \OpenAPI\Client\Model\EdFiGradeTypeDescriptor | The JSON representation of the \"gradeTypeDescriptor\" resource to be created or updated.
 $if_match = 'if_match_example'; // string | The ETag header value used to prevent the PUT from updating a resource modified by another consumer.
 
 try {
@@ -452,7 +452,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| A resource identifier that uniquely identifies the resource. | |
-| **ed_fi_grade_type_descriptor** | [**\Descriptors\Model\EdFiGradeTypeDescriptor**](../Model/EdFiGradeTypeDescriptor.md)| The JSON representation of the \&quot;gradeTypeDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_grade_type_descriptor** | [**\OpenAPI\Client\Model\EdFiGradeTypeDescriptor**](../Model/EdFiGradeTypeDescriptor.md)| The JSON representation of the \&quot;gradeTypeDescriptor\&quot; resource to be created or updated. | |
 | **if_match** | **string**| The ETag header value used to prevent the PUT from updating a resource modified by another consumer. | [optional] |
 
 ### Return type

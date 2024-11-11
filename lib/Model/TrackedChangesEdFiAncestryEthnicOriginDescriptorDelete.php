@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Model;
+namespace OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \Descriptors\ObjectSerializer;
+use \OpenAPI\Client\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete implements ModelInt
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'key_values' => '\Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKey'
+        'key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKey'
     ];
 
     /**
@@ -360,7 +360,7 @@ class TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete implements ModelInt
     /**
      * Gets key_values
      *
-     * @return \Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKey|null
      */
     public function getKeyValues()
     {
@@ -370,7 +370,7 @@ class TrackedChangesEdFiAncestryEthnicOriginDescriptorDelete implements ModelInt
     /**
      * Sets key_values
      *
-     * @param \Descriptors\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKey|null $key_values key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesEdFiAncestryEthnicOriginDescriptorKey|null $key_values key_values
      *
      * @return self
      */

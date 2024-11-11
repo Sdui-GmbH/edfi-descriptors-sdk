@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * SpecialEducationExitReasonDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class SpecialEducationExitReasonDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSpecialEducationExitReasonDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class SpecialEducationExitReasonDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSpecialEducationExitReasonDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class SpecialEducationExitReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesSpecialEducationExitReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete[]
      */
     public function deletesSpecialEducationExitReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSpecialEducationExitReasonDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class SpecialEducationExitReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesSpecialEducationExitReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesSpecialEducationExitReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSpecialEducationExitReasonDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class SpecialEducationExitReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class SpecialEducationExitReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class SpecialEducationExitReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class SpecialEducationExitReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class SpecialEducationExitReasonDescriptorsApi
      */
     public function deletesSpecialEducationExitReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSpecialEducationExitReasonDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete[]';
         $request = $this->deletesSpecialEducationExitReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class SpecialEducationExitReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSpecialEducationExitReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor[]
      */
     public function getSpecialEducationExitReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $special_education_exit_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSpecialEducationExitReasonDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class SpecialEducationExitReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSpecialEducationExitReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getSpecialEducationExitReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $special_education_exit_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSpecialEducationExitReasonDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class SpecialEducationExitReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class SpecialEducationExitReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class SpecialEducationExitReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class SpecialEducationExitReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class SpecialEducationExitReasonDescriptorsApi
      */
     public function getSpecialEducationExitReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $special_education_exit_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSpecialEducationExitReasonDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor[]';
         $request = $this->getSpecialEducationExitReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $special_education_exit_reason_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class SpecialEducationExitReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSpecialEducationExitReasonDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor
+     * @return \OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor
      */
     public function getSpecialEducationExitReasonDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSpecialEducationExitReasonDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class SpecialEducationExitReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSpecialEducationExitReasonDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSpecialEducationExitReasonDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSpecialEducationExitReasonDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class SpecialEducationExitReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class SpecialEducationExitReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class SpecialEducationExitReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class SpecialEducationExitReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor',
+                        '\OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class SpecialEducationExitReasonDescriptorsApi
      */
     public function getSpecialEducationExitReasonDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSpecialEducationExitReasonDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor';
         $request = $this->getSpecialEducationExitReasonDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class SpecialEducationExitReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesSpecialEducationExitReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKeyChange[]
      */
     public function keyChangesSpecialEducationExitReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSpecialEducationExitReasonDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class SpecialEducationExitReasonDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesSpecialEducationExitReasonDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesSpecialEducationExitReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSpecialEducationExitReasonDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class SpecialEducationExitReasonDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class SpecialEducationExitReasonDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class SpecialEducationExitReasonDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class SpecialEducationExitReasonDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class SpecialEducationExitReasonDescriptorsApi
      */
     public function keyChangesSpecialEducationExitReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSpecialEducationExitReasonDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKeyChange[]';
         $request = $this->keyChangesSpecialEducationExitReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class SpecialEducationExitReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSpecialEducationExitReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class SpecialEducationExitReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSpecialEducationExitReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class SpecialEducationExitReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSpecialEducationExitReasonDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class SpecialEducationExitReasonDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSpecialEducationExitReasonDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class SpecialEducationExitReasonDescriptorsApi
     /**
      * Create request for operation 'postSpecialEducationExitReasonDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSpecialEducationExitReasonDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class SpecialEducationExitReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSpecialEducationExitReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class SpecialEducationExitReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSpecialEducationExitReasonDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class SpecialEducationExitReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSpecialEducationExitReasonDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class SpecialEducationExitReasonDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSpecialEducationExitReasonDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class SpecialEducationExitReasonDescriptorsApi
      * Create request for operation 'putSpecialEducationExitReasonDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSpecialEducationExitReasonDescriptor $ed_fi_special_education_exit_reason_descriptor The JSON representation of the \&quot;specialEducationExitReasonDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSpecialEducationExitReasonDescriptor'] to see the possible values for this operation
      *

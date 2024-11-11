@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * NeglectedOrDelinquentProgramDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteNeglectedOrDelinquentProgramDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteNeglectedOrDelinquentProgramDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesNeglectedOrDelinquentProgramDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorDelete[]
      */
     public function deletesNeglectedOrDelinquentProgramDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesNeglectedOrDelinquentProgramDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesNeglectedOrDelinquentProgramDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesNeglectedOrDelinquentProgramDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesNeglectedOrDelinquentProgramDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class NeglectedOrDelinquentProgramDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      */
     public function deletesNeglectedOrDelinquentProgramDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesNeglectedOrDelinquentProgramDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorDelete[]';
         $request = $this->deletesNeglectedOrDelinquentProgramDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getNeglectedOrDelinquentProgramDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor[]
      */
     public function getNeglectedOrDelinquentProgramDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $neglected_or_delinquent_program_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getNeglectedOrDelinquentProgramDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getNeglectedOrDelinquentProgramDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getNeglectedOrDelinquentProgramDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $neglected_or_delinquent_program_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getNeglectedOrDelinquentProgramDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class NeglectedOrDelinquentProgramDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      */
     public function getNeglectedOrDelinquentProgramDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $neglected_or_delinquent_program_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getNeglectedOrDelinquentProgramDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor[]';
         $request = $this->getNeglectedOrDelinquentProgramDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $neglected_or_delinquent_program_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getNeglectedOrDelinquentProgramDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor
+     * @return \OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor
      */
     public function getNeglectedOrDelinquentProgramDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getNeglectedOrDelinquentProgramDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getNeglectedOrDelinquentProgramDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getNeglectedOrDelinquentProgramDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getNeglectedOrDelinquentProgramDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class NeglectedOrDelinquentProgramDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor',
+                        '\OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      */
     public function getNeglectedOrDelinquentProgramDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getNeglectedOrDelinquentProgramDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor';
         $request = $this->getNeglectedOrDelinquentProgramDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesNeglectedOrDelinquentProgramDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorKeyChange[]
      */
     public function keyChangesNeglectedOrDelinquentProgramDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesNeglectedOrDelinquentProgramDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesNeglectedOrDelinquentProgramDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesNeglectedOrDelinquentProgramDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesNeglectedOrDelinquentProgramDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class NeglectedOrDelinquentProgramDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      */
     public function keyChangesNeglectedOrDelinquentProgramDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesNeglectedOrDelinquentProgramDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiNeglectedOrDelinquentProgramDescriptorKeyChange[]';
         $request = $this->keyChangesNeglectedOrDelinquentProgramDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postNeglectedOrDelinquentProgramDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postNeglectedOrDelinquentProgramDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postNeglectedOrDelinquentProgramDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postNeglectedOrDelinquentProgramDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
     /**
      * Create request for operation 'postNeglectedOrDelinquentProgramDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postNeglectedOrDelinquentProgramDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putNeglectedOrDelinquentProgramDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putNeglectedOrDelinquentProgramDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putNeglectedOrDelinquentProgramDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putNeglectedOrDelinquentProgramDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class NeglectedOrDelinquentProgramDescriptorsApi
      * Create request for operation 'putNeglectedOrDelinquentProgramDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiNeglectedOrDelinquentProgramDescriptor $ed_fi_neglected_or_delinquent_program_descriptor The JSON representation of the \&quot;neglectedOrDelinquentProgramDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putNeglectedOrDelinquentProgramDescriptor'] to see the possible values for this operation
      *

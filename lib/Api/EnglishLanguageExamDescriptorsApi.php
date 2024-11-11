@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * EnglishLanguageExamDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class EnglishLanguageExamDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEnglishLanguageExamDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class EnglishLanguageExamDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEnglishLanguageExamDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class EnglishLanguageExamDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEnglishLanguageExamDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorDelete[]
      */
     public function deletesEnglishLanguageExamDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEnglishLanguageExamDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class EnglishLanguageExamDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEnglishLanguageExamDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesEnglishLanguageExamDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEnglishLanguageExamDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class EnglishLanguageExamDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class EnglishLanguageExamDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class EnglishLanguageExamDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class EnglishLanguageExamDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class EnglishLanguageExamDescriptorsApi
      */
     public function deletesEnglishLanguageExamDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEnglishLanguageExamDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorDelete[]';
         $request = $this->deletesEnglishLanguageExamDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class EnglishLanguageExamDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEnglishLanguageExamDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TpdmEnglishLanguageExamDescriptor[]
+     * @return \OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor[]
      */
     public function getEnglishLanguageExamDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $english_language_exam_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEnglishLanguageExamDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class EnglishLanguageExamDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEnglishLanguageExamDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TpdmEnglishLanguageExamDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getEnglishLanguageExamDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $english_language_exam_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEnglishLanguageExamDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class EnglishLanguageExamDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TpdmEnglishLanguageExamDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TpdmEnglishLanguageExamDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class EnglishLanguageExamDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmEnglishLanguageExamDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class EnglishLanguageExamDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TpdmEnglishLanguageExamDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class EnglishLanguageExamDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TpdmEnglishLanguageExamDescriptor[]',
+                        '\OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class EnglishLanguageExamDescriptorsApi
      */
     public function getEnglishLanguageExamDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $english_language_exam_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEnglishLanguageExamDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TpdmEnglishLanguageExamDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor[]';
         $request = $this->getEnglishLanguageExamDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $english_language_exam_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class EnglishLanguageExamDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEnglishLanguageExamDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TpdmEnglishLanguageExamDescriptor
+     * @return \OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor
      */
     public function getEnglishLanguageExamDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEnglishLanguageExamDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class EnglishLanguageExamDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEnglishLanguageExamDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TpdmEnglishLanguageExamDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEnglishLanguageExamDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEnglishLanguageExamDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class EnglishLanguageExamDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TpdmEnglishLanguageExamDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TpdmEnglishLanguageExamDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class EnglishLanguageExamDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmEnglishLanguageExamDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class EnglishLanguageExamDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TpdmEnglishLanguageExamDescriptor';
+            $returnType = '\OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class EnglishLanguageExamDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TpdmEnglishLanguageExamDescriptor',
+                        '\OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class EnglishLanguageExamDescriptorsApi
      */
     public function getEnglishLanguageExamDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEnglishLanguageExamDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\TpdmEnglishLanguageExamDescriptor';
+        $returnType = '\OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor';
         $request = $this->getEnglishLanguageExamDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class EnglishLanguageExamDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEnglishLanguageExamDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange[]
      */
     public function keyChangesEnglishLanguageExamDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEnglishLanguageExamDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class EnglishLanguageExamDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEnglishLanguageExamDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesEnglishLanguageExamDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEnglishLanguageExamDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class EnglishLanguageExamDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class EnglishLanguageExamDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class EnglishLanguageExamDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class EnglishLanguageExamDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class EnglishLanguageExamDescriptorsApi
      */
     public function keyChangesEnglishLanguageExamDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEnglishLanguageExamDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange[]';
         $request = $this->keyChangesEnglishLanguageExamDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class EnglishLanguageExamDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEnglishLanguageExamDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class EnglishLanguageExamDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEnglishLanguageExamDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class EnglishLanguageExamDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEnglishLanguageExamDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class EnglishLanguageExamDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEnglishLanguageExamDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class EnglishLanguageExamDescriptorsApi
     /**
      * Create request for operation 'postEnglishLanguageExamDescriptor'
      *
-     * @param  \Descriptors\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEnglishLanguageExamDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class EnglishLanguageExamDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEnglishLanguageExamDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class EnglishLanguageExamDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEnglishLanguageExamDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class EnglishLanguageExamDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEnglishLanguageExamDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class EnglishLanguageExamDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEnglishLanguageExamDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class EnglishLanguageExamDescriptorsApi
      * Create request for operation 'putEnglishLanguageExamDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEnglishLanguageExamDescriptor $tpdm_english_language_exam_descriptor The JSON representation of the \&quot;englishLanguageExamDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEnglishLanguageExamDescriptor'] to see the possible values for this operation
      *

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Model;
+namespace OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \Descriptors\ObjectSerializer;
+use \OpenAPI\Client\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete implemen
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'key_values' => '\Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey'
+        'key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey'
     ];
 
     /**
@@ -360,7 +360,7 @@ class TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete implemen
     /**
      * Gets key_values
      *
-     * @return \Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey|null
      */
     public function getKeyValues()
     {
@@ -370,7 +370,7 @@ class TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorDelete implemen
     /**
      * Sets key_values
      *
-     * @param \Descriptors\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey|null $key_values key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesEdFiSchoolFoodServiceProgramServiceDescriptorKey|null $key_values key_values
      *
      * @return self
      */

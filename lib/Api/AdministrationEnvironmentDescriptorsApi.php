@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * AdministrationEnvironmentDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class AdministrationEnvironmentDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAdministrationEnvironmentDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class AdministrationEnvironmentDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAdministrationEnvironmentDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class AdministrationEnvironmentDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAdministrationEnvironmentDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorDelete[]
      */
     public function deletesAdministrationEnvironmentDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAdministrationEnvironmentDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class AdministrationEnvironmentDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAdministrationEnvironmentDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesAdministrationEnvironmentDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAdministrationEnvironmentDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class AdministrationEnvironmentDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class AdministrationEnvironmentDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class AdministrationEnvironmentDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class AdministrationEnvironmentDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class AdministrationEnvironmentDescriptorsApi
      */
     public function deletesAdministrationEnvironmentDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAdministrationEnvironmentDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorDelete[]';
         $request = $this->deletesAdministrationEnvironmentDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class AdministrationEnvironmentDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAdministrationEnvironmentDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiAdministrationEnvironmentDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor[]
      */
     public function getAdministrationEnvironmentDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $administration_environment_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAdministrationEnvironmentDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class AdministrationEnvironmentDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAdministrationEnvironmentDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiAdministrationEnvironmentDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAdministrationEnvironmentDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $administration_environment_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAdministrationEnvironmentDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class AdministrationEnvironmentDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiAdministrationEnvironmentDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiAdministrationEnvironmentDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class AdministrationEnvironmentDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiAdministrationEnvironmentDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class AdministrationEnvironmentDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiAdministrationEnvironmentDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class AdministrationEnvironmentDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiAdministrationEnvironmentDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class AdministrationEnvironmentDescriptorsApi
      */
     public function getAdministrationEnvironmentDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $administration_environment_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAdministrationEnvironmentDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiAdministrationEnvironmentDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor[]';
         $request = $this->getAdministrationEnvironmentDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $administration_environment_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class AdministrationEnvironmentDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAdministrationEnvironmentDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiAdministrationEnvironmentDescriptor
+     * @return \OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor
      */
     public function getAdministrationEnvironmentDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAdministrationEnvironmentDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class AdministrationEnvironmentDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAdministrationEnvironmentDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiAdministrationEnvironmentDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAdministrationEnvironmentDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAdministrationEnvironmentDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class AdministrationEnvironmentDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiAdministrationEnvironmentDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiAdministrationEnvironmentDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class AdministrationEnvironmentDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiAdministrationEnvironmentDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class AdministrationEnvironmentDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiAdministrationEnvironmentDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class AdministrationEnvironmentDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiAdministrationEnvironmentDescriptor',
+                        '\OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class AdministrationEnvironmentDescriptorsApi
      */
     public function getAdministrationEnvironmentDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAdministrationEnvironmentDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiAdministrationEnvironmentDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor';
         $request = $this->getAdministrationEnvironmentDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class AdministrationEnvironmentDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAdministrationEnvironmentDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorKeyChange[]
      */
     public function keyChangesAdministrationEnvironmentDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAdministrationEnvironmentDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class AdministrationEnvironmentDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAdministrationEnvironmentDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesAdministrationEnvironmentDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAdministrationEnvironmentDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class AdministrationEnvironmentDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class AdministrationEnvironmentDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class AdministrationEnvironmentDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class AdministrationEnvironmentDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class AdministrationEnvironmentDescriptorsApi
      */
     public function keyChangesAdministrationEnvironmentDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAdministrationEnvironmentDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAdministrationEnvironmentDescriptorKeyChange[]';
         $request = $this->keyChangesAdministrationEnvironmentDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class AdministrationEnvironmentDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAdministrationEnvironmentDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class AdministrationEnvironmentDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAdministrationEnvironmentDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class AdministrationEnvironmentDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAdministrationEnvironmentDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class AdministrationEnvironmentDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAdministrationEnvironmentDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class AdministrationEnvironmentDescriptorsApi
     /**
      * Create request for operation 'postAdministrationEnvironmentDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAdministrationEnvironmentDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class AdministrationEnvironmentDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAdministrationEnvironmentDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class AdministrationEnvironmentDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAdministrationEnvironmentDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class AdministrationEnvironmentDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAdministrationEnvironmentDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class AdministrationEnvironmentDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAdministrationEnvironmentDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class AdministrationEnvironmentDescriptorsApi
      * Create request for operation 'putAdministrationEnvironmentDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiAdministrationEnvironmentDescriptor $ed_fi_administration_environment_descriptor The JSON representation of the \&quot;administrationEnvironmentDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAdministrationEnvironmentDescriptor'] to see the possible values for this operation
      *

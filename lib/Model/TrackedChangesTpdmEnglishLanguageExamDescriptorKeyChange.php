@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Model;
+namespace OpenAPI\Client\Model;
 
 use \ArrayAccess;
-use \Descriptors\ObjectSerializer;
+use \OpenAPI\Client\ObjectSerializer;
 
 /**
  * TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange implements ModelI
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'old_key_values' => '\Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKey',
-        'new_key_values' => '\Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKey'
+        'old_key_values' => '\OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKey',
+        'new_key_values' => '\OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKey'
     ];
 
     /**
@@ -367,7 +367,7 @@ class TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange implements ModelI
     /**
      * Gets old_key_values
      *
-     * @return \Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKey|null
      */
     public function getOldKeyValues()
     {
@@ -377,7 +377,7 @@ class TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange implements ModelI
     /**
      * Sets old_key_values
      *
-     * @param \Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKey|null $old_key_values old_key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKey|null $old_key_values old_key_values
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange implements ModelI
     /**
      * Gets new_key_values
      *
-     * @return \Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKey|null
+     * @return \OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKey|null
      */
     public function getNewKeyValues()
     {
@@ -404,7 +404,7 @@ class TrackedChangesTpdmEnglishLanguageExamDescriptorKeyChange implements ModelI
     /**
      * Sets new_key_values
      *
-     * @param \Descriptors\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKey|null $new_key_values new_key_values
+     * @param \OpenAPI\Client\Model\TrackedChangesTpdmEnglishLanguageExamDescriptorKey|null $new_key_values new_key_values
      *
      * @return self
      */

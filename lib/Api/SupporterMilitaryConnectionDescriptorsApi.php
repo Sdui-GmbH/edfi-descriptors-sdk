@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * SupporterMilitaryConnectionDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class SupporterMilitaryConnectionDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSupporterMilitaryConnectionDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class SupporterMilitaryConnectionDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteSupporterMilitaryConnectionDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class SupporterMilitaryConnectionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesSupporterMilitaryConnectionDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorDelete[]
      */
     public function deletesSupporterMilitaryConnectionDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSupporterMilitaryConnectionDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class SupporterMilitaryConnectionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesSupporterMilitaryConnectionDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesSupporterMilitaryConnectionDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSupporterMilitaryConnectionDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class SupporterMilitaryConnectionDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class SupporterMilitaryConnectionDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class SupporterMilitaryConnectionDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class SupporterMilitaryConnectionDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class SupporterMilitaryConnectionDescriptorsApi
      */
     public function deletesSupporterMilitaryConnectionDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesSupporterMilitaryConnectionDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorDelete[]';
         $request = $this->deletesSupporterMilitaryConnectionDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class SupporterMilitaryConnectionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSupporterMilitaryConnectionDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor[]
      */
     public function getSupporterMilitaryConnectionDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $supporter_military_connection_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSupporterMilitaryConnectionDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class SupporterMilitaryConnectionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSupporterMilitaryConnectionDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getSupporterMilitaryConnectionDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $supporter_military_connection_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSupporterMilitaryConnectionDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class SupporterMilitaryConnectionDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class SupporterMilitaryConnectionDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class SupporterMilitaryConnectionDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class SupporterMilitaryConnectionDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class SupporterMilitaryConnectionDescriptorsApi
      */
     public function getSupporterMilitaryConnectionDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $supporter_military_connection_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getSupporterMilitaryConnectionDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor[]';
         $request = $this->getSupporterMilitaryConnectionDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $supporter_military_connection_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class SupporterMilitaryConnectionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSupporterMilitaryConnectionDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor
+     * @return \OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor
      */
     public function getSupporterMilitaryConnectionDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSupporterMilitaryConnectionDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class SupporterMilitaryConnectionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSupporterMilitaryConnectionDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSupporterMilitaryConnectionDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSupporterMilitaryConnectionDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class SupporterMilitaryConnectionDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class SupporterMilitaryConnectionDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class SupporterMilitaryConnectionDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class SupporterMilitaryConnectionDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor',
+                        '\OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class SupporterMilitaryConnectionDescriptorsApi
      */
     public function getSupporterMilitaryConnectionDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getSupporterMilitaryConnectionDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor';
         $request = $this->getSupporterMilitaryConnectionDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class SupporterMilitaryConnectionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesSupporterMilitaryConnectionDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorKeyChange[]
      */
     public function keyChangesSupporterMilitaryConnectionDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSupporterMilitaryConnectionDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class SupporterMilitaryConnectionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesSupporterMilitaryConnectionDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesSupporterMilitaryConnectionDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSupporterMilitaryConnectionDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class SupporterMilitaryConnectionDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class SupporterMilitaryConnectionDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class SupporterMilitaryConnectionDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class SupporterMilitaryConnectionDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class SupporterMilitaryConnectionDescriptorsApi
      */
     public function keyChangesSupporterMilitaryConnectionDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesSupporterMilitaryConnectionDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiSupporterMilitaryConnectionDescriptorKeyChange[]';
         $request = $this->keyChangesSupporterMilitaryConnectionDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class SupporterMilitaryConnectionDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSupporterMilitaryConnectionDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class SupporterMilitaryConnectionDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSupporterMilitaryConnectionDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class SupporterMilitaryConnectionDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSupporterMilitaryConnectionDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class SupporterMilitaryConnectionDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSupporterMilitaryConnectionDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class SupporterMilitaryConnectionDescriptorsApi
     /**
      * Create request for operation 'postSupporterMilitaryConnectionDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postSupporterMilitaryConnectionDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class SupporterMilitaryConnectionDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSupporterMilitaryConnectionDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class SupporterMilitaryConnectionDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSupporterMilitaryConnectionDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class SupporterMilitaryConnectionDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSupporterMilitaryConnectionDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class SupporterMilitaryConnectionDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSupporterMilitaryConnectionDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class SupporterMilitaryConnectionDescriptorsApi
      * Create request for operation 'putSupporterMilitaryConnectionDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiSupporterMilitaryConnectionDescriptor $ed_fi_supporter_military_connection_descriptor The JSON representation of the \&quot;supporterMilitaryConnectionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putSupporterMilitaryConnectionDescriptor'] to see the possible values for this operation
      *

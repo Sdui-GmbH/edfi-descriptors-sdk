@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * EppProgramPathwayDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class EppProgramPathwayDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEPPProgramPathwayDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class EppProgramPathwayDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEPPProgramPathwayDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class EppProgramPathwayDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEPPProgramPathwayDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorDelete[]
      */
     public function deletesEPPProgramPathwayDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEPPProgramPathwayDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class EppProgramPathwayDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEPPProgramPathwayDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesEPPProgramPathwayDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEPPProgramPathwayDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class EppProgramPathwayDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class EppProgramPathwayDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class EppProgramPathwayDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class EppProgramPathwayDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class EppProgramPathwayDescriptorsApi
      */
     public function deletesEPPProgramPathwayDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEPPProgramPathwayDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorDelete[]';
         $request = $this->deletesEPPProgramPathwayDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class EppProgramPathwayDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEPPProgramPathwayDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TpdmEppProgramPathwayDescriptor[]
+     * @return \OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor[]
      */
     public function getEPPProgramPathwayDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $epp_program_pathway_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEPPProgramPathwayDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class EppProgramPathwayDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEPPProgramPathwayDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TpdmEppProgramPathwayDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getEPPProgramPathwayDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $epp_program_pathway_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEPPProgramPathwayDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class EppProgramPathwayDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TpdmEppProgramPathwayDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TpdmEppProgramPathwayDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class EppProgramPathwayDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmEppProgramPathwayDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class EppProgramPathwayDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TpdmEppProgramPathwayDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class EppProgramPathwayDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TpdmEppProgramPathwayDescriptor[]',
+                        '\OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class EppProgramPathwayDescriptorsApi
      */
     public function getEPPProgramPathwayDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $epp_program_pathway_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEPPProgramPathwayDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TpdmEppProgramPathwayDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor[]';
         $request = $this->getEPPProgramPathwayDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $epp_program_pathway_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class EppProgramPathwayDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEPPProgramPathwayDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TpdmEppProgramPathwayDescriptor
+     * @return \OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor
      */
     public function getEPPProgramPathwayDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEPPProgramPathwayDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class EppProgramPathwayDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEPPProgramPathwayDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TpdmEppProgramPathwayDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEPPProgramPathwayDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEPPProgramPathwayDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class EppProgramPathwayDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TpdmEppProgramPathwayDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TpdmEppProgramPathwayDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class EppProgramPathwayDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmEppProgramPathwayDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class EppProgramPathwayDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TpdmEppProgramPathwayDescriptor';
+            $returnType = '\OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class EppProgramPathwayDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TpdmEppProgramPathwayDescriptor',
+                        '\OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class EppProgramPathwayDescriptorsApi
      */
     public function getEPPProgramPathwayDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEPPProgramPathwayDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\TpdmEppProgramPathwayDescriptor';
+        $returnType = '\OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor';
         $request = $this->getEPPProgramPathwayDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class EppProgramPathwayDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEPPProgramPathwayDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange[]
      */
     public function keyChangesEPPProgramPathwayDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEPPProgramPathwayDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class EppProgramPathwayDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEPPProgramPathwayDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesEPPProgramPathwayDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEPPProgramPathwayDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class EppProgramPathwayDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class EppProgramPathwayDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class EppProgramPathwayDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class EppProgramPathwayDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class EppProgramPathwayDescriptorsApi
      */
     public function keyChangesEPPProgramPathwayDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEPPProgramPathwayDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange[]';
         $request = $this->keyChangesEPPProgramPathwayDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class EppProgramPathwayDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEPPProgramPathwayDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class EppProgramPathwayDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEPPProgramPathwayDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class EppProgramPathwayDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEPPProgramPathwayDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class EppProgramPathwayDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEPPProgramPathwayDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class EppProgramPathwayDescriptorsApi
     /**
      * Create request for operation 'postEPPProgramPathwayDescriptor'
      *
-     * @param  \Descriptors\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postEPPProgramPathwayDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class EppProgramPathwayDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEPPProgramPathwayDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class EppProgramPathwayDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEPPProgramPathwayDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class EppProgramPathwayDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEPPProgramPathwayDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class EppProgramPathwayDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEPPProgramPathwayDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class EppProgramPathwayDescriptorsApi
      * Create request for operation 'putEPPProgramPathwayDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\TpdmEppProgramPathwayDescriptor $tpdm_epp_program_pathway_descriptor The JSON representation of the \&quot;eppProgramPathwayDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putEPPProgramPathwayDescriptor'] to see the possible values for this operation
      *

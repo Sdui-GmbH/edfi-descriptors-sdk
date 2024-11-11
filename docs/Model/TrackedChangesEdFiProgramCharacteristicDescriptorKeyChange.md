@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Resource identifier | [optional]
 **change_version** | **float** | Change version | [optional]
-**old_key_values** | [**\Descriptors\Model\TrackedChangesEdFiProgramCharacteristicDescriptorKey**](TrackedChangesEdFiProgramCharacteristicDescriptorKey.md) |  | [optional]
-**new_key_values** | [**\Descriptors\Model\TrackedChangesEdFiProgramCharacteristicDescriptorKey**](TrackedChangesEdFiProgramCharacteristicDescriptorKey.md) |  | [optional]
+**old_key_values** | [**\OpenAPI\Client\Model\TrackedChangesEdFiProgramCharacteristicDescriptorKey**](TrackedChangesEdFiProgramCharacteristicDescriptorKey.md) |  | [optional]
+**new_key_values** | [**\OpenAPI\Client\Model\TrackedChangesEdFiProgramCharacteristicDescriptorKey**](TrackedChangesEdFiProgramCharacteristicDescriptorKey.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

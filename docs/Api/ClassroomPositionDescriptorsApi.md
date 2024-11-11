@@ -1,4 +1,4 @@
-# Descriptors\ClassroomPositionDescriptorsApi
+# OpenAPI\Client\ClassroomPositionDescriptorsApi
 
 All URIs are relative to https://api.ed-fi.org:443/v7.1/api/data/v3, except if the operation defines another base path.
 
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\ClassroomPositionDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\ClassroomPositionDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -77,7 +77,7 @@ void (empty response body)
 ## `deletesClassroomPositionDescriptors()`
 
 ```php
-deletesClassroomPositionDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]
+deletesClassroomPositionDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]
 ```
 
 Retrieves deleted resources based on change version.
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\ClassroomPositionDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\ClassroomPositionDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]**](../Model/TrackedChangesEdFiClassroomPositionDescriptorDelete.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]**](../Model/TrackedChangesEdFiClassroomPositionDescriptorDelete.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ try {
 ## `getClassroomPositionDescriptors()`
 
 ```php
-getClassroomPositionDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $classroom_position_descriptor_id, $use_snapshot): \Descriptors\Model\EdFiClassroomPositionDescriptor[]
+getClassroomPositionDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $classroom_position_descriptor_id, $use_snapshot): \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor[]
 ```
 
 Retrieves specific resources using the resource's property values (using the \"Get\" pattern).
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\ClassroomPositionDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\ClassroomPositionDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,7 +201,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiClassroomPositionDescriptor[]**](../Model/EdFiClassroomPositionDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiClassroomPositionDescriptor[]**](../Model/EdFiClassroomPositionDescriptor.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ try {
 ## `getClassroomPositionDescriptorsById()`
 
 ```php
-getClassroomPositionDescriptorsById($id, $if_none_match, $use_snapshot): \Descriptors\Model\EdFiClassroomPositionDescriptor
+getClassroomPositionDescriptorsById($id, $if_none_match, $use_snapshot): \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor
 ```
 
 Retrieves a specific resource using the resource's identifier (using the \"Get By Id\" pattern).
@@ -234,10 +234,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\ClassroomPositionDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\ClassroomPositionDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,7 +265,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\EdFiClassroomPositionDescriptor**](../Model/EdFiClassroomPositionDescriptor.md)
+[**\OpenAPI\Client\Model\EdFiClassroomPositionDescriptor**](../Model/EdFiClassroomPositionDescriptor.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ try {
 ## `keyChangesClassroomPositionDescriptors()`
 
 ```php
-keyChangesClassroomPositionDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]
+keyChangesClassroomPositionDescriptors($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot): \OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]
 ```
 
 Retrieves resources key changes based on change version.
@@ -298,10 +298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\ClassroomPositionDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\ClassroomPositionDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -335,7 +335,7 @@ try {
 
 ### Return type
 
-[**\Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]**](../Model/TrackedChangesEdFiClassroomPositionDescriptorKeyChange.md)
+[**\OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]**](../Model/TrackedChangesEdFiClassroomPositionDescriptorKeyChange.md)
 
 ### Authorization
 
@@ -368,16 +368,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\ClassroomPositionDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\ClassroomPositionDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ed_fi_classroom_position_descriptor = new \Descriptors\Model\EdFiClassroomPositionDescriptor(); // \Descriptors\Model\EdFiClassroomPositionDescriptor | The JSON representation of the \"classroomPositionDescriptor\" resource to be created or updated.
+$ed_fi_classroom_position_descriptor = new \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor(); // \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor | The JSON representation of the \"classroomPositionDescriptor\" resource to be created or updated.
 
 try {
     $apiInstance->postClassroomPositionDescriptor($ed_fi_classroom_position_descriptor);
@@ -390,7 +390,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ed_fi_classroom_position_descriptor** | [**\Descriptors\Model\EdFiClassroomPositionDescriptor**](../Model/EdFiClassroomPositionDescriptor.md)| The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_classroom_position_descriptor** | [**\OpenAPI\Client\Model\EdFiClassroomPositionDescriptor**](../Model/EdFiClassroomPositionDescriptor.md)| The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. | |
 
 ### Return type
 
@@ -427,17 +427,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Descriptors\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Descriptors\Api\ClassroomPositionDescriptorsApi(
+$apiInstance = new OpenAPI\Client\Api\ClassroomPositionDescriptorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string | A resource identifier that uniquely identifies the resource.
-$ed_fi_classroom_position_descriptor = new \Descriptors\Model\EdFiClassroomPositionDescriptor(); // \Descriptors\Model\EdFiClassroomPositionDescriptor | The JSON representation of the \"classroomPositionDescriptor\" resource to be created or updated.
+$ed_fi_classroom_position_descriptor = new \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor(); // \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor | The JSON representation of the \"classroomPositionDescriptor\" resource to be created or updated.
 $if_match = 'if_match_example'; // string | The ETag header value used to prevent the PUT from updating a resource modified by another consumer.
 
 try {
@@ -452,7 +452,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| A resource identifier that uniquely identifies the resource. | |
-| **ed_fi_classroom_position_descriptor** | [**\Descriptors\Model\EdFiClassroomPositionDescriptor**](../Model/EdFiClassroomPositionDescriptor.md)| The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. | |
+| **ed_fi_classroom_position_descriptor** | [**\OpenAPI\Client\Model\EdFiClassroomPositionDescriptor**](../Model/EdFiClassroomPositionDescriptor.md)| The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. | |
 | **if_match** | **string**| The ETag header value used to prevent the PUT from updating a resource modified by another consumer. | [optional] |
 
 ### Return type

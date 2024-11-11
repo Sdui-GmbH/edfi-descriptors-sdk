@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * InternetPerformanceInResidenceDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class InternetPerformanceInResidenceDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteInternetPerformanceInResidenceDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class InternetPerformanceInResidenceDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteInternetPerformanceInResidenceDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class InternetPerformanceInResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesInternetPerformanceInResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorDelete[]
      */
     public function deletesInternetPerformanceInResidenceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesInternetPerformanceInResidenceDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class InternetPerformanceInResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesInternetPerformanceInResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesInternetPerformanceInResidenceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesInternetPerformanceInResidenceDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class InternetPerformanceInResidenceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class InternetPerformanceInResidenceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class InternetPerformanceInResidenceDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class InternetPerformanceInResidenceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class InternetPerformanceInResidenceDescriptorsApi
      */
     public function deletesInternetPerformanceInResidenceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesInternetPerformanceInResidenceDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorDelete[]';
         $request = $this->deletesInternetPerformanceInResidenceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class InternetPerformanceInResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getInternetPerformanceInResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor[]
      */
     public function getInternetPerformanceInResidenceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $internet_performance_in_residence_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getInternetPerformanceInResidenceDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class InternetPerformanceInResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getInternetPerformanceInResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getInternetPerformanceInResidenceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $internet_performance_in_residence_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getInternetPerformanceInResidenceDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class InternetPerformanceInResidenceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class InternetPerformanceInResidenceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class InternetPerformanceInResidenceDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class InternetPerformanceInResidenceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class InternetPerformanceInResidenceDescriptorsApi
      */
     public function getInternetPerformanceInResidenceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $internet_performance_in_residence_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getInternetPerformanceInResidenceDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor[]';
         $request = $this->getInternetPerformanceInResidenceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $internet_performance_in_residence_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class InternetPerformanceInResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getInternetPerformanceInResidenceDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor
+     * @return \OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor
      */
     public function getInternetPerformanceInResidenceDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getInternetPerformanceInResidenceDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class InternetPerformanceInResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getInternetPerformanceInResidenceDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInternetPerformanceInResidenceDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getInternetPerformanceInResidenceDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class InternetPerformanceInResidenceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class InternetPerformanceInResidenceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class InternetPerformanceInResidenceDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class InternetPerformanceInResidenceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor',
+                        '\OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class InternetPerformanceInResidenceDescriptorsApi
      */
     public function getInternetPerformanceInResidenceDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getInternetPerformanceInResidenceDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor';
         $request = $this->getInternetPerformanceInResidenceDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class InternetPerformanceInResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesInternetPerformanceInResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorKeyChange[]
      */
     public function keyChangesInternetPerformanceInResidenceDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesInternetPerformanceInResidenceDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class InternetPerformanceInResidenceDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesInternetPerformanceInResidenceDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesInternetPerformanceInResidenceDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesInternetPerformanceInResidenceDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class InternetPerformanceInResidenceDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class InternetPerformanceInResidenceDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class InternetPerformanceInResidenceDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class InternetPerformanceInResidenceDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class InternetPerformanceInResidenceDescriptorsApi
      */
     public function keyChangesInternetPerformanceInResidenceDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesInternetPerformanceInResidenceDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiInternetPerformanceInResidenceDescriptorKeyChange[]';
         $request = $this->keyChangesInternetPerformanceInResidenceDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class InternetPerformanceInResidenceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postInternetPerformanceInResidenceDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class InternetPerformanceInResidenceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postInternetPerformanceInResidenceDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class InternetPerformanceInResidenceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postInternetPerformanceInResidenceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class InternetPerformanceInResidenceDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postInternetPerformanceInResidenceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class InternetPerformanceInResidenceDescriptorsApi
     /**
      * Create request for operation 'postInternetPerformanceInResidenceDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postInternetPerformanceInResidenceDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class InternetPerformanceInResidenceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putInternetPerformanceInResidenceDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class InternetPerformanceInResidenceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putInternetPerformanceInResidenceDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class InternetPerformanceInResidenceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putInternetPerformanceInResidenceDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class InternetPerformanceInResidenceDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putInternetPerformanceInResidenceDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class InternetPerformanceInResidenceDescriptorsApi
      * Create request for operation 'putInternetPerformanceInResidenceDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiInternetPerformanceInResidenceDescriptor $ed_fi_internet_performance_in_residence_descriptor The JSON representation of the \&quot;internetPerformanceInResidenceDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putInternetPerformanceInResidenceDescriptor'] to see the possible values for this operation
      *

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Descriptors\Api;
+namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Descriptors\ApiException;
-use Descriptors\Configuration;
-use Descriptors\HeaderSelector;
-use Descriptors\ObjectSerializer;
+use OpenAPI\Client\ApiException;
+use OpenAPI\Client\Configuration;
+use OpenAPI\Client\HeaderSelector;
+use OpenAPI\Client\ObjectSerializer;
 
 /**
  * PrimaryLearningDeviceAwayFromSchoolDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  Descriptors
+ * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePrimaryLearningDeviceAwayFromSchoolDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePrimaryLearningDeviceAwayFromSchoolDescriptorById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesPrimaryLearningDeviceAwayFromSchoolDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorDelete[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorDelete[]
      */
     public function deletesPrimaryLearningDeviceAwayFromSchoolDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPrimaryLearningDeviceAwayFromSchoolDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesPrimaryLearningDeviceAwayFromSchoolDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesPrimaryLearningDeviceAwayFromSchoolDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPrimaryLearningDeviceAwayFromSchoolDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorDelete[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorDelete[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorDelete[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      */
     public function deletesPrimaryLearningDeviceAwayFromSchoolDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPrimaryLearningDeviceAwayFromSchoolDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorDelete[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorDelete[]';
         $request = $this->deletesPrimaryLearningDeviceAwayFromSchoolDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPrimaryLearningDeviceAwayFromSchoolDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor[]
+     * @return \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor[]
      */
     public function getPrimaryLearningDeviceAwayFromSchoolDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $primary_learning_device_away_from_school_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPrimaryLearningDeviceAwayFromSchoolDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPrimaryLearningDeviceAwayFromSchoolDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getPrimaryLearningDeviceAwayFromSchoolDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $primary_learning_device_away_from_school_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPrimaryLearningDeviceAwayFromSchoolDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor[]';
+            $returnType = '\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor[]',
+                        '\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      */
     public function getPrimaryLearningDeviceAwayFromSchoolDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $primary_learning_device_away_from_school_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPrimaryLearningDeviceAwayFromSchoolDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor[]';
+        $returnType = '\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor[]';
         $request = $this->getPrimaryLearningDeviceAwayFromSchoolDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $primary_learning_device_away_from_school_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPrimaryLearningDeviceAwayFromSchoolDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor
+     * @return \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor
      */
     public function getPrimaryLearningDeviceAwayFromSchoolDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPrimaryLearningDeviceAwayFromSchoolDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPrimaryLearningDeviceAwayFromSchoolDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPrimaryLearningDeviceAwayFromSchoolDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPrimaryLearningDeviceAwayFromSchoolDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor';
+            $returnType = '\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor',
+                        '\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      */
     public function getPrimaryLearningDeviceAwayFromSchoolDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPrimaryLearningDeviceAwayFromSchoolDescriptorsById'][0])
     {
-        $returnType = '\Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor';
+        $returnType = '\OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor';
         $request = $this->getPrimaryLearningDeviceAwayFromSchoolDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesPrimaryLearningDeviceAwayFromSchoolDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorKeyChange[]
+     * @return \OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorKeyChange[]
      */
     public function keyChangesPrimaryLearningDeviceAwayFromSchoolDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPrimaryLearningDeviceAwayFromSchoolDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesPrimaryLearningDeviceAwayFromSchoolDescriptors'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesPrimaryLearningDeviceAwayFromSchoolDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPrimaryLearningDeviceAwayFromSchoolDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorKeyChange[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
                 );
             }
 
-            $returnType = '\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorKeyChange[]';
+            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorKeyChange[]',
+                        '\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      */
     public function keyChangesPrimaryLearningDeviceAwayFromSchoolDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPrimaryLearningDeviceAwayFromSchoolDescriptors'][0])
     {
-        $returnType = '\Descriptors\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorKeyChange[]';
+        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPrimaryLearningDeviceAwayFromSchoolDescriptorKeyChange[]';
         $request = $this->keyChangesPrimaryLearningDeviceAwayFromSchoolDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPrimaryLearningDeviceAwayFromSchoolDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPrimaryLearningDeviceAwayFromSchoolDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPrimaryLearningDeviceAwayFromSchoolDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPrimaryLearningDeviceAwayFromSchoolDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
     /**
      * Create request for operation 'postPrimaryLearningDeviceAwayFromSchoolDescriptor'
      *
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPrimaryLearningDeviceAwayFromSchoolDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPrimaryLearningDeviceAwayFromSchoolDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPrimaryLearningDeviceAwayFromSchoolDescriptor'] to see the possible values for this operation
      *
-     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPrimaryLearningDeviceAwayFromSchoolDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPrimaryLearningDeviceAwayFromSchoolDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class PrimaryLearningDeviceAwayFromSchoolDescriptorsApi
      * Create request for operation 'putPrimaryLearningDeviceAwayFromSchoolDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \Descriptors\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \OpenAPI\Client\Model\EdFiPrimaryLearningDeviceAwayFromSchoolDescriptor $ed_fi_primary_learning_device_away_from_school_descriptor The JSON representation of the \&quot;primaryLearningDeviceAwayFromSchoolDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPrimaryLearningDeviceAwayFromSchoolDescriptor'] to see the possible values for this operation
      *
