@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Descriptors\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Descriptors\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKeyChange Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKeyChange implements Mo
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'old_key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey',
-        'new_key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey'
+        'old_key_values' => '\Descriptors\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey',
+        'new_key_values' => '\Descriptors\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey'
     ];
 
     /**
@@ -367,7 +367,7 @@ class TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKeyChange implements Mo
     /**
      * Gets old_key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey|null
      */
     public function getOldKeyValues()
     {
@@ -377,7 +377,7 @@ class TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKeyChange implements Mo
     /**
      * Sets old_key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey|null $old_key_values old_key_values
+     * @param \Descriptors\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey|null $old_key_values old_key_values
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKeyChange implements Mo
     /**
      * Gets new_key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey|null
      */
     public function getNewKeyValues()
     {
@@ -404,7 +404,7 @@ class TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKeyChange implements Mo
     /**
      * Sets new_key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey|null $new_key_values new_key_values
+     * @param \Descriptors\Model\TrackedChangesEdFiStaffLeaveEventCategoryDescriptorKey|null $new_key_values new_key_values
      *
      * @return self
      */

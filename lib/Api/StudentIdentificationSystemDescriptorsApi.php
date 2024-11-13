@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * StudentIdentificationSystemDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class StudentIdentificationSystemDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStudentIdentificationSystemDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class StudentIdentificationSystemDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStudentIdentificationSystemDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class StudentIdentificationSystemDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesStudentIdentificationSystemDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorDelete[]
      */
     public function deletesStudentIdentificationSystemDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesStudentIdentificationSystemDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class StudentIdentificationSystemDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesStudentIdentificationSystemDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesStudentIdentificationSystemDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesStudentIdentificationSystemDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class StudentIdentificationSystemDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class StudentIdentificationSystemDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class StudentIdentificationSystemDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class StudentIdentificationSystemDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class StudentIdentificationSystemDescriptorsApi
      */
     public function deletesStudentIdentificationSystemDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesStudentIdentificationSystemDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorDelete[]';
         $request = $this->deletesStudentIdentificationSystemDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class StudentIdentificationSystemDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStudentIdentificationSystemDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor[]
+     * @return \Descriptors\Model\EdFiStudentIdentificationSystemDescriptor[]
      */
     public function getStudentIdentificationSystemDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $student_identification_system_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getStudentIdentificationSystemDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class StudentIdentificationSystemDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStudentIdentificationSystemDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiStudentIdentificationSystemDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getStudentIdentificationSystemDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $student_identification_system_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getStudentIdentificationSystemDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class StudentIdentificationSystemDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiStudentIdentificationSystemDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiStudentIdentificationSystemDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class StudentIdentificationSystemDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiStudentIdentificationSystemDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class StudentIdentificationSystemDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiStudentIdentificationSystemDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class StudentIdentificationSystemDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor[]',
+                        '\Descriptors\Model\EdFiStudentIdentificationSystemDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class StudentIdentificationSystemDescriptorsApi
      */
     public function getStudentIdentificationSystemDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $student_identification_system_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getStudentIdentificationSystemDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiStudentIdentificationSystemDescriptor[]';
         $request = $this->getStudentIdentificationSystemDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $student_identification_system_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class StudentIdentificationSystemDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStudentIdentificationSystemDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor
+     * @return \Descriptors\Model\EdFiStudentIdentificationSystemDescriptor
      */
     public function getStudentIdentificationSystemDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getStudentIdentificationSystemDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class StudentIdentificationSystemDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStudentIdentificationSystemDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiStudentIdentificationSystemDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getStudentIdentificationSystemDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getStudentIdentificationSystemDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class StudentIdentificationSystemDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiStudentIdentificationSystemDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiStudentIdentificationSystemDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class StudentIdentificationSystemDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiStudentIdentificationSystemDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class StudentIdentificationSystemDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor';
+            $returnType = '\Descriptors\Model\EdFiStudentIdentificationSystemDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class StudentIdentificationSystemDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor',
+                        '\Descriptors\Model\EdFiStudentIdentificationSystemDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class StudentIdentificationSystemDescriptorsApi
      */
     public function getStudentIdentificationSystemDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getStudentIdentificationSystemDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor';
+        $returnType = '\Descriptors\Model\EdFiStudentIdentificationSystemDescriptor';
         $request = $this->getStudentIdentificationSystemDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class StudentIdentificationSystemDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesStudentIdentificationSystemDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorKeyChange[]
      */
     public function keyChangesStudentIdentificationSystemDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesStudentIdentificationSystemDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class StudentIdentificationSystemDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesStudentIdentificationSystemDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesStudentIdentificationSystemDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesStudentIdentificationSystemDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class StudentIdentificationSystemDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class StudentIdentificationSystemDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class StudentIdentificationSystemDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class StudentIdentificationSystemDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class StudentIdentificationSystemDescriptorsApi
      */
     public function keyChangesStudentIdentificationSystemDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesStudentIdentificationSystemDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiStudentIdentificationSystemDescriptorKeyChange[]';
         $request = $this->keyChangesStudentIdentificationSystemDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class StudentIdentificationSystemDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStudentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class StudentIdentificationSystemDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStudentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class StudentIdentificationSystemDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStudentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class StudentIdentificationSystemDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStudentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class StudentIdentificationSystemDescriptorsApi
     /**
      * Create request for operation 'postStudentIdentificationSystemDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStudentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class StudentIdentificationSystemDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStudentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class StudentIdentificationSystemDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStudentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class StudentIdentificationSystemDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStudentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class StudentIdentificationSystemDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStudentIdentificationSystemDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class StudentIdentificationSystemDescriptorsApi
      * Create request for operation 'putStudentIdentificationSystemDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentIdentificationSystemDescriptor $ed_fi_student_identification_system_descriptor The JSON representation of the \&quot;studentIdentificationSystemDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStudentIdentificationSystemDescriptor'] to see the possible values for this operation
      *

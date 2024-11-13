@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * StudentParticipationCodeDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class StudentParticipationCodeDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStudentParticipationCodeDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class StudentParticipationCodeDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStudentParticipationCodeDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class StudentParticipationCodeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesStudentParticipationCodeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorDelete[]
      */
     public function deletesStudentParticipationCodeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesStudentParticipationCodeDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class StudentParticipationCodeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesStudentParticipationCodeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesStudentParticipationCodeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesStudentParticipationCodeDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class StudentParticipationCodeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class StudentParticipationCodeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class StudentParticipationCodeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class StudentParticipationCodeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class StudentParticipationCodeDescriptorsApi
      */
     public function deletesStudentParticipationCodeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesStudentParticipationCodeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorDelete[]';
         $request = $this->deletesStudentParticipationCodeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class StudentParticipationCodeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStudentParticipationCodeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor[]
+     * @return \Descriptors\Model\EdFiStudentParticipationCodeDescriptor[]
      */
     public function getStudentParticipationCodeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $student_participation_code_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getStudentParticipationCodeDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class StudentParticipationCodeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStudentParticipationCodeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiStudentParticipationCodeDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getStudentParticipationCodeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $student_participation_code_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getStudentParticipationCodeDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class StudentParticipationCodeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiStudentParticipationCodeDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiStudentParticipationCodeDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class StudentParticipationCodeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiStudentParticipationCodeDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class StudentParticipationCodeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiStudentParticipationCodeDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class StudentParticipationCodeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor[]',
+                        '\Descriptors\Model\EdFiStudentParticipationCodeDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class StudentParticipationCodeDescriptorsApi
      */
     public function getStudentParticipationCodeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $student_participation_code_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getStudentParticipationCodeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiStudentParticipationCodeDescriptor[]';
         $request = $this->getStudentParticipationCodeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $student_participation_code_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class StudentParticipationCodeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStudentParticipationCodeDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor
+     * @return \Descriptors\Model\EdFiStudentParticipationCodeDescriptor
      */
     public function getStudentParticipationCodeDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getStudentParticipationCodeDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class StudentParticipationCodeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStudentParticipationCodeDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiStudentParticipationCodeDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getStudentParticipationCodeDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getStudentParticipationCodeDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class StudentParticipationCodeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiStudentParticipationCodeDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiStudentParticipationCodeDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class StudentParticipationCodeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiStudentParticipationCodeDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class StudentParticipationCodeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor';
+            $returnType = '\Descriptors\Model\EdFiStudentParticipationCodeDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class StudentParticipationCodeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor',
+                        '\Descriptors\Model\EdFiStudentParticipationCodeDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class StudentParticipationCodeDescriptorsApi
      */
     public function getStudentParticipationCodeDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getStudentParticipationCodeDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor';
+        $returnType = '\Descriptors\Model\EdFiStudentParticipationCodeDescriptor';
         $request = $this->getStudentParticipationCodeDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class StudentParticipationCodeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesStudentParticipationCodeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorKeyChange[]
      */
     public function keyChangesStudentParticipationCodeDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesStudentParticipationCodeDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class StudentParticipationCodeDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesStudentParticipationCodeDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesStudentParticipationCodeDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesStudentParticipationCodeDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class StudentParticipationCodeDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class StudentParticipationCodeDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class StudentParticipationCodeDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class StudentParticipationCodeDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class StudentParticipationCodeDescriptorsApi
      */
     public function keyChangesStudentParticipationCodeDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesStudentParticipationCodeDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiStudentParticipationCodeDescriptorKeyChange[]';
         $request = $this->keyChangesStudentParticipationCodeDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class StudentParticipationCodeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStudentParticipationCodeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class StudentParticipationCodeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStudentParticipationCodeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class StudentParticipationCodeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStudentParticipationCodeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class StudentParticipationCodeDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStudentParticipationCodeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class StudentParticipationCodeDescriptorsApi
     /**
      * Create request for operation 'postStudentParticipationCodeDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStudentParticipationCodeDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class StudentParticipationCodeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStudentParticipationCodeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class StudentParticipationCodeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStudentParticipationCodeDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class StudentParticipationCodeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStudentParticipationCodeDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class StudentParticipationCodeDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStudentParticipationCodeDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class StudentParticipationCodeDescriptorsApi
      * Create request for operation 'putStudentParticipationCodeDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStudentParticipationCodeDescriptor $ed_fi_student_participation_code_descriptor The JSON representation of the \&quot;studentParticipationCodeDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStudentParticipationCodeDescriptor'] to see the possible values for this operation
      *

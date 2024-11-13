@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Descriptors\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Descriptors\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiEducationOrganizationAssociationTypeDescriptorDelete Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TrackedChangesEdFiEducationOrganizationAssociationTypeDescriptorDelete imp
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiEducationOrganizationAssociationTypeDescriptorKey'
+        'key_values' => '\Descriptors\Model\TrackedChangesEdFiEducationOrganizationAssociationTypeDescriptorKey'
     ];
 
     /**
@@ -360,7 +360,7 @@ class TrackedChangesEdFiEducationOrganizationAssociationTypeDescriptorDelete imp
     /**
      * Gets key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEducationOrganizationAssociationTypeDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesEdFiEducationOrganizationAssociationTypeDescriptorKey|null
      */
     public function getKeyValues()
     {
@@ -370,7 +370,7 @@ class TrackedChangesEdFiEducationOrganizationAssociationTypeDescriptorDelete imp
     /**
      * Sets key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesEdFiEducationOrganizationAssociationTypeDescriptorKey|null $key_values key_values
+     * @param \Descriptors\Model\TrackedChangesEdFiEducationOrganizationAssociationTypeDescriptorKey|null $key_values key_values
      *
      * @return self
      */

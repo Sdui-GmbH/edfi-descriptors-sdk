@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * StateAbbreviationDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class StateAbbreviationDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStateAbbreviationDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class StateAbbreviationDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStateAbbreviationDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class StateAbbreviationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesStateAbbreviationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorDelete[]
      */
     public function deletesStateAbbreviationDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesStateAbbreviationDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class StateAbbreviationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesStateAbbreviationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesStateAbbreviationDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesStateAbbreviationDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class StateAbbreviationDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class StateAbbreviationDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class StateAbbreviationDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class StateAbbreviationDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class StateAbbreviationDescriptorsApi
      */
     public function deletesStateAbbreviationDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesStateAbbreviationDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorDelete[]';
         $request = $this->deletesStateAbbreviationDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class StateAbbreviationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStateAbbreviationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor[]
+     * @return \Descriptors\Model\EdFiStateAbbreviationDescriptor[]
      */
     public function getStateAbbreviationDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $state_abbreviation_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getStateAbbreviationDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class StateAbbreviationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStateAbbreviationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiStateAbbreviationDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getStateAbbreviationDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $state_abbreviation_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getStateAbbreviationDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class StateAbbreviationDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiStateAbbreviationDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiStateAbbreviationDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class StateAbbreviationDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiStateAbbreviationDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class StateAbbreviationDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiStateAbbreviationDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class StateAbbreviationDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor[]',
+                        '\Descriptors\Model\EdFiStateAbbreviationDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class StateAbbreviationDescriptorsApi
      */
     public function getStateAbbreviationDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $state_abbreviation_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getStateAbbreviationDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiStateAbbreviationDescriptor[]';
         $request = $this->getStateAbbreviationDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $state_abbreviation_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class StateAbbreviationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStateAbbreviationDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor
+     * @return \Descriptors\Model\EdFiStateAbbreviationDescriptor
      */
     public function getStateAbbreviationDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getStateAbbreviationDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class StateAbbreviationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStateAbbreviationDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiStateAbbreviationDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getStateAbbreviationDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getStateAbbreviationDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class StateAbbreviationDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiStateAbbreviationDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiStateAbbreviationDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class StateAbbreviationDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiStateAbbreviationDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class StateAbbreviationDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor';
+            $returnType = '\Descriptors\Model\EdFiStateAbbreviationDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class StateAbbreviationDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor',
+                        '\Descriptors\Model\EdFiStateAbbreviationDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class StateAbbreviationDescriptorsApi
      */
     public function getStateAbbreviationDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getStateAbbreviationDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor';
+        $returnType = '\Descriptors\Model\EdFiStateAbbreviationDescriptor';
         $request = $this->getStateAbbreviationDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class StateAbbreviationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesStateAbbreviationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorKeyChange[]
      */
     public function keyChangesStateAbbreviationDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesStateAbbreviationDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class StateAbbreviationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesStateAbbreviationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesStateAbbreviationDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesStateAbbreviationDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class StateAbbreviationDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class StateAbbreviationDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class StateAbbreviationDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class StateAbbreviationDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class StateAbbreviationDescriptorsApi
      */
     public function keyChangesStateAbbreviationDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesStateAbbreviationDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiStateAbbreviationDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiStateAbbreviationDescriptorKeyChange[]';
         $request = $this->keyChangesStateAbbreviationDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class StateAbbreviationDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStateAbbreviationDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class StateAbbreviationDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStateAbbreviationDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class StateAbbreviationDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStateAbbreviationDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class StateAbbreviationDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStateAbbreviationDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class StateAbbreviationDescriptorsApi
     /**
      * Create request for operation 'postStateAbbreviationDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStateAbbreviationDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class StateAbbreviationDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStateAbbreviationDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class StateAbbreviationDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStateAbbreviationDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class StateAbbreviationDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStateAbbreviationDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class StateAbbreviationDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStateAbbreviationDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class StateAbbreviationDescriptorsApi
      * Create request for operation 'putStateAbbreviationDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStateAbbreviationDescriptor $ed_fi_state_abbreviation_descriptor The JSON representation of the \&quot;stateAbbreviationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStateAbbreviationDescriptor'] to see the possible values for this operation
      *

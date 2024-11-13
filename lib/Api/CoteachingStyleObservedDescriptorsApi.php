@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * CoteachingStyleObservedDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class CoteachingStyleObservedDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCoteachingStyleObservedDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class CoteachingStyleObservedDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCoteachingStyleObservedDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class CoteachingStyleObservedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCoteachingStyleObservedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorDelete[]
      */
     public function deletesCoteachingStyleObservedDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCoteachingStyleObservedDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class CoteachingStyleObservedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCoteachingStyleObservedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesCoteachingStyleObservedDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCoteachingStyleObservedDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class CoteachingStyleObservedDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class CoteachingStyleObservedDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class CoteachingStyleObservedDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class CoteachingStyleObservedDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class CoteachingStyleObservedDescriptorsApi
      */
     public function deletesCoteachingStyleObservedDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCoteachingStyleObservedDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorDelete[]';
         $request = $this->deletesCoteachingStyleObservedDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class CoteachingStyleObservedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCoteachingStyleObservedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor[]
+     * @return \Descriptors\Model\TpdmCoteachingStyleObservedDescriptor[]
      */
     public function getCoteachingStyleObservedDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $coteaching_style_observed_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCoteachingStyleObservedDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class CoteachingStyleObservedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCoteachingStyleObservedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TpdmCoteachingStyleObservedDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getCoteachingStyleObservedDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $coteaching_style_observed_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCoteachingStyleObservedDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class CoteachingStyleObservedDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TpdmCoteachingStyleObservedDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\TpdmCoteachingStyleObservedDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class CoteachingStyleObservedDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmCoteachingStyleObservedDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class CoteachingStyleObservedDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor[]';
+            $returnType = '\Descriptors\Model\TpdmCoteachingStyleObservedDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class CoteachingStyleObservedDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor[]',
+                        '\Descriptors\Model\TpdmCoteachingStyleObservedDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class CoteachingStyleObservedDescriptorsApi
      */
     public function getCoteachingStyleObservedDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $coteaching_style_observed_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCoteachingStyleObservedDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor[]';
+        $returnType = '\Descriptors\Model\TpdmCoteachingStyleObservedDescriptor[]';
         $request = $this->getCoteachingStyleObservedDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $coteaching_style_observed_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class CoteachingStyleObservedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCoteachingStyleObservedDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor
+     * @return \Descriptors\Model\TpdmCoteachingStyleObservedDescriptor
      */
     public function getCoteachingStyleObservedDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCoteachingStyleObservedDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class CoteachingStyleObservedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCoteachingStyleObservedDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TpdmCoteachingStyleObservedDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCoteachingStyleObservedDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCoteachingStyleObservedDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class CoteachingStyleObservedDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TpdmCoteachingStyleObservedDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\TpdmCoteachingStyleObservedDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class CoteachingStyleObservedDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmCoteachingStyleObservedDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class CoteachingStyleObservedDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor';
+            $returnType = '\Descriptors\Model\TpdmCoteachingStyleObservedDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class CoteachingStyleObservedDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor',
+                        '\Descriptors\Model\TpdmCoteachingStyleObservedDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class CoteachingStyleObservedDescriptorsApi
      */
     public function getCoteachingStyleObservedDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCoteachingStyleObservedDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor';
+        $returnType = '\Descriptors\Model\TpdmCoteachingStyleObservedDescriptor';
         $request = $this->getCoteachingStyleObservedDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class CoteachingStyleObservedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCoteachingStyleObservedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorKeyChange[]
      */
     public function keyChangesCoteachingStyleObservedDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCoteachingStyleObservedDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class CoteachingStyleObservedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCoteachingStyleObservedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesCoteachingStyleObservedDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCoteachingStyleObservedDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class CoteachingStyleObservedDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class CoteachingStyleObservedDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class CoteachingStyleObservedDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class CoteachingStyleObservedDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class CoteachingStyleObservedDescriptorsApi
      */
     public function keyChangesCoteachingStyleObservedDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCoteachingStyleObservedDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesTpdmCoteachingStyleObservedDescriptorKeyChange[]';
         $request = $this->keyChangesCoteachingStyleObservedDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class CoteachingStyleObservedDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCoteachingStyleObservedDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class CoteachingStyleObservedDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCoteachingStyleObservedDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class CoteachingStyleObservedDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCoteachingStyleObservedDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class CoteachingStyleObservedDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCoteachingStyleObservedDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class CoteachingStyleObservedDescriptorsApi
     /**
      * Create request for operation 'postCoteachingStyleObservedDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCoteachingStyleObservedDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class CoteachingStyleObservedDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCoteachingStyleObservedDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class CoteachingStyleObservedDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCoteachingStyleObservedDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class CoteachingStyleObservedDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCoteachingStyleObservedDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class CoteachingStyleObservedDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCoteachingStyleObservedDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class CoteachingStyleObservedDescriptorsApi
      * Create request for operation 'putCoteachingStyleObservedDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmCoteachingStyleObservedDescriptor $tpdm_coteaching_style_observed_descriptor The JSON representation of the \&quot;coteachingStyleObservedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCoteachingStyleObservedDescriptor'] to see the possible values for this operation
      *

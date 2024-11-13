@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * AdministrativeFundingControlDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class AdministrativeFundingControlDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAdministrativeFundingControlDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class AdministrativeFundingControlDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAdministrativeFundingControlDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class AdministrativeFundingControlDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAdministrativeFundingControlDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorDelete[]
      */
     public function deletesAdministrativeFundingControlDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAdministrativeFundingControlDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class AdministrativeFundingControlDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAdministrativeFundingControlDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesAdministrativeFundingControlDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAdministrativeFundingControlDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class AdministrativeFundingControlDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class AdministrativeFundingControlDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class AdministrativeFundingControlDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class AdministrativeFundingControlDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class AdministrativeFundingControlDescriptorsApi
      */
     public function deletesAdministrativeFundingControlDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAdministrativeFundingControlDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorDelete[]';
         $request = $this->deletesAdministrativeFundingControlDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class AdministrativeFundingControlDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAdministrativeFundingControlDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor[]
+     * @return \Descriptors\Model\EdFiAdministrativeFundingControlDescriptor[]
      */
     public function getAdministrativeFundingControlDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $administrative_funding_control_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAdministrativeFundingControlDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class AdministrativeFundingControlDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAdministrativeFundingControlDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiAdministrativeFundingControlDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAdministrativeFundingControlDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $administrative_funding_control_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAdministrativeFundingControlDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class AdministrativeFundingControlDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiAdministrativeFundingControlDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiAdministrativeFundingControlDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class AdministrativeFundingControlDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiAdministrativeFundingControlDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class AdministrativeFundingControlDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiAdministrativeFundingControlDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class AdministrativeFundingControlDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor[]',
+                        '\Descriptors\Model\EdFiAdministrativeFundingControlDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class AdministrativeFundingControlDescriptorsApi
      */
     public function getAdministrativeFundingControlDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $administrative_funding_control_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAdministrativeFundingControlDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiAdministrativeFundingControlDescriptor[]';
         $request = $this->getAdministrativeFundingControlDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $administrative_funding_control_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class AdministrativeFundingControlDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAdministrativeFundingControlDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor
+     * @return \Descriptors\Model\EdFiAdministrativeFundingControlDescriptor
      */
     public function getAdministrativeFundingControlDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAdministrativeFundingControlDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class AdministrativeFundingControlDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAdministrativeFundingControlDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiAdministrativeFundingControlDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAdministrativeFundingControlDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAdministrativeFundingControlDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class AdministrativeFundingControlDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiAdministrativeFundingControlDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiAdministrativeFundingControlDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class AdministrativeFundingControlDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiAdministrativeFundingControlDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class AdministrativeFundingControlDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor';
+            $returnType = '\Descriptors\Model\EdFiAdministrativeFundingControlDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class AdministrativeFundingControlDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor',
+                        '\Descriptors\Model\EdFiAdministrativeFundingControlDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class AdministrativeFundingControlDescriptorsApi
      */
     public function getAdministrativeFundingControlDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAdministrativeFundingControlDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor';
+        $returnType = '\Descriptors\Model\EdFiAdministrativeFundingControlDescriptor';
         $request = $this->getAdministrativeFundingControlDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class AdministrativeFundingControlDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAdministrativeFundingControlDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorKeyChange[]
      */
     public function keyChangesAdministrativeFundingControlDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAdministrativeFundingControlDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class AdministrativeFundingControlDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAdministrativeFundingControlDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesAdministrativeFundingControlDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAdministrativeFundingControlDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class AdministrativeFundingControlDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class AdministrativeFundingControlDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class AdministrativeFundingControlDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class AdministrativeFundingControlDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class AdministrativeFundingControlDescriptorsApi
      */
     public function keyChangesAdministrativeFundingControlDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAdministrativeFundingControlDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiAdministrativeFundingControlDescriptorKeyChange[]';
         $request = $this->keyChangesAdministrativeFundingControlDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class AdministrativeFundingControlDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAdministrativeFundingControlDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class AdministrativeFundingControlDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAdministrativeFundingControlDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class AdministrativeFundingControlDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAdministrativeFundingControlDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class AdministrativeFundingControlDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAdministrativeFundingControlDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class AdministrativeFundingControlDescriptorsApi
     /**
      * Create request for operation 'postAdministrativeFundingControlDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAdministrativeFundingControlDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class AdministrativeFundingControlDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAdministrativeFundingControlDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class AdministrativeFundingControlDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAdministrativeFundingControlDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class AdministrativeFundingControlDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAdministrativeFundingControlDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class AdministrativeFundingControlDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAdministrativeFundingControlDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class AdministrativeFundingControlDescriptorsApi
      * Create request for operation 'putAdministrativeFundingControlDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAdministrativeFundingControlDescriptor $ed_fi_administrative_funding_control_descriptor The JSON representation of the \&quot;administrativeFundingControlDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAdministrativeFundingControlDescriptor'] to see the possible values for this operation
      *

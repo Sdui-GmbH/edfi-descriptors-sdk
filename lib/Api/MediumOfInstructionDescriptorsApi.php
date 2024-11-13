@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * MediumOfInstructionDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class MediumOfInstructionDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMediumOfInstructionDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class MediumOfInstructionDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteMediumOfInstructionDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class MediumOfInstructionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesMediumOfInstructionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiMediumOfInstructionDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiMediumOfInstructionDescriptorDelete[]
      */
     public function deletesMediumOfInstructionDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesMediumOfInstructionDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class MediumOfInstructionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesMediumOfInstructionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiMediumOfInstructionDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiMediumOfInstructionDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesMediumOfInstructionDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesMediumOfInstructionDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class MediumOfInstructionDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiMediumOfInstructionDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiMediumOfInstructionDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiMediumOfInstructionDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiMediumOfInstructionDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class MediumOfInstructionDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiMediumOfInstructionDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiMediumOfInstructionDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class MediumOfInstructionDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiMediumOfInstructionDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiMediumOfInstructionDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class MediumOfInstructionDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiMediumOfInstructionDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiMediumOfInstructionDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class MediumOfInstructionDescriptorsApi
      */
     public function deletesMediumOfInstructionDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesMediumOfInstructionDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiMediumOfInstructionDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiMediumOfInstructionDescriptorDelete[]';
         $request = $this->deletesMediumOfInstructionDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class MediumOfInstructionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMediumOfInstructionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor[]
+     * @return \Descriptors\Model\EdFiMediumOfInstructionDescriptor[]
      */
     public function getMediumOfInstructionDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $medium_of_instruction_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getMediumOfInstructionDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class MediumOfInstructionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMediumOfInstructionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiMediumOfInstructionDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getMediumOfInstructionDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $medium_of_instruction_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getMediumOfInstructionDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class MediumOfInstructionDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiMediumOfInstructionDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiMediumOfInstructionDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class MediumOfInstructionDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiMediumOfInstructionDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class MediumOfInstructionDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiMediumOfInstructionDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class MediumOfInstructionDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor[]',
+                        '\Descriptors\Model\EdFiMediumOfInstructionDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class MediumOfInstructionDescriptorsApi
      */
     public function getMediumOfInstructionDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $medium_of_instruction_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getMediumOfInstructionDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiMediumOfInstructionDescriptor[]';
         $request = $this->getMediumOfInstructionDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $medium_of_instruction_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class MediumOfInstructionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMediumOfInstructionDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor
+     * @return \Descriptors\Model\EdFiMediumOfInstructionDescriptor
      */
     public function getMediumOfInstructionDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getMediumOfInstructionDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class MediumOfInstructionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMediumOfInstructionDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiMediumOfInstructionDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMediumOfInstructionDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getMediumOfInstructionDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class MediumOfInstructionDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiMediumOfInstructionDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiMediumOfInstructionDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class MediumOfInstructionDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiMediumOfInstructionDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class MediumOfInstructionDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor';
+            $returnType = '\Descriptors\Model\EdFiMediumOfInstructionDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class MediumOfInstructionDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor',
+                        '\Descriptors\Model\EdFiMediumOfInstructionDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class MediumOfInstructionDescriptorsApi
      */
     public function getMediumOfInstructionDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getMediumOfInstructionDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor';
+        $returnType = '\Descriptors\Model\EdFiMediumOfInstructionDescriptor';
         $request = $this->getMediumOfInstructionDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class MediumOfInstructionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesMediumOfInstructionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiMediumOfInstructionDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiMediumOfInstructionDescriptorKeyChange[]
      */
     public function keyChangesMediumOfInstructionDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesMediumOfInstructionDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class MediumOfInstructionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesMediumOfInstructionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiMediumOfInstructionDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiMediumOfInstructionDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesMediumOfInstructionDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesMediumOfInstructionDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class MediumOfInstructionDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiMediumOfInstructionDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiMediumOfInstructionDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiMediumOfInstructionDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiMediumOfInstructionDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class MediumOfInstructionDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiMediumOfInstructionDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiMediumOfInstructionDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class MediumOfInstructionDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiMediumOfInstructionDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiMediumOfInstructionDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class MediumOfInstructionDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiMediumOfInstructionDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiMediumOfInstructionDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class MediumOfInstructionDescriptorsApi
      */
     public function keyChangesMediumOfInstructionDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesMediumOfInstructionDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiMediumOfInstructionDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiMediumOfInstructionDescriptorKeyChange[]';
         $request = $this->keyChangesMediumOfInstructionDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class MediumOfInstructionDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMediumOfInstructionDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class MediumOfInstructionDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMediumOfInstructionDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class MediumOfInstructionDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMediumOfInstructionDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class MediumOfInstructionDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMediumOfInstructionDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class MediumOfInstructionDescriptorsApi
     /**
      * Create request for operation 'postMediumOfInstructionDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postMediumOfInstructionDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class MediumOfInstructionDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMediumOfInstructionDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class MediumOfInstructionDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMediumOfInstructionDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class MediumOfInstructionDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMediumOfInstructionDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class MediumOfInstructionDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMediumOfInstructionDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class MediumOfInstructionDescriptorsApi
      * Create request for operation 'putMediumOfInstructionDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiMediumOfInstructionDescriptor $ed_fi_medium_of_instruction_descriptor The JSON representation of the \&quot;mediumOfInstructionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putMediumOfInstructionDescriptor'] to see the possible values for this operation
      *

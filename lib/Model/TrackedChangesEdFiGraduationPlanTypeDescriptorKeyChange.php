@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Descriptors\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Descriptors\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiGraduationPlanTypeDescriptorKeyChange Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class TrackedChangesEdFiGraduationPlanTypeDescriptorKeyChange implements ModelIn
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'old_key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiGraduationPlanTypeDescriptorKey',
-        'new_key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiGraduationPlanTypeDescriptorKey'
+        'old_key_values' => '\Descriptors\Model\TrackedChangesEdFiGraduationPlanTypeDescriptorKey',
+        'new_key_values' => '\Descriptors\Model\TrackedChangesEdFiGraduationPlanTypeDescriptorKey'
     ];
 
     /**
@@ -367,7 +367,7 @@ class TrackedChangesEdFiGraduationPlanTypeDescriptorKeyChange implements ModelIn
     /**
      * Gets old_key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiGraduationPlanTypeDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesEdFiGraduationPlanTypeDescriptorKey|null
      */
     public function getOldKeyValues()
     {
@@ -377,7 +377,7 @@ class TrackedChangesEdFiGraduationPlanTypeDescriptorKeyChange implements ModelIn
     /**
      * Sets old_key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesEdFiGraduationPlanTypeDescriptorKey|null $old_key_values old_key_values
+     * @param \Descriptors\Model\TrackedChangesEdFiGraduationPlanTypeDescriptorKey|null $old_key_values old_key_values
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class TrackedChangesEdFiGraduationPlanTypeDescriptorKeyChange implements ModelIn
     /**
      * Gets new_key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiGraduationPlanTypeDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesEdFiGraduationPlanTypeDescriptorKey|null
      */
     public function getNewKeyValues()
     {
@@ -404,7 +404,7 @@ class TrackedChangesEdFiGraduationPlanTypeDescriptorKeyChange implements ModelIn
     /**
      * Sets new_key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesEdFiGraduationPlanTypeDescriptorKey|null $new_key_values new_key_values
+     * @param \Descriptors\Model\TrackedChangesEdFiGraduationPlanTypeDescriptorKey|null $new_key_values new_key_values
      *
      * @return self
      */

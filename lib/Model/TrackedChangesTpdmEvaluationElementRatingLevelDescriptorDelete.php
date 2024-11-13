@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Descriptors\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Descriptors\ObjectSerializer;
 
 /**
  * TrackedChangesTpdmEvaluationElementRatingLevelDescriptorDelete Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TrackedChangesTpdmEvaluationElementRatingLevelDescriptorDelete implements 
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'key_values' => '\OpenAPI\Client\Model\TrackedChangesTpdmEvaluationElementRatingLevelDescriptorKey'
+        'key_values' => '\Descriptors\Model\TrackedChangesTpdmEvaluationElementRatingLevelDescriptorKey'
     ];
 
     /**
@@ -360,7 +360,7 @@ class TrackedChangesTpdmEvaluationElementRatingLevelDescriptorDelete implements 
     /**
      * Gets key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmEvaluationElementRatingLevelDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesTpdmEvaluationElementRatingLevelDescriptorKey|null
      */
     public function getKeyValues()
     {
@@ -370,7 +370,7 @@ class TrackedChangesTpdmEvaluationElementRatingLevelDescriptorDelete implements 
     /**
      * Sets key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesTpdmEvaluationElementRatingLevelDescriptorKey|null $key_values key_values
+     * @param \Descriptors\Model\TrackedChangesTpdmEvaluationElementRatingLevelDescriptorKey|null $key_values key_values
      *
      * @return self
      */

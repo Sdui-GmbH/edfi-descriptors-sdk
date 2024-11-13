@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * PersonalInformationVerificationDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class PersonalInformationVerificationDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePersonalInformationVerificationDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class PersonalInformationVerificationDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePersonalInformationVerificationDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class PersonalInformationVerificationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesPersonalInformationVerificationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorDelete[]
      */
     public function deletesPersonalInformationVerificationDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPersonalInformationVerificationDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class PersonalInformationVerificationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesPersonalInformationVerificationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesPersonalInformationVerificationDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPersonalInformationVerificationDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class PersonalInformationVerificationDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class PersonalInformationVerificationDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class PersonalInformationVerificationDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class PersonalInformationVerificationDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class PersonalInformationVerificationDescriptorsApi
      */
     public function deletesPersonalInformationVerificationDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPersonalInformationVerificationDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorDelete[]';
         $request = $this->deletesPersonalInformationVerificationDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class PersonalInformationVerificationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPersonalInformationVerificationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor[]
+     * @return \Descriptors\Model\EdFiPersonalInformationVerificationDescriptor[]
      */
     public function getPersonalInformationVerificationDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $personal_information_verification_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPersonalInformationVerificationDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class PersonalInformationVerificationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPersonalInformationVerificationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiPersonalInformationVerificationDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getPersonalInformationVerificationDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $personal_information_verification_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPersonalInformationVerificationDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class PersonalInformationVerificationDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiPersonalInformationVerificationDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiPersonalInformationVerificationDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class PersonalInformationVerificationDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiPersonalInformationVerificationDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class PersonalInformationVerificationDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiPersonalInformationVerificationDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class PersonalInformationVerificationDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor[]',
+                        '\Descriptors\Model\EdFiPersonalInformationVerificationDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class PersonalInformationVerificationDescriptorsApi
      */
     public function getPersonalInformationVerificationDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $personal_information_verification_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPersonalInformationVerificationDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiPersonalInformationVerificationDescriptor[]';
         $request = $this->getPersonalInformationVerificationDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $personal_information_verification_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class PersonalInformationVerificationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPersonalInformationVerificationDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor
+     * @return \Descriptors\Model\EdFiPersonalInformationVerificationDescriptor
      */
     public function getPersonalInformationVerificationDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPersonalInformationVerificationDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class PersonalInformationVerificationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPersonalInformationVerificationDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiPersonalInformationVerificationDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPersonalInformationVerificationDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPersonalInformationVerificationDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class PersonalInformationVerificationDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiPersonalInformationVerificationDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiPersonalInformationVerificationDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class PersonalInformationVerificationDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiPersonalInformationVerificationDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class PersonalInformationVerificationDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor';
+            $returnType = '\Descriptors\Model\EdFiPersonalInformationVerificationDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class PersonalInformationVerificationDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor',
+                        '\Descriptors\Model\EdFiPersonalInformationVerificationDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class PersonalInformationVerificationDescriptorsApi
      */
     public function getPersonalInformationVerificationDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPersonalInformationVerificationDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor';
+        $returnType = '\Descriptors\Model\EdFiPersonalInformationVerificationDescriptor';
         $request = $this->getPersonalInformationVerificationDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class PersonalInformationVerificationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesPersonalInformationVerificationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorKeyChange[]
      */
     public function keyChangesPersonalInformationVerificationDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPersonalInformationVerificationDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class PersonalInformationVerificationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesPersonalInformationVerificationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesPersonalInformationVerificationDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPersonalInformationVerificationDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class PersonalInformationVerificationDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class PersonalInformationVerificationDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class PersonalInformationVerificationDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class PersonalInformationVerificationDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class PersonalInformationVerificationDescriptorsApi
      */
     public function keyChangesPersonalInformationVerificationDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPersonalInformationVerificationDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiPersonalInformationVerificationDescriptorKeyChange[]';
         $request = $this->keyChangesPersonalInformationVerificationDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class PersonalInformationVerificationDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPersonalInformationVerificationDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class PersonalInformationVerificationDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPersonalInformationVerificationDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class PersonalInformationVerificationDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPersonalInformationVerificationDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class PersonalInformationVerificationDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPersonalInformationVerificationDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class PersonalInformationVerificationDescriptorsApi
     /**
      * Create request for operation 'postPersonalInformationVerificationDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPersonalInformationVerificationDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class PersonalInformationVerificationDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPersonalInformationVerificationDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class PersonalInformationVerificationDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPersonalInformationVerificationDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class PersonalInformationVerificationDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPersonalInformationVerificationDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class PersonalInformationVerificationDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPersonalInformationVerificationDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class PersonalInformationVerificationDescriptorsApi
      * Create request for operation 'putPersonalInformationVerificationDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPersonalInformationVerificationDescriptor $ed_fi_personal_information_verification_descriptor The JSON representation of the \&quot;personalInformationVerificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPersonalInformationVerificationDescriptor'] to see the possible values for this operation
      *

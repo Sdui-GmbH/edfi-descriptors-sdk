@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Descriptors\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Descriptors\ObjectSerializer;
 
 /**
  * TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange implements ModelInt
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'old_key_values' => '\OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKey',
-        'new_key_values' => '\OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKey'
+        'old_key_values' => '\Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKey',
+        'new_key_values' => '\Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKey'
     ];
 
     /**
@@ -367,7 +367,7 @@ class TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange implements ModelInt
     /**
      * Gets old_key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKey|null
      */
     public function getOldKeyValues()
     {
@@ -377,7 +377,7 @@ class TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange implements ModelInt
     /**
      * Sets old_key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKey|null $old_key_values old_key_values
+     * @param \Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKey|null $old_key_values old_key_values
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange implements ModelInt
     /**
      * Gets new_key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKey|null
      */
     public function getNewKeyValues()
     {
@@ -404,7 +404,7 @@ class TrackedChangesTpdmEppProgramPathwayDescriptorKeyChange implements ModelInt
     /**
      * Sets new_key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKey|null $new_key_values new_key_values
+     * @param \Descriptors\Model\TrackedChangesTpdmEppProgramPathwayDescriptorKey|null $new_key_values new_key_values
      *
      * @return self
      */

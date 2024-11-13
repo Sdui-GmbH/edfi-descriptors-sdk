@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * PerformanceBaseConversionDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class PerformanceBaseConversionDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePerformanceBaseConversionDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class PerformanceBaseConversionDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePerformanceBaseConversionDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class PerformanceBaseConversionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesPerformanceBaseConversionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorDelete[]
      */
     public function deletesPerformanceBaseConversionDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPerformanceBaseConversionDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class PerformanceBaseConversionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesPerformanceBaseConversionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesPerformanceBaseConversionDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPerformanceBaseConversionDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class PerformanceBaseConversionDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class PerformanceBaseConversionDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class PerformanceBaseConversionDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class PerformanceBaseConversionDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class PerformanceBaseConversionDescriptorsApi
      */
     public function deletesPerformanceBaseConversionDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesPerformanceBaseConversionDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorDelete[]';
         $request = $this->deletesPerformanceBaseConversionDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class PerformanceBaseConversionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPerformanceBaseConversionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor[]
+     * @return \Descriptors\Model\EdFiPerformanceBaseConversionDescriptor[]
      */
     public function getPerformanceBaseConversionDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $performance_base_conversion_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPerformanceBaseConversionDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class PerformanceBaseConversionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPerformanceBaseConversionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiPerformanceBaseConversionDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getPerformanceBaseConversionDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $performance_base_conversion_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPerformanceBaseConversionDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class PerformanceBaseConversionDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiPerformanceBaseConversionDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiPerformanceBaseConversionDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class PerformanceBaseConversionDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiPerformanceBaseConversionDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class PerformanceBaseConversionDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiPerformanceBaseConversionDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class PerformanceBaseConversionDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor[]',
+                        '\Descriptors\Model\EdFiPerformanceBaseConversionDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class PerformanceBaseConversionDescriptorsApi
      */
     public function getPerformanceBaseConversionDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $performance_base_conversion_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getPerformanceBaseConversionDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiPerformanceBaseConversionDescriptor[]';
         $request = $this->getPerformanceBaseConversionDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $performance_base_conversion_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class PerformanceBaseConversionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPerformanceBaseConversionDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor
+     * @return \Descriptors\Model\EdFiPerformanceBaseConversionDescriptor
      */
     public function getPerformanceBaseConversionDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPerformanceBaseConversionDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class PerformanceBaseConversionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPerformanceBaseConversionDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiPerformanceBaseConversionDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPerformanceBaseConversionDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPerformanceBaseConversionDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class PerformanceBaseConversionDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiPerformanceBaseConversionDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiPerformanceBaseConversionDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class PerformanceBaseConversionDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiPerformanceBaseConversionDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class PerformanceBaseConversionDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor';
+            $returnType = '\Descriptors\Model\EdFiPerformanceBaseConversionDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class PerformanceBaseConversionDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor',
+                        '\Descriptors\Model\EdFiPerformanceBaseConversionDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class PerformanceBaseConversionDescriptorsApi
      */
     public function getPerformanceBaseConversionDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getPerformanceBaseConversionDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor';
+        $returnType = '\Descriptors\Model\EdFiPerformanceBaseConversionDescriptor';
         $request = $this->getPerformanceBaseConversionDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class PerformanceBaseConversionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesPerformanceBaseConversionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorKeyChange[]
      */
     public function keyChangesPerformanceBaseConversionDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPerformanceBaseConversionDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class PerformanceBaseConversionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesPerformanceBaseConversionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesPerformanceBaseConversionDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPerformanceBaseConversionDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class PerformanceBaseConversionDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class PerformanceBaseConversionDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class PerformanceBaseConversionDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class PerformanceBaseConversionDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class PerformanceBaseConversionDescriptorsApi
      */
     public function keyChangesPerformanceBaseConversionDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesPerformanceBaseConversionDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiPerformanceBaseConversionDescriptorKeyChange[]';
         $request = $this->keyChangesPerformanceBaseConversionDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class PerformanceBaseConversionDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPerformanceBaseConversionDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class PerformanceBaseConversionDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPerformanceBaseConversionDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class PerformanceBaseConversionDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPerformanceBaseConversionDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class PerformanceBaseConversionDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPerformanceBaseConversionDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class PerformanceBaseConversionDescriptorsApi
     /**
      * Create request for operation 'postPerformanceBaseConversionDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postPerformanceBaseConversionDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class PerformanceBaseConversionDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPerformanceBaseConversionDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class PerformanceBaseConversionDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPerformanceBaseConversionDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class PerformanceBaseConversionDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPerformanceBaseConversionDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class PerformanceBaseConversionDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPerformanceBaseConversionDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class PerformanceBaseConversionDescriptorsApi
      * Create request for operation 'putPerformanceBaseConversionDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiPerformanceBaseConversionDescriptor $ed_fi_performance_base_conversion_descriptor The JSON representation of the \&quot;performanceBaseConversionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putPerformanceBaseConversionDescriptor'] to see the possible values for this operation
      *

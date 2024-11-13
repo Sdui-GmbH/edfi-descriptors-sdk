@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Descriptors\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Descriptors\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete imple
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKey'
+        'key_values' => '\Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKey'
     ];
 
     /**
@@ -360,7 +360,7 @@ class TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete imple
     /**
      * Gets key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKey|null
      */
     public function getKeyValues()
     {
@@ -370,7 +370,7 @@ class TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorDelete imple
     /**
      * Sets key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKey|null $key_values key_values
+     * @param \Descriptors\Model\TrackedChangesEdFiBarrierToInternetAccessInResidenceDescriptorKey|null $key_values key_values
      *
      * @return self
      */

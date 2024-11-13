@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * RepeatIdentifierDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class RepeatIdentifierDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteRepeatIdentifierDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class RepeatIdentifierDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteRepeatIdentifierDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class RepeatIdentifierDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesRepeatIdentifierDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiRepeatIdentifierDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiRepeatIdentifierDescriptorDelete[]
      */
     public function deletesRepeatIdentifierDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesRepeatIdentifierDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class RepeatIdentifierDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesRepeatIdentifierDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiRepeatIdentifierDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiRepeatIdentifierDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesRepeatIdentifierDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesRepeatIdentifierDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class RepeatIdentifierDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiRepeatIdentifierDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiRepeatIdentifierDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiRepeatIdentifierDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiRepeatIdentifierDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class RepeatIdentifierDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiRepeatIdentifierDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiRepeatIdentifierDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class RepeatIdentifierDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiRepeatIdentifierDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiRepeatIdentifierDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class RepeatIdentifierDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiRepeatIdentifierDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiRepeatIdentifierDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class RepeatIdentifierDescriptorsApi
      */
     public function deletesRepeatIdentifierDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesRepeatIdentifierDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiRepeatIdentifierDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiRepeatIdentifierDescriptorDelete[]';
         $request = $this->deletesRepeatIdentifierDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class RepeatIdentifierDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRepeatIdentifierDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor[]
+     * @return \Descriptors\Model\EdFiRepeatIdentifierDescriptor[]
      */
     public function getRepeatIdentifierDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $repeat_identifier_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getRepeatIdentifierDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class RepeatIdentifierDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRepeatIdentifierDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiRepeatIdentifierDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getRepeatIdentifierDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $repeat_identifier_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getRepeatIdentifierDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class RepeatIdentifierDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiRepeatIdentifierDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiRepeatIdentifierDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class RepeatIdentifierDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiRepeatIdentifierDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class RepeatIdentifierDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiRepeatIdentifierDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class RepeatIdentifierDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor[]',
+                        '\Descriptors\Model\EdFiRepeatIdentifierDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class RepeatIdentifierDescriptorsApi
      */
     public function getRepeatIdentifierDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $repeat_identifier_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getRepeatIdentifierDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiRepeatIdentifierDescriptor[]';
         $request = $this->getRepeatIdentifierDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $repeat_identifier_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class RepeatIdentifierDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRepeatIdentifierDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor
+     * @return \Descriptors\Model\EdFiRepeatIdentifierDescriptor
      */
     public function getRepeatIdentifierDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getRepeatIdentifierDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class RepeatIdentifierDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRepeatIdentifierDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiRepeatIdentifierDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRepeatIdentifierDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getRepeatIdentifierDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class RepeatIdentifierDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiRepeatIdentifierDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiRepeatIdentifierDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class RepeatIdentifierDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiRepeatIdentifierDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class RepeatIdentifierDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor';
+            $returnType = '\Descriptors\Model\EdFiRepeatIdentifierDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class RepeatIdentifierDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor',
+                        '\Descriptors\Model\EdFiRepeatIdentifierDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class RepeatIdentifierDescriptorsApi
      */
     public function getRepeatIdentifierDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getRepeatIdentifierDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor';
+        $returnType = '\Descriptors\Model\EdFiRepeatIdentifierDescriptor';
         $request = $this->getRepeatIdentifierDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class RepeatIdentifierDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesRepeatIdentifierDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiRepeatIdentifierDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiRepeatIdentifierDescriptorKeyChange[]
      */
     public function keyChangesRepeatIdentifierDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesRepeatIdentifierDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class RepeatIdentifierDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesRepeatIdentifierDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiRepeatIdentifierDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiRepeatIdentifierDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesRepeatIdentifierDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesRepeatIdentifierDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class RepeatIdentifierDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiRepeatIdentifierDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiRepeatIdentifierDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiRepeatIdentifierDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiRepeatIdentifierDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class RepeatIdentifierDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiRepeatIdentifierDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiRepeatIdentifierDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class RepeatIdentifierDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiRepeatIdentifierDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiRepeatIdentifierDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class RepeatIdentifierDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiRepeatIdentifierDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiRepeatIdentifierDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class RepeatIdentifierDescriptorsApi
      */
     public function keyChangesRepeatIdentifierDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesRepeatIdentifierDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiRepeatIdentifierDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiRepeatIdentifierDescriptorKeyChange[]';
         $request = $this->keyChangesRepeatIdentifierDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class RepeatIdentifierDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postRepeatIdentifierDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class RepeatIdentifierDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postRepeatIdentifierDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class RepeatIdentifierDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postRepeatIdentifierDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class RepeatIdentifierDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postRepeatIdentifierDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class RepeatIdentifierDescriptorsApi
     /**
      * Create request for operation 'postRepeatIdentifierDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postRepeatIdentifierDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class RepeatIdentifierDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putRepeatIdentifierDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class RepeatIdentifierDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putRepeatIdentifierDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class RepeatIdentifierDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putRepeatIdentifierDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class RepeatIdentifierDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putRepeatIdentifierDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class RepeatIdentifierDescriptorsApi
      * Create request for operation 'putRepeatIdentifierDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiRepeatIdentifierDescriptor $ed_fi_repeat_identifier_descriptor The JSON representation of the \&quot;repeatIdentifierDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putRepeatIdentifierDescriptor'] to see the possible values for this operation
      *

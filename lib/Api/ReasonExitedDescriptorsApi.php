@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * ReasonExitedDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class ReasonExitedDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteReasonExitedDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class ReasonExitedDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteReasonExitedDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class ReasonExitedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesReasonExitedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorDelete[]
      */
     public function deletesReasonExitedDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesReasonExitedDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class ReasonExitedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesReasonExitedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesReasonExitedDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesReasonExitedDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class ReasonExitedDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class ReasonExitedDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class ReasonExitedDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class ReasonExitedDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class ReasonExitedDescriptorsApi
      */
     public function deletesReasonExitedDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesReasonExitedDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorDelete[]';
         $request = $this->deletesReasonExitedDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class ReasonExitedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getReasonExitedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiReasonExitedDescriptor[]
+     * @return \Descriptors\Model\EdFiReasonExitedDescriptor[]
      */
     public function getReasonExitedDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $reason_exited_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getReasonExitedDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class ReasonExitedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getReasonExitedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiReasonExitedDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiReasonExitedDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getReasonExitedDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $reason_exited_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getReasonExitedDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class ReasonExitedDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiReasonExitedDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiReasonExitedDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiReasonExitedDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiReasonExitedDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class ReasonExitedDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiReasonExitedDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiReasonExitedDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class ReasonExitedDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiReasonExitedDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiReasonExitedDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class ReasonExitedDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiReasonExitedDescriptor[]',
+                        '\Descriptors\Model\EdFiReasonExitedDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class ReasonExitedDescriptorsApi
      */
     public function getReasonExitedDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $reason_exited_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getReasonExitedDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiReasonExitedDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiReasonExitedDescriptor[]';
         $request = $this->getReasonExitedDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $reason_exited_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class ReasonExitedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getReasonExitedDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiReasonExitedDescriptor
+     * @return \Descriptors\Model\EdFiReasonExitedDescriptor
      */
     public function getReasonExitedDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getReasonExitedDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class ReasonExitedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getReasonExitedDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiReasonExitedDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiReasonExitedDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getReasonExitedDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getReasonExitedDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class ReasonExitedDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiReasonExitedDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiReasonExitedDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiReasonExitedDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiReasonExitedDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class ReasonExitedDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiReasonExitedDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiReasonExitedDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class ReasonExitedDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiReasonExitedDescriptor';
+            $returnType = '\Descriptors\Model\EdFiReasonExitedDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class ReasonExitedDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiReasonExitedDescriptor',
+                        '\Descriptors\Model\EdFiReasonExitedDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class ReasonExitedDescriptorsApi
      */
     public function getReasonExitedDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getReasonExitedDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiReasonExitedDescriptor';
+        $returnType = '\Descriptors\Model\EdFiReasonExitedDescriptor';
         $request = $this->getReasonExitedDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class ReasonExitedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesReasonExitedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKeyChange[]
      */
     public function keyChangesReasonExitedDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesReasonExitedDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class ReasonExitedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesReasonExitedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesReasonExitedDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesReasonExitedDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class ReasonExitedDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class ReasonExitedDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class ReasonExitedDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class ReasonExitedDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class ReasonExitedDescriptorsApi
      */
     public function keyChangesReasonExitedDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesReasonExitedDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiReasonExitedDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiReasonExitedDescriptorKeyChange[]';
         $request = $this->keyChangesReasonExitedDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class ReasonExitedDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postReasonExitedDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class ReasonExitedDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postReasonExitedDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class ReasonExitedDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postReasonExitedDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class ReasonExitedDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postReasonExitedDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class ReasonExitedDescriptorsApi
     /**
      * Create request for operation 'postReasonExitedDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postReasonExitedDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class ReasonExitedDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putReasonExitedDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class ReasonExitedDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putReasonExitedDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class ReasonExitedDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putReasonExitedDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class ReasonExitedDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putReasonExitedDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class ReasonExitedDescriptorsApi
      * Create request for operation 'putReasonExitedDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiReasonExitedDescriptor $ed_fi_reason_exited_descriptor The JSON representation of the \&quot;reasonExitedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putReasonExitedDescriptor'] to see the possible values for this operation
      *

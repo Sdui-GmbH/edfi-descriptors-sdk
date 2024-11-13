@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Descriptors\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Descriptors\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiEducationOrganizationIdentificationSystemDescriptorDelete Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TrackedChangesEdFiEducationOrganizationIdentificationSystemDescriptorDelet
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiEducationOrganizationIdentificationSystemDescriptorKey'
+        'key_values' => '\Descriptors\Model\TrackedChangesEdFiEducationOrganizationIdentificationSystemDescriptorKey'
     ];
 
     /**
@@ -360,7 +360,7 @@ class TrackedChangesEdFiEducationOrganizationIdentificationSystemDescriptorDelet
     /**
      * Gets key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEducationOrganizationIdentificationSystemDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesEdFiEducationOrganizationIdentificationSystemDescriptorKey|null
      */
     public function getKeyValues()
     {
@@ -370,7 +370,7 @@ class TrackedChangesEdFiEducationOrganizationIdentificationSystemDescriptorDelet
     /**
      * Sets key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesEdFiEducationOrganizationIdentificationSystemDescriptorKey|null $key_values key_values
+     * @param \Descriptors\Model\TrackedChangesEdFiEducationOrganizationIdentificationSystemDescriptorKey|null $key_values key_values
      *
      * @return self
      */

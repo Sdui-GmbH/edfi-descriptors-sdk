@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * RubricRatingLevelDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class RubricRatingLevelDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteRubricRatingLevelDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class RubricRatingLevelDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteRubricRatingLevelDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class RubricRatingLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesRubricRatingLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmRubricRatingLevelDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesTpdmRubricRatingLevelDescriptorDelete[]
      */
     public function deletesRubricRatingLevelDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesRubricRatingLevelDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class RubricRatingLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesRubricRatingLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmRubricRatingLevelDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesTpdmRubricRatingLevelDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesRubricRatingLevelDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesRubricRatingLevelDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class RubricRatingLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmRubricRatingLevelDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesTpdmRubricRatingLevelDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmRubricRatingLevelDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesTpdmRubricRatingLevelDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class RubricRatingLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmRubricRatingLevelDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmRubricRatingLevelDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class RubricRatingLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmRubricRatingLevelDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesTpdmRubricRatingLevelDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class RubricRatingLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesTpdmRubricRatingLevelDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesTpdmRubricRatingLevelDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class RubricRatingLevelDescriptorsApi
      */
     public function deletesRubricRatingLevelDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesRubricRatingLevelDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmRubricRatingLevelDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesTpdmRubricRatingLevelDescriptorDelete[]';
         $request = $this->deletesRubricRatingLevelDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class RubricRatingLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRubricRatingLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor[]
+     * @return \Descriptors\Model\TpdmRubricRatingLevelDescriptor[]
      */
     public function getRubricRatingLevelDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $rubric_rating_level_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getRubricRatingLevelDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class RubricRatingLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRubricRatingLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TpdmRubricRatingLevelDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getRubricRatingLevelDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $rubric_rating_level_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getRubricRatingLevelDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class RubricRatingLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TpdmRubricRatingLevelDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\TpdmRubricRatingLevelDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class RubricRatingLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmRubricRatingLevelDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class RubricRatingLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor[]';
+            $returnType = '\Descriptors\Model\TpdmRubricRatingLevelDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class RubricRatingLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor[]',
+                        '\Descriptors\Model\TpdmRubricRatingLevelDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class RubricRatingLevelDescriptorsApi
      */
     public function getRubricRatingLevelDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $rubric_rating_level_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getRubricRatingLevelDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor[]';
+        $returnType = '\Descriptors\Model\TpdmRubricRatingLevelDescriptor[]';
         $request = $this->getRubricRatingLevelDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $rubric_rating_level_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class RubricRatingLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRubricRatingLevelDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor
+     * @return \Descriptors\Model\TpdmRubricRatingLevelDescriptor
      */
     public function getRubricRatingLevelDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getRubricRatingLevelDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class RubricRatingLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRubricRatingLevelDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TpdmRubricRatingLevelDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRubricRatingLevelDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getRubricRatingLevelDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class RubricRatingLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TpdmRubricRatingLevelDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\TpdmRubricRatingLevelDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class RubricRatingLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TpdmRubricRatingLevelDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class RubricRatingLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor';
+            $returnType = '\Descriptors\Model\TpdmRubricRatingLevelDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class RubricRatingLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor',
+                        '\Descriptors\Model\TpdmRubricRatingLevelDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class RubricRatingLevelDescriptorsApi
      */
     public function getRubricRatingLevelDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getRubricRatingLevelDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor';
+        $returnType = '\Descriptors\Model\TpdmRubricRatingLevelDescriptor';
         $request = $this->getRubricRatingLevelDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class RubricRatingLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesRubricRatingLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesTpdmRubricRatingLevelDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesTpdmRubricRatingLevelDescriptorKeyChange[]
      */
     public function keyChangesRubricRatingLevelDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesRubricRatingLevelDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class RubricRatingLevelDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesRubricRatingLevelDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesTpdmRubricRatingLevelDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesTpdmRubricRatingLevelDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesRubricRatingLevelDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesRubricRatingLevelDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class RubricRatingLevelDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesTpdmRubricRatingLevelDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesTpdmRubricRatingLevelDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesTpdmRubricRatingLevelDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesTpdmRubricRatingLevelDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class RubricRatingLevelDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesTpdmRubricRatingLevelDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesTpdmRubricRatingLevelDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class RubricRatingLevelDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmRubricRatingLevelDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesTpdmRubricRatingLevelDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class RubricRatingLevelDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesTpdmRubricRatingLevelDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesTpdmRubricRatingLevelDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class RubricRatingLevelDescriptorsApi
      */
     public function keyChangesRubricRatingLevelDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesRubricRatingLevelDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesTpdmRubricRatingLevelDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesTpdmRubricRatingLevelDescriptorKeyChange[]';
         $request = $this->keyChangesRubricRatingLevelDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class RubricRatingLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postRubricRatingLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class RubricRatingLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postRubricRatingLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class RubricRatingLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postRubricRatingLevelDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class RubricRatingLevelDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postRubricRatingLevelDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class RubricRatingLevelDescriptorsApi
     /**
      * Create request for operation 'postRubricRatingLevelDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postRubricRatingLevelDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class RubricRatingLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putRubricRatingLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class RubricRatingLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putRubricRatingLevelDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class RubricRatingLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putRubricRatingLevelDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class RubricRatingLevelDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putRubricRatingLevelDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class RubricRatingLevelDescriptorsApi
      * Create request for operation 'putRubricRatingLevelDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\TpdmRubricRatingLevelDescriptor $tpdm_rubric_rating_level_descriptor The JSON representation of the \&quot;rubricRatingLevelDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putRubricRatingLevelDescriptor'] to see the possible values for this operation
      *

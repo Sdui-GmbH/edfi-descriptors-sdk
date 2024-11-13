@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * AcademicSubjectDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class AcademicSubjectDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAcademicSubjectDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class AcademicSubjectDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteAcademicSubjectDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class AcademicSubjectDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAcademicSubjectDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiAcademicSubjectDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiAcademicSubjectDescriptorDelete[]
      */
     public function deletesAcademicSubjectDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAcademicSubjectDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class AcademicSubjectDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAcademicSubjectDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiAcademicSubjectDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiAcademicSubjectDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesAcademicSubjectDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAcademicSubjectDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class AcademicSubjectDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiAcademicSubjectDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiAcademicSubjectDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiAcademicSubjectDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiAcademicSubjectDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class AcademicSubjectDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiAcademicSubjectDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiAcademicSubjectDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class AcademicSubjectDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAcademicSubjectDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiAcademicSubjectDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class AcademicSubjectDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiAcademicSubjectDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiAcademicSubjectDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class AcademicSubjectDescriptorsApi
      */
     public function deletesAcademicSubjectDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAcademicSubjectDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAcademicSubjectDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiAcademicSubjectDescriptorDelete[]';
         $request = $this->deletesAcademicSubjectDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class AcademicSubjectDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAcademicSubjectDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor[]
+     * @return \Descriptors\Model\EdFiAcademicSubjectDescriptor[]
      */
     public function getAcademicSubjectDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $academic_subject_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicSubjectDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class AcademicSubjectDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAcademicSubjectDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiAcademicSubjectDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAcademicSubjectDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $academic_subject_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicSubjectDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class AcademicSubjectDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiAcademicSubjectDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiAcademicSubjectDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class AcademicSubjectDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiAcademicSubjectDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class AcademicSubjectDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiAcademicSubjectDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class AcademicSubjectDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor[]',
+                        '\Descriptors\Model\EdFiAcademicSubjectDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class AcademicSubjectDescriptorsApi
      */
     public function getAcademicSubjectDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $academic_subject_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicSubjectDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiAcademicSubjectDescriptor[]';
         $request = $this->getAcademicSubjectDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $academic_subject_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class AcademicSubjectDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAcademicSubjectDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor
+     * @return \Descriptors\Model\EdFiAcademicSubjectDescriptor
      */
     public function getAcademicSubjectDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicSubjectDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class AcademicSubjectDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAcademicSubjectDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiAcademicSubjectDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAcademicSubjectDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicSubjectDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class AcademicSubjectDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiAcademicSubjectDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiAcademicSubjectDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class AcademicSubjectDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiAcademicSubjectDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class AcademicSubjectDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor';
+            $returnType = '\Descriptors\Model\EdFiAcademicSubjectDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class AcademicSubjectDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor',
+                        '\Descriptors\Model\EdFiAcademicSubjectDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class AcademicSubjectDescriptorsApi
      */
     public function getAcademicSubjectDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicSubjectDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor';
+        $returnType = '\Descriptors\Model\EdFiAcademicSubjectDescriptor';
         $request = $this->getAcademicSubjectDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class AcademicSubjectDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAcademicSubjectDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiAcademicSubjectDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiAcademicSubjectDescriptorKeyChange[]
      */
     public function keyChangesAcademicSubjectDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAcademicSubjectDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class AcademicSubjectDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAcademicSubjectDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiAcademicSubjectDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiAcademicSubjectDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesAcademicSubjectDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAcademicSubjectDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class AcademicSubjectDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiAcademicSubjectDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiAcademicSubjectDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiAcademicSubjectDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiAcademicSubjectDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class AcademicSubjectDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiAcademicSubjectDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiAcademicSubjectDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class AcademicSubjectDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAcademicSubjectDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiAcademicSubjectDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class AcademicSubjectDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiAcademicSubjectDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiAcademicSubjectDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class AcademicSubjectDescriptorsApi
      */
     public function keyChangesAcademicSubjectDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAcademicSubjectDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiAcademicSubjectDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiAcademicSubjectDescriptorKeyChange[]';
         $request = $this->keyChangesAcademicSubjectDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class AcademicSubjectDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAcademicSubjectDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class AcademicSubjectDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAcademicSubjectDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class AcademicSubjectDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAcademicSubjectDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class AcademicSubjectDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAcademicSubjectDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class AcademicSubjectDescriptorsApi
     /**
      * Create request for operation 'postAcademicSubjectDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postAcademicSubjectDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class AcademicSubjectDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAcademicSubjectDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class AcademicSubjectDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAcademicSubjectDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class AcademicSubjectDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAcademicSubjectDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class AcademicSubjectDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAcademicSubjectDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class AcademicSubjectDescriptorsApi
      * Create request for operation 'putAcademicSubjectDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiAcademicSubjectDescriptor $ed_fi_academic_subject_descriptor The JSON representation of the \&quot;academicSubjectDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putAcademicSubjectDescriptor'] to see the possible values for this operation
      *

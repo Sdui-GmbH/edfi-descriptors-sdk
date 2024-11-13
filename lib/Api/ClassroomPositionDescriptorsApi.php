@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * ClassroomPositionDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class ClassroomPositionDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteClassroomPositionDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class ClassroomPositionDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteClassroomPositionDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class ClassroomPositionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesClassroomPositionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]
      */
     public function deletesClassroomPositionDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesClassroomPositionDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class ClassroomPositionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesClassroomPositionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesClassroomPositionDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesClassroomPositionDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class ClassroomPositionDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class ClassroomPositionDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class ClassroomPositionDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class ClassroomPositionDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class ClassroomPositionDescriptorsApi
      */
     public function deletesClassroomPositionDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesClassroomPositionDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorDelete[]';
         $request = $this->deletesClassroomPositionDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class ClassroomPositionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getClassroomPositionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor[]
+     * @return \Descriptors\Model\EdFiClassroomPositionDescriptor[]
      */
     public function getClassroomPositionDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $classroom_position_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getClassroomPositionDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class ClassroomPositionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getClassroomPositionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiClassroomPositionDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getClassroomPositionDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $classroom_position_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getClassroomPositionDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class ClassroomPositionDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiClassroomPositionDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiClassroomPositionDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiClassroomPositionDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiClassroomPositionDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class ClassroomPositionDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiClassroomPositionDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiClassroomPositionDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class ClassroomPositionDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiClassroomPositionDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiClassroomPositionDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class ClassroomPositionDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiClassroomPositionDescriptor[]',
+                        '\Descriptors\Model\EdFiClassroomPositionDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class ClassroomPositionDescriptorsApi
      */
     public function getClassroomPositionDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $classroom_position_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getClassroomPositionDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiClassroomPositionDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiClassroomPositionDescriptor[]';
         $request = $this->getClassroomPositionDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $classroom_position_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class ClassroomPositionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getClassroomPositionDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor
+     * @return \Descriptors\Model\EdFiClassroomPositionDescriptor
      */
     public function getClassroomPositionDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getClassroomPositionDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class ClassroomPositionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getClassroomPositionDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiClassroomPositionDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getClassroomPositionDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getClassroomPositionDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class ClassroomPositionDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiClassroomPositionDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiClassroomPositionDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiClassroomPositionDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiClassroomPositionDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class ClassroomPositionDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiClassroomPositionDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiClassroomPositionDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class ClassroomPositionDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiClassroomPositionDescriptor';
+            $returnType = '\Descriptors\Model\EdFiClassroomPositionDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class ClassroomPositionDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiClassroomPositionDescriptor',
+                        '\Descriptors\Model\EdFiClassroomPositionDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class ClassroomPositionDescriptorsApi
      */
     public function getClassroomPositionDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getClassroomPositionDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiClassroomPositionDescriptor';
+        $returnType = '\Descriptors\Model\EdFiClassroomPositionDescriptor';
         $request = $this->getClassroomPositionDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class ClassroomPositionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesClassroomPositionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]
      */
     public function keyChangesClassroomPositionDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesClassroomPositionDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class ClassroomPositionDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesClassroomPositionDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesClassroomPositionDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesClassroomPositionDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class ClassroomPositionDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class ClassroomPositionDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class ClassroomPositionDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class ClassroomPositionDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class ClassroomPositionDescriptorsApi
      */
     public function keyChangesClassroomPositionDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesClassroomPositionDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiClassroomPositionDescriptorKeyChange[]';
         $request = $this->keyChangesClassroomPositionDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class ClassroomPositionDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postClassroomPositionDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class ClassroomPositionDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postClassroomPositionDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class ClassroomPositionDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postClassroomPositionDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class ClassroomPositionDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postClassroomPositionDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class ClassroomPositionDescriptorsApi
     /**
      * Create request for operation 'postClassroomPositionDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postClassroomPositionDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class ClassroomPositionDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putClassroomPositionDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class ClassroomPositionDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putClassroomPositionDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class ClassroomPositionDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putClassroomPositionDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class ClassroomPositionDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putClassroomPositionDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class ClassroomPositionDescriptorsApi
      * Create request for operation 'putClassroomPositionDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiClassroomPositionDescriptor $ed_fi_classroom_position_descriptor The JSON representation of the \&quot;classroomPositionDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putClassroomPositionDescriptor'] to see the possible values for this operation
      *

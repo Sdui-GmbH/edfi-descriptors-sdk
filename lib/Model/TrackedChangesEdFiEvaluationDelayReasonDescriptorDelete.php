@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Descriptors\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Descriptors\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete implements ModelIn
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKey'
+        'key_values' => '\Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKey'
     ];
 
     /**
@@ -360,7 +360,7 @@ class TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete implements ModelIn
     /**
      * Gets key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKey|null
      */
     public function getKeyValues()
     {
@@ -370,7 +370,7 @@ class TrackedChangesEdFiEvaluationDelayReasonDescriptorDelete implements ModelIn
     /**
      * Sets key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKey|null $key_values key_values
+     * @param \Descriptors\Model\TrackedChangesEdFiEvaluationDelayReasonDescriptorKey|null $key_values key_values
      *
      * @return self
      */

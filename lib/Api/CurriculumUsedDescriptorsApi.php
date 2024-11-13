@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * CurriculumUsedDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class CurriculumUsedDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCurriculumUsedDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class CurriculumUsedDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCurriculumUsedDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class CurriculumUsedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCurriculumUsedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiCurriculumUsedDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiCurriculumUsedDescriptorDelete[]
      */
     public function deletesCurriculumUsedDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCurriculumUsedDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class CurriculumUsedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesCurriculumUsedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiCurriculumUsedDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiCurriculumUsedDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesCurriculumUsedDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCurriculumUsedDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class CurriculumUsedDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiCurriculumUsedDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiCurriculumUsedDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiCurriculumUsedDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiCurriculumUsedDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class CurriculumUsedDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiCurriculumUsedDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiCurriculumUsedDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class CurriculumUsedDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCurriculumUsedDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiCurriculumUsedDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class CurriculumUsedDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiCurriculumUsedDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiCurriculumUsedDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class CurriculumUsedDescriptorsApi
      */
     public function deletesCurriculumUsedDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesCurriculumUsedDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCurriculumUsedDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiCurriculumUsedDescriptorDelete[]';
         $request = $this->deletesCurriculumUsedDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class CurriculumUsedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCurriculumUsedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor[]
+     * @return \Descriptors\Model\EdFiCurriculumUsedDescriptor[]
      */
     public function getCurriculumUsedDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $curriculum_used_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCurriculumUsedDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class CurriculumUsedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCurriculumUsedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiCurriculumUsedDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getCurriculumUsedDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $curriculum_used_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCurriculumUsedDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class CurriculumUsedDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiCurriculumUsedDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiCurriculumUsedDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class CurriculumUsedDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiCurriculumUsedDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class CurriculumUsedDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiCurriculumUsedDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class CurriculumUsedDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor[]',
+                        '\Descriptors\Model\EdFiCurriculumUsedDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class CurriculumUsedDescriptorsApi
      */
     public function getCurriculumUsedDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $curriculum_used_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getCurriculumUsedDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiCurriculumUsedDescriptor[]';
         $request = $this->getCurriculumUsedDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $curriculum_used_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class CurriculumUsedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCurriculumUsedDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor
+     * @return \Descriptors\Model\EdFiCurriculumUsedDescriptor
      */
     public function getCurriculumUsedDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCurriculumUsedDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class CurriculumUsedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCurriculumUsedDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiCurriculumUsedDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCurriculumUsedDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCurriculumUsedDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class CurriculumUsedDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiCurriculumUsedDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiCurriculumUsedDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class CurriculumUsedDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiCurriculumUsedDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class CurriculumUsedDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor';
+            $returnType = '\Descriptors\Model\EdFiCurriculumUsedDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class CurriculumUsedDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor',
+                        '\Descriptors\Model\EdFiCurriculumUsedDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class CurriculumUsedDescriptorsApi
      */
     public function getCurriculumUsedDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getCurriculumUsedDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor';
+        $returnType = '\Descriptors\Model\EdFiCurriculumUsedDescriptor';
         $request = $this->getCurriculumUsedDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class CurriculumUsedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCurriculumUsedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiCurriculumUsedDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiCurriculumUsedDescriptorKeyChange[]
      */
     public function keyChangesCurriculumUsedDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCurriculumUsedDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class CurriculumUsedDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesCurriculumUsedDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiCurriculumUsedDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiCurriculumUsedDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesCurriculumUsedDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCurriculumUsedDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class CurriculumUsedDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiCurriculumUsedDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiCurriculumUsedDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiCurriculumUsedDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiCurriculumUsedDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class CurriculumUsedDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiCurriculumUsedDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiCurriculumUsedDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class CurriculumUsedDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCurriculumUsedDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiCurriculumUsedDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class CurriculumUsedDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiCurriculumUsedDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiCurriculumUsedDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class CurriculumUsedDescriptorsApi
      */
     public function keyChangesCurriculumUsedDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesCurriculumUsedDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiCurriculumUsedDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiCurriculumUsedDescriptorKeyChange[]';
         $request = $this->keyChangesCurriculumUsedDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class CurriculumUsedDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCurriculumUsedDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class CurriculumUsedDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCurriculumUsedDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class CurriculumUsedDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCurriculumUsedDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class CurriculumUsedDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCurriculumUsedDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class CurriculumUsedDescriptorsApi
     /**
      * Create request for operation 'postCurriculumUsedDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCurriculumUsedDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class CurriculumUsedDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCurriculumUsedDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class CurriculumUsedDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCurriculumUsedDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class CurriculumUsedDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCurriculumUsedDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class CurriculumUsedDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCurriculumUsedDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class CurriculumUsedDescriptorsApi
      * Create request for operation 'putCurriculumUsedDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiCurriculumUsedDescriptor $ed_fi_curriculum_used_descriptor The JSON representation of the \&quot;curriculumUsedDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCurriculumUsedDescriptor'] to see the possible values for this operation
      *

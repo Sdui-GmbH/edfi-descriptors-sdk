@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Descriptors\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Descriptors\ObjectSerializer;
 
 /**
  * TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete implements Mo
     protected static $openAPITypes = [
         'id' => 'string',
         'change_version' => 'float',
-        'key_values' => '\OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKey'
+        'key_values' => '\Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKey'
     ];
 
     /**
@@ -360,7 +360,7 @@ class TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete implements Mo
     /**
      * Gets key_values
      *
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKey|null
+     * @return \Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKey|null
      */
     public function getKeyValues()
     {
@@ -370,7 +370,7 @@ class TrackedChangesEdFiSpecialEducationExitReasonDescriptorDelete implements Mo
     /**
      * Sets key_values
      *
-     * @param \OpenAPI\Client\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKey|null $key_values key_values
+     * @param \Descriptors\Model\TrackedChangesEdFiSpecialEducationExitReasonDescriptorKey|null $key_values key_values
      *
      * @return self
      */

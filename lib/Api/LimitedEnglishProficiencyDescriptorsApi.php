@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * LimitedEnglishProficiencyDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class LimitedEnglishProficiencyDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteLimitedEnglishProficiencyDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class LimitedEnglishProficiencyDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteLimitedEnglishProficiencyDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class LimitedEnglishProficiencyDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesLimitedEnglishProficiencyDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorDelete[]
      */
     public function deletesLimitedEnglishProficiencyDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesLimitedEnglishProficiencyDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class LimitedEnglishProficiencyDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesLimitedEnglishProficiencyDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesLimitedEnglishProficiencyDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesLimitedEnglishProficiencyDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class LimitedEnglishProficiencyDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class LimitedEnglishProficiencyDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class LimitedEnglishProficiencyDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class LimitedEnglishProficiencyDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class LimitedEnglishProficiencyDescriptorsApi
      */
     public function deletesLimitedEnglishProficiencyDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesLimitedEnglishProficiencyDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorDelete[]';
         $request = $this->deletesLimitedEnglishProficiencyDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class LimitedEnglishProficiencyDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLimitedEnglishProficiencyDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor[]
+     * @return \Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor[]
      */
     public function getLimitedEnglishProficiencyDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $limited_english_proficiency_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getLimitedEnglishProficiencyDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class LimitedEnglishProficiencyDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLimitedEnglishProficiencyDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getLimitedEnglishProficiencyDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $limited_english_proficiency_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getLimitedEnglishProficiencyDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class LimitedEnglishProficiencyDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class LimitedEnglishProficiencyDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class LimitedEnglishProficiencyDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class LimitedEnglishProficiencyDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor[]',
+                        '\Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class LimitedEnglishProficiencyDescriptorsApi
      */
     public function getLimitedEnglishProficiencyDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $limited_english_proficiency_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getLimitedEnglishProficiencyDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor[]';
         $request = $this->getLimitedEnglishProficiencyDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $limited_english_proficiency_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class LimitedEnglishProficiencyDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLimitedEnglishProficiencyDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor
+     * @return \Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor
      */
     public function getLimitedEnglishProficiencyDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getLimitedEnglishProficiencyDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class LimitedEnglishProficiencyDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLimitedEnglishProficiencyDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLimitedEnglishProficiencyDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getLimitedEnglishProficiencyDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class LimitedEnglishProficiencyDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class LimitedEnglishProficiencyDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class LimitedEnglishProficiencyDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor';
+            $returnType = '\Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class LimitedEnglishProficiencyDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor',
+                        '\Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class LimitedEnglishProficiencyDescriptorsApi
      */
     public function getLimitedEnglishProficiencyDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getLimitedEnglishProficiencyDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor';
+        $returnType = '\Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor';
         $request = $this->getLimitedEnglishProficiencyDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class LimitedEnglishProficiencyDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesLimitedEnglishProficiencyDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorKeyChange[]
      */
     public function keyChangesLimitedEnglishProficiencyDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesLimitedEnglishProficiencyDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class LimitedEnglishProficiencyDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesLimitedEnglishProficiencyDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesLimitedEnglishProficiencyDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesLimitedEnglishProficiencyDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class LimitedEnglishProficiencyDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class LimitedEnglishProficiencyDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class LimitedEnglishProficiencyDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class LimitedEnglishProficiencyDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class LimitedEnglishProficiencyDescriptorsApi
      */
     public function keyChangesLimitedEnglishProficiencyDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesLimitedEnglishProficiencyDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiLimitedEnglishProficiencyDescriptorKeyChange[]';
         $request = $this->keyChangesLimitedEnglishProficiencyDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class LimitedEnglishProficiencyDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLimitedEnglishProficiencyDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class LimitedEnglishProficiencyDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLimitedEnglishProficiencyDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class LimitedEnglishProficiencyDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLimitedEnglishProficiencyDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class LimitedEnglishProficiencyDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLimitedEnglishProficiencyDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class LimitedEnglishProficiencyDescriptorsApi
     /**
      * Create request for operation 'postLimitedEnglishProficiencyDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postLimitedEnglishProficiencyDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class LimitedEnglishProficiencyDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLimitedEnglishProficiencyDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class LimitedEnglishProficiencyDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLimitedEnglishProficiencyDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class LimitedEnglishProficiencyDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLimitedEnglishProficiencyDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class LimitedEnglishProficiencyDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLimitedEnglishProficiencyDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class LimitedEnglishProficiencyDescriptorsApi
      * Create request for operation 'putLimitedEnglishProficiencyDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiLimitedEnglishProficiencyDescriptor $ed_fi_limited_english_proficiency_descriptor The JSON representation of the \&quot;limitedEnglishProficiencyDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putLimitedEnglishProficiencyDescriptor'] to see the possible values for this operation
      *

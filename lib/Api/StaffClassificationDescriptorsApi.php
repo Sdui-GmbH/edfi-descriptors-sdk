@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * StaffClassificationDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class StaffClassificationDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStaffClassificationDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class StaffClassificationDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteStaffClassificationDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class StaffClassificationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesStaffClassificationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiStaffClassificationDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiStaffClassificationDescriptorDelete[]
      */
     public function deletesStaffClassificationDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesStaffClassificationDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class StaffClassificationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesStaffClassificationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiStaffClassificationDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiStaffClassificationDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesStaffClassificationDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesStaffClassificationDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class StaffClassificationDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiStaffClassificationDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiStaffClassificationDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiStaffClassificationDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiStaffClassificationDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class StaffClassificationDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiStaffClassificationDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiStaffClassificationDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class StaffClassificationDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiStaffClassificationDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiStaffClassificationDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class StaffClassificationDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiStaffClassificationDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiStaffClassificationDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class StaffClassificationDescriptorsApi
      */
     public function deletesStaffClassificationDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesStaffClassificationDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiStaffClassificationDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiStaffClassificationDescriptorDelete[]';
         $request = $this->deletesStaffClassificationDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class StaffClassificationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStaffClassificationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiStaffClassificationDescriptor[]
+     * @return \Descriptors\Model\EdFiStaffClassificationDescriptor[]
      */
     public function getStaffClassificationDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $staff_classification_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getStaffClassificationDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class StaffClassificationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStaffClassificationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiStaffClassificationDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiStaffClassificationDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getStaffClassificationDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $staff_classification_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getStaffClassificationDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class StaffClassificationDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiStaffClassificationDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiStaffClassificationDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiStaffClassificationDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiStaffClassificationDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class StaffClassificationDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiStaffClassificationDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiStaffClassificationDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class StaffClassificationDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiStaffClassificationDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiStaffClassificationDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class StaffClassificationDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiStaffClassificationDescriptor[]',
+                        '\Descriptors\Model\EdFiStaffClassificationDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class StaffClassificationDescriptorsApi
      */
     public function getStaffClassificationDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $staff_classification_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getStaffClassificationDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiStaffClassificationDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiStaffClassificationDescriptor[]';
         $request = $this->getStaffClassificationDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $staff_classification_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class StaffClassificationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStaffClassificationDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiStaffClassificationDescriptor
+     * @return \Descriptors\Model\EdFiStaffClassificationDescriptor
      */
     public function getStaffClassificationDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getStaffClassificationDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class StaffClassificationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStaffClassificationDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiStaffClassificationDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiStaffClassificationDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getStaffClassificationDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getStaffClassificationDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class StaffClassificationDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiStaffClassificationDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiStaffClassificationDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiStaffClassificationDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiStaffClassificationDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class StaffClassificationDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiStaffClassificationDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiStaffClassificationDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class StaffClassificationDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiStaffClassificationDescriptor';
+            $returnType = '\Descriptors\Model\EdFiStaffClassificationDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class StaffClassificationDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiStaffClassificationDescriptor',
+                        '\Descriptors\Model\EdFiStaffClassificationDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class StaffClassificationDescriptorsApi
      */
     public function getStaffClassificationDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getStaffClassificationDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiStaffClassificationDescriptor';
+        $returnType = '\Descriptors\Model\EdFiStaffClassificationDescriptor';
         $request = $this->getStaffClassificationDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class StaffClassificationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesStaffClassificationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiStaffClassificationDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiStaffClassificationDescriptorKeyChange[]
      */
     public function keyChangesStaffClassificationDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesStaffClassificationDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class StaffClassificationDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesStaffClassificationDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiStaffClassificationDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiStaffClassificationDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesStaffClassificationDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesStaffClassificationDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class StaffClassificationDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiStaffClassificationDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiStaffClassificationDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiStaffClassificationDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiStaffClassificationDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class StaffClassificationDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiStaffClassificationDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiStaffClassificationDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class StaffClassificationDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiStaffClassificationDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiStaffClassificationDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class StaffClassificationDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiStaffClassificationDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiStaffClassificationDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class StaffClassificationDescriptorsApi
      */
     public function keyChangesStaffClassificationDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesStaffClassificationDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiStaffClassificationDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiStaffClassificationDescriptorKeyChange[]';
         $request = $this->keyChangesStaffClassificationDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class StaffClassificationDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStaffClassificationDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class StaffClassificationDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStaffClassificationDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class StaffClassificationDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStaffClassificationDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class StaffClassificationDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStaffClassificationDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class StaffClassificationDescriptorsApi
     /**
      * Create request for operation 'postStaffClassificationDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postStaffClassificationDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class StaffClassificationDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStaffClassificationDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class StaffClassificationDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStaffClassificationDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class StaffClassificationDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStaffClassificationDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class StaffClassificationDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStaffClassificationDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class StaffClassificationDescriptorsApi
      * Create request for operation 'putStaffClassificationDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiStaffClassificationDescriptor $ed_fi_staff_classification_descriptor The JSON representation of the \&quot;staffClassificationDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putStaffClassificationDescriptor'] to see the possible values for this operation
      *

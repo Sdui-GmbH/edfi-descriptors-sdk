@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Descriptors\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Descriptors\ApiException;
+use Descriptors\Configuration;
+use Descriptors\HeaderSelector;
+use Descriptors\ObjectSerializer;
 
 /**
  * ProgramSponsorDescriptorsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Descriptors
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class ProgramSponsorDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteProgramSponsorDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -167,7 +167,7 @@ class ProgramSponsorDescriptorsApi
      * @param  string $if_match The ETag header value used to prevent the DELETE from removing a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteProgramSponsorDescriptorById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -384,9 +384,9 @@ class ProgramSponsorDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesProgramSponsorDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiProgramSponsorDescriptorDelete[]
+     * @return \Descriptors\Model\TrackedChangesEdFiProgramSponsorDescriptorDelete[]
      */
     public function deletesProgramSponsorDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesProgramSponsorDescriptors'][0])
     {
@@ -407,9 +407,9 @@ class ProgramSponsorDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesProgramSponsorDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiProgramSponsorDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiProgramSponsorDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deletesProgramSponsorDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesProgramSponsorDescriptors'][0])
     {
@@ -440,11 +440,11 @@ class ProgramSponsorDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiProgramSponsorDescriptorDelete[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiProgramSponsorDescriptorDelete[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiProgramSponsorDescriptorDelete[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiProgramSponsorDescriptorDelete[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -462,7 +462,7 @@ class ProgramSponsorDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiProgramSponsorDescriptorDelete[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiProgramSponsorDescriptorDelete[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -481,7 +481,7 @@ class ProgramSponsorDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiProgramSponsorDescriptorDelete[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiProgramSponsorDescriptorDelete[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class ProgramSponsorDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiProgramSponsorDescriptorDelete[]',
+                        '\Descriptors\Model\TrackedChangesEdFiProgramSponsorDescriptorDelete[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class ProgramSponsorDescriptorsApi
      */
     public function deletesProgramSponsorDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesProgramSponsorDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiProgramSponsorDescriptorDelete[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiProgramSponsorDescriptorDelete[]';
         $request = $this->deletesProgramSponsorDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -768,9 +768,9 @@ class ProgramSponsorDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProgramSponsorDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiProgramSponsorDescriptor[]
+     * @return \Descriptors\Model\EdFiProgramSponsorDescriptor[]
      */
     public function getProgramSponsorDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $program_sponsor_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getProgramSponsorDescriptors'][0])
     {
@@ -792,9 +792,9 @@ class ProgramSponsorDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProgramSponsorDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiProgramSponsorDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiProgramSponsorDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getProgramSponsorDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $program_sponsor_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getProgramSponsorDescriptors'][0])
     {
@@ -825,11 +825,11 @@ class ProgramSponsorDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiProgramSponsorDescriptor[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiProgramSponsorDescriptor[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiProgramSponsorDescriptor[]' !== 'string') {
+                        if ('\Descriptors\Model\EdFiProgramSponsorDescriptor[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class ProgramSponsorDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiProgramSponsorDescriptor[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiProgramSponsorDescriptor[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class ProgramSponsorDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiProgramSponsorDescriptor[]';
+            $returnType = '\Descriptors\Model\EdFiProgramSponsorDescriptor[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class ProgramSponsorDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiProgramSponsorDescriptor[]',
+                        '\Descriptors\Model\EdFiProgramSponsorDescriptor[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class ProgramSponsorDescriptorsApi
      */
     public function getProgramSponsorDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $program_sponsor_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getProgramSponsorDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiProgramSponsorDescriptor[]';
+        $returnType = '\Descriptors\Model\EdFiProgramSponsorDescriptor[]';
         $request = $this->getProgramSponsorDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $program_sponsor_descriptor_id, $use_snapshot, $contentType);
 
         return $this->client
@@ -1162,9 +1162,9 @@ class ProgramSponsorDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProgramSponsorDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EdFiProgramSponsorDescriptor
+     * @return \Descriptors\Model\EdFiProgramSponsorDescriptor
      */
     public function getProgramSponsorDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getProgramSponsorDescriptorsById'][0])
     {
@@ -1182,9 +1182,9 @@ class ProgramSponsorDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProgramSponsorDescriptorsById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EdFiProgramSponsorDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\EdFiProgramSponsorDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProgramSponsorDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getProgramSponsorDescriptorsById'][0])
     {
@@ -1215,11 +1215,11 @@ class ProgramSponsorDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EdFiProgramSponsorDescriptor' === '\SplFileObject') {
+                    if ('\Descriptors\Model\EdFiProgramSponsorDescriptor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EdFiProgramSponsorDescriptor' !== 'string') {
+                        if ('\Descriptors\Model\EdFiProgramSponsorDescriptor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1237,7 +1237,7 @@ class ProgramSponsorDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EdFiProgramSponsorDescriptor', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\EdFiProgramSponsorDescriptor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1256,7 +1256,7 @@ class ProgramSponsorDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\EdFiProgramSponsorDescriptor';
+            $returnType = '\Descriptors\Model\EdFiProgramSponsorDescriptor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1289,7 +1289,7 @@ class ProgramSponsorDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EdFiProgramSponsorDescriptor',
+                        '\Descriptors\Model\EdFiProgramSponsorDescriptor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class ProgramSponsorDescriptorsApi
      */
     public function getProgramSponsorDescriptorsByIdAsyncWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getProgramSponsorDescriptorsById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EdFiProgramSponsorDescriptor';
+        $returnType = '\Descriptors\Model\EdFiProgramSponsorDescriptor';
         $request = $this->getProgramSponsorDescriptorsByIdRequest($id, $if_none_match, $use_snapshot, $contentType);
 
         return $this->client
@@ -1497,9 +1497,9 @@ class ProgramSponsorDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesProgramSponsorDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackedChangesEdFiProgramSponsorDescriptorKeyChange[]
+     * @return \Descriptors\Model\TrackedChangesEdFiProgramSponsorDescriptorKeyChange[]
      */
     public function keyChangesProgramSponsorDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesProgramSponsorDescriptors'][0])
     {
@@ -1520,9 +1520,9 @@ class ProgramSponsorDescriptorsApi
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesProgramSponsorDescriptors'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackedChangesEdFiProgramSponsorDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Descriptors\Model\TrackedChangesEdFiProgramSponsorDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function keyChangesProgramSponsorDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesProgramSponsorDescriptors'][0])
     {
@@ -1553,11 +1553,11 @@ class ProgramSponsorDescriptorsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackedChangesEdFiProgramSponsorDescriptorKeyChange[]' === '\SplFileObject') {
+                    if ('\Descriptors\Model\TrackedChangesEdFiProgramSponsorDescriptorKeyChange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackedChangesEdFiProgramSponsorDescriptorKeyChange[]' !== 'string') {
+                        if ('\Descriptors\Model\TrackedChangesEdFiProgramSponsorDescriptorKeyChange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1575,7 +1575,7 @@ class ProgramSponsorDescriptorsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackedChangesEdFiProgramSponsorDescriptorKeyChange[]', []),
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\TrackedChangesEdFiProgramSponsorDescriptorKeyChange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1594,7 +1594,7 @@ class ProgramSponsorDescriptorsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiProgramSponsorDescriptorKeyChange[]';
+            $returnType = '\Descriptors\Model\TrackedChangesEdFiProgramSponsorDescriptorKeyChange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1627,7 +1627,7 @@ class ProgramSponsorDescriptorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackedChangesEdFiProgramSponsorDescriptorKeyChange[]',
+                        '\Descriptors\Model\TrackedChangesEdFiProgramSponsorDescriptorKeyChange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class ProgramSponsorDescriptorsApi
      */
     public function keyChangesProgramSponsorDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesProgramSponsorDescriptors'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TrackedChangesEdFiProgramSponsorDescriptorKeyChange[]';
+        $returnType = '\Descriptors\Model\TrackedChangesEdFiProgramSponsorDescriptorKeyChange[]';
         $request = $this->keyChangesProgramSponsorDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
         return $this->client
@@ -1872,10 +1872,10 @@ class ProgramSponsorDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProgramSponsorDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1889,10 +1889,10 @@ class ProgramSponsorDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProgramSponsorDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1937,7 +1937,7 @@ class ProgramSponsorDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProgramSponsorDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1958,7 +1958,7 @@ class ProgramSponsorDescriptorsApi
      *
      * Creates or updates resources based on the natural key values of the supplied resource.
      *
-     * @param  \OpenAPI\Client\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProgramSponsorDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class ProgramSponsorDescriptorsApi
     /**
      * Create request for operation 'postProgramSponsorDescriptor'
      *
-     * @param  \OpenAPI\Client\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postProgramSponsorDescriptor'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2093,11 +2093,11 @@ class ProgramSponsorDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProgramSponsorDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2112,11 +2112,11 @@ class ProgramSponsorDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProgramSponsorDescriptor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2162,7 +2162,7 @@ class ProgramSponsorDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProgramSponsorDescriptor'] to see the possible values for this operation
      *
@@ -2185,7 +2185,7 @@ class ProgramSponsorDescriptorsApi
      * Updates a resource based on the resource identifier.
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProgramSponsorDescriptor'] to see the possible values for this operation
      *
@@ -2224,7 +2224,7 @@ class ProgramSponsorDescriptorsApi
      * Create request for operation 'putProgramSponsorDescriptor'
      *
      * @param  string $id A resource identifier that uniquely identifies the resource. (required)
-     * @param  \OpenAPI\Client\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
+     * @param  \Descriptors\Model\EdFiProgramSponsorDescriptor $ed_fi_program_sponsor_descriptor The JSON representation of the \&quot;programSponsorDescriptor\&quot; resource to be created or updated. (required)
      * @param  string $if_match The ETag header value used to prevent the PUT from updating a resource modified by another consumer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putProgramSponsorDescriptor'] to see the possible values for this operation
      *
