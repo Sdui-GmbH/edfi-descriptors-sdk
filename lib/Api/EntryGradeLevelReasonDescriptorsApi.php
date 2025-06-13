@@ -83,6 +83,9 @@ class EntryGradeLevelReasonDescriptorsApi
         'getEntryGradeLevelReasonDescriptorsById' => [
             'application/json',
         ],
+        'getEntryGradeLevelReasonDescriptorsPartitions' => [
+            'application/json',
+        ],
         'keyChangesEntryGradeLevelReasonDescriptors' => [
             'application/json',
         ],
@@ -376,19 +379,19 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * Retrieves deleted resources based on change version.
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
      * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]
+     * @return |\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]
      */
-    public function deletesEntryGradeLevelReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEntryGradeLevelReasonDescriptors'][0])
+    public function deletesEntryGradeLevelReasonDescriptors($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEntryGradeLevelReasonDescriptors'][0])
     {
         list($response) = $this->deletesEntryGradeLevelReasonDescriptorsWithHttpInfo($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
         return $response;
@@ -399,19 +402,19 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * Retrieves deleted resources based on change version.
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
      * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of |\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function deletesEntryGradeLevelReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEntryGradeLevelReasonDescriptors'][0])
+    public function deletesEntryGradeLevelReasonDescriptorsWithHttpInfo($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEntryGradeLevelReasonDescriptors'][0])
     {
         $request = $this->deletesEntryGradeLevelReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
@@ -529,18 +532,18 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * Retrieves deleted resources based on change version.
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deletesEntryGradeLevelReasonDescriptorsAsync($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEntryGradeLevelReasonDescriptors'][0])
+    public function deletesEntryGradeLevelReasonDescriptorsAsync($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEntryGradeLevelReasonDescriptors'][0])
     {
         return $this->deletesEntryGradeLevelReasonDescriptorsAsyncWithHttpInfo($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType)
             ->then(
@@ -555,18 +558,18 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * Retrieves deleted resources based on change version.
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deletesEntryGradeLevelReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEntryGradeLevelReasonDescriptors'][0])
+    public function deletesEntryGradeLevelReasonDescriptorsAsyncWithHttpInfo($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEntryGradeLevelReasonDescriptors'][0])
     {
         $returnType = '\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorDelete[]';
         $request = $this->deletesEntryGradeLevelReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
@@ -610,18 +613,18 @@ class EntryGradeLevelReasonDescriptorsApi
     /**
      * Create request for operation 'deletesEntryGradeLevelReasonDescriptors'
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deletesEntryGradeLevelReasonDescriptorsRequest($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEntryGradeLevelReasonDescriptors'][0])
+    public function deletesEntryGradeLevelReasonDescriptorsRequest($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesEntryGradeLevelReasonDescriptors'][0])
     {
 
 
@@ -759,22 +762,30 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * Retrieves specific resources using the resource&#39;s property values (using the \&quot;Get\&quot; pattern).
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
+     * @param  string $page_token The token of the page to retrieve, obtained either from the \&quot;Next-Page-Token\&quot; header of the previous request, or from the \&quot;partitions\&quot; endpoint for the resource. Cannot be used with limit/offset paging. (optional)
+     * @param  int $page_size The maximum number of items to retrieve in the page. For use with pageToken (cursor paging) only. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
-     * @param  int $entry_grade_level_reason_descriptor_id A unique identifier used as Primary Key, not derived from business logic, when acting as Foreign Key, references the parent table. (optional)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
      * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor[]
+     * @return |\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor[]
      */
-    public function getEntryGradeLevelReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $entry_grade_level_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptors'][0])
+    public function getEntryGradeLevelReasonDescriptors($offset = null, $limit = 25, $page_token = null, $page_size = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptors'][0])
     {
-        list($response) = $this->getEntryGradeLevelReasonDescriptorsWithHttpInfo($offset, $limit, $min_change_version, $max_change_version, $total_count, $entry_grade_level_reason_descriptor_id, $use_snapshot, $contentType);
+        list($response) = $this->getEntryGradeLevelReasonDescriptorsWithHttpInfo($offset, $limit, $page_token, $page_size, $min_change_version, $max_change_version, $total_count, $code_value, $description, $effective_begin_date, $effective_end_date, $id, $namespace, $short_description, $use_snapshot, $contentType);
         return $response;
     }
 
@@ -783,22 +794,30 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * Retrieves specific resources using the resource&#39;s property values (using the \&quot;Get\&quot; pattern).
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
+     * @param  string $page_token The token of the page to retrieve, obtained either from the \&quot;Next-Page-Token\&quot; header of the previous request, or from the \&quot;partitions\&quot; endpoint for the resource. Cannot be used with limit/offset paging. (optional)
+     * @param  int $page_size The maximum number of items to retrieve in the page. For use with pageToken (cursor paging) only. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
-     * @param  int $entry_grade_level_reason_descriptor_id A unique identifier used as Primary Key, not derived from business logic, when acting as Foreign Key, references the parent table. (optional)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
      * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of |\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function getEntryGradeLevelReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $entry_grade_level_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptors'][0])
+    public function getEntryGradeLevelReasonDescriptorsWithHttpInfo($offset = null, $limit = 25, $page_token = null, $page_size = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptors'][0])
     {
-        $request = $this->getEntryGradeLevelReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $entry_grade_level_reason_descriptor_id, $use_snapshot, $contentType);
+        $request = $this->getEntryGradeLevelReasonDescriptorsRequest($offset, $limit, $page_token, $page_size, $min_change_version, $max_change_version, $total_count, $code_value, $description, $effective_begin_date, $effective_end_date, $id, $namespace, $short_description, $use_snapshot, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -914,21 +933,29 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * Retrieves specific resources using the resource&#39;s property values (using the \&quot;Get\&quot; pattern).
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
+     * @param  string $page_token The token of the page to retrieve, obtained either from the \&quot;Next-Page-Token\&quot; header of the previous request, or from the \&quot;partitions\&quot; endpoint for the resource. Cannot be used with limit/offset paging. (optional)
+     * @param  int $page_size The maximum number of items to retrieve in the page. For use with pageToken (cursor paging) only. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
-     * @param  int $entry_grade_level_reason_descriptor_id A unique identifier used as Primary Key, not derived from business logic, when acting as Foreign Key, references the parent table. (optional)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getEntryGradeLevelReasonDescriptorsAsync($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $entry_grade_level_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptors'][0])
+    public function getEntryGradeLevelReasonDescriptorsAsync($offset = null, $limit = 25, $page_token = null, $page_size = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptors'][0])
     {
-        return $this->getEntryGradeLevelReasonDescriptorsAsyncWithHttpInfo($offset, $limit, $min_change_version, $max_change_version, $total_count, $entry_grade_level_reason_descriptor_id, $use_snapshot, $contentType)
+        return $this->getEntryGradeLevelReasonDescriptorsAsyncWithHttpInfo($offset, $limit, $page_token, $page_size, $min_change_version, $max_change_version, $total_count, $code_value, $description, $effective_begin_date, $effective_end_date, $id, $namespace, $short_description, $use_snapshot, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -941,22 +968,30 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * Retrieves specific resources using the resource&#39;s property values (using the \&quot;Get\&quot; pattern).
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
+     * @param  string $page_token The token of the page to retrieve, obtained either from the \&quot;Next-Page-Token\&quot; header of the previous request, or from the \&quot;partitions\&quot; endpoint for the resource. Cannot be used with limit/offset paging. (optional)
+     * @param  int $page_size The maximum number of items to retrieve in the page. For use with pageToken (cursor paging) only. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
-     * @param  int $entry_grade_level_reason_descriptor_id A unique identifier used as Primary Key, not derived from business logic, when acting as Foreign Key, references the parent table. (optional)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getEntryGradeLevelReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $entry_grade_level_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptors'][0])
+    public function getEntryGradeLevelReasonDescriptorsAsyncWithHttpInfo($offset = null, $limit = 25, $page_token = null, $page_size = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptors'][0])
     {
         $returnType = '\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor[]';
-        $request = $this->getEntryGradeLevelReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $entry_grade_level_reason_descriptor_id, $use_snapshot, $contentType);
+        $request = $this->getEntryGradeLevelReasonDescriptorsRequest($offset, $limit, $page_token, $page_size, $min_change_version, $max_change_version, $total_count, $code_value, $description, $effective_begin_date, $effective_end_date, $id, $namespace, $short_description, $use_snapshot, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -997,19 +1032,27 @@ class EntryGradeLevelReasonDescriptorsApi
     /**
      * Create request for operation 'getEntryGradeLevelReasonDescriptors'
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
+     * @param  string $page_token The token of the page to retrieve, obtained either from the \&quot;Next-Page-Token\&quot; header of the previous request, or from the \&quot;partitions\&quot; endpoint for the resource. Cannot be used with limit/offset paging. (optional)
+     * @param  int $page_size The maximum number of items to retrieve in the page. For use with pageToken (cursor paging) only. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
-     * @param  int $entry_grade_level_reason_descriptor_id A unique identifier used as Primary Key, not derived from business logic, when acting as Foreign Key, references the parent table. (optional)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getEntryGradeLevelReasonDescriptorsRequest($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $entry_grade_level_reason_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptors'][0])
+    public function getEntryGradeLevelReasonDescriptorsRequest($offset = null, $limit = 25, $page_token = null, $page_size = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptors'][0])
     {
 
 
@@ -1021,9 +1064,32 @@ class EntryGradeLevelReasonDescriptorsApi
         }
         
 
+        if ($page_size !== null && $page_size < 0) {
+            throw new \InvalidArgumentException('invalid value for "$page_size" when calling EntryGradeLevelReasonDescriptorsApi.getEntryGradeLevelReasonDescriptors, must be bigger than or equal to 0.');
+        }
+        
 
 
 
+        if ($code_value !== null && strlen($code_value) > 50) {
+            throw new \InvalidArgumentException('invalid length for "$code_value" when calling EntryGradeLevelReasonDescriptorsApi.getEntryGradeLevelReasonDescriptors, must be smaller than or equal to 50.');
+        }
+        
+        if ($description !== null && strlen($description) > 1024) {
+            throw new \InvalidArgumentException('invalid length for "$description" when calling EntryGradeLevelReasonDescriptorsApi.getEntryGradeLevelReasonDescriptors, must be smaller than or equal to 1024.');
+        }
+        
+
+
+
+        if ($namespace !== null && strlen($namespace) > 255) {
+            throw new \InvalidArgumentException('invalid length for "$namespace" when calling EntryGradeLevelReasonDescriptorsApi.getEntryGradeLevelReasonDescriptors, must be smaller than or equal to 255.');
+        }
+        
+        if ($short_description !== null && strlen($short_description) > 75) {
+            throw new \InvalidArgumentException('invalid length for "$short_description" when calling EntryGradeLevelReasonDescriptorsApi.getEntryGradeLevelReasonDescriptors, must be smaller than or equal to 75.');
+        }
+        
 
 
         $resourcePath = '/ed-fi/entryGradeLevelReasonDescriptors';
@@ -1046,6 +1112,24 @@ class EntryGradeLevelReasonDescriptorsApi
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $limit,
             'limit', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $page_token,
+            'pageToken', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $page_size,
+            'pageSize', // param base name
             'integer', // openApiType
             'form', // style
             true, // explode
@@ -1080,9 +1164,63 @@ class EntryGradeLevelReasonDescriptorsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $entry_grade_level_reason_descriptor_id,
-            'entryGradeLevelReasonDescriptorId', // param base name
-            'integer', // openApiType
+            $code_value,
+            'codeValue', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $description,
+            'description', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $effective_begin_date,
+            'effectiveBeginDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $effective_end_date,
+            'effectiveEndDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $namespace,
+            'namespace', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $short_description,
+            'shortDescription', // param base name
+            'string', // openApiType
             'form', // style
             true, // explode
             false // required
@@ -1164,7 +1302,7 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor
+     * @return |\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor
      */
     public function getEntryGradeLevelReasonDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptorsById'][0])
     {
@@ -1184,7 +1322,7 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of |\Descriptors\Model\EdFiEntryGradeLevelReasonDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEntryGradeLevelReasonDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptorsById'][0])
     {
@@ -1485,23 +1623,493 @@ class EntryGradeLevelReasonDescriptorsApi
     }
 
     /**
+     * Operation getEntryGradeLevelReasonDescriptorsPartitions
+     *
+     * Retrieves a set of page tokens to be used for efficient client-side parallel processing.
+     *
+     * @param  int $number The number of evenly distributed partitions to provide for client-side parallel processing. If unspecified, a reasonable set of partitions will be determined based on the total number of accessible items. (optional)
+     * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
+     * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
+     * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntryGradeLevelReasonDescriptorsPartitions'] to see the possible values for this operation
+     *
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return |\Descriptors\Model\GetAbsenceEventCategoryDescriptorsPartitions200Response
+     */
+    public function getEntryGradeLevelReasonDescriptorsPartitions($number = null, $min_change_version = null, $max_change_version = null, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptorsPartitions'][0])
+    {
+        list($response) = $this->getEntryGradeLevelReasonDescriptorsPartitionsWithHttpInfo($number, $min_change_version, $max_change_version, $code_value, $description, $effective_begin_date, $effective_end_date, $id, $namespace, $short_description, $use_snapshot, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getEntryGradeLevelReasonDescriptorsPartitionsWithHttpInfo
+     *
+     * Retrieves a set of page tokens to be used for efficient client-side parallel processing.
+     *
+     * @param  int $number The number of evenly distributed partitions to provide for client-side parallel processing. If unspecified, a reasonable set of partitions will be determined based on the total number of accessible items. (optional)
+     * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
+     * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
+     * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntryGradeLevelReasonDescriptorsPartitions'] to see the possible values for this operation
+     *
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of |\Descriptors\Model\GetAbsenceEventCategoryDescriptorsPartitions200Response, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getEntryGradeLevelReasonDescriptorsPartitionsWithHttpInfo($number = null, $min_change_version = null, $max_change_version = null, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptorsPartitions'][0])
+    {
+        $request = $this->getEntryGradeLevelReasonDescriptorsPartitionsRequest($number, $min_change_version, $max_change_version, $code_value, $description, $effective_begin_date, $effective_end_date, $id, $namespace, $short_description, $use_snapshot, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Descriptors\Model\GetAbsenceEventCategoryDescriptorsPartitions200Response' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Descriptors\Model\GetAbsenceEventCategoryDescriptorsPartitions200Response' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\GetAbsenceEventCategoryDescriptorsPartitions200Response', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            $returnType = '\Descriptors\Model\GetAbsenceEventCategoryDescriptorsPartitions200Response';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Descriptors\Model\GetAbsenceEventCategoryDescriptorsPartitions200Response',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getEntryGradeLevelReasonDescriptorsPartitionsAsync
+     *
+     * Retrieves a set of page tokens to be used for efficient client-side parallel processing.
+     *
+     * @param  int $number The number of evenly distributed partitions to provide for client-side parallel processing. If unspecified, a reasonable set of partitions will be determined based on the total number of accessible items. (optional)
+     * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
+     * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
+     * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntryGradeLevelReasonDescriptorsPartitions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getEntryGradeLevelReasonDescriptorsPartitionsAsync($number = null, $min_change_version = null, $max_change_version = null, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptorsPartitions'][0])
+    {
+        return $this->getEntryGradeLevelReasonDescriptorsPartitionsAsyncWithHttpInfo($number, $min_change_version, $max_change_version, $code_value, $description, $effective_begin_date, $effective_end_date, $id, $namespace, $short_description, $use_snapshot, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getEntryGradeLevelReasonDescriptorsPartitionsAsyncWithHttpInfo
+     *
+     * Retrieves a set of page tokens to be used for efficient client-side parallel processing.
+     *
+     * @param  int $number The number of evenly distributed partitions to provide for client-side parallel processing. If unspecified, a reasonable set of partitions will be determined based on the total number of accessible items. (optional)
+     * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
+     * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
+     * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntryGradeLevelReasonDescriptorsPartitions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getEntryGradeLevelReasonDescriptorsPartitionsAsyncWithHttpInfo($number = null, $min_change_version = null, $max_change_version = null, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptorsPartitions'][0])
+    {
+        $returnType = '\Descriptors\Model\GetAbsenceEventCategoryDescriptorsPartitions200Response';
+        $request = $this->getEntryGradeLevelReasonDescriptorsPartitionsRequest($number, $min_change_version, $max_change_version, $code_value, $description, $effective_begin_date, $effective_end_date, $id, $namespace, $short_description, $use_snapshot, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getEntryGradeLevelReasonDescriptorsPartitions'
+     *
+     * @param  int $number The number of evenly distributed partitions to provide for client-side parallel processing. If unspecified, a reasonable set of partitions will be determined based on the total number of accessible items. (optional)
+     * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
+     * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
+     * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntryGradeLevelReasonDescriptorsPartitions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getEntryGradeLevelReasonDescriptorsPartitionsRequest($number = null, $min_change_version = null, $max_change_version = null, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getEntryGradeLevelReasonDescriptorsPartitions'][0])
+    {
+
+        if ($number !== null && $number > 200) {
+            throw new \InvalidArgumentException('invalid value for "$number" when calling EntryGradeLevelReasonDescriptorsApi.getEntryGradeLevelReasonDescriptorsPartitions, must be smaller than or equal to 200.');
+        }
+        if ($number !== null && $number < 1) {
+            throw new \InvalidArgumentException('invalid value for "$number" when calling EntryGradeLevelReasonDescriptorsApi.getEntryGradeLevelReasonDescriptorsPartitions, must be bigger than or equal to 1.');
+        }
+        
+
+
+        if ($code_value !== null && strlen($code_value) > 50) {
+            throw new \InvalidArgumentException('invalid length for "$code_value" when calling EntryGradeLevelReasonDescriptorsApi.getEntryGradeLevelReasonDescriptorsPartitions, must be smaller than or equal to 50.');
+        }
+        
+        if ($description !== null && strlen($description) > 1024) {
+            throw new \InvalidArgumentException('invalid length for "$description" when calling EntryGradeLevelReasonDescriptorsApi.getEntryGradeLevelReasonDescriptorsPartitions, must be smaller than or equal to 1024.');
+        }
+        
+
+
+
+        if ($namespace !== null && strlen($namespace) > 255) {
+            throw new \InvalidArgumentException('invalid length for "$namespace" when calling EntryGradeLevelReasonDescriptorsApi.getEntryGradeLevelReasonDescriptorsPartitions, must be smaller than or equal to 255.');
+        }
+        
+        if ($short_description !== null && strlen($short_description) > 75) {
+            throw new \InvalidArgumentException('invalid length for "$short_description" when calling EntryGradeLevelReasonDescriptorsApi.getEntryGradeLevelReasonDescriptorsPartitions, must be smaller than or equal to 75.');
+        }
+        
+
+
+        $resourcePath = '/ed-fi/entryGradeLevelReasonDescriptors/partitions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $number,
+            'number', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $min_change_version,
+            'minChangeVersion', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $max_change_version,
+            'maxChangeVersion', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $code_value,
+            'codeValue', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $description,
+            'description', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $effective_begin_date,
+            'effectiveBeginDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $effective_end_date,
+            'effectiveEndDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $namespace,
+            'namespace', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $short_description,
+            'shortDescription', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+        // header params
+        if ($use_snapshot !== null) {
+            $headerParams['Use-Snapshot'] = ObjectSerializer::toHeaderValue($use_snapshot);
+        }
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation keyChangesEntryGradeLevelReasonDescriptors
      *
      * Retrieves resources key changes based on change version.
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
      * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]
+     * @return |\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]
      */
-    public function keyChangesEntryGradeLevelReasonDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'][0])
+    public function keyChangesEntryGradeLevelReasonDescriptors($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'][0])
     {
         list($response) = $this->keyChangesEntryGradeLevelReasonDescriptorsWithHttpInfo($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
         return $response;
@@ -1512,19 +2120,19 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * Retrieves resources key changes based on change version.
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
      * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of |\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function keyChangesEntryGradeLevelReasonDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'][0])
+    public function keyChangesEntryGradeLevelReasonDescriptorsWithHttpInfo($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'][0])
     {
         $request = $this->keyChangesEntryGradeLevelReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
@@ -1642,18 +2250,18 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * Retrieves resources key changes based on change version.
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function keyChangesEntryGradeLevelReasonDescriptorsAsync($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'][0])
+    public function keyChangesEntryGradeLevelReasonDescriptorsAsync($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'][0])
     {
         return $this->keyChangesEntryGradeLevelReasonDescriptorsAsyncWithHttpInfo($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType)
             ->then(
@@ -1668,18 +2276,18 @@ class EntryGradeLevelReasonDescriptorsApi
      *
      * Retrieves resources key changes based on change version.
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function keyChangesEntryGradeLevelReasonDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'][0])
+    public function keyChangesEntryGradeLevelReasonDescriptorsAsyncWithHttpInfo($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'][0])
     {
         $returnType = '\Descriptors\Model\TrackedChangesEdFiEntryGradeLevelReasonDescriptorKeyChange[]';
         $request = $this->keyChangesEntryGradeLevelReasonDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
@@ -1723,18 +2331,18 @@ class EntryGradeLevelReasonDescriptorsApi
     /**
      * Create request for operation 'keyChangesEntryGradeLevelReasonDescriptors'
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function keyChangesEntryGradeLevelReasonDescriptorsRequest($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'][0])
+    public function keyChangesEntryGradeLevelReasonDescriptorsRequest($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesEntryGradeLevelReasonDescriptors'][0])
     {
 
 

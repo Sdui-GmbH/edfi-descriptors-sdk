@@ -83,6 +83,9 @@ class AcademicHonorCategoryDescriptorsApi
         'getAcademicHonorCategoryDescriptorsById' => [
             'application/json',
         ],
+        'getAcademicHonorCategoryDescriptorsPartitions' => [
+            'application/json',
+        ],
         'keyChangesAcademicHonorCategoryDescriptors' => [
             'application/json',
         ],
@@ -376,19 +379,19 @@ class AcademicHonorCategoryDescriptorsApi
      *
      * Retrieves deleted resources based on change version.
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAcademicHonorCategoryDescriptors'] to see the possible values for this operation
      *
      * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiAcademicHonorCategoryDescriptorDelete[]
+     * @return |\Descriptors\Model\TrackedChangesEdFiAcademicHonorCategoryDescriptorDelete[]
      */
-    public function deletesAcademicHonorCategoryDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAcademicHonorCategoryDescriptors'][0])
+    public function deletesAcademicHonorCategoryDescriptors($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAcademicHonorCategoryDescriptors'][0])
     {
         list($response) = $this->deletesAcademicHonorCategoryDescriptorsWithHttpInfo($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
         return $response;
@@ -399,19 +402,19 @@ class AcademicHonorCategoryDescriptorsApi
      *
      * Retrieves deleted resources based on change version.
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAcademicHonorCategoryDescriptors'] to see the possible values for this operation
      *
      * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiAcademicHonorCategoryDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of |\Descriptors\Model\TrackedChangesEdFiAcademicHonorCategoryDescriptorDelete[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function deletesAcademicHonorCategoryDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAcademicHonorCategoryDescriptors'][0])
+    public function deletesAcademicHonorCategoryDescriptorsWithHttpInfo($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAcademicHonorCategoryDescriptors'][0])
     {
         $request = $this->deletesAcademicHonorCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
@@ -529,18 +532,18 @@ class AcademicHonorCategoryDescriptorsApi
      *
      * Retrieves deleted resources based on change version.
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAcademicHonorCategoryDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deletesAcademicHonorCategoryDescriptorsAsync($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAcademicHonorCategoryDescriptors'][0])
+    public function deletesAcademicHonorCategoryDescriptorsAsync($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAcademicHonorCategoryDescriptors'][0])
     {
         return $this->deletesAcademicHonorCategoryDescriptorsAsyncWithHttpInfo($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType)
             ->then(
@@ -555,18 +558,18 @@ class AcademicHonorCategoryDescriptorsApi
      *
      * Retrieves deleted resources based on change version.
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAcademicHonorCategoryDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deletesAcademicHonorCategoryDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAcademicHonorCategoryDescriptors'][0])
+    public function deletesAcademicHonorCategoryDescriptorsAsyncWithHttpInfo($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAcademicHonorCategoryDescriptors'][0])
     {
         $returnType = '\Descriptors\Model\TrackedChangesEdFiAcademicHonorCategoryDescriptorDelete[]';
         $request = $this->deletesAcademicHonorCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
@@ -610,18 +613,18 @@ class AcademicHonorCategoryDescriptorsApi
     /**
      * Create request for operation 'deletesAcademicHonorCategoryDescriptors'
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletesAcademicHonorCategoryDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deletesAcademicHonorCategoryDescriptorsRequest($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAcademicHonorCategoryDescriptors'][0])
+    public function deletesAcademicHonorCategoryDescriptorsRequest($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['deletesAcademicHonorCategoryDescriptors'][0])
     {
 
 
@@ -759,22 +762,30 @@ class AcademicHonorCategoryDescriptorsApi
      *
      * Retrieves specific resources using the resource&#39;s property values (using the \&quot;Get\&quot; pattern).
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
+     * @param  string $page_token The token of the page to retrieve, obtained either from the \&quot;Next-Page-Token\&quot; header of the previous request, or from the \&quot;partitions\&quot; endpoint for the resource. Cannot be used with limit/offset paging. (optional)
+     * @param  int $page_size The maximum number of items to retrieve in the page. For use with pageToken (cursor paging) only. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
-     * @param  int $academic_honor_category_descriptor_id A unique identifier used as Primary Key, not derived from business logic, when acting as Foreign Key, references the parent table. (optional)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAcademicHonorCategoryDescriptors'] to see the possible values for this operation
      *
      * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiAcademicHonorCategoryDescriptor[]
+     * @return |\Descriptors\Model\EdFiAcademicHonorCategoryDescriptor[]
      */
-    public function getAcademicHonorCategoryDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $academic_honor_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptors'][0])
+    public function getAcademicHonorCategoryDescriptors($offset = null, $limit = 25, $page_token = null, $page_size = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptors'][0])
     {
-        list($response) = $this->getAcademicHonorCategoryDescriptorsWithHttpInfo($offset, $limit, $min_change_version, $max_change_version, $total_count, $academic_honor_category_descriptor_id, $use_snapshot, $contentType);
+        list($response) = $this->getAcademicHonorCategoryDescriptorsWithHttpInfo($offset, $limit, $page_token, $page_size, $min_change_version, $max_change_version, $total_count, $code_value, $description, $effective_begin_date, $effective_end_date, $id, $namespace, $short_description, $use_snapshot, $contentType);
         return $response;
     }
 
@@ -783,22 +794,30 @@ class AcademicHonorCategoryDescriptorsApi
      *
      * Retrieves specific resources using the resource&#39;s property values (using the \&quot;Get\&quot; pattern).
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
+     * @param  string $page_token The token of the page to retrieve, obtained either from the \&quot;Next-Page-Token\&quot; header of the previous request, or from the \&quot;partitions\&quot; endpoint for the resource. Cannot be used with limit/offset paging. (optional)
+     * @param  int $page_size The maximum number of items to retrieve in the page. For use with pageToken (cursor paging) only. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
-     * @param  int $academic_honor_category_descriptor_id A unique identifier used as Primary Key, not derived from business logic, when acting as Foreign Key, references the parent table. (optional)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAcademicHonorCategoryDescriptors'] to see the possible values for this operation
      *
      * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiAcademicHonorCategoryDescriptor[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of |\Descriptors\Model\EdFiAcademicHonorCategoryDescriptor[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAcademicHonorCategoryDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $academic_honor_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptors'][0])
+    public function getAcademicHonorCategoryDescriptorsWithHttpInfo($offset = null, $limit = 25, $page_token = null, $page_size = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptors'][0])
     {
-        $request = $this->getAcademicHonorCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $academic_honor_category_descriptor_id, $use_snapshot, $contentType);
+        $request = $this->getAcademicHonorCategoryDescriptorsRequest($offset, $limit, $page_token, $page_size, $min_change_version, $max_change_version, $total_count, $code_value, $description, $effective_begin_date, $effective_end_date, $id, $namespace, $short_description, $use_snapshot, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -914,21 +933,29 @@ class AcademicHonorCategoryDescriptorsApi
      *
      * Retrieves specific resources using the resource&#39;s property values (using the \&quot;Get\&quot; pattern).
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
+     * @param  string $page_token The token of the page to retrieve, obtained either from the \&quot;Next-Page-Token\&quot; header of the previous request, or from the \&quot;partitions\&quot; endpoint for the resource. Cannot be used with limit/offset paging. (optional)
+     * @param  int $page_size The maximum number of items to retrieve in the page. For use with pageToken (cursor paging) only. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
-     * @param  int $academic_honor_category_descriptor_id A unique identifier used as Primary Key, not derived from business logic, when acting as Foreign Key, references the parent table. (optional)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAcademicHonorCategoryDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAcademicHonorCategoryDescriptorsAsync($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $academic_honor_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptors'][0])
+    public function getAcademicHonorCategoryDescriptorsAsync($offset = null, $limit = 25, $page_token = null, $page_size = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptors'][0])
     {
-        return $this->getAcademicHonorCategoryDescriptorsAsyncWithHttpInfo($offset, $limit, $min_change_version, $max_change_version, $total_count, $academic_honor_category_descriptor_id, $use_snapshot, $contentType)
+        return $this->getAcademicHonorCategoryDescriptorsAsyncWithHttpInfo($offset, $limit, $page_token, $page_size, $min_change_version, $max_change_version, $total_count, $code_value, $description, $effective_begin_date, $effective_end_date, $id, $namespace, $short_description, $use_snapshot, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -941,22 +968,30 @@ class AcademicHonorCategoryDescriptorsApi
      *
      * Retrieves specific resources using the resource&#39;s property values (using the \&quot;Get\&quot; pattern).
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
+     * @param  string $page_token The token of the page to retrieve, obtained either from the \&quot;Next-Page-Token\&quot; header of the previous request, or from the \&quot;partitions\&quot; endpoint for the resource. Cannot be used with limit/offset paging. (optional)
+     * @param  int $page_size The maximum number of items to retrieve in the page. For use with pageToken (cursor paging) only. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
-     * @param  int $academic_honor_category_descriptor_id A unique identifier used as Primary Key, not derived from business logic, when acting as Foreign Key, references the parent table. (optional)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAcademicHonorCategoryDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAcademicHonorCategoryDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $academic_honor_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptors'][0])
+    public function getAcademicHonorCategoryDescriptorsAsyncWithHttpInfo($offset = null, $limit = 25, $page_token = null, $page_size = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptors'][0])
     {
         $returnType = '\Descriptors\Model\EdFiAcademicHonorCategoryDescriptor[]';
-        $request = $this->getAcademicHonorCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $academic_honor_category_descriptor_id, $use_snapshot, $contentType);
+        $request = $this->getAcademicHonorCategoryDescriptorsRequest($offset, $limit, $page_token, $page_size, $min_change_version, $max_change_version, $total_count, $code_value, $description, $effective_begin_date, $effective_end_date, $id, $namespace, $short_description, $use_snapshot, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -997,19 +1032,27 @@ class AcademicHonorCategoryDescriptorsApi
     /**
      * Create request for operation 'getAcademicHonorCategoryDescriptors'
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
+     * @param  string $page_token The token of the page to retrieve, obtained either from the \&quot;Next-Page-Token\&quot; header of the previous request, or from the \&quot;partitions\&quot; endpoint for the resource. Cannot be used with limit/offset paging. (optional)
+     * @param  int $page_size The maximum number of items to retrieve in the page. For use with pageToken (cursor paging) only. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
-     * @param  int $academic_honor_category_descriptor_id A unique identifier used as Primary Key, not derived from business logic, when acting as Foreign Key, references the parent table. (optional)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAcademicHonorCategoryDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getAcademicHonorCategoryDescriptorsRequest($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $academic_honor_category_descriptor_id = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptors'][0])
+    public function getAcademicHonorCategoryDescriptorsRequest($offset = null, $limit = 25, $page_token = null, $page_size = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptors'][0])
     {
 
 
@@ -1021,9 +1064,32 @@ class AcademicHonorCategoryDescriptorsApi
         }
         
 
+        if ($page_size !== null && $page_size < 0) {
+            throw new \InvalidArgumentException('invalid value for "$page_size" when calling AcademicHonorCategoryDescriptorsApi.getAcademicHonorCategoryDescriptors, must be bigger than or equal to 0.');
+        }
+        
 
 
 
+        if ($code_value !== null && strlen($code_value) > 50) {
+            throw new \InvalidArgumentException('invalid length for "$code_value" when calling AcademicHonorCategoryDescriptorsApi.getAcademicHonorCategoryDescriptors, must be smaller than or equal to 50.');
+        }
+        
+        if ($description !== null && strlen($description) > 1024) {
+            throw new \InvalidArgumentException('invalid length for "$description" when calling AcademicHonorCategoryDescriptorsApi.getAcademicHonorCategoryDescriptors, must be smaller than or equal to 1024.');
+        }
+        
+
+
+
+        if ($namespace !== null && strlen($namespace) > 255) {
+            throw new \InvalidArgumentException('invalid length for "$namespace" when calling AcademicHonorCategoryDescriptorsApi.getAcademicHonorCategoryDescriptors, must be smaller than or equal to 255.');
+        }
+        
+        if ($short_description !== null && strlen($short_description) > 75) {
+            throw new \InvalidArgumentException('invalid length for "$short_description" when calling AcademicHonorCategoryDescriptorsApi.getAcademicHonorCategoryDescriptors, must be smaller than or equal to 75.');
+        }
+        
 
 
         $resourcePath = '/ed-fi/academicHonorCategoryDescriptors';
@@ -1046,6 +1112,24 @@ class AcademicHonorCategoryDescriptorsApi
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $limit,
             'limit', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $page_token,
+            'pageToken', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $page_size,
+            'pageSize', // param base name
             'integer', // openApiType
             'form', // style
             true, // explode
@@ -1080,9 +1164,63 @@ class AcademicHonorCategoryDescriptorsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $academic_honor_category_descriptor_id,
-            'academicHonorCategoryDescriptorId', // param base name
-            'integer', // openApiType
+            $code_value,
+            'codeValue', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $description,
+            'description', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $effective_begin_date,
+            'effectiveBeginDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $effective_end_date,
+            'effectiveEndDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $namespace,
+            'namespace', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $short_description,
+            'shortDescription', // param base name
+            'string', // openApiType
             'form', // style
             true, // explode
             false // required
@@ -1164,7 +1302,7 @@ class AcademicHonorCategoryDescriptorsApi
      *
      * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\EdFiAcademicHonorCategoryDescriptor
+     * @return |\Descriptors\Model\EdFiAcademicHonorCategoryDescriptor
      */
     public function getAcademicHonorCategoryDescriptorsById($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptorsById'][0])
     {
@@ -1184,7 +1322,7 @@ class AcademicHonorCategoryDescriptorsApi
      *
      * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\EdFiAcademicHonorCategoryDescriptor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of |\Descriptors\Model\EdFiAcademicHonorCategoryDescriptor, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAcademicHonorCategoryDescriptorsByIdWithHttpInfo($id, $if_none_match = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptorsById'][0])
     {
@@ -1485,23 +1623,493 @@ class AcademicHonorCategoryDescriptorsApi
     }
 
     /**
+     * Operation getAcademicHonorCategoryDescriptorsPartitions
+     *
+     * Retrieves a set of page tokens to be used for efficient client-side parallel processing.
+     *
+     * @param  int $number The number of evenly distributed partitions to provide for client-side parallel processing. If unspecified, a reasonable set of partitions will be determined based on the total number of accessible items. (optional)
+     * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
+     * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
+     * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAcademicHonorCategoryDescriptorsPartitions'] to see the possible values for this operation
+     *
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return |\Descriptors\Model\GetAbsenceEventCategoryDescriptorsPartitions200Response
+     */
+    public function getAcademicHonorCategoryDescriptorsPartitions($number = null, $min_change_version = null, $max_change_version = null, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptorsPartitions'][0])
+    {
+        list($response) = $this->getAcademicHonorCategoryDescriptorsPartitionsWithHttpInfo($number, $min_change_version, $max_change_version, $code_value, $description, $effective_begin_date, $effective_end_date, $id, $namespace, $short_description, $use_snapshot, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getAcademicHonorCategoryDescriptorsPartitionsWithHttpInfo
+     *
+     * Retrieves a set of page tokens to be used for efficient client-side parallel processing.
+     *
+     * @param  int $number The number of evenly distributed partitions to provide for client-side parallel processing. If unspecified, a reasonable set of partitions will be determined based on the total number of accessible items. (optional)
+     * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
+     * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
+     * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAcademicHonorCategoryDescriptorsPartitions'] to see the possible values for this operation
+     *
+     * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of |\Descriptors\Model\GetAbsenceEventCategoryDescriptorsPartitions200Response, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getAcademicHonorCategoryDescriptorsPartitionsWithHttpInfo($number = null, $min_change_version = null, $max_change_version = null, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptorsPartitions'][0])
+    {
+        $request = $this->getAcademicHonorCategoryDescriptorsPartitionsRequest($number, $min_change_version, $max_change_version, $code_value, $description, $effective_begin_date, $effective_end_date, $id, $namespace, $short_description, $use_snapshot, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Descriptors\Model\GetAbsenceEventCategoryDescriptorsPartitions200Response' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Descriptors\Model\GetAbsenceEventCategoryDescriptorsPartitions200Response' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Descriptors\Model\GetAbsenceEventCategoryDescriptorsPartitions200Response', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            $returnType = '\Descriptors\Model\GetAbsenceEventCategoryDescriptorsPartitions200Response';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Descriptors\Model\GetAbsenceEventCategoryDescriptorsPartitions200Response',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getAcademicHonorCategoryDescriptorsPartitionsAsync
+     *
+     * Retrieves a set of page tokens to be used for efficient client-side parallel processing.
+     *
+     * @param  int $number The number of evenly distributed partitions to provide for client-side parallel processing. If unspecified, a reasonable set of partitions will be determined based on the total number of accessible items. (optional)
+     * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
+     * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
+     * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAcademicHonorCategoryDescriptorsPartitions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAcademicHonorCategoryDescriptorsPartitionsAsync($number = null, $min_change_version = null, $max_change_version = null, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptorsPartitions'][0])
+    {
+        return $this->getAcademicHonorCategoryDescriptorsPartitionsAsyncWithHttpInfo($number, $min_change_version, $max_change_version, $code_value, $description, $effective_begin_date, $effective_end_date, $id, $namespace, $short_description, $use_snapshot, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getAcademicHonorCategoryDescriptorsPartitionsAsyncWithHttpInfo
+     *
+     * Retrieves a set of page tokens to be used for efficient client-side parallel processing.
+     *
+     * @param  int $number The number of evenly distributed partitions to provide for client-side parallel processing. If unspecified, a reasonable set of partitions will be determined based on the total number of accessible items. (optional)
+     * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
+     * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
+     * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAcademicHonorCategoryDescriptorsPartitions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAcademicHonorCategoryDescriptorsPartitionsAsyncWithHttpInfo($number = null, $min_change_version = null, $max_change_version = null, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptorsPartitions'][0])
+    {
+        $returnType = '\Descriptors\Model\GetAbsenceEventCategoryDescriptorsPartitions200Response';
+        $request = $this->getAcademicHonorCategoryDescriptorsPartitionsRequest($number, $min_change_version, $max_change_version, $code_value, $description, $effective_begin_date, $effective_end_date, $id, $namespace, $short_description, $use_snapshot, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getAcademicHonorCategoryDescriptorsPartitions'
+     *
+     * @param  int $number The number of evenly distributed partitions to provide for client-side parallel processing. If unspecified, a reasonable set of partitions will be determined based on the total number of accessible items. (optional)
+     * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
+     * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
+     * @param  string $code_value A code or abbreviation that is used to refer to the descriptor. (optional)
+     * @param  string $description The description of the descriptor. (optional)
+     * @param  \DateTime $effective_begin_date The beginning date of the period when the descriptor is in effect. If omitted, the default is immediate effectiveness. (optional)
+     * @param  \DateTime $effective_end_date The end date of the period when the descriptor is in effect. (optional)
+     * @param  string $id  (optional)
+     * @param  string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary. (optional)
+     * @param  string $short_description A shortened description for the descriptor. (optional)
+     * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAcademicHonorCategoryDescriptorsPartitions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getAcademicHonorCategoryDescriptorsPartitionsRequest($number = null, $min_change_version = null, $max_change_version = null, $code_value = null, $description = null, $effective_begin_date = null, $effective_end_date = null, $id = null, $namespace = null, $short_description = null, $use_snapshot = false, string $contentType = self::contentTypes['getAcademicHonorCategoryDescriptorsPartitions'][0])
+    {
+
+        if ($number !== null && $number > 200) {
+            throw new \InvalidArgumentException('invalid value for "$number" when calling AcademicHonorCategoryDescriptorsApi.getAcademicHonorCategoryDescriptorsPartitions, must be smaller than or equal to 200.');
+        }
+        if ($number !== null && $number < 1) {
+            throw new \InvalidArgumentException('invalid value for "$number" when calling AcademicHonorCategoryDescriptorsApi.getAcademicHonorCategoryDescriptorsPartitions, must be bigger than or equal to 1.');
+        }
+        
+
+
+        if ($code_value !== null && strlen($code_value) > 50) {
+            throw new \InvalidArgumentException('invalid length for "$code_value" when calling AcademicHonorCategoryDescriptorsApi.getAcademicHonorCategoryDescriptorsPartitions, must be smaller than or equal to 50.');
+        }
+        
+        if ($description !== null && strlen($description) > 1024) {
+            throw new \InvalidArgumentException('invalid length for "$description" when calling AcademicHonorCategoryDescriptorsApi.getAcademicHonorCategoryDescriptorsPartitions, must be smaller than or equal to 1024.');
+        }
+        
+
+
+
+        if ($namespace !== null && strlen($namespace) > 255) {
+            throw new \InvalidArgumentException('invalid length for "$namespace" when calling AcademicHonorCategoryDescriptorsApi.getAcademicHonorCategoryDescriptorsPartitions, must be smaller than or equal to 255.');
+        }
+        
+        if ($short_description !== null && strlen($short_description) > 75) {
+            throw new \InvalidArgumentException('invalid length for "$short_description" when calling AcademicHonorCategoryDescriptorsApi.getAcademicHonorCategoryDescriptorsPartitions, must be smaller than or equal to 75.');
+        }
+        
+
+
+        $resourcePath = '/ed-fi/academicHonorCategoryDescriptors/partitions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $number,
+            'number', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $min_change_version,
+            'minChangeVersion', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $max_change_version,
+            'maxChangeVersion', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $code_value,
+            'codeValue', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $description,
+            'description', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $effective_begin_date,
+            'effectiveBeginDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $effective_end_date,
+            'effectiveEndDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $namespace,
+            'namespace', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $short_description,
+            'shortDescription', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+        // header params
+        if ($use_snapshot !== null) {
+            $headerParams['Use-Snapshot'] = ObjectSerializer::toHeaderValue($use_snapshot);
+        }
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation keyChangesAcademicHonorCategoryDescriptors
      *
      * Retrieves resources key changes based on change version.
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAcademicHonorCategoryDescriptors'] to see the possible values for this operation
      *
      * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Descriptors\Model\TrackedChangesEdFiAcademicHonorCategoryDescriptorKeyChange[]
+     * @return |\Descriptors\Model\TrackedChangesEdFiAcademicHonorCategoryDescriptorKeyChange[]
      */
-    public function keyChangesAcademicHonorCategoryDescriptors($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAcademicHonorCategoryDescriptors'][0])
+    public function keyChangesAcademicHonorCategoryDescriptors($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAcademicHonorCategoryDescriptors'][0])
     {
         list($response) = $this->keyChangesAcademicHonorCategoryDescriptorsWithHttpInfo($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
         return $response;
@@ -1512,19 +2120,19 @@ class AcademicHonorCategoryDescriptorsApi
      *
      * Retrieves resources key changes based on change version.
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAcademicHonorCategoryDescriptors'] to see the possible values for this operation
      *
      * @throws \Descriptors\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Descriptors\Model\TrackedChangesEdFiAcademicHonorCategoryDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of |\Descriptors\Model\TrackedChangesEdFiAcademicHonorCategoryDescriptorKeyChange[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function keyChangesAcademicHonorCategoryDescriptorsWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAcademicHonorCategoryDescriptors'][0])
+    public function keyChangesAcademicHonorCategoryDescriptorsWithHttpInfo($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAcademicHonorCategoryDescriptors'][0])
     {
         $request = $this->keyChangesAcademicHonorCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
 
@@ -1642,18 +2250,18 @@ class AcademicHonorCategoryDescriptorsApi
      *
      * Retrieves resources key changes based on change version.
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAcademicHonorCategoryDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function keyChangesAcademicHonorCategoryDescriptorsAsync($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAcademicHonorCategoryDescriptors'][0])
+    public function keyChangesAcademicHonorCategoryDescriptorsAsync($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAcademicHonorCategoryDescriptors'][0])
     {
         return $this->keyChangesAcademicHonorCategoryDescriptorsAsyncWithHttpInfo($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType)
             ->then(
@@ -1668,18 +2276,18 @@ class AcademicHonorCategoryDescriptorsApi
      *
      * Retrieves resources key changes based on change version.
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAcademicHonorCategoryDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function keyChangesAcademicHonorCategoryDescriptorsAsyncWithHttpInfo($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAcademicHonorCategoryDescriptors'][0])
+    public function keyChangesAcademicHonorCategoryDescriptorsAsyncWithHttpInfo($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAcademicHonorCategoryDescriptors'][0])
     {
         $returnType = '\Descriptors\Model\TrackedChangesEdFiAcademicHonorCategoryDescriptorKeyChange[]';
         $request = $this->keyChangesAcademicHonorCategoryDescriptorsRequest($offset, $limit, $min_change_version, $max_change_version, $total_count, $use_snapshot, $contentType);
@@ -1723,18 +2331,18 @@ class AcademicHonorCategoryDescriptorsApi
     /**
      * Create request for operation 'keyChangesAcademicHonorCategoryDescriptors'
      *
-     * @param  int $offset Indicates how many items should be skipped before returning results. (optional, default to 0)
+     * @param  int $offset Indicates how many items should be skipped before returning results. (optional)
      * @param  int $limit Indicates the maximum number of items that should be returned in the results. (optional, default to 25)
      * @param  int $min_change_version Used in synchronization to set sequence minimum ChangeVersion (optional)
      * @param  int $max_change_version Used in synchronization to set sequence maximum ChangeVersion (optional)
-     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. (optional, default to false)
+     * @param  bool $total_count Indicates if the total number of items available should be returned in the &#39;Total-Count&#39; header of the response.  If set to false, &#39;Total-Count&#39; header will not be provided. Must be false when using cursor paging (with pageToken). (optional, default to false)
      * @param  bool $use_snapshot Indicates if the configured Snapshot should be used. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['keyChangesAcademicHonorCategoryDescriptors'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function keyChangesAcademicHonorCategoryDescriptorsRequest($offset = 0, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAcademicHonorCategoryDescriptors'][0])
+    public function keyChangesAcademicHonorCategoryDescriptorsRequest($offset = null, $limit = 25, $min_change_version = null, $max_change_version = null, $total_count = false, $use_snapshot = false, string $contentType = self::contentTypes['keyChangesAcademicHonorCategoryDescriptors'][0])
     {
 
 

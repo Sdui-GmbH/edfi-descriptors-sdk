@@ -58,12 +58,11 @@ class EdFiTitleIPartASchoolDesignationDescriptor implements ModelInterface, Arra
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'title_i_part_a_school_designation_descriptor_id' => 'int',
         'code_value' => 'string',
+        'namespace' => 'string',
         'description' => 'string',
         'effective_begin_date' => '\DateTime',
         'effective_end_date' => '\DateTime',
-        'namespace' => 'string',
         'short_description' => 'string',
         '_etag' => 'string',
         '_last_modified_date' => '\DateTime'
@@ -78,12 +77,11 @@ class EdFiTitleIPartASchoolDesignationDescriptor implements ModelInterface, Arra
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'title_i_part_a_school_designation_descriptor_id' => 'int32',
         'code_value' => null,
+        'namespace' => null,
         'description' => null,
         'effective_begin_date' => 'date',
         'effective_end_date' => 'date',
-        'namespace' => null,
         'short_description' => null,
         '_etag' => null,
         '_last_modified_date' => 'date-time'
@@ -96,12 +94,11 @@ class EdFiTitleIPartASchoolDesignationDescriptor implements ModelInterface, Arra
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'title_i_part_a_school_designation_descriptor_id' => false,
         'code_value' => false,
+        'namespace' => false,
         'description' => true,
         'effective_begin_date' => true,
         'effective_end_date' => true,
-        'namespace' => false,
         'short_description' => false,
         '_etag' => false,
         '_last_modified_date' => false
@@ -194,12 +191,11 @@ class EdFiTitleIPartASchoolDesignationDescriptor implements ModelInterface, Arra
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'title_i_part_a_school_designation_descriptor_id' => 'titleIPartASchoolDesignationDescriptorId',
         'code_value' => 'codeValue',
+        'namespace' => 'namespace',
         'description' => 'description',
         'effective_begin_date' => 'effectiveBeginDate',
         'effective_end_date' => 'effectiveEndDate',
-        'namespace' => 'namespace',
         'short_description' => 'shortDescription',
         '_etag' => '_etag',
         '_last_modified_date' => '_lastModifiedDate'
@@ -212,12 +208,11 @@ class EdFiTitleIPartASchoolDesignationDescriptor implements ModelInterface, Arra
      */
     protected static $setters = [
         'id' => 'setId',
-        'title_i_part_a_school_designation_descriptor_id' => 'setTitleIPartASchoolDesignationDescriptorId',
         'code_value' => 'setCodeValue',
+        'namespace' => 'setNamespace',
         'description' => 'setDescription',
         'effective_begin_date' => 'setEffectiveBeginDate',
         'effective_end_date' => 'setEffectiveEndDate',
-        'namespace' => 'setNamespace',
         'short_description' => 'setShortDescription',
         '_etag' => 'setEtag',
         '_last_modified_date' => 'setLastModifiedDate'
@@ -230,12 +225,11 @@ class EdFiTitleIPartASchoolDesignationDescriptor implements ModelInterface, Arra
      */
     protected static $getters = [
         'id' => 'getId',
-        'title_i_part_a_school_designation_descriptor_id' => 'getTitleIPartASchoolDesignationDescriptorId',
         'code_value' => 'getCodeValue',
+        'namespace' => 'getNamespace',
         'description' => 'getDescription',
         'effective_begin_date' => 'getEffectiveBeginDate',
         'effective_end_date' => 'getEffectiveEndDate',
-        'namespace' => 'getNamespace',
         'short_description' => 'getShortDescription',
         '_etag' => 'getEtag',
         '_last_modified_date' => 'getLastModifiedDate'
@@ -299,12 +293,11 @@ class EdFiTitleIPartASchoolDesignationDescriptor implements ModelInterface, Arra
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('title_i_part_a_school_designation_descriptor_id', $data ?? [], null);
         $this->setIfExists('code_value', $data ?? [], null);
+        $this->setIfExists('namespace', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('effective_begin_date', $data ?? [], null);
         $this->setIfExists('effective_end_date', $data ?? [], null);
-        $this->setIfExists('namespace', $data ?? [], null);
         $this->setIfExists('short_description', $data ?? [], null);
         $this->setIfExists('_etag', $data ?? [], null);
         $this->setIfExists('_last_modified_date', $data ?? [], null);
@@ -344,15 +337,15 @@ class EdFiTitleIPartASchoolDesignationDescriptor implements ModelInterface, Arra
             $invalidProperties[] = "invalid value for 'code_value', the character length must be smaller than or equal to 50.";
         }
 
-        if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1024)) {
-            $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1024.";
-        }
-
         if ($this->container['namespace'] === null) {
             $invalidProperties[] = "'namespace' can't be null";
         }
         if ((mb_strlen($this->container['namespace']) > 255)) {
             $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 255.";
+        }
+
+        if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1024)) {
+            $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1024.";
         }
 
         if ($this->container['short_description'] === null) {
@@ -405,33 +398,6 @@ class EdFiTitleIPartASchoolDesignationDescriptor implements ModelInterface, Arra
     }
 
     /**
-     * Gets title_i_part_a_school_designation_descriptor_id
-     *
-     * @return int|null
-     */
-    public function getTitleIPartASchoolDesignationDescriptorId()
-    {
-        return $this->container['title_i_part_a_school_designation_descriptor_id'];
-    }
-
-    /**
-     * Sets title_i_part_a_school_designation_descriptor_id
-     *
-     * @param int|null $title_i_part_a_school_designation_descriptor_id A unique identifier used as Primary Key, not derived from business logic, when acting as Foreign Key, references the parent table.
-     *
-     * @return self
-     */
-    public function setTitleIPartASchoolDesignationDescriptorId($title_i_part_a_school_designation_descriptor_id)
-    {
-        if (is_null($title_i_part_a_school_designation_descriptor_id)) {
-            throw new \InvalidArgumentException('non-nullable title_i_part_a_school_designation_descriptor_id cannot be null');
-        }
-        $this->container['title_i_part_a_school_designation_descriptor_id'] = $title_i_part_a_school_designation_descriptor_id;
-
-        return $this;
-    }
-
-    /**
      * Gets code_value
      *
      * @return string
@@ -458,6 +424,37 @@ class EdFiTitleIPartASchoolDesignationDescriptor implements ModelInterface, Arra
         }
 
         $this->container['code_value'] = $code_value;
+
+        return $this;
+    }
+
+    /**
+     * Gets namespace
+     *
+     * @return string
+     */
+    public function getNamespace()
+    {
+        return $this->container['namespace'];
+    }
+
+    /**
+     * Sets namespace
+     *
+     * @param string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary.
+     *
+     * @return self
+     */
+    public function setNamespace($namespace)
+    {
+        if (is_null($namespace)) {
+            throw new \InvalidArgumentException('non-nullable namespace cannot be null');
+        }
+        if ((mb_strlen($namespace) > 255)) {
+            throw new \InvalidArgumentException('invalid length for $namespace when calling EdFiTitleIPartASchoolDesignationDescriptor., must be smaller than or equal to 255.');
+        }
+
+        $this->container['namespace'] = $namespace;
 
         return $this;
     }
@@ -564,37 +561,6 @@ class EdFiTitleIPartASchoolDesignationDescriptor implements ModelInterface, Arra
             }
         }
         $this->container['effective_end_date'] = $effective_end_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets namespace
-     *
-     * @return string
-     */
-    public function getNamespace()
-    {
-        return $this->container['namespace'];
-    }
-
-    /**
-     * Sets namespace
-     *
-     * @param string $namespace A globally unique namespace that identifies this descriptor set. Author is strongly encouraged to use the Universal Resource Identifier (http, ftp, file, etc.) for the source of the descriptor definition. Best practice is for this source to be the descriptor file itself, so that it can be machine-readable and be fetched in real-time, if necessary.
-     *
-     * @return self
-     */
-    public function setNamespace($namespace)
-    {
-        if (is_null($namespace)) {
-            throw new \InvalidArgumentException('non-nullable namespace cannot be null');
-        }
-        if ((mb_strlen($namespace) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $namespace when calling EdFiTitleIPartASchoolDesignationDescriptor., must be smaller than or equal to 255.');
-        }
-
-        $this->container['namespace'] = $namespace;
 
         return $this;
     }
